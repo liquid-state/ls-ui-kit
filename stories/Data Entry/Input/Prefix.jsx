@@ -15,7 +15,8 @@ class Prefix extends Component {
         <h3 className="ex-title">Prefix and Suffix</h3>
 
         <Input
-          style={{width: 300}}
+          style={{maxWidth: 300}}
+          className="fw"
           placeholder="Enter your username"
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
           suffix={suffix}

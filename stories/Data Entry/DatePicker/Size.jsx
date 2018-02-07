@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DatePicker, Radio } from 'antd';
+import { Row, Col } from 'antd';
 
 class Size extends Component {
 
@@ -15,19 +16,39 @@ class Size extends Component {
       <section className="example">
         <h3 className="ex-title">Three Sizes</h3>
 
-        <Radio.Group value={size} onChange={this.handleSizeChange}>
-          <Radio.Button value="large">Large</Radio.Button>
-          <Radio.Button value="default">Default</Radio.Button>
-          <Radio.Button value="small">Small</Radio.Button>
-        </Radio.Group>
-        <br /><br />
-        <DatePicker size={size} />
-        <br /><br />
-        <MonthPicker size={size} placeholder="Select Month" />
-        <br /><br />
-        <RangePicker size={size} />
-        <br /><br />
-        <WeekPicker size={size} placeholder="Select Week" />
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <Radio.Group value={size} onChange={this.handleSizeChange}>
+              <Radio.Button value="large">Large</Radio.Button>
+              <Radio.Button value="default">Default</Radio.Button>
+              <Radio.Button value="small">Small</Radio.Button>
+            </Radio.Group>
+          </Col>
+        </Row>
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <DatePicker style={{width: '100%'}} size={size} />
+          </Col>
+        </Row>
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <MonthPicker style={{width: '100%'}} size={size} placeholder="Select Month" />
+          </Col>
+        </Row>
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <RangePicker style={{width: '100%'}} size={size} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={12} lg={6}>
+            <WeekPicker className="fw" size={size} placeholder="Select Week" />
+          </Col>
+        </Row>
 
       </section>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
+import { Row, Col } from 'antd';
 
 const { RangePicker } = DatePicker;
 
@@ -20,6 +21,7 @@ class ControlledDatePicker extends Component {
   render() {
     return (
       <DatePicker
+        style={this.props.style}
         mode={this.state.mode}
         showTime
         onOpenChange={this.handleOpenChange}
@@ -49,6 +51,7 @@ class ControlledRangePicker extends React.Component {
     const { value, mode } = this.state;
     return (
       <RangePicker
+        style={this.props.style}
         placeholder={['Start month', 'End month']}
         format="YYYY-MM"
         value={value}
@@ -66,9 +69,18 @@ class Panel extends Component {
       <section className="example">
         <h3 className="ex-title">Controlled Panels</h3>
 
-        <ControlledDatePicker />
-        <br /><br/>
-        <ControlledRangePicker />
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <ControlledDatePicker style={{width: '100%'}} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={12} lg={6}>
+            <ControlledRangePicker style={{width: '100%'}} />
+          </Col>
+        </Row>
+        
       </section>
     );
   }

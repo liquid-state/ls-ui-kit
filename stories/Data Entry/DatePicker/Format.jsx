@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
+import { Row, Col } from 'antd';
 
 class Format extends Component {
   render() {
@@ -11,15 +12,26 @@ class Format extends Component {
     return (
       <section className="example">
         <h3 className="ex-title">Date Format</h3>
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <DatePicker style={{width: '100%'}} defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
+          </Col>
+        </Row>
 
-        <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
-        <br /><br />
-        <MonthPicker defaultValue={moment('2015/01', monthFormat)} format={monthFormat} />
-        <br /><br />
-        <RangePicker
-          defaultValue={[moment('2015/01/01', dateFormat), moment('2015/01/01', dateFormat)]}
-          format={dateFormat}
-        />
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+          <MonthPicker style={{width: '100%'}} defaultValue={moment('2015/01', monthFormat)} format={monthFormat} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={12} lg={6}>
+            <RangePicker style={{width: '100%'}}
+              defaultValue={[moment('2015/01/01', dateFormat), moment('2015/01/01', dateFormat)]}
+              format={dateFormat}
+            />
+          </Col>
+        </Row>
       </section>
     );
   }

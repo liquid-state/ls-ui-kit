@@ -13,7 +13,7 @@ class CoordinatedControls extends Component {
       <section className="example">
         <h3 className="ex-title">Coordinated Controls</h3>
 
-        <Form style={{width: '600px'}} onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <FormItem
             label="Note"
             labelCol={{ span: 5 }}

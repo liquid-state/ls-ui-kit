@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AutoComplete } from 'antd';
+import { Row, Col } from 'antd';
 
 class Custom extends Component {
   state = {
@@ -17,13 +18,17 @@ class Custom extends Component {
       <section className="example">
         <h3 className="ex-title">Customized</h3>
 
-          <AutoComplete
-            style={{ width: 200 }}
-            onSearch={this.handleSearch}
-            placeholder="input here"
-          >
-            {children}
-          </AutoComplete>
+        <Row>
+            <Col md={12} lg={6}>
+            <AutoComplete
+                style={{ width: '100%' }}
+                onSearch={this.handleSearch}
+                placeholder="input here"
+              >
+                {children}
+              </AutoComplete>
+            </Col>
+          </Row>
       </section>
     );
   }

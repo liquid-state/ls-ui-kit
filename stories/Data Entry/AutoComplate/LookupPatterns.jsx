@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Icon, Input, AutoComplete } from 'antd';
+import { Row, Col } from 'antd';
 
 class Pattern extends Component {
   state = {}
@@ -71,21 +72,24 @@ class Pattern extends Component {
       <section className="example">
         <h3 className="ex-title">Lookup-Patterns - Certain Category</h3>
         
-        <div style={{width: '40%'}}>
-        <AutoComplete
-            className="certain-category-search"
-            dropdownClassName="certain-category-search-dropdown"
-            dropdownMatchSelectWidth={false}
-            dropdownStyle={{ width: 300 }}
-            size="large"
-            style={{ width: '100%' }}
-            dataSource={options}
-            placeholder="input here"
-            optionLabelProp="value"
-          >
-            <Input suffix={<Icon type="search" className="certain-category-icon" />} />
-          </AutoComplete>
-        </div>
+        <Row>
+          <Col md={12} lg={6}>
+            <AutoComplete
+                className="certain-category-search"
+                dropdownClassName="certain-category-search-dropdown"
+                dropdownMatchSelectWidth={false}
+                dropdownStyle={{ width: '100%' }}
+                size="large"
+                style={{ width: '100%' }}
+                dataSource={options}
+                placeholder="input here"
+                optionLabelProp="value"
+              >
+                <Input suffix={<Icon type="search" className="certain-category-icon" />} />
+              </AutoComplete>
+            </Col>
+          </Row>
+        
       </section>
     );
   }

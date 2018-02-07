@@ -18,7 +18,7 @@ class Placement extends Component {
 
         <Select
           defaultValue="topRight"
-          style={{ width: 120, marginRight: 10 }}
+          style={{ width: 120, marginRight: 20, marginBottom: 20 }}
           onChange={(val) => {
             notification.config({
               placement: val,

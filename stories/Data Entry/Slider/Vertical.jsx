@@ -3,8 +3,8 @@ import { Slider } from 'antd';
 
 const style = {
   float: 'left',
-  height: 300,
-  marginLeft: 70,
+  height: 180,
+  marginLeft: 30,
 };
 
 const marks = {
@@ -25,7 +25,7 @@ class Vertical extends Component {
       <section className="example">
         <h3 className="ex-title">Vertical</h3>
 
-        <div style={{ height: 300 }}>
+        <div style={{ height: 200 }}>
           <div style={style}>
             <Slider vertical defaultValue={30} />
           </div>

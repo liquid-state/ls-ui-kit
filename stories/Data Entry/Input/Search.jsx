@@ -8,20 +8,25 @@ class SearchBox extends Component {
     return (
       <section className="example">
         <h3 className="ex-title">Search</h3>
-        <div style={{width: 350}}>
+        <div>
           <Search
+            className="mb20"
+            style={{maxWidth: 300}}
             placeholder="input search text"
-            onSearch={value => console.log(value)}
-            style={{ width: 200 }}
           />
-          <br /><br />
+
+          <br/><br/>
+          
           <Search
+            className="mb20"
+            style={{maxWidth: 300}}
             placeholder="input search text"
-            onSearch={value => console.log(value)}
             enterButton
           />
+
           <br /><br />
-          <Search placeholder="input search text" enterButton="Search" size="large" />
+          
+          <Search style={{maxWidth: 300}} className="fw" placeholder="input search text" enterButton="Search" size="large" />
         </div>
       </section>
     );

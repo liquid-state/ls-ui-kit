@@ -60,25 +60,3 @@ class ButtonPage extends Component {
 }
  
 export default ButtonPage;
-
-
-
-
-
-/* import { storiesOf } from '@storybook/react';
-
-import ButtonTypes from './Types';
-import ButtonSize from './Size';
-import ButtonLoading from './Loading';
-import ButtonDisabled from './Disabled';
-import ButtonMultiple from './Multiple';
-import ButtonGhost from './Ghost';
-
-storiesOf('Button', module)
-  .add('Types', () => <ButtonTypes />)
-  .add('Sizes', () => <ButtonSize />)
-  .add('Loadings', () => <ButtonLoading />)
-  .add('Disabled', () => <ButtonDisabled />)
-  .add('Multiple Buttons', () => <ButtonMultiple />)
-  .add('Ghost Button', () => <ButtonGhost />);
- */

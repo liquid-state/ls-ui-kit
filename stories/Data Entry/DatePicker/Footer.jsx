@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
+import { Row, Col } from 'antd';
 
 class Footer extends Component {
   state = {}
@@ -10,13 +11,32 @@ class Footer extends Component {
       <section className="example">
         <h3 className="ex-title">Extra Footer</h3>
 
-        <DatePicker renderExtraFooter={() => 'extra footer'} />
-        <DatePicker style={{marginLeft: '20px'}} renderExtraFooter={() => 'extra footer'} showTime />
-        <br/><br/>
-        <RangePicker renderExtraFooter={() => 'extra footer'} />
-        <br/><br/>
-        <RangePicker renderExtraFooter={() => 'extra footer'} showTime />
-        <MonthPicker style={{marginLeft: '20px'}} renderExtraFooter={() => 'extra footer'} placeholder="Select month" />
+        <Row gutter={24}>
+          <Col md={12} lg={6}>
+            <DatePicker className="fw mb20" renderExtraFooter={() => 'extra footer'} />
+          </Col>
+
+          <Col md={12} lg={6}>
+            <DatePicker className="fw mb20" renderExtraFooter={() => 'extra footer'} showTime />
+          </Col>
+        </Row>
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <RangePicker className="fw" renderExtraFooter={() => 'extra footer'} />
+          </Col>
+        </Row>
+
+        <Row gutter={24}>
+          <Col md={12} lg={6}>
+            <RangePicker className="fw mb20" renderExtraFooter={() => 'extra footer'} showTime />
+          </Col>
+
+          <Col md={12} lg={6}>
+          <MonthPicker className="fw mb20" renderExtraFooter={() => 'extra footer'} placeholder="Select month" />
+          </Col>
+        </Row>
+        
       </section>
     );
   }
