@@ -8,10 +8,10 @@ class Icon extends Component {
         <h3 className="ex-title">Notification with icon</h3>
 
         <div>
-          <Button onClick={() => this.openNotificationWithIcon('success')}>Success</Button>
-          <Button className="ml20" onClick={() => this.openNotificationWithIcon('info')}>Info</Button>
-          <Button className="ml20" onClick={() => this.openNotificationWithIcon('warning')}>Warning</Button>
-          <Button className="ml20" onClick={() => this.openNotificationWithIcon('error')}>Error</Button>
+          <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('success')}>Success</Button>
+          <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('info')}>Info</Button>
+          <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('warning')}>Warning</Button>
+          <Button onClick={() => this.openNotificationWithIcon('error')}>Error</Button>
         </div>
       </section>
     );

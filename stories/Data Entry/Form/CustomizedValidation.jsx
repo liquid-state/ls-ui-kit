@@ -23,7 +23,7 @@ class CustomizedValidation extends Component {
       <section className="example">
         <h3 className="ex-title">Customized Validation</h3>
 
-        <Form style={{width: '600px'}}>
+        <Form>
           <FormItem
             {...formItemLayout}
             label="Fail"

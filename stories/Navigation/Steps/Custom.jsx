@@ -19,7 +19,6 @@ class Custom extends Component {
           <Step title="Finished" description="You can hover on the dot." />
           <Step title="In Progress" description="You can hover on the dot." />
           <Step title="Waiting" description="You can hover on the dot." />
-          <Step title="Waiting" description="You can hover on the dot." />
         </Steps>
       </section>
     );

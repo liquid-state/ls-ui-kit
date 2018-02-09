@@ -132,7 +132,7 @@ class OtherControls extends Component {
           <FormItem
             {...formItemLayout}
             label="Upload"
-            extra="longgggggggggggggggggggggggggggggggggg"
+            extra="longgg"
           >
             {getFieldDecorator('upload', {
               valuePropName: 'fileList',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Icon, Button } from 'antd';
+import { Form, Input, Icon, Button, Row, Col } from 'antd';
 
 const FormItem = Form.Item;
 let uuid = 0;
@@ -33,45 +33,49 @@ class DynamicFormItem extends Component {
 
     const formItems = keys.map((k, index) => {
       return (
-        <FormItem
-          {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-          label={index === 0 ? 'Passengers' : ''}
-          required={false}
-          key={k}
-        >
-          {getFieldDecorator(`names[${k}]`, {
-            validateTrigger: ['onChange', 'onBlur'],
-            rules: [{
-              required: true,
-              whitespace: true,
-              message: "Please input passenger's name or delete this field.",
-            }],
-          })(
-            <Input placeholder="passenger name" style={{ width: '60%', marginRight: 8 }} />
-          )}
-          {keys.length > 1 ? (
-            <Icon
-              className="dynamic-delete-button"
-              type="minus-circle-o"
-              disabled={keys.length === 1}
-              onClick={() => this.remove(k)}
-            />
-          ) : null}
-        </FormItem>
+        <Row>
+          <Col md={12} lg={6}>
+            <FormItem
+              {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
+              label={index === 0 ? 'Passengers' : ''}
+              required={false}
+              key={k}
+            >
+              {getFieldDecorator(`names[${k}]`, {
+                validateTrigger: ['onChange', 'onBlur'],
+                rules: [{
+                  required: true,
+                  whitespace: true,
+                  message: "Please input passenger's name or delete this field.",
+                }],
+              })(
+                <Input placeholder="passenger name" style={{ width: '90%', marginRight: 8 }} />
+              )}
+              {keys.length > 1 ? (
+                <Icon
+                  className="dynamic-delete-button"
+                  type="minus-circle-o"
+                  disabled={keys.length === 1}
+                  onClick={() => this.remove(k)}
+                />
+              ) : null}
+            </FormItem>
+          </Col>
+        </Row>
       );
     });
 
     return (
       <section className="example">
         <h3 className="ex-title">Dynamic Form Item</h3>
-
-        <Form style={{width: '600px'}} onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           {formItems}
-          <FormItem {...formItemLayoutWithOutLabel}>
-            <Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
+          <FormItem {...formItemLayoutWithOutLabel} className="fw">
+            <Button type="dashed" onClick={this.add} className="fw">
               <Icon type="plus" /> Add field
             </Button>
           </FormItem>
+
           <FormItem {...formItemLayoutWithOutLabel}>
             <Button type="primary" htmlType="submit">Submit</Button>
           </FormItem>

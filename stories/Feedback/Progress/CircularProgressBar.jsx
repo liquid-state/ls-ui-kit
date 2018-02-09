@@ -7,9 +7,9 @@ class CircularProgressBar extends Component {
       <section className="example">
         <h3 className="ex-title">Circular progress bar</h3>
 
-        <Progress type="circle" percent={75} />
-        <Progress className="ml20" type="circle" percent={70} status="exception" />
-        <Progress className="ml20" type="circle" percent={100} />
+        <Progress className="mb20 mr20" type="circle" percent={75} />
+        <Progress className="mb20 mr20" type="circle" percent={70} status="exception" />
+        <Progress type="circle" percent={100} />
       </section>
     );
   }

@@ -12,13 +12,13 @@ class Confirm extends Component {
         <h3 className="ex-title">Confirmation modal dialog</h3>
 
         <div>
-          <Button onClick={this.showConfirm}>
+          <Button className="mr20 mb20" onClick={this.showConfirm}>
             Confirm
           </Button>
-          <Button className="ml20" onClick={this.showDeleteConfirm} type="dashed">
+          <Button className="mr20 mb20" onClick={this.showDeleteConfirm} type="dashed">
             Delete
           </Button>
-          <Button className="ml20" onClick={this.showConfirm}>
+          <Button onClick={this.showConfirm}>
             Confirm
           </Button>
         </div>

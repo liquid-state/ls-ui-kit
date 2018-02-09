@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, DatePicker, TimePicker, Button } from 'antd';
+import { Form, DatePicker, TimePicker, Button, Col, Row } from 'antd';
 
 const FormItem = Form.Item;
 const MonthPicker = DatePicker.MonthPicker;
@@ -33,7 +33,7 @@ class TimeControls extends Component {
       <section className="example">
         <h3 className="ex-title">Time-related Controls</h3>
 
-        <Form style={{width: '700px'}} onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <FormItem
             {...formItemLayout}
             label="DatePicker"
@@ -42,54 +42,61 @@ class TimeControls extends Component {
               <DatePicker />
             )}
           </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="DatePicker[showTime]"
-          >
-            {getFieldDecorator('date-time-picker', config)(
-              <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" />
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="MonthPicker"
-          >
-            {getFieldDecorator('month-picker', config)(
-              <MonthPicker />
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="RangePicker"
-          >
-            {getFieldDecorator('range-picker', rangeConfig)(
-              <RangePicker />
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="RangePicker[showTime]"
-          >
-            {getFieldDecorator('range-time-picker', rangeConfig)(
-              <RangePicker showTime format="YYYY-MM-DD HH:mm:ss" />
-            )}
-          </FormItem>
-          <FormItem
-            {...formItemLayout}
-            label="TimePicker"
-          >
-            {getFieldDecorator('time-picker', config)(
-              <TimePicker />
-            )}
-          </FormItem>
-          <FormItem
-            wrapperCol={{
-              xs: { span: 24, offset: 0 },
-              sm: { span: 16, offset: 8 },
-            }}
-          >
-            <Button type="primary" htmlType="submit">Submit</Button>
-          </FormItem>
+
+            <FormItem
+              {...formItemLayout}
+              label="DatePicker[showTime]"
+            >
+              {getFieldDecorator('date-time-picker', config)(
+                <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" />
+              )}
+            </FormItem>
+
+            <FormItem
+              {...formItemLayout}
+              label="MonthPicker"
+            >
+              {getFieldDecorator('month-picker', config)(
+                <MonthPicker />
+              )}
+            </FormItem>
+
+            <FormItem
+              {...formItemLayout}
+              label="RangePicker"
+            >
+              {getFieldDecorator('range-picker', rangeConfig)(
+                <RangePicker />
+              )}
+            </FormItem>
+
+            <FormItem
+              {...formItemLayout}
+              label="RangePicker[showTime]"
+            >
+              {getFieldDecorator('range-time-picker', rangeConfig)(
+                <RangePicker style={{width: '100%', maxWidth: 330}} showTime format="YYYY-MM-DD HH:mm:ss" />
+              )}
+            </FormItem>
+
+            <FormItem
+              {...formItemLayout}
+              label="TimePicker"
+            >
+              {getFieldDecorator('time-picker', config)(
+                <TimePicker />
+              )}
+            </FormItem>
+
+            <FormItem
+              wrapperCol={{
+                xs: { span: 24, offset: 0 },
+                sm: { span: 16, offset: 8 },
+              }}
+            >
+              <Button type="primary" htmlType="submit">Submit</Button>
+            </FormItem>
+
         </Form>
       </section>
     );

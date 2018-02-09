@@ -24,7 +24,7 @@ class FormLayout extends Component {
       <section className="example">
         <h3 className="ex-title">Form Layout</h3>
 
-        <Form style={{width: '600px'}} layout={formLayout}>
+        <Form layout={formLayout}>
           <FormItem
             label="Form Layout"
             {...formItemLayout}

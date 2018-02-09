@@ -6,10 +6,10 @@ class Info extends Component {
     return (
       <section className="example">
         <h3 className="ex-title">Information modal dialog</h3>
-        <Button onClick={this.info}>Info</Button>
-        <Button className="ml20" onClick={this.success}>Success</Button>
-        <Button className="ml20" onClick={this.error}>Error</Button>
-        <Button className="ml20" onClick={this.warning}>Warning</Button>
+        <Button className="mb20 mr20" onClick={this.info}>Info</Button>
+        <Button className="mr20 mb20" onClick={this.success}>Success</Button>
+        <Button className="mr20 mb20" onClick={this.error}>Error</Button>
+        <Button onClick={this.warning}>Warning</Button>
       </section>
     );
   }

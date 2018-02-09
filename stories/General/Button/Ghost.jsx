@@ -8,10 +8,10 @@ class ButtonGhost extends Component {
       <Fragment>
         <h3 className="ex-title">Ghost Button</h3>
         <div style={{ background: 'rgb(47, 45, 165)', padding: '26px 16px 16px' }}>
-          <Button type="primary" ghost onClick={action('Primary Ghost Button Clicked')}>Primary</Button>
-          <Button className="ml20" ghost onClick={action('Default Ghost Button Clicked')}>Default</Button>
-          <Button className="ml20" type="dashed" ghost onClick={action('Dashed Ghost Button Clicked')}>Dashed</Button>
-          <Button className="ml20" type="danger" ghost onClick={action('Danger Ghost Button Clicked')}>danger</Button>
+          <Button className="mr20 mb20" type="primary" ghost onClick={action('Primary Ghost Button Clicked')}>Primary</Button>
+          <Button className="mr20 mb20" ghost onClick={action('Default Ghost Button Clicked')}>Default</Button>
+          <Button className="mr20 mb20" type="dashed" ghost onClick={action('Dashed Ghost Button Clicked')}>Dashed</Button>
+          <Button className="mb20" type="danger" ghost onClick={action('Danger Ghost Button Clicked')}>danger</Button>
         </div>
       </Fragment>
     );

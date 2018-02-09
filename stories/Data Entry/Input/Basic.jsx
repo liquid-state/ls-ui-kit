@@ -8,7 +8,7 @@ class Basic extends Component {
       <section className="example">
         <h3 className="ex-title">Basic usage</h3>
 
-        <Input style={{width: '200px'}} placeholder="Basic usage" />
+        <Input style={{maxWidth: 300}} placeholder="Basic usage" />
       </section>
     );
   }

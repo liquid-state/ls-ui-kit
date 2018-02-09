@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { DatePicker } from 'antd';
+import { Row, Col } from 'antd';
 
 const { MonthPicker, RangePicker } = DatePicker;
 
@@ -46,24 +47,41 @@ class DisDate extends Component {
       <section className="example">
         <h3 className="ex-title">Disabled Date & Time</h3>
 
-        <DatePicker
-          format="YYYY-MM-DD HH:mm:ss"
-          disabledDate={disabledDate}
-          disabledTime={disabledDateTime}
-          showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
-        />
-        <br /><br/>
-        <MonthPicker disabledDate={disabledDate} placeholder="Select month" />
-        <br /><br/>
-        <RangePicker
-          disabledDate={disabledDate}
-          disabledTime={disabledRangeTime}
-          showTime={{
-            hideDisabledOptions: true,
-            defaultValue: [moment('00:00:00', 'HH:mm:ss'), moment('11:59:59', 'HH:mm:ss')],
-          }}
-          format="YYYY-MM-DD HH:mm:ss"
-        />
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <DatePicker
+              style={{width: '100%'}}
+              format="YYYY-MM-DD HH:mm:ss"
+              disabledDate={disabledDate}
+              disabledTime={disabledDateTime}
+              showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
+            />
+          </Col>
+        </Row>
+
+
+        <Row className="mb20">
+          <Col md={12} lg={6}>
+            <MonthPicker style={{width: '100%'}} disabledDate={disabledDate} placeholder="Select month" />
+          </Col>
+        </Row>
+
+
+        <Row>
+          <Col md={12} lg={6}>
+            <RangePicker
+              style={{width: '100%'}}
+              disabledDate={disabledDate}
+              disabledTime={disabledRangeTime}
+              showTime={{
+                hideDisabledOptions: true,
+                defaultValue: [moment('00:00:00', 'HH:mm:ss'), moment('11:59:59', 'HH:mm:ss')],
+              }}
+              format="YYYY-MM-DD HH:mm:ss"
+            />
+          </Col>
+        </Row>
       </section>
     );
   }

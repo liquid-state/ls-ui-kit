@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Icon, Button, Input, AutoComplete } from 'antd';
+import { Row, Col } from 'antd';
 
 const Option = AutoComplete.Option;
 
@@ -55,26 +56,31 @@ class Uncertain extends Component {
       <section className="example">
         <h3 className="ex-title">Lookup-Patterns - Uncertain Category</h3>
 
-        <div className="global-search-wrapper">
-          <AutoComplete
-            className="global-search"
-            size="large"
-            style={{ width: '100%' }}
-            dataSource={dataSource.map(renderOption)}
-            onSelect={onSelect}
-            onSearch={this.handleSearch}
-            placeholder="input here"
-            optionLabelProp="text"
-          >
-            <Input
-              suffix={(
-                <Button className="search-btn" size="large" type="primary">
-                  <Icon type="search" />
-                </Button>
-              )}
-            />
-          </AutoComplete>
-        </div>
+
+        <Row>
+          <Col md={12} lg={6}>
+            <div className="global-search-wrapper" style={{width: '100%'}}>
+              <AutoComplete
+                className="global-search"
+                size="large"
+                style={{ width: '100%' }}
+                dataSource={dataSource.map(renderOption)}
+                onSelect={onSelect}
+                onSearch={this.handleSearch}
+                placeholder="input here"
+                optionLabelProp="text"
+              >
+                <Input
+                  suffix={(
+                    <Button className="search-btn" size="large" type="primary">
+                      <Icon type="search" />
+                    </Button>
+                  )}
+                />
+              </AutoComplete>
+            </div>
+          </Col>
+        </Row>
       </section>
     );
   }

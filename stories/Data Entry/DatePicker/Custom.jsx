@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
+import { Row, Col } from 'antd';
 
 class Custom extends Component {
 
@@ -15,26 +16,34 @@ class Custom extends Component {
       <section className="example">
         <h3 className="ex-title">Customized Range Picker</h3>
 
-        <DatePicker
-          disabledDate={this.disabledStartDate}
-          showTime
-          format="YYYY-MM-DD HH:mm:ss"
-          value={startValue}
-          placeholder="Start"
-          onChange={this.onStartChange}
-          onOpenChange={this.handleStartOpenChange}
-        />
-        <DatePicker
-          style={{marginLeft: '20px'}}
-          disabledDate={this.disabledEndDate}
-          showTime
-          format="YYYY-MM-DD HH:mm:ss"
-          value={endValue}
-          placeholder="End"
-          onChange={this.onEndChange}
-          open={endOpen}
-          onOpenChange={this.handleEndOpenChange}
-        />
+        <Row gutter={24}>
+          <Col md={12} lg={6}>
+            <DatePicker
+              className="fw mb20"
+              disabledDate={this.disabledStartDate}
+              showTime
+              format="YYYY-MM-DD HH:mm:ss"
+              value={startValue}
+              placeholder="Start"
+              onChange={this.onStartChange}
+              onOpenChange={this.handleStartOpenChange}
+            />
+          </Col>
+
+          <Col md={12} lg={6}>
+            <DatePicker
+              className="fw"
+              disabledDate={this.disabledEndDate}
+              showTime
+              format="YYYY-MM-DD HH:mm:ss"
+              value={endValue}
+              placeholder="End"
+              onChange={this.onEndChange}
+              open={endOpen}
+              onOpenChange={this.handleEndOpenChange}
+            />
+          </Col>
+        </Row>
       </section>
     );
   }

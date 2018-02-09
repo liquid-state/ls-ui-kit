@@ -7,8 +7,10 @@ class Sizes extends Component {
       <section className="example">
         <h3 className="ex-title">Sizes</h3>
         <InputNumber size="large" min={1} max={100000} defaultValue={3} />
-        <InputNumber style={{marginLeft: '20px'}} min={1} max={100000} defaultValue={3} />
-        <InputNumber style={{marginLeft: '20px'}} size="small" min={1} max={100000} defaultValue={3} />
+        <br/><br/>
+        <InputNumber min={1} max={100000} defaultValue={3} />
+        <br/><br/>
+        <InputNumber size="small" min={1} max={100000} defaultValue={3} />
       </section>
     );
   }
