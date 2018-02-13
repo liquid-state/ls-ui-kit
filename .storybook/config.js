@@ -1,6 +1,6 @@
 import { configure } from '@storybook/react';
-import '../css/style.css';
-import '../css/icons.css';
+import '../stories/css/style.css';
+import '../stories/css/icons.css';
 
 function loadStories() {
   require('../stories/General/');
@@ -9,7 +9,6 @@ function loadStories() {
   require('../stories/Data Display/');
   require('../stories/Feedback/');
   require('../stories/Other/');
-  // You can require as many stories as you need.
 }
 
 configure(loadStories, module);
