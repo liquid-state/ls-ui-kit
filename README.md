@@ -1,18 +1,15 @@
-## Storybook Ant Design
+## Liquid State UI Kit
 
-Repository created for the purpose of helping to change components using Ant Design quickly and easily.
+Liquid state UI kit for Desktop (Web) and Mobile (Web) applications, based on ant design.
 
-To start run the following commands
+This repository contains custom components and a storybook showing off all of the ant components we use as well as the custom components which are implemented here.
 
-```
-npm i
-npm run storybook
-```
+## Using the UI Kit
 
-SASS and LESS were inserted to meet the most needs
+Get a compiled version of the kit from and include it in your project to get started.
 
-### Todo
+## TODO:
 
-- [ ] Insert all components
-- [ ] Insert eslint
-- [ ] Move components to folder and separate files
+- [ ] Publish and link to npm
+- [ ] Getting started guide
+- [ ] Contributing guide

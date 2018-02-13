@@ -1,14 +1,13 @@
 {
-  "name": "story",
+  "name": "ls-ui-kit",
   "version": "1.0.0",
-  "description": "Stories for AntDesign",
+  "description": "Liquid State UI Kit for Desktop and Mobile.",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9002 -c .storybook",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "storybook": "start-storybook -p 9002 -c .storybook"
   },
-  "author": "Davidson Nascimento <davidsonsns@gmail.com> https://github.com/davidsonsns",
-  "license": "ISC",
+  "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
+  "license": "MIT",
   "dependencies": {
     "antd": "^3.2.0",
     "immutability-helper": "^2.6.4",
