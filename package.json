@@ -9,6 +9,7 @@
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "dependencies": {
+    "@storybook/react": "^3.3.6",
     "antd": "^3.2.0",
     "immutability-helper": "^2.6.4",
     "moment": "^2.20.1",
@@ -22,13 +23,18 @@
     "reqwest": "^2.0.5"
   },
   "devDependencies": {
-    "@storybook/react": "^3.3.6",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-plugin-import": "^1.6.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
     "webpack": "^3.4.1"
   }
 }
