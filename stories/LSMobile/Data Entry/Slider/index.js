@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Basic from './Basic';
-import './style.css';
+
+import Basic from '../../../../src/Data Entry/Slider/Basic';
 
 class Slider extends Component {
 
