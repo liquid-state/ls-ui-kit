@@ -34,6 +34,9 @@ import List from './Data Display/List';
 import Table from './Data Display/Table';
 import Tabs from './Data Display/Tabs';
 import Timeline from './Data Display/Timeline';
+import Popover from './Data Display/Popover';
+import Tooltip from './Data Display/Tooltip';
+import Tree from './Data Display/Tree';
 
 // Feedback
 import Alert from './Feedback/Alert';
@@ -46,6 +49,9 @@ import Spin from './Feedback/Spin';
 
 // Other
 import Divider from './Other/Divider';
+import Anchor from './Other/Anchor';
+import BackTop from './Other/BackTop';
+import LocaleProvider from './Other/LocaleProvider';
 
 storiesOf('Ant Default', module);
 storiesOf('Ant Default/General', module)
@@ -78,9 +84,12 @@ storiesOf('Ant Default/Data Display', module)
   .add('Collapse', () => <Collapse />)
   .add('Carousel', () => <Carousel />)
   .add('List', () => <List />)
+  .add('Popover', () => <Popover />)
   .add('Table', () => <Table />)
   .add('Tabs', () => <Tabs />)
-  .add('Timeline', () => <Timeline />);
+  .add('Timeline', () => <Timeline />)
+  .add('Tooltip', () => <Tooltip />)
+  .add('Tree', () => <Tree />);
 
 storiesOf('Ant Default/Feedback', module)
   .add('Alert', () => <Alert />)
@@ -92,4 +101,7 @@ storiesOf('Ant Default/Feedback', module)
   .add('Spin', () => <Spin />);
 
 storiesOf('Ant Default/Other', module)
-.add('Divider', () => <Divider />);
+  .add('Divider', () => <Divider />)
+  .add('Anchor', () => <Anchor />)
+  .add('BackTop', () => <BackTop />)
+  .add('LocaleProvider', () => <LocaleProvider />);

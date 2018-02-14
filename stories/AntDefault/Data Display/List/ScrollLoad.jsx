@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { List, message, Avatar, Spin } from 'antd';
-import reqwest from 'reqwest';
 import InfiniteScroll from 'react-infinite-scroller';
 
-const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
+const data = [
+  {gender: "female", name: {title: "miss", first: "olivia", last: "novak"}, email: "olivia.novak@example.com", nat: "CA"},
+  {gender: "male", name: {title: "monsieur", first: "dylan", last: "dufour"}, email: "dylan.dufour@example.com", nat: "CH"},
+  {gender: "female", name: {title: "miss", first: "astrid", last: "christensen"}, email: "astrid.christensen@example.com", nat: "DK"},
+  {gender: "female", name: {title: "ms", first: "mischa", last: "van de kant"}, email: "mischa.vandekant@example.com", nat: "NL"},
+  {gender: "male", name: {title: "mr", first: "harold", last: "kim"}, email: "harold.kim@example.com", nat: "US"}
+];
 
 class ScrollLoad extends Component {
   state = {
@@ -13,10 +18,8 @@ class ScrollLoad extends Component {
   };
 
   componentWillMount() {
-    this.getData((res) => {
-      this.setState({
-        data: res.results,
-      });
+    this.setState({
+      data: [...data]
     });
   }
 
@@ -57,37 +60,19 @@ class ScrollLoad extends Component {
   }
 
   getData = (callback) => {
-    reqwest({
-      url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
-      success: (res) => {
-        callback(res);
-      },
+    this.state.data.push(...data);
+    this.setState({
+      data: [...this.state.data],
+      loading: false
     });
   }
 
   handleInfiniteOnLoad = () => {
-    let data = this.state.data;
-    this.setState({
-      loading: true,
-    });
-    if (data.length > 14) {
+    if(this.state.data.length > 10) {
       message.warning('Infinite List loaded all');
-      this.setState({
-        hasMore: false,
-        loading: false,
-      });
-      return;
+    } else {
+      this.setState({ loading: true }, () => setTimeout(() => this.getData(), 1000));
     }
-    this.getData((res) => {
-      data = data.concat(res.results);
-      this.setState({
-        data,
-        loading: false,
-      });
-    });
   }
 }
  

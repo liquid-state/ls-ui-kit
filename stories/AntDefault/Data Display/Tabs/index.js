@@ -1,7 +1,18 @@
 import React, { Component, Fragment } from 'react';
 
+import './style.css';
+
 import Basic from './Basic';
 import Icon from './Icon';
+import Disabled from './Disabled';
+import Slide from './Slide';
+import ExtraContent from './ExtraContent';
+import Size from './Size';
+import Position from './Position';
+import CardType from './CardType';
+import AddCloseTab from './AddCloseTab';
+import Container from './Container';
+import Customized from './Customized';
 
 class TabsPage extends Component {
   render() { 
@@ -29,6 +40,15 @@ class TabsPage extends Component {
 
         <Basic />
         <Icon />
+        <Disabled />
+        <Slide />
+        <ExtraContent />
+        <Size />
+        <Position />
+        <CardType />
+        <AddCloseTab />
+        <Container />
+        <Customized />
 
       </Fragment>
     );

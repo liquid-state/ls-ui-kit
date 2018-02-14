@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { List, Avatar, Button, Spin } from 'antd';
 
-import reqwest from 'reqwest';
-
-const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
+const data = [
+  {gender: "female", name: {title: "miss", first: "beatriz", last: "roman"}, email: "afet.kuday@example.com", nat: "TR"},
+  {gender: "male", name: {title: "mr", first: "leroy", last: "jenkins"}, email: "murat.gümüşpala@example.com", nat: "TR"},
+  {gender: "male", name: {title: "mr", first: "justin", last: "tremblay"}, email: "raul.nieto@example.com", nat: "ES"},
+  {gender: "female", name: {title: "mrs", first: "bendita", last: "pires"}, email: "melike.fahri@example.com", nat: "TR"},
+  {gender: "male", name: {title: "ms", first: "brielle", last: "singh"}, email: "leo.tremblay@example.com", nat: "CA"}
+]
 
 class LoadMore extends Component {
   state = {
@@ -48,43 +52,21 @@ class LoadMore extends Component {
   }
 
   componentDidMount() {
-    this.getData((res) => {
-      this.setState({
-        loading: false,
-        data: res.results,
-      });
-    });
-  }
-
-  getData = (callback) => {
-    reqwest({
-      url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
-      success: (res) => {
-        callback(res);
-      },
-    });
-  }
-
-  onLoadMore = () => {
     this.setState({
-      loadingMore: true,
-    });
-    this.getData((res) => {
-      const data = this.state.data.concat(res.results);
-      this.setState({
-        data,
-        loadingMore: false,
-      }, () => {
-        // Resetting window's offsetTop so as to display react-virtualized demo underfloor.
-        // In real scene, you can using public method of react-virtualized:
-        // https://stackoverflow.com/questions/46700726/how-to-use-public-method-updateposition-of-react-virtualized
-        window.dispatchEvent(new Event('resize'));
-      });
+      loading: false,
+      data,
     });
   }
+
+  getData = () => {
+    this.state.data.push(...data);
+    this.setState({
+      data: [...this.state.data],
+      loadingMore: false
+    });
+  }
+
+  onLoadMore = () => this.setState({ loadingMore: true }, () => setTimeout(() => this.getData(), 1000));
 }
  
 export default LoadMore;
