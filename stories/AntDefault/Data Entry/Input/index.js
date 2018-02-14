@@ -1,9 +1,13 @@
 import React, { Component, Fragment } from 'react';
 
 import Basic from './Basic';
+import Group from './Group';
 import Search from './Search';
+import Textarea from './Textarea';
 import Autosize from './Autosize';
 import Prefix from './Prefix';
+import PrePost from './PrePost';
+import FormatTooltip from './FormatTooltip';
 
 class DatePickerPage extends Component {
   render() { 
@@ -25,9 +29,13 @@ class DatePickerPage extends Component {
         <h2 className="title">Examples:</h2>
 
         <Basic />
+        <Group />
         <Search />
+        <Textarea />
         <Autosize />
         <Prefix />
+        <PrePost />
+        <FormatTooltip />
 
       </Fragment>
     );

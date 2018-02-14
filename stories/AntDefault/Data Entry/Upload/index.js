@@ -3,6 +3,11 @@ import React, { Component, Fragment } from 'react';
 import Avatar from './Avatar';
 import PicturesWall from './PicturesWall';
 import PicturesList from './PicturesList';
+import Click from './Click';
+import ComplateControll from './ComplateControll';
+import Default from './Default';
+import DnD from './DnD';
+import UploadManually from './UploadManually';
 
 class UploadPage extends Component {
   render() { 
@@ -33,6 +38,11 @@ class UploadPage extends Component {
         <Avatar />
         <PicturesWall />
         <PicturesList />
+        <Click />
+        <ComplateControll />
+        <Default />
+        <DnD />
+        <UploadManually />
 
       </Fragment>
     );

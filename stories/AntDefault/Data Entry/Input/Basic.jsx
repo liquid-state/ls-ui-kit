@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { Input } from 'antd';
+import { Input, Row, Col } from 'antd';
 
 class Basic extends Component {
-  state = {}
   render() { 
     return (
       <section className="example">
-        <h3 className="ex-title">Basic usage</h3>
+        <h3 className="ex-title">Basic</h3>
 
-        <Input style={{maxWidth: 300}} placeholder="Basic usage" />
+        <Row>
+          <Col sm={16} lg={7}>
+            <Input style={{width: '100%'}} placeholder="Basic usage" />
+          </Col>
+        </Row>
       </section>
     );
   }

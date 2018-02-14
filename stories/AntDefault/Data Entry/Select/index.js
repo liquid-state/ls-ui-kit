@@ -1,7 +1,17 @@
 import React, { Component, Fragment } from 'react';
 
+import Basic from './Basic';
+import Sizes from './Sizes';
 import Search from './Search';
+import Tags from './Tags';
+import Group from './Group';
 import AutoComplate from './AutoComplate';
+import Multiple from './Multiple';
+import AutomaticCompletion from './AutomaticCompletion';
+import SearchBox from './SearchBox';
+import AutomaticTokenization from './AutomaticTokenization';
+import GetValue from './GetValue';
+import SearchUser from './SearchUser';
 
 class DatePickerPage extends Component {
   render() { 
@@ -22,8 +32,18 @@ class DatePickerPage extends Component {
 
         <h2 className="title">Examples:</h2>
 
+        <Basic />
+        <Sizes />
         <Search />
+        <Tags />
+        <Group />
         <AutoComplate />
+        <Multiple />
+        <AutomaticCompletion />
+        <SearchBox />
+        <AutomaticTokenization />
+        <GetValue />
+        <SearchUser />
 
       </Fragment>
     );

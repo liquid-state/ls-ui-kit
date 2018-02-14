@@ -8,6 +8,9 @@ import Icon from './General/Icon';
 // Navigation
 import Pagination from './Navigation/Pagination';
 import Steps from './Navigation/Steps';
+import Affix from './Navigation/Affix';
+import Breadcrumbs from './Navigation/Breadcrumbs';
+import Dropdown from './Navigation/Dropdown';
 
 // Data Entry
 import AutoComplate from './Data Entry/AutoComplate';
@@ -22,6 +25,11 @@ import Slider from './Data Entry/Slider';
 import Switch from './Data Entry/Switch';
 import Select from './Data Entry/Select';
 import Upload from './Data Entry/Upload';
+import Cascader from './Data Entry/Cascader';
+import Mention from './Data Entry/Mention';
+import TreeSelect from './Data Entry/TreeSelect';
+import TimePicker from './Data Entry/TimePicker';
+import Transfer from './Data Entry/Transfer';
 
 // Data Display
 import Avatar from './Data Display/Avatar';
@@ -60,20 +68,28 @@ storiesOf('Ant Default/General', module)
 
 storiesOf('Ant Default/Navigation', module)
   .add('Pagination', () => <Pagination />)
-  .add('Steps', () => <Steps />);
+  .add('Steps', () => <Steps />)
+  .add('Affix', () => <Affix />)
+  .add('Breadcrumbs', () => <Breadcrumbs />)
+  .add('Dropdown', () => <Dropdown />);
 
 storiesOf('Ant Default/Data Entry', module)
   .add('AutoComplate', () => <AutoComplate />)
+  .add('Cascader', () => <Cascader />)
   .add('Checkbox', () => <Checkbox />)
   .add('DatePicker', () => <DatePicker />)
   .add('Form', () => <Form />)
   .add('InputNumber', () => <InputNumber />)
   .add('Input', () => <Input />)
+  .add('Mention', () => <Mention />)
   .add('Rate', () => <Rate />)
   .add('Radio', () => <Radio />)
   .add('Slider', () => <Slider />)
   .add('Switch', () => <Switch />)
   .add('Select', () => <Select />)
+  .add('TimePicker', () => <TimePicker />)
+  .add('Transfer', () => <Transfer />)
+  .add('TreeSelect', () => <TreeSelect />)
   .add('Upload', () => <Upload />);
 
 storiesOf('Ant Default/Data Display', module)

@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
-import jsonp from 'fetch-jsonp';
-import querystring from 'querystring';
 
 const Option = Select.Option;
+
+const data = [
+  {value: "阿迪达斯", text: "阿迪达斯"},
+  {value: "阿迪达斯男鞋", text: "阿迪达斯男鞋"},
+  {value: "aj1", text: "aj1"},
+  {value: "a字裙 半身裙", text: "a字裙 半身裙"},
+  {value: "阿迪达斯官方旗舰店男", text: "阿迪达斯官方旗舰店男"},
+  {value: "安踏官方旗舰店 正品", text: "安踏官方旗舰店 正品"},
+  {value: "aj", text: "aj"},
+  {value: "爱奇艺会员", text: "爱奇艺会员"},
+  {value: "阿迪达斯女鞋", text: "阿迪达斯女鞋"},
+  {value: "昂贵", text: "昂贵"}
+];
 
 let timeout;
 let currentValue;
@@ -16,25 +27,7 @@ function fetch(value, callback) {
   currentValue = value;
 
   function fake() {
-    const str = querystring.encode({
-      code: 'utf-8',
-      q: value,
-    });
-    jsonp(`https://suggest.taobao.com/sug?${str}`)
-      .then(response => response.json())
-      .then((d) => {
-        if (currentValue === value) {
-          const result = d.result;
-          const data = [];
-          result.forEach((r) => {
-            data.push({
-              value: r[0],
-              text: r[0],
-            });
-          });
-          callback(data);
-        }
-      });
+    callback(data);
   }
 
   timeout = setTimeout(fake, 300);

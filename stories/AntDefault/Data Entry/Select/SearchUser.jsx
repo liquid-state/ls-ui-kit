@@ -44,14 +44,13 @@ class SearchUsers extends Component {
   }
 
   fetchUser = (value) => {
-    console.log('fetching user', value);
     this.lastFetchId += 1;
     const fetchId = this.lastFetchId;
     this.setState({ data: [], fetching: true });
     fetch('https://randomuser.me/api/?results=5')
       .then(response => response.json())
       .then((body) => {
-        if (fetchId !== this.lastFetchId) { // for fetch callback order
+        if (fetchId !== this.lastFetchId) {
           return;
         }
         const data = body.results.map(user => ({
@@ -59,6 +58,7 @@ class SearchUsers extends Component {
           value: user.login.username,
         }));
         this.setState({ data, fetching: false });
+        console.log(data);
       });
   }
 
@@ -72,3 +72,13 @@ class SearchUsers extends Component {
 }
  
 export default SearchUsers;
+
+/* 
+[
+{text: "محمد نجاتی", value: "crazylion198"},
+{text: "nelli kari", value: "greenladybug203"},
+{text: "sofia olsen", value: "smallpeacock116"},
+{text: "séléna gaillard", value: "beautifulduck515"},
+{text: "villads andersen", value: "heavylion262"}
+
+*/
