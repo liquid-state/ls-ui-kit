@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import { TimePicker, Button, Row, Col } from 'antd';
+import moment from 'moment';
+
+class Addon extends Component {
+  state = { open: false };
+
+  render() { 
+    return (
+      <section className="example">
+        <h3 className="ex-title">Addon</h3>
+
+        <Row>
+          <Col sm={16} lg={7}>
+            <TimePicker
+              style={{width: '100%'}}
+              open={this.state.open}
+              onOpenChange={this.handleOpenChange}
+              addon={() => (
+                <Button size="small" type="primary" onClick={this.handleClose}>
+                  Ok
+                </Button>
+              )}
+            />
+          </Col>
+        </Row>
+      </section>
+    );
+  }
+
+  handleOpenChange = (open) => {
+    this.setState({ open });
+  }
+
+  handleClose = () => this.setState({ open: false })
+}
+ 
+export default Addon;
