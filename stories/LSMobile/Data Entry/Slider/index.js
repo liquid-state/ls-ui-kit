@@ -35,11 +35,6 @@ class Slider extends Component {
       </Fragment>
     );
   }
-
-
-  handleDisabledChange = (disabled) => {
-    this.setState({ disabled });
-  }
 }
  
 export default Slider;
