@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import Basic from '../../../../src/Data Entry/Slider/Basic';
+import SliderComponent from '../../../../src/Data Entry/Slider/Slider';
 
 class Slider extends Component {
 
@@ -22,7 +22,14 @@ class Slider extends Component {
 
         <h2 className="title">Examples:</h2>
 
-        <Basic />
+        <section className="example">
+          <h3 className="ex-title">Slider</h3>
+          <div style={{marginTop: 20}}>
+
+            <SliderComponent />
+            
+          </div>
+        </section>
 
 
       </Fragment>

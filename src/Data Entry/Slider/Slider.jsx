@@ -4,8 +4,6 @@ import { Slider } from 'antd';
 
 import './style.less';
 
-
-
 export default (props) => {
     const {
         className,
@@ -14,12 +12,5 @@ export default (props) => {
 
     const name = cn(className, 'mobile');
 
-    return (
-        <section className="example">
-            <h3 className="ex-title">Slider</h3>
-            <div style={{marginTop: 20}}>
-                <Slider className={name} {...otherProps} />
-            </div>
-        </section>
-    );
-}
+    return <Slider className={name} {...otherProps} />;
+};
