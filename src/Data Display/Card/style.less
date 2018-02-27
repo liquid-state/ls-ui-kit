@@ -1,16 +1,18 @@
 
+@Radius: 50%;
+@Color: #666;
+@Border: none;
+@Shadow: none;
+@Time: 700ms;
+@Spacing: 8px;
+@Font-size: 16px;
+@Font-family: "Roboto", sans-serif;
 
 .ant-card.mobile {  
-  @Radius: 50%;
-  @Color: #666;
-  @Border: none;
-  @Shadow: none;
-  @Time: 1s;
-  @Spacing: 8px;
-  @Font-size: 16px;
-  @Font-family: "Roboto", sans-serif;
 
   width: 100%;
+  border: none;
+  box-shadow: none;
 
   .ant-card-body {
     padding: @Spacing;
@@ -28,13 +30,13 @@
     box-shadow: @Shadow;
 
     img {
-      box-sizing: border-box;
       border-radius: @Radius;
     }
 
     .animation {
       animation-name: Animation;
       animation-duration: @Time;
+      animation-timing-function: ease-in;
     }
   }
 
@@ -53,7 +55,7 @@
   }
 
   &.eg4 {
-    @Radius: 0;
+    @Radius: .1px;
     img {
       border-radius: @Radius;
     }
@@ -80,7 +82,6 @@
 }
 
 .ant-card.mobile {
-  @Time: 1s;
   /* Block */
 
   .ant-card-cover {
