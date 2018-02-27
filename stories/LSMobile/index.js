@@ -6,6 +6,7 @@ import Button from './General/Button';
 
 // Data Display
 import Card from './Data Display/Card';
+import Table from './Data Display/Table';
 
 // Data Entry
 import Slider from './Data Entry/Slider';
@@ -21,8 +22,10 @@ storiesOf('LS Mobile', module);
 storiesOf('LS Mobile/General', module)
   .add('Button', () => <Button />);
 
+// Data Display
 storiesOf('LS Mobile/Data Display', module)
-  .add('Card', () => <Card />);
+  .add('Card', () => <Card />)
+  .add('Table', () => <Table />);
 
 // Data Entry
 storiesOf('LS Mobile/Data Entry', module)

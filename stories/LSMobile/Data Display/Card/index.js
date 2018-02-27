@@ -4,7 +4,7 @@ import { Row, Col } from 'antd';
 import Card from '../../../../src/Data Display/Card/Card';
 
 
-class Button extends Component {
+class CardPage extends Component {
 
   render() {
 
@@ -88,4 +88,4 @@ class Button extends Component {
   }
 }
  
-export default Button;
+export default CardPage;
