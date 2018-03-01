@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Steps, Button, Row, Col } from 'antd';
+import { Steps, Button, Icon, Row, Col } from 'antd';
 
 import './steps.less';
 
@@ -26,48 +26,45 @@ class StepsComponent extends Component {
     const { current } = this.state;
 
     return (
-      <div className="steps mobile">
-        <Steps current={current}>
-          {steps.map(item => <Step key={item.title} title={item.title} />)}
-        </Steps>
-        <div className="steps-action">
-          <Row gutter={24}>
-            <Col lg={4} md={4} sm={12} xs={24}>
-              {
-                this.state.current < steps.length - 1
-                &&
-                <Button type="primary" onClick={() => this.next()}>Next</Button>
-              }
-              {
-                this.state.current === steps.length - 1
-                &&
-                <Button type="primary">Done</Button>
-              }
-            </Col>
-
-            <Col lg={4} md={4} sm={12} xs={24}>
-              {
-                this.state.current > 0
-                &&
-                <Button onClick={() => this.prev()}>
-                  Previous
-                </Button>
-              }
-            </Col>
-          </Row>
-        </div>
-      </div>
+      <Row className={
+          this.props.noText ? 
+          'steps mobile' : 'steps mobile text'
+      }>
+        <Col className="button" span={1}>
+          <Icon type="left" onClick={this.prev} />
+        </Col>
+        <Col span={22}>
+          <Steps current={current} size={this.props.size}>
+            {
+              steps.map(
+                item =>
+                  <Step
+                    key={item.title}
+                    title={this.props.noText ? null : item.title}
+                  />
+              )
+            }
+          </Steps>
+        </Col>
+        <Col className="button" span={1}>
+          <Icon type="right" onClick={this.next} />
+        </Col>
+      </Row>
     );
   }
 
 
-  next() {
-    const current = this.state.current + 1;
-    this.setState({ current });
+  next = () => {
+    let { current } = this.state;
+    if ( current === steps.length - 1 ) return;
+    current += 1;
+    this.setState( { current } );
   }
 
-  prev() {
-    const current = this.state.current - 1;
+  prev = () => {
+    let { current } = this.state;
+    if ( current === 0 ) return;
+    current = current - 1;
     this.setState({ current });
   }
 }

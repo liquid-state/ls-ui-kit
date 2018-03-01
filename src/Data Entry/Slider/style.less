@@ -1,7 +1,14 @@
-@import './variables.less';
+@slider-handle-size: 28px;
+@rail-color: #e1e1e1;
 
-.ant-slider.mobile .ant-slider-handle {
-    width: @slider-handle-size;
-    height: @slider-handle-size;
-    margin-top: -(@slider-handle-size / 2);
+.ant-slider.mobile {
+    .ant-slider-handle {
+        width: @slider-handle-size;
+        height: @slider-handle-size;
+        margin-top: -(@slider-handle-size / 2);
+    }
+
+    .ant-slider-rail {
+        background: @rail-color;
+    }
 }

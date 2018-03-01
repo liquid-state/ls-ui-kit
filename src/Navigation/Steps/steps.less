@@ -44,6 +44,19 @@
     width: @Width;
   }
 
+  &.ant-row {
+    display: flex;
+  }
+
+  .ant-steps-item {
+    padding-left: 10px;
+  }
+
+  // Icon
+  &.steps-icon .ant-steps-item-process .ant-steps-item-icon {
+    background: none;
+  }
+
   // Dot
   .ant-steps-item-icon {
     border-radius: @Radius-dot;
@@ -65,6 +78,7 @@
   }
 
   // Line
+
   .ant-steps-item-wait .ant-steps-item-title:after {
     height: @Height-wait-line;
     background: @Background-wait-line;
@@ -92,5 +106,28 @@
     font-family: @Font-family-finish;
     font-size: @Font-size-finish;
     color: @Color-finish;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 24px;
+      color: #727272;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .steps.mobile.text .ant-steps-item-title {
+    margin-top: 40px;
+    margin-left: -40px;
+
+    &::after {
+      top: -25px;
+    }
   }
 }

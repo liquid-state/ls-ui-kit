@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Steps, Button, Row, Col } from 'antd';
+import { Steps, Button, Icon, Row, Col } from 'antd';
 
 import './arrow.less';
 
@@ -28,7 +28,8 @@ class Arrow extends Component {
     return (
       <Row className="mobile arrows">
         <Col span={1} className="button">
-          <Button icon="caret-left" className="prev" onClick={this.prev} />
+          <Icon type="left" className="prev" onClick={this.prev} />
+          {/* <Button icon="caret-left" className="prev" onClick={this.prev} /> */}
         </Col>
 
         <Col span={22} className="step">
@@ -38,7 +39,8 @@ class Arrow extends Component {
         </Col>
 
         <Col span={1} className="button">
-          <Button icon="caret-right" className="next" onClick={this.next} />
+          <Icon type="right" className="next" onClick={this.next} />
+          {/* <Button icon="caret-right" className="next" onClick={this.next} /> */}
         </Col>
       </Row>
     );

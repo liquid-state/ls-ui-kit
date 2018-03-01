@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 import Steps from '../../../../src/Navigation/Steps/Steps.jsx';
 import Arrow from '../../../../src/Navigation/Steps/Arrow.jsx';
 import Dot from '../../../../src/Navigation/Steps/Dot.jsx';
+import Icon from '../../../../src/Navigation/Steps/Icon';
 
 class StepsPage extends Component {
 
@@ -63,6 +64,32 @@ class StepsPage extends Component {
           </Row>
         </section>
 
+        <section className="example">
+          <h3 className="ex-title">Mini Steps</h3>
+          <Row>
+            <Col span={24}>
+              <Steps size="small" />
+            </Col>
+          </Row>
+        </section>
+
+        <section className="example">
+          <h3 className="ex-title">No Text</h3>
+          <Row>
+            <Col span={24}>
+              <Steps noText={true} />
+            </Col>
+          </Row>
+        </section>
+
+        <section className="example">
+          <h3 className="ex-title">Steps with Icons</h3>
+          <Row>
+            <Col span={24}>
+              <Icon />
+            </Col>
+          </Row>
+        </section>
       </Fragment>
     );
   }
