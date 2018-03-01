@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import cn from 'classnames';
 import { Slider } from 'antd';
 
 import './style.less';
 
-export default (props) => {
+
+class SliderComponent extends Component {
+    render() {
+        const {
+            className,
+            ...otherProps
+        } = this.props;
+
+        const name = cn(className, 'mobile');
+
+        return (
+            <Slider className={name} {...otherProps} />
+        );
+    }
+}
+ 
+export default SliderComponent;
+/* export default (props) => {
     const {
         className,
         ...otherProps
@@ -13,4 +30,4 @@ export default (props) => {
     const name = cn(className, 'mobile');
 
     return <Slider className={name} {...otherProps} />;
-};
+}; */
