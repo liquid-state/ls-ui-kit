@@ -1,0 +1,283 @@
+@Width: 100%;
+
+/*    Dot    */
+@Shadow-wait-dot: none;
+@Background-wait-dot: #727272;
+
+// Wait
+@Size-wait-dot: 6px;
+@Background-wait-dot: #ccc;
+@Top-wait-dot: 0;
+@Radius-wait-dot: 50%;
+@Shadow-wait-dot: none;
+
+// Process
+@Size-process-dot: 6px;
+@Background-process-dot: #727272;
+@Top-process-dot: 0;
+@Radius-process-dot: 50%;
+@Shadow-process-dot: none;
+
+// Finish
+@Size-finish-dot: 6px;
+@Background-finish-dot: #727272;
+@Top-finish-dot: 0;
+@Radius-finish-dot: 50%;
+@Shadow-finish-dot: none;
+/* ================================================== */
+
+/*    Line    */
+// Wait
+@Height-wait-line: 2px;
+@Background-wait-line: #ccc;
+@Shadow-wait-line: none;
+
+// Process
+@Height-process-line: 2px;
+@Background-process-line: #ccc;
+@Shadow-process-line: none;
+
+// Finish
+@Height-finish-line: 2px;
+@Background-finish-line: #727272;
+@Shadow-finish-line: none;
+/* ================================================== */
+
+/*    Buttons    */
+// Prev
+@Font-family-prev: none;
+@Font-size-prev: 24px;
+@Font-weight-prev: normal;
+@Font-color-prev: #727272;
+@Font-shadow-prev: none;
+@Border-prev: #727272;
+
+// Next
+@Font-family-next: none;
+@Font-size-next: 24px;
+@Font-weight-next: normal;
+@Font-color-next: #727272;
+@Font-shadow-next: none;
+@Border-next: #727272;
+
+
+
+.mobile.arrows {
+
+  // Line
+  .ant-steps-dot .ant-steps-item-tail:after {
+    width: 100%;
+    margin: 0;
+  }
+
+  // Steps Compoenent
+  .ant-steps-label-vertical .ant-steps-item {
+    margin-top: 10px;
+    min-width: 0;
+  }
+
+  // Finish
+  .ant-steps-item-finish {
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-finish-line;
+      background: @Background-finish-line;
+      box-shadow: @Shadow-finish-line;
+    }
+
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-finish-dot;
+      height: @Size-finish-dot;
+      background: @Background-finish-dot;
+      top: @Top-finish-dot;
+      border-radius: @Radius-finish-dot;
+      box-shadow: @Shadow-finish-dot;
+    }
+  }
+
+  // Process
+  .ant-steps-item-process {
+
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-process-line;
+      background: @Background-process-line;
+      box-shadow: @Shadow-process-line;
+    }
+
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-process-dot;
+      height: @Size-process-dot;
+      background: @Background-process-dot;
+      top: @Top-process-dot;
+      border-radius: @Radius-process-dot;
+      box-shadow: @Shadow-process-dot;
+    }
+  }
+
+  // Wait
+  .ant-steps-item-wait {
+
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-wait-line;
+      background: @Background-wait-line;
+      box-shadow: @Shadow-wait-line;
+    }
+
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-wait-dot;
+      height: @Size-wait-dot;
+      background: @Background-wait-dot;
+      top: @Top-wait-dot;
+      border-radius: @Radius-wait-dot;
+      box-shadow: @Shadow-wait-dot;
+    }
+  }
+
+  .button, .step {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+
+  .button {
+    .next {
+      font-family: @Font-family-next;
+      font-size: @Font-size-next;
+      font-weight: @Font-weight-next;
+      color: @Font-color-next;
+      text-shadow: @Font-shadow-next;
+      cursor: pointer;
+
+      &:hover {
+        border-color: @Border-next;
+      }
+    }
+
+    .prev {
+      font-family: @Font-family-prev;
+      font-size: @Font-size-prev;
+      font-weight: @Font-weight-prev;
+      color: @Font-color-prev;
+      text-shadow: @Font-shadow-prev;
+      cursor: pointer;
+
+      &:hover {
+        border-color: @Border-prev;
+      }
+    }
+  }
+}
+
+.steps.dark {
+  // Wait
+  @Background-wait-dot: #E9E9E9;
+  @Background-wait-line: #E9E9E9;
+
+  // Process
+  @Background-process-dot: #4A90E2;
+  @Background-process-line: #e9e9e9; 
+
+  // Finish
+  @Background-finish-dot: #4A90E2;
+  @Background-finish-line: #4A90E2;
+  
+
+  padding: 20px;
+  background: #202020;
+
+  // Wait
+  .ant-steps-item-wait {
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-wait-dot;
+      height: @Size-wait-dot;
+      background: @Background-wait-dot;
+      top: @Top-wait-dot;
+      border-radius: @Radius-wait-dot;
+      box-shadow: @Shadow-wait-dot;
+    }
+
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-wait-line;
+      background: @Background-wait-line;
+      box-shadow: @Shadow-wait-line;
+    }
+  }
+
+  // Process
+  .ant-steps-item-process {
+    
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-process-line;
+      background: @Background-process-line;
+      box-shadow: @Shadow-process-line;
+    }
+
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-process-dot;
+      height: @Size-process-dot;
+      background: @Background-process-dot;
+      top: @Top-process-dot;
+      border-radius: @Radius-process-dot;
+      box-shadow: @Shadow-process-dot;
+    }
+  }
+
+  // Finish
+  .ant-steps-item-finish {
+    // Line
+    .ant-steps-item-tail::after {
+      height: @Height-finish-line;
+      background: @Background-finish-line;
+      box-shadow: @Shadow-finish-line;
+    }
+
+    // Dot
+    .ant-steps-icon-dot {
+      width: @Size-finish-dot;
+      height: @Size-finish-dot;
+      background: @Background-finish-dot;
+      top: @Top-finish-dot;
+      border-radius: @Radius-finish-dot;
+      box-shadow: @Shadow-finish-dot;
+    }
+  }
+
+  .button {
+    @Font-color-next: #727272;
+    @Font-color-prev: #727272;
+    
+    .next {
+      font-family: @Font-family-next;
+      font-size: @Font-size-next;
+      font-weight: @Font-weight-next;
+      color: @Font-color-next;
+      text-shadow: @Font-shadow-next;
+
+      &:hover {
+        border-color: @Border-next;
+      }
+    }
+
+    .prev {
+      font-family: @Font-family-prev;
+      font-size: @Font-size-prev;
+      font-weight: @Font-weight-prev;
+      color: @Font-color-prev;
+      text-shadow: @Font-shadow-prev;
+
+      &:hover {
+        border-color: @Border-prev;
+      }
+    }
+  }
+}

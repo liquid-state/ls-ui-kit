@@ -1,0 +1,64 @@
+// Button box
+@Width: 100%;
+@Font-family: 'Roboto';
+@Font-size: 14px;
+@Radius: 3px;
+
+
+/* @Radius: 3px; */
+/*@Border: 1px;
+@Border-colour: none;
+@Fill-colour: none;
+@Shadow: 0px 2px 5px rgba(0, 0, 0, .5);
+
+//Text
+@Font-family: 'Roboto', sans-serif;
+@Font-size: 16px;
+@Font-colour: #555;
+
+// Icon
+@Font-family-icon: sans-serif;
+@Font-size-icon: 16px;
+@Font-colour-icon: #fff; */
+
+.ant-btn.default {
+
+  width: @Width;
+  font-family: @Font-family;
+  font-size: @Font-size;
+  border-radius: @Radius;
+}
+
+.ant-btn.box {
+  @Radius: 0;
+
+  width: @Width;
+  border-radius: @Radius;
+}
+
+.ant-btn.rounded {
+  @Radius: 16px;
+
+  width: @Width;
+  border-radius: @Radius;
+}
+
+.ant-btn.radius {
+  @Radius: 8px;
+
+  width: @Width;
+  border-radius: @Radius;
+}
+
+.ant-btn.shadow {
+  @Shadow: 0 2px 4px rgba(0, 0, 0, .3);
+
+  width: @Width;
+  border-radius: @Radius;
+  box-shadow: @Shadow;
+}
+
+.ant-btn.ghost {
+  width: @Width;
+  border-radius: @Radius;
+}
