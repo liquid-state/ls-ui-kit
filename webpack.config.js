@@ -28,6 +28,7 @@ module.exports = {
                 const rel = path.relative(baseDir, context);
                 const fullImport = `./${path.join(rel, request)}`;
                 callback(null, 'commonjs ' + fullImport);
+                return;
             }
             callback();
         }
