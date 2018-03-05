@@ -3,6 +3,6 @@ import Slider from './Data Entry/Slider/Slider';
 // any ant components which are only imported in a library will be missing their styles.
 
 // To correct this we make sure to import all antd styles here directly.
-import "~antd/dist/antd.less";
+import "antd/dist/antd.less";
 
 export { Slider };

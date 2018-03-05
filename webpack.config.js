@@ -16,6 +16,7 @@ module.exports = {
         'react',
         'classnames',
         'antd',
+        'antd/dist/antd.less',
         function (context, request, callback) {
             if (/.less$/.test(request) && context.includes(baseDir)) {
                 /* This is one of our less files
