@@ -62,12 +62,12 @@ import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
 // G2
-import CurveLineChart from './G2/CurveLineChart';
+/* import CurveLineChart from './G2/CurveLineChart';
 import StackHistogram from './G2/StackHistogram';
 import GroupHistogram from './G2/GroupHistogram';
 import ScatterPlot from './G2/ScatterPlot';
 import MultipleLineCharts from './G2/MultipleLineCharts';
-import BasicLine from './G2/BasicLine';
+import BasicLine from './G2/BasicLine'; */
 
 storiesOf('Ant Default', module);
 storiesOf('Ant Default/General', module)
@@ -130,10 +130,10 @@ storiesOf('Ant Default/Other', module)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
 
-storiesOf('Ant Default/G2', module)
+/* storiesOf('Ant Default/G2', module)
   .add('Curve line chart', () => <CurveLineChart />)
   .add('Stack histogram', () => <StackHistogram />)
   .add('Group histogram', () => <GroupHistogram />)
   .add('Scatter plot', () => <ScatterPlot />)
   .add('Multiple line charts', () => <MultipleLineCharts />)
-  .add('The basic line chart', () => <BasicLine />);
+  .add('The basic line chart', () => <BasicLine />); */
