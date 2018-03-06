@@ -79,3 +79,8 @@ section.example {
 .fw {
   width: 100% !important;
 }
+
+.ghost-bg {
+  padding: 20px;
+  background: #48157f;
+}
