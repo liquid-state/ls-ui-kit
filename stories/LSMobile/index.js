@@ -1,17 +1,24 @@
 import React, { Component, Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 
-// General
-import Button from './General/Button';
-
 // Data Display
 import Card from './Data Display/Card';
 
-storiesOf('LS Mobile', module);
+// Data Entry
+import Slider from './Data Entry/Slider';
 
-storiesOf('LS Mobile/General', module)
-  .add('Button', () => <Button />);
+// General
+import Button from './General/Button';
+
+storiesOf('LS Mobile', module);
 
 // Data Display
 storiesOf('LS Mobile/Data Display', module)
   .add('Card', () => <Card />);
+
+// Data Entry
+storiesOf('LS Mobile/Data Entry', module)
+  .add('Slider', () => <Slider />);
+
+storiesOf('LS Mobile/General', module)
+  .add('Button', () => <Button />);

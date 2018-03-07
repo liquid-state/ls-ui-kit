@@ -1,52 +1,112 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'antd';
 
-import './Button.less';
+import './style.less';
 
-export const Default = [
-  () => <Button className="default" type="primary">Primary</Button>,
-  () => <Button className="default">Default</Button>,
-  () => <Button className="default" type="dashed">Dashed</Button>,
-  () => <Button className="default" icon="search" type="primary">Icon</Button>,
-  () => <Button className="default" type="danger">Danger</Button>,
-];
+/* Default */
+export function ButtonDefault(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-default ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonDefault.defaultProps = {
+  type: 'default',
+  className: ''
+};
 
-export const Box = [
-  () => <Button className="box" type="primary">Primary</Button>,
-  () => <Button className="box">Default</Button>,
-  () => <Button className="box" type="dashed">Dashed</Button>,
-  () => <Button className="box" icon="search" type="primary">Icon</Button>,
-  () => <Button className="box" type="danger">Danger</Button>
-];
+/* Box */
+export function ButtonBox(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-box ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonBox.defaultProps = {
+  type: 'default',
+  className: ''
+};
 
-export const Rounded = [
-  () => <Button className="rounded" type="primary">Primary</Button>,
-  () => <Button className="rounded">Default</Button>,
-  () => <Button className="rounded" type="dashed">Dashed</Button>,
-  () => <Button className="rounded" icon="search" type="primary">Icon</Button>,
-  () => <Button className="rounded" type="danger">Danger</Button>
-];
+/* Rounded */
+export function ButtonRounded(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-rounded ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonRounded.defaultProps = {
+  type: 'default',
+  className: ''
+};
 
-export const Radius = [
-  () => <Button className="radius" type="primary">Primary</Button>,
-  () => <Button className="radius">Default</Button>,
-  () => <Button className="radius" type="dashed">Dashed</Button>,
-  () => <Button className="radius" icon="search" type="primary">Icon</Button>,
-  () => <Button className="radius" type="danger">Danger</Button>
-];
+/* Radius */
+export function ButtonRadius(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-radius ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonRadius.defaultProps = {
+  type: 'default',
+  className: ''
+};
 
-export const Shadow = [
-  () => <Button className="shadow" type="primary">Primary</Button>,
-  () => <Button className="shadow">Default</Button>,
-  () => <Button className="shadow" type="dashed">Dashed</Button>,
-  () => <Button className="shadow" icon="search" type="primary">Icon</Button>,
-  () => <Button className="shadow" type="danger">Danger</Button>
-];
+/* Shadow */
+export function ButtonShadow(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-shadow ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonShadow.defaultProps = {
+  type: 'default',
+  className: ''
+};
 
-export const Ghost = [
-  () => <Button className="ghost" type="primary" ghost>Primary</Button>,
-  () => <Button className="ghost" ghost>Default</Button>,
-  () => <Button className="ghost" type="dashed" ghost>Dashed</Button>,
-  () => <Button className="ghost" icon="search" type="primary" ghost>Icon</Button>,
-  () => <Button className="ghost" type="danger" ghost>Danger</Button>
-];
+/* Ghost */
+export function ButtonGhost(props) {
+  const {children, type, className, ...otherProps} = props;
+  return (
+    <Button
+      className={`ls-ghost ${className}`}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </Button>
+  );
+}
+ButtonGhost.defaultProps = {
+  type: 'default',
+  className: ''
+};
