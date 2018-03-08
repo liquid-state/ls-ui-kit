@@ -51,5 +51,7 @@
     "style-loader": "^0.20.1",
     "webpack": "^3.11.0"
   },
-  "theme": {}
+  "theme": {
+    "font-size-base": "16px"
+  }
 }
