@@ -101,6 +101,7 @@ export function ButtonGhost(props) {
       className={`ls-ghost ${className}`}
       type={type}
       {...otherProps}
+      ghost
     >
       {children}
     </Button>

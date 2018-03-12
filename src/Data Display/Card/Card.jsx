@@ -7,50 +7,58 @@ const { Meta } = Card;
 
 class CardComponent extends Component {
 
+  // Reexport Meta from this component, so that users who want to use 
+  // Meta do not have to import the base component from antd.
+  static Meta = Meta;
+
   state = {
-    Meta: this.props.children,
     animation: false
-  };  
+  };
+
+  renderImage = (image, alt) => {
+    return <img
+      className={this.state.animation ? 'animation' : ''}
+      alt={alt}
+      src={image}
+    />
+  }
+
+  renderIcon = (icon) => {
+    return <div className="icon-card-wrapper">
+      <div className={this.state.animation ? 'icon-card animation' : 'icon-card'}>
+        <Icon type={icon} />
+      </div>
+    </div>
+  }
+
+  startAnimation = () => {
+    if (this.state.animation) return;
+    this.setState(
+      { animation: true },
+      () => setTimeout(() => this.setState({ animation: false }), 1000)
+    );
+  }
 
   render() {
-    const { className, ...props } = this.props;
+    const { className, icon, image, alt, text, children, ...props } = this.props;
     return (
       <Card
         onClick={() => this.startAnimation()}
         hoverable
-        className={`ls-ui-kit ${ className ? className : '' }`}
+        className={`ls-ui-kit ${className ? className : ''}`}
         cover={
-          this.props.image ? 
-            <img
-              className={
-                this.state.animation ?
-                  'animation' : ''
-              }
-              alt="example"
-              src={this.props.image}
-            />
-            :
-            this.props.icon ?
-              <div className="icon-card-wrapper">
-                <div className={this.state.animation ? 'icon-card animation' : 'icon-card'}>
-                  <Icon type={this.props.icon} />
-                </div>
-              </div> : null
+          image ?
+            this.renderImage(image, alt)
+            : icon ? this.renderIcon(icon) : null
         }
         {...props}
       >
         {
-          this.props.children
+          children
+            ? children
+            : <Meta title={text} />
         }
       </Card>
-    );
-  }
-
-  startAnimation = () => {
-    if(this.state.animation) return;
-    this.setState(
-      { animation: true },
-      () => setTimeout( () => this.setState({ animation: false }), 1000 )
     );
   }
 }

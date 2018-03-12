@@ -26,8 +26,8 @@
     }
 
     .animation {
-      animation-name: Animation;
-      animation-duration: @ls-card-inamation-time;
+      animation-name: ls-card-bounce-animation;
+      animation-duration: @ls-card-animation-time;
       animation-timing-function: ease-in;
     }
   }
@@ -57,13 +57,13 @@
     }
 
     .animation {
-      animation-name: Animation;
-      animation-duration: @ls-card-inamation-time;
+      animation-name: ls-card-bounce-animation;
+      animation-duration: @ls-card-animation-time;
     }
   }
 }
 
-@keyframes Animation {
+@keyframes ls-card-bounce-animation {
   from {
     transform: scale(1);
   }
