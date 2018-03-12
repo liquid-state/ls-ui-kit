@@ -1,0 +1,77 @@
+@import "~antd/lib/style/themes/default.less";
+@import "../../variables.less";
+
+
+.media-button-icon(@font-size, @color, @fill-color, @border-color: @fill-color) {
+    //Mixin to create styles for a media button with icon + fill.
+    .ls-ui-kit.media-button .uikit-icon .uikit-media-wrapper {
+        border: 2px solid @border-color;
+        background-color: @fill-color;
+
+        .anticon {
+            font-size: @font-size;
+            color: @color;
+        }
+
+        &.shadow {
+            border: none;
+        }
+    }
+}
+
+// Default icon styles.
+.media-button-icon(@ls-media-button-icon-font-size, @text-color, @white, @border-color-base);
+
+.ls-ui-kit.media-button {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .uikit-icon .uikit-media-wrapper {
+        .inner-icon-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        .anticon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+        }
+
+        &.shadow {
+            box-shadow: @ls-media-button-shadow;
+        }
+    }
+
+    .uikit-media-wrapper {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        &.circle {
+            border-radius: @ls-media-button-circle-radius;
+            img {
+                border-radius: @ls-media-button-circle-radius;
+            }
+        }
+
+        &.shadow {
+            img {
+                box-shadow: @ls-media-button-shadow;
+            }
+        }
+    }
+
+    .uikit-text {
+        margin-top: @padding-xs;
+        align-self: center;
+        text-align: center;
+    }
+}

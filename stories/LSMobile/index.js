@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 // Data Display
 import Card from './Data Display/Card';
+import './Data Display/MediaButton';
 
 // Data Entry
 import Slider from './Data Entry/Slider';
