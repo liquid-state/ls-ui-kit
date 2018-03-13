@@ -1,0 +1,102 @@
+@import '../../variables.less';
+
+.steps.ls {
+  
+  .ant-steps {
+    width: 100%;
+  }
+  .steps-action {
+    margin-top: 20px;
+  }
+  button {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &.ant-row {
+    display: flex;
+  }
+
+  .ant-steps-item {
+    padding-left: 10px;
+  }
+
+  // Icon
+  &.steps-icon .ant-steps-item-process .ant-steps-item-icon {
+    background: none;
+  }
+
+  // Dot
+  .ant-steps-item-icon {
+    border-radius: @ls-steps-radius-dot;
+    box-shadow: @ls-steps-shadow-dot;
+  }
+
+  // Process dot
+  .ant-steps-item-process .ant-steps-item-icon {
+    background: @ls-steps-background-success-dot;
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon {
+    background: @ls-steps-background-wait-dot;
+  }
+
+  // Finish dot
+  .ant-steps-item-finish .ant-steps-item-icon {
+    background: @ls-steps-background-finish-dot;
+  }
+
+  // Line
+
+  .ant-steps-item-wait .ant-steps-item-title:after {
+    height: @ls-steps-height-wait-line;
+    background: @ls-steps-background-wait-line;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-title:after {
+    background: @ls-steps-background-finish-line;
+    height: @ls-steps-height-finish-line;
+  }
+
+  // Title
+  .ant-steps-item-wait .ant-steps-item-title {
+    font-family: @ls-steps-font-family-wait;
+    font-size: @ls-steps-font-size-wait;
+    color: @ls-steps-color-wait;
+  }
+
+  .ant-steps-item-process .ant-steps-item-title {
+    font-family: @ls-steps-font-family-wait;
+    font-size: @ls-steps-font-size-wait;
+    color: @ls-steps-color-wait;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-title {
+    font-family: @ls-steps-font-family-finish;
+    font-size: @ls-steps-font-size-finish;
+    color: @ls-steps-color-finish;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 24px;
+      color: #727272;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .steps.ls.text .ant-steps-item-title {
+    margin-top: 40px;
+    margin-left: -40px;
+
+    &::after {
+      top: -25px;
+    }
+  }
+}
