@@ -8,6 +8,7 @@ import Table from './Data Display/Table';
 
 // Data Entry
 import Slider from './Data Entry/Slider';
+import Checkbox from './Data Entry/Checkbox';
 
 storiesOf('LS Mobile', module);
 
@@ -18,4 +19,5 @@ storiesOf('LS Mobile/Data Display', module)
 
 // Data Entry
 storiesOf('LS Mobile/Data Entry', module)
+  .add('Checkbox', () => <Checkbox />)
   .add('Slider', () => <Slider />);
