@@ -1,0 +1,136 @@
+// Header
+.ant-table-wrapper.ls/* .header */ {
+  @Font-size: 12px;
+  @Font-family: 'Lato', sans-serif;
+  @Font-weight: bold;
+  @Font-color: #FFF;
+  @Font-shadow: none;
+  @Alignment: center;
+  @Background: #727272;
+  @Border-width: 1px;
+  @Border-color: none;
+  @Title-Height: 51px;
+
+  th {
+    height: @Title-Height;
+    font-family: @Font-family;
+    font-size: @Font-size;
+    font-weight: @Font-weight;
+    color: @Font-color;
+    text-shadow: @Font-shadow;
+    background: @Background;
+    border-width: @Border-width;
+    border-color: @Border-color;
+  }
+
+  th:first-child {
+    text-align: @Alignment;
+  }
+
+  th:nth-child(2) {
+    @Alignment: left;
+    text-align: @Alignment;
+  }
+
+  th:last-child {
+    @Alignment: center;
+    text-align: @Alignment;
+  }
+
+  /* &.hide .ant-table-placeholder{
+    display: none;
+  } */
+}
+
+.ant-table-wrapper.ls/* .rows */ {
+  @Font-family: 'Lato', sans-serif;
+  @Font-size: 16pt;
+  @Font-weight: normal;
+  @Font-color: #999;
+  @Font-shadow: none;
+  @Alignment: center;
+  @Background: none;
+  @Border-width: 1px;
+  @Border-color: none;
+  @Vertical-padding: 16px;
+
+  h2.title {
+    @Font-family: 'Lato', sans-serif;
+    @Font-size: 16spt;
+    @Font-weight: bold;
+    @Font-color: #4A4A4A;
+    @Font-shadow: none;
+    @Alignment: left;
+
+    margin: 0;
+    font-family: @Font-family;
+    font-size: @Font-size;
+    font-weight: @Font-weight;
+    text-align: @Alignment; 
+    color: @Font-color;
+    text-shadow: @Font-shadow;
+  }
+
+  p.sub-title {
+    @Alignment: left;
+
+    font-family: @Font-family;
+    font-size: @Font-size;
+    font-weight: @Font-weight;
+    text-align: @Alignment;
+    color: @Font-color;
+    text-shadow: @Font-shadow;
+  }
+
+  td {
+    padding-top: @Vertical-padding;
+    padding-bottom: @Vertical-padding;
+    border-width: @Border-width;
+    border-color: @Border-color;
+    background: @Background;
+  }
+
+  tr {
+    text-align: center;
+    &:hover td{
+      background: @Background;      
+    }
+  }
+
+  /* &.hide .ant-table-thead, */
+  .ant-pagination {
+    display: none;
+  }
+
+  .anticon.type {
+    @Font-size: 28pt;
+    @Font-color: #979797;
+
+    font-size: @Font-size;
+    color: @Font-color;
+  }
+
+  .anticon.status {
+    @Font-size: 24pt;
+    @Font-color: #009970;
+
+    font-size: @Font-size;
+    color: @Font-color;
+  }
+
+  .warning {
+    @Color: rgb(245, 166, 35);
+    .anticon.status {
+      color: @Color;
+    }
+    background: rgba(245, 166, 35, .1);
+  }
+}
+
+.ant-table-wrapper.ls.medical {
+  @Background: #75BA4F;
+
+  th {
+    background: @Background;
+  }
+}
