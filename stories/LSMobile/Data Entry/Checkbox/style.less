@@ -1,0 +1,53 @@
+@Width: 100%;
+@Size: 24px;
+@Checkbox-Font: none;
+@Checkbox-color: #727272;
+@Shadow: none;
+@Spacing: 8px;
+
+@Font-family: 'Roboto', sans-serif;
+@Font-size: 16px;
+@Font-color: #727272;
+@Font-weight: normal;
+@Font-shadow: none;
+
+@Check-top: 3px;
+@Check-left: 8px;
+@Check-height: 12px;
+@Check-width: 8px;
+
+.ant-checkbox-wrapper.ls {
+  width: @Width;
+  font-family: @Font-family;
+  font-size: @Font-size;
+
+  .ant-checkbox + span {
+    padding-left: @Spacing;
+    font-family: @Font-family;
+    font-size: @Font-size;
+    font-weight: @Font-weight;
+    color: @Font-color;
+    box-shadow: @Font-shadow;
+  }
+  
+  .ant-checkbox-inner {
+    width: @Size;
+    height: @Size;
+    border-color: @Checkbox-color;
+
+    &::after {
+      left: @Check-left;
+      top: @Check-top;
+      width: @Check-width;
+      height: @Check-height;
+    }
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background: @Checkbox-color;
+  }
+
+  .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner {
+    background: #f5f5f5;
+  }
+}
