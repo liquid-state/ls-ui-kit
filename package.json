@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "build": "webpack -p"
   },
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
@@ -14,7 +16,8 @@
   },
   "peerDependencies": {
     "antd": "^3.2.0",
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.6",

@@ -15,52 +15,73 @@ export default class extends React.Component {
 
     static displayName = 'MediaButton';
     static propTypes = {
-        type: PropTypes.string,
-        className: PropTypes.string,
-        style: PropTypes.object,
+      type: PropTypes.string,
+      className: PropTypes.string,
+      style: PropTypes.object,
+      children: PropTypes.oneOfType([
+        PropTypes.node,
+        PropTypes.arrayOf(PropTypes.node),
+      ]).isRequired,
     };
 
+    static defaultProps = {
+      type: undefined,
+      className: undefined,
+      style: {},
+    }
+
     state = {
-        animating: false,
+      animating: false,
     };
 
     onClick = () => {
-        if (this.state.animating) {
-            return;
-        }
-        this.setState({ animating: true });
-        setTimeout(() => this.setState({ animating: false }), 400);
+      if (this.state.animating) {
+        return;
+      }
+      this.setState({ animating: true });
+      setTimeout(() => this.setState({ animating: false }), 400);
+    }
+
+    onKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        this.onClick();
+      }
     }
 
     render() {
-        const {
-            children,
-            type,
-            className,
-            ...props
-        } = this.props;
+      const {
+        children,
+        type,
+        className,
+        ...props
+      } = this.props;
 
-        const cname = cx('ls-ui-kit', 'media-button', className, { animating: this.state.animating });
+      const cname = cx('ls-ui-kit', 'media-button', className, { animating: this.state.animating });
 
-        if (type) {
-            // Make this an actual button.
-            return (
+      if (type) {
+        // Make this an actual button.
+        return (
                 <button
-                    type={type}
-                    className={cname}
-                    onClick={this.onClick}
-                    {...props}>
+                  type={type}
+                  className={cname}
+                  onClick={this.onClick}
+                  {...props}
+                >
                     {children}
                 </button>
-            );
-        }
-        return (
+        );
+      }
+      return (
             <div
-                className={cname}
-                {...props}
-                onClick={this.onClick}>
+              className={cname}
+              {...props}
+              onClick={this.onClick}
+              onKeyPress={this.onKeyPress}
+              tabIndex={0}
+              role="button"
+            >
                 {children}
             </div>
-        );
+      );
     }
 }
