@@ -18,6 +18,18 @@ export default class extends React.Component {
         type: PropTypes.string,
         className: PropTypes.string,
         style: PropTypes.object,
+    };
+
+    state = {
+        animating: false,
+    };
+
+    onClick = () => {
+        if (this.state.animating) {
+            return;
+        }
+        this.setState({ animating: true });
+        setTimeout(() => this.setState({ animating: false }), 400);
     }
 
     render() {
@@ -28,12 +40,27 @@ export default class extends React.Component {
             ...props
         } = this.props;
 
-        const cname = cx('ls-ui-kit', 'media-button', className);
+        const cname = cx('ls-ui-kit', 'media-button', className, { animating: this.state.animating });
 
         if (type) {
             // Make this an actual button.
-            return <button type={type} className={cname} {...props}>{children}</button>;
+            return (
+                <button
+                    type={type}
+                    className={cname}
+                    onClick={this.onClick}
+                    {...props}>
+                    {children}
+                </button>
+            );
         }
-        return <div className={cname} {...props}>{children}</div>;
+        return (
+            <div
+                className={cname}
+                {...props}
+                onClick={this.onClick}>
+                {children}
+            </div>
+        );
     }
 }

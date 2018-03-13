@@ -74,4 +74,26 @@
         align-self: center;
         text-align: center;
     }
+
+    &.animating .uikit-media-wrapper {
+        animation: 400ms ease-in ls-media-button-bounce-animation;
+    }
 }
+
+@keyframes ls-media-button-bounce-animation {
+    from {
+      transform: scale(1);
+    }
+  
+    33% {
+      transform: scale(1.05);
+    }
+  
+    67% {
+      transform: scale(0.95);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
