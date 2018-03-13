@@ -1,0 +1,32 @@
+// Text
+@ls-rate-font-size: 28px;
+@ls-rate-font-family: Roboto, sans-serif;
+@ls-rate-font-weight: normal;
+
+@ls-rate-full-size: 40px;
+@ls-rate-full-color: gold;
+@ls-rate-zero-size: 40px;
+@ls-rate-zero-color: silver;
+
+.ant-rate.ls {
+  .anticon {
+    font-size: 40px;
+  }
+
+  & + .ant-rate-text {
+    font-family: @ls-rate-font-family;
+    font-size: @ls-rate-font-size;
+    font-weight: @ls-rate-font-weight;
+  }
+
+  .ant-rate-star-full .anticon,
+  .ant-rate-star-first .anticon {
+    font-size: @ls-rate-full-size;
+    color: @ls-rate-full-color;
+  }
+
+  .ant-rate-star-zero .anticon {
+    font-size: @ls-rate-zero-size;
+    color: @ls-rate-zero-color;
+  }
+}
