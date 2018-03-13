@@ -1,0 +1,142 @@
+@ls-radio-color: rgb(0, 162, 255);
+@ls-radio-size: 20px;
+@ls-radio-width: 100%;
+@ls-radio-spacing: 10px;
+@ls-radio-vertical-space: 30px;
+
+@ls-radio-font-family: 'Roboto', sans-serif;
+@ls-radio-font-size: 18px;
+@ls-radio-font-color: #666;
+
+@ls-radio-disabled: #eee;
+
+@ls-radio-shadow: none;
+
+.radio-mobile {
+  @ls-radio-color: #727272;
+  @ls-radio-size: 16px;
+  @ls-radio-spacing: 8px;
+  @ls-radio-font-family: 'Lato', sans-serif;
+  @ls-radio-font-size: 16px;
+
+  .ant-radio-group.ls {
+    .ant-radio-wrapper:hover .ant-radio-inner {
+      border-color: @ls-radio-color;
+    }
+
+    .ant-radio-inner {
+      width: @ls-radio-size;
+      height: @ls-radio-size;
+    }
+
+    .ant-radio + span {
+      padding-left: @ls-radio-spacing;
+      font-family: @ls-radio-font-family;
+      font-size: @ls-radio-font-size;
+    }
+  }
+
+  .ant-radio-group.ls .ant-radio-checked{
+
+    .ant-radio-inner::after {
+      display: none;
+    }
+
+    .ant-radio-inner {
+      border-color: @ls-radio-color;
+      background: @ls-radio-color;
+    }
+
+    &::after {
+      border-color: @ls-radio-color;
+    }
+  }
+}
+
+.radio-desktop {
+  @ls-radio-color: #727272;
+  @ls-radio-size: 14px;
+  @ls-radio-spacing: 8px;
+  @ls-radio-font-family: 'Lato', sans-serif;
+  @ls-radio-font-size: 14px;
+
+  .ant-radio-group.ls {
+    .ant-radio-wrapper:hover .ant-radio-inner {
+      border-color: @ls-radio-color;
+    }
+
+    .ant-radio-inner {
+      width: @ls-radio-size;
+      height: @ls-radio-size;
+    }
+
+    .ant-radio + span {
+      padding-left: @ls-radio-spacing;
+      font-family: @ls-radio-font-family;
+      font-size: @ls-radio-font-size;
+    }
+  }
+
+  .ant-radio-group.ls .ant-radio-checked{
+
+    .ant-radio-inner::after {
+      display: none;
+    }
+
+    .ant-radio-inner {
+      border-color: @ls-radio-color;
+      background: @ls-radio-color;
+    }
+
+    &::after {
+      border-color: @ls-radio-color;
+    }
+  }
+}
+
+.radio-vertical {
+  @ls-radio-color: #727272;
+  @ls-radio-size: 16px;
+  @ls-radio-spacing: 5px;
+  @ls-radio-font-family: 'Lato', sans-serif;
+  @ls-radio-font-size: 16px;
+  @ls-radio-vertical-space: 30px;
+
+  .ant-radio-group.ls {
+    .ant-radio-wrapper {
+      display: block;
+      height: @ls-radio-vertical-space;
+    }
+
+    .ant-radio-wrapper:hover .ant-radio-inner {
+      border-color: @ls-radio-color;
+    }
+
+    .ant-radio-inner {
+      width: @ls-radio-size;
+      height: @ls-radio-size;
+    }
+
+    .ant-radio + span {
+      padding-left: @ls-radio-spacing;
+      font-family: @ls-radio-font-family;
+      font-size: @ls-radio-font-size;
+    }
+  }
+
+  .ant-radio-group.ls .ant-radio-checked{
+
+    .ant-radio-inner::after {
+      display: none;
+    }
+
+    .ant-radio-inner {
+      border-color: @ls-radio-color;
+      background: @ls-radio-color;
+    }
+
+    &::after {
+      border-color: @ls-radio-color;
+    }
+  }
+}
