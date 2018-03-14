@@ -3,12 +3,46 @@ import { Button, Icon } from 'antd';
 
 import './style.less';
 
+class LS_Button extends Component {
+  static defaultProps = {
+    type: 'default',
+    className: ''
+  };
+
+  render() {
+    const {type, className, children, box, rounded, radius, shadow, ...other} = this.props;
+
+    return (
+      <Button
+        type={type}
+        className={this.getClass()}
+        {...other}
+      >
+        { children }
+      </Button>
+    );
+  }
+
+  getClass() {
+    const {box, rounded, radius, shadow, className} = this.props;
+    let _className = 'ls-ui-kit';
+    _className = box ? _className + ' box' : _className;
+    _className = rounded ? _className + ' rounded' : _className;
+    _className = radius ? _className + ' radius' : _className;
+    _className = shadow ? _className + ' shadow' : _className;
+    _className = className ? _className + ` ${className}` : _className;
+    return _className;
+  }
+}
+ 
+export default LS_Button;
+
 /* Default */
-export function ButtonDefault(props) {
+/* export function ButtonDefault(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-default ${className}`}
+      className={`ls-ui-kit default ${className}`}
       type={type}
       {...otherProps}
     >
@@ -19,14 +53,14 @@ export function ButtonDefault(props) {
 ButtonDefault.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
 
 /* Box */
-export function ButtonBox(props) {
+/* export function ButtonBox(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-box ${className}`}
+      className={`ls-ui-kit box ${className}`}
       type={type}
       {...otherProps}
     >
@@ -37,14 +71,14 @@ export function ButtonBox(props) {
 ButtonBox.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
 
 /* Rounded */
-export function ButtonRounded(props) {
+/* export function ButtonRounded(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-rounded ${className}`}
+      className={`ls-ui-kit rounded ${className}`}
       type={type}
       {...otherProps}
     >
@@ -55,14 +89,14 @@ export function ButtonRounded(props) {
 ButtonRounded.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
 
 /* Radius */
-export function ButtonRadius(props) {
+/* export function ButtonRadius(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-radius ${className}`}
+      className={`ls-ui-kit radius ${className}`}
       type={type}
       {...otherProps}
     >
@@ -73,14 +107,14 @@ export function ButtonRadius(props) {
 ButtonRadius.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
 
 /* Shadow */
-export function ButtonShadow(props) {
+/* export function ButtonShadow(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-shadow ${className}`}
+      className={`ls-ui-kit shadow ${className}`}
       type={type}
       {...otherProps}
     >
@@ -91,14 +125,14 @@ export function ButtonShadow(props) {
 ButtonShadow.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
 
 /* Ghost */
-export function ButtonGhost(props) {
+/* export function ButtonGhost(props) {
   const {children, type, className, ...otherProps} = props;
   return (
     <Button
-      className={`ls-ghost ${className}`}
+      className={`ls-ui-kit ghost ${className}`}
       type={type}
       {...otherProps}
       ghost
@@ -110,4 +144,4 @@ export function ButtonGhost(props) {
 ButtonGhost.defaultProps = {
   type: 'default',
   className: ''
-};
+}; */
