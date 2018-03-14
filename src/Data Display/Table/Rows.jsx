@@ -51,12 +51,12 @@ const columns = [
 class TableRows extends Component {
   render() {
     return (
-      <Table className="ls rows hide" dataSource={dataSource} columns={columns} />
+      <Table className="ls-ui-kit rows hide" dataSource={dataSource} columns={columns} />
     );
   }
 
   componentDidMount() {
-    const elements = document.querySelectorAll('.ant-table-wrapper.ls.rows .ant-table-row-level-0');
+    const elements = document.querySelectorAll('.ant-table-wrapper.ls-ui-kit.rows .ant-table-row-level-0');
 
     dataSource.forEach((element, i) => {
       if(element.styleType !== 'warning') return;

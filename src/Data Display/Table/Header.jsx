@@ -27,7 +27,7 @@ const columns = [
 class TableHeader extends Component {
   render() {
     return (
-      <Table className="ls header hide" columns={columns} />
+      <Table className="ls-ui-kit header hide" columns={columns} />
     );
   }
 }

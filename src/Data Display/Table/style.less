@@ -1,136 +1,94 @@
-// Header
-.ant-table-wrapper.ls/* .header */ {
-  @Font-size: 12px;
-  @Font-family: 'Lato', sans-serif;
-  @Font-weight: bold;
-  @Font-color: #FFF;
-  @Font-shadow: none;
-  @Alignment: center;
-  @Background: #727272;
-  @Border-width: 1px;
-  @Border-color: none;
-  @Title-Height: 51px;
+@import '../../variables.less';
 
+// Header
+.ant-table-wrapper.ls-ui-kit{
   th {
-    height: @Title-Height;
-    font-family: @Font-family;
-    font-size: @Font-size;
-    font-weight: @Font-weight;
-    color: @Font-color;
-    text-shadow: @Font-shadow;
-    background: @Background;
-    border-width: @Border-width;
-    border-color: @Border-color;
+    height: @ls-table-head-height;
+    font-family: @ls-table-font-family;
+    font-size: @ls-table-head-font-size;
+    font-weight: @ls-table-font-weight;
+    color: @ls-table-head-font-color;
+    text-shadow: @ls-table-font-shadow;
+    background: @ls-table-head-background;
+    border-width: @ls-table-head-border-width;
+    border-color: @ls-table-head-border-color;
   }
 
   th:first-child {
-    text-align: @Alignment;
+    text-align: @ls-table-head-alignment;
   }
 
   th:nth-child(2) {
-    @Alignment: left;
-    text-align: @Alignment;
+    @ls-table-head-alignment: left;
+    text-align: @ls-table-head-alignment;
   }
 
   th:last-child {
-    @Alignment: center;
-    text-align: @Alignment;
+    @ls-table-head-alignment: center;
+    text-align: @ls-table-head-alignment;
   }
-
-  /* &.hide .ant-table-placeholder{
-    display: none;
-  } */
 }
 
-.ant-table-wrapper.ls/* .rows */ {
-  @Font-family: 'Lato', sans-serif;
-  @Font-size: 16pt;
-  @Font-weight: normal;
-  @Font-color: #999;
-  @Font-shadow: none;
-  @Alignment: center;
-  @Background: none;
-  @Border-width: 1px;
-  @Border-color: none;
-  @Vertical-padding: 16px;
+// Rows
+.ant-table-wrapper.ls-ui-kit {
+  tbody {
+    font-family: @ls-table-font-family;
+    font-size: @ls-table-body-font-size;
+    text-shadow: @ls-table-font-shadow;
+    color: @ls-table-body-color;
+  }
 
   h2.title {
-    @Font-family: 'Lato', sans-serif;
-    @Font-size: 16spt;
-    @Font-weight: bold;
-    @Font-color: #4A4A4A;
-    @Font-shadow: none;
-    @Alignment: left;
 
     margin: 0;
-    font-family: @Font-family;
-    font-size: @Font-size;
-    font-weight: @Font-weight;
-    text-align: @Alignment; 
-    color: @Font-color;
-    text-shadow: @Font-shadow;
+    font-weight: @ls-table-font-weight;
+    text-align: @ls-table-body-alignment; 
+    text-shadow: @ls-table-font-shadow;
   }
 
   p.sub-title {
-    @Alignment: left;
+    @ls-table-font-weight: normal;
 
-    font-family: @Font-family;
-    font-size: @Font-size;
-    font-weight: @Font-weight;
-    text-align: @Alignment;
-    color: @Font-color;
-    text-shadow: @Font-shadow;
+    font-weight: @ls-table-font-weight;
+    text-align: @ls-table-body-alignment;
+    text-shadow: @ls-table-font-shadow;
   }
 
   td {
-    padding-top: @Vertical-padding;
-    padding-bottom: @Vertical-padding;
-    border-width: @Border-width;
-    border-color: @Border-color;
-    background: @Background;
+    padding-top: @ls-table-body-vertical-padding;
+    padding-bottom: @ls-table-body-vertical-padding;
+    border-width: @ls-table-body-border-width;
+    border-color: @ls-table-body-border-color;
+    background: @ls-table-body-background;
   }
 
   tr {
     text-align: center;
     &:hover td{
-      background: @Background;      
+      background: @ls-table-body-background;      
     }
   }
 
-  /* &.hide .ant-table-thead, */
   .ant-pagination {
     display: none;
   }
 
   .anticon.type {
-    @Font-size: 28pt;
-    @Font-color: #979797;
-
-    font-size: @Font-size;
-    color: @Font-color;
+    font-size: @ls-table-icon-size;
+    color: @ls-table-icon-color;
   }
 
   .anticon.status {
-    @Font-size: 24pt;
-    @Font-color: #009970;
+    @ls-table-icon-size: 24pt;
 
-    font-size: @Font-size;
-    color: @Font-color;
+    font-size: @ls-table-icon-size;
+    color: @ls-table-icon-success;
   }
 
   .warning {
-    @Color: rgb(245, 166, 35);
     .anticon.status {
-      color: @Color;
+      color: @ls-table-icon-warning;
     }
-    background: rgba(245, 166, 35, .1);
-  }
-}
-
-.ant-table-wrapper.ls.medical {
-  @Background: #75BA4F;
-
-  th {
-    background: @Background;
+    background: @ls-table-body-background-warning;
   }
 }

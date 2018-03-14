@@ -132,12 +132,12 @@ const columns = [
 class TableComponent extends Component {
   render() {
     return (
-        <Table className="ls rows header table" dataSource={dataSource} columns={columns} />
+        <Table className="ls-ui-kit rows header table" dataSource={dataSource} columns={columns} />
     );
   }
 
   componentDidMount() {
-    const elements = document.querySelectorAll('.ant-table-wrapper.ls.table .ant-table-row-level-0');
+    const elements = document.querySelectorAll('.ant-table-wrapper.ls-ui-kit.table .ant-table-row-level-0');
 
     dataSource.forEach((element, i) => {
       if(element.styleType !== 'warning') return;
