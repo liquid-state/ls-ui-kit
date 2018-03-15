@@ -2,24 +2,23 @@
 @import '../../variables.less';
 
 .ant-btn.ls-ui-kit {
-  width: @ls-button-width;
-  font-family: @ls-button-font-family;
-  font-size: @ls-button-font-size;
-  border-radius: @ls-button-radius-dafault;
+  font-family: @ls-stretch-button-font-family;
+  font-size: @ls-stretch-button-font-size;
+  border-radius: @ls-stretch-button-radius-default;
+
+  &.stretch-button {
+    width: @ls-stretch-button-width;
+  }
 }
 
-.ant-btn.ls-ui-kit.box {
-  border-radius: @ls-button-box;
+.ant-btn.ls-ui-kit.block {
+  border-radius: 0;
 }
 
-.ant-btn.ls-ui-kit.rounded {
-  border-radius: @ls-button-rounded;
+.ant-btn.ls-ui-kit.round {
+  border-radius: @ls-stretch-button-rounded;
 }
 
-.ant-btn.ls-ui-kit.radius {
-  border-radius: @ls-button-radius;
-}
-
-.ant-btn.ls-ui-kit.shadow {
-  box-shadow: @ls-button-shadow;
+.ant-btn.ls-ui-kit.raised {
+  box-shadow: @ls-stretch-button-shadow;
 }

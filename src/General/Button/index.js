@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'antd';
+import cn from 'classnames';
 
 import './style.less';
 
-class LS_Button extends Component {
+class StretchButton extends Component {
   static defaultProps = {
     type: 'default',
-    className: ''
+    className: '',
+    block: '',
+    round: '',
+    raised: ''
   };
 
   render() {
-    const {type, className, children, box, rounded, radius, shadow, ...other} = this.props;
+    const {type, className, children, block, round, raised, ...other} = this.props;
 
     return (
       <Button
@@ -24,15 +28,9 @@ class LS_Button extends Component {
   }
 
   getClass() {
-    const {box, rounded, radius, shadow, className} = this.props;
-    let _className = 'ls-ui-kit';
-    _className = box ? _className + ' box' : _className;
-    _className = rounded ? _className + ' rounded' : _className;
-    _className = radius ? _className + ' radius' : _className;
-    _className = shadow ? _className + ' shadow' : _className;
-    _className = className ? _className + ` ${className}` : _className;
-    return _className;
+    const {block, round, raised, className} = this.props;
+    return cn('ls-ui-kit stretch-button', className, {block, round, raised});
   }
 }
  
-export default LS_Button;
+export default StretchButton;
