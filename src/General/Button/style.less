@@ -1,0 +1,24 @@
+@import "~antd/lib/style/themes/default.less";
+@import '../../variables.less';
+
+.ant-btn.ls-ui-kit {
+  font-family: @ls-stretch-button-font-family;
+  font-size: @ls-stretch-button-font-size;
+  border-radius: @ls-stretch-button-radius-default;
+
+  &.stretch-button {
+    width: @ls-stretch-button-width;
+  }
+}
+
+.ant-btn.ls-ui-kit.block {
+  border-radius: 0;
+}
+
+.ant-btn.ls-ui-kit.round {
+  border-radius: @ls-stretch-button-rounded;
+}
+
+.ant-btn.ls-ui-kit.raised {
+  box-shadow: @ls-stretch-button-shadow;
+}
