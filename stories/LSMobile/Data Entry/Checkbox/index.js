@@ -33,19 +33,19 @@ class CheckboxPage extends Component {
         <section className="example">
           <Row>
             <Col span={24}>
-              <Checkbox className="ls mb20">Default</Checkbox>
+              <Checkbox className="ls-ui-kit mb20">Default</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls mb20" onChange={this.handleChange} checked={this.state.check}>Selected</Checkbox>
+              <Checkbox className="ls-ui-kit mb20" onChange={this.handleChange} checked={this.state.check}>Selected</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls mb20" disabled>Disabled</Checkbox>
+              <Checkbox className="ls-ui-kit mb20" disabled>Disabled</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls" disabled checked>Disabled + Selected</Checkbox>
+              <Checkbox className="ls-ui-kit" disabled checked>Disabled + Selected</Checkbox>
             </Col>
           </Row>
         </section>
