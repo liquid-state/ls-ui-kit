@@ -11,15 +11,17 @@ class RadioComponent extends Component {
   };
 
   render() {
+    console.log(this.props.data)
     const { type } = this.props;
     return (
-      <div className={`radio-${type}`}>
-        <RadioGroup className="ls" onChange={this.onChange} value={this.state.value}>
-          <Radio value={1}>A</Radio>
-          <Radio value={2}>B</Radio>
-          <Radio value={3}>C</Radio>
-          <Radio value={4}>D</Radio>
-          <Radio value={5} disabled>E</Radio>
+      <div className={`ls-ui-kit-radio-${type}`}>
+        <RadioGroup className="ls-ui-kit" onChange={this.onChange} value={this.state.value}>
+          {
+            this.props.data.map(
+              item =>
+                <Radio key={item.value} value={item.value} disabled={item.disabled}>{item.text}</Radio>
+            )
+          }
         </RadioGroup>
       </div>
     );

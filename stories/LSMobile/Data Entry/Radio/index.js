@@ -1,7 +1,30 @@
 import React, { Component, Fragment } from 'react';
 
 import Radio from '../../../../src/Data Entry/Radio';
-/* import RadioMobile from '../../../../src/Data Entry/Radio/Mobile'; */
+
+const data = [
+  {
+    value: 1,
+    text: 'A'
+  },
+  {
+    value: 2,
+    text: 'B'
+  },
+  {
+    value: 3,
+    text: 'C'
+  },
+  {
+    value: 4,
+    text: 'D'
+  },
+  {
+    value: 5,
+    text: 'E',
+    disabled: true
+  }
+];
 
 class RadioPage extends Component {
 
@@ -22,17 +45,17 @@ class RadioPage extends Component {
 
         <section className="example">
           <h3 className="ex-title">Mobile</h3>
-          <Radio type="mobile" />
+          <Radio type="mobile" data={data} />
         </section>
 
         <section className="example">
           <h3 className="ex-title">Desktop</h3>
-          <Radio />
+          <Radio data={data} />
         </section>
 
         <section className="example">
           <h3 className="ex-title">Vertical</h3>
-          <Radio type="vertical" />
+          <Radio type="vertical" data={data} />
         </section>
 
       </Fragment>

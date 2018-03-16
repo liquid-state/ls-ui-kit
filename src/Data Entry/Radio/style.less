@@ -1,42 +1,26 @@
-@ls-radio-color: rgb(0, 162, 255);
-@ls-radio-size: 20px;
-@ls-radio-width: 100%;
-@ls-radio-spacing: 10px;
-@ls-radio-vertical-space: 30px;
+@import '../../../src/variables.less';
 
-@ls-radio-font-family: 'Roboto', sans-serif;
-@ls-radio-font-size: 18px;
-@ls-radio-font-color: #666;
-
-@ls-radio-disabled: #eee;
-
-@ls-radio-shadow: none;
-
-.radio-mobile {
-  @ls-radio-color: #727272;
-  @ls-radio-size: 16px;
-  @ls-radio-spacing: 8px;
-  @ls-radio-font-family: 'Lato', sans-serif;
-  @ls-radio-font-size: 16px;
-
-  .ant-radio-group.ls {
+.ls-ui-kit-radio-mobile {
+  .ant-radio-group.ls-ui-kit {
     .ant-radio-wrapper:hover .ant-radio-inner {
       border-color: @ls-radio-color;
     }
 
     .ant-radio-inner {
-      width: @ls-radio-size;
-      height: @ls-radio-size;
+      width: @ls-radio-mobile-size;
+      height: @ls-radio-mobile-size;
+      box-shadow: @ls-radio-mobile-shadow;
     }
 
     .ant-radio + span {
-      padding-left: @ls-radio-spacing;
+      padding-left: @ls-radio-mobile-spacing;
       font-family: @ls-radio-font-family;
-      font-size: @ls-radio-font-size;
+      font-size: @ls-radio-mobile-font-size;
+      color: @ls-radio-mobile-font-color;
     }
   }
 
-  .ant-radio-group.ls .ant-radio-checked{
+  .ant-radio-group.ls-ui-kit .ant-radio-checked{
 
     .ant-radio-inner::after {
       display: none;
@@ -53,31 +37,28 @@
   }
 }
 
-.radio-desktop {
-  @ls-radio-color: #727272;
-  @ls-radio-size: 14px;
-  @ls-radio-spacing: 8px;
-  @ls-radio-font-family: 'Lato', sans-serif;
-  @ls-radio-font-size: 14px;
+.ls-ui-kit-radio-desktop {
 
-  .ant-radio-group.ls {
+  .ant-radio-group.ls-ui-kit {
     .ant-radio-wrapper:hover .ant-radio-inner {
       border-color: @ls-radio-color;
     }
 
     .ant-radio-inner {
-      width: @ls-radio-size;
-      height: @ls-radio-size;
+      width: @ls-radio-desktop-size;
+      height: @ls-radio-desktop-size;
+      box-shadow: @ls-radio-desktop-shadow;
     }
 
     .ant-radio + span {
-      padding-left: @ls-radio-spacing;
+      padding-left: @ls-radio-desktop-spacing;
       font-family: @ls-radio-font-family;
-      font-size: @ls-radio-font-size;
+      font-size: @ls-radio-desktop-font-size;
+      color: @ls-radio-desktop-font-color;
     }
   }
 
-  .ant-radio-group.ls .ant-radio-checked{
+  .ant-radio-group.ls-ui-kit .ant-radio-checked{
 
     .ant-radio-inner::after {
       display: none;
@@ -94,15 +75,9 @@
   }
 }
 
-.radio-vertical {
-  @ls-radio-color: #727272;
-  @ls-radio-size: 16px;
-  @ls-radio-spacing: 5px;
-  @ls-radio-font-family: 'Lato', sans-serif;
-  @ls-radio-font-size: 16px;
-  @ls-radio-vertical-space: 30px;
+.ls-ui-kit-radio-vertical {
 
-  .ant-radio-group.ls {
+  .ant-radio-group.ls-ui-kit {
     .ant-radio-wrapper {
       display: block;
       height: @ls-radio-vertical-space;
@@ -113,18 +88,20 @@
     }
 
     .ant-radio-inner {
-      width: @ls-radio-size;
-      height: @ls-radio-size;
+      width: @ls-radio-vertical-size;
+      height: @ls-radio-vertical-size;
+      box-shadow: @ls-radio-vertical-shadow;
     }
 
     .ant-radio + span {
-      padding-left: @ls-radio-spacing;
+      padding-left: @ls-radio-vertical-spacing;
       font-family: @ls-radio-font-family;
-      font-size: @ls-radio-font-size;
+      font-size: @ls-radio-vertical-font-size;
+      color: @ls-radio-vertical-font-color;
     }
   }
 
-  .ant-radio-group.ls .ant-radio-checked{
+  .ant-radio-group.ls-ui-kit .ant-radio-checked{
 
     .ant-radio-inner::after {
       display: none;
