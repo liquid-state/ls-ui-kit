@@ -8,7 +8,14 @@ import './Data Display/MediaButton';
 // Data Entry
 import Slider from './Data Entry/Slider';
 
+// General
+import Button from './General/Button';
+
 storiesOf('LS Mobile', module);
+
+// General
+storiesOf('LS Mobile/General', module)
+  .add('Button', () => <Button />);
 
 // Data Display
 storiesOf('LS Mobile/Data Display', module)
