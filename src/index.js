@@ -5,7 +5,8 @@
 // To correct this we make sure to import all antd styles here directly.
 import 'antd/dist/antd.less';
 
+import StretchButton from './General/StretchButton';
 import Slider from './Data Entry/Slider/Slider';
 import MediaButton from './Data Display/MediaButton';
 
-export { Slider, MediaButton };
+export { StretchButton, Slider, MediaButton };

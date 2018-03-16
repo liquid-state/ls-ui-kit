@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'antd';
 
-import Button from '../../../../src/General/Button';
+import Button from '../../../../src/General/StretchButton';
 
 class ButtonPage extends Component {
-  render() { 
+  render() {
     return (
       <Fragment>
-        <h1 className="title">Button</h1>
+        <h1 className="title">Stretch Button</h1>
 
         <section className="example">
           <h3 className="ex-title">Default</h3>
@@ -19,7 +19,7 @@ class ButtonPage extends Component {
         </section>
 
         <section className="example">
-          <h3 className="ex-title">Box</h3>
+          <h3 className="ex-title">Block</h3>
           <Button className="mb20" block>Default</Button>
           <Button className="mb20" type="primary" block>Primary</Button>
           <Button className="mb20" type="dashed" block>Dashed</Button>
@@ -28,7 +28,7 @@ class ButtonPage extends Component {
         </section>
 
         <section className="example">
-          <h3 className="ex-title">Rounded</h3>
+          <h3 className="ex-title">Round</h3>
           <Button className="mb20" round>Default</Button>
           <Button className="mb20" type="primary" round>Primary</Button>
           <Button className="mb20" type="dashed" round>Dashed</Button>
@@ -37,7 +37,7 @@ class ButtonPage extends Component {
         </section>
 
         <section className="example">
-          <h3 className="ex-title">Shadow</h3>
+          <h3 className="ex-title">Raised</h3>
           <Button className="mb20" raised>Default</Button>
           <Button className="mb20" type="primary" raised>Primary</Button>
           <Button className="mb20" type="dashed" raised>Dashed</Button>
@@ -59,5 +59,5 @@ class ButtonPage extends Component {
     );
   }
 }
- 
+
 export default ButtonPage;
