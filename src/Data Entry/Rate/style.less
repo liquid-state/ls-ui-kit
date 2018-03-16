@@ -1,17 +1,6 @@
-// Text
-@ls-rate-font-size: 28px;
-@ls-rate-font-family: Roboto, sans-serif;
-@ls-rate-font-weight: normal;
+@import '../../variables.less';
 
-@ls-rate-full-size: 40px;
-@ls-rate-full-color: gold;
-@ls-rate-zero-size: 40px;
-@ls-rate-zero-color: silver;
-
-.ant-rate.ls {
-  .anticon {
-    font-size: 40px;
-  }
+.ant-rate.ls-ui-kit {
 
   & + .ant-rate-text {
     font-family: @ls-rate-font-family;
@@ -27,6 +16,14 @@
 
   .ant-rate-star-zero .anticon {
     font-size: @ls-rate-zero-size;
+    color: @ls-rate-zero-color;
+  }
+
+  .anticon {
+    font-size: @ls-rate-zero-size;
+  }
+
+  .ant-rate-star-focused {
     color: @ls-rate-zero-color;
   }
 }

@@ -12,10 +12,10 @@ class RateComponent extends Component {
     const { value } = this.state;
 
     return (
-      <span>
-        <Rate className="ls" onChange={this.handleChange} value={value} />
+      <div>
+        <Rate className="ls-ui-kit" onChange={this.handleChange} value={value} />
         <span className="ant-rate-text">{value} stars</span>
-      </span>
+      </div>
     );
   }
 
