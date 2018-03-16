@@ -17,15 +17,18 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": ["eslint --fix", "git add"]
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "classnames": "^2.2.5"
   },
   "peerDependencies": {
     "antd": "^3.2.0",
-    "react": "^16.2.0",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.6",
