@@ -9,7 +9,14 @@ import './Data Display/MediaButton';
 import Slider from './Data Entry/Slider';
 import Checkbox from './Data Entry/Checkbox';
 
+// General
+import Button from './General/StretchButton';
+
 storiesOf('LS Mobile', module);
+
+// General
+storiesOf('LS Mobile/General', module)
+  .add('Stretch Button', () => <Button />);
 
 // Data Display
 storiesOf('LS Mobile/Data Display', module)

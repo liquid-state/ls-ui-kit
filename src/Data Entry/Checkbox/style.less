@@ -1,0 +1,22 @@
+@import '../../variables.less';
+
+.ant-checkbox-wrapper.ls-ui-kit {
+  width: 100%;
+
+  span:last-child {
+    padding-left: @ls-checkox-spacing;
+    font-size: @ls-checkbox-font-size;
+  }
+
+  .ant-checkbox-inner {
+    width: @ls-checkbox-size;
+    height: @ls-checkbox-size;
+
+    &::after {
+      left: @ls-checkbox-size / 3;
+      top: @ls-checkbox-size / 8;
+      width: @ls-checkbox-size / 4;
+      height: @ls-checkbox-size / 2;
+    }
+  }
+}

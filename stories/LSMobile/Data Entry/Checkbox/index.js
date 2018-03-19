@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Col, Checkbox } from 'antd';
-
-import './style.less';
+import { Row, Col } from 'antd';
+import Checkbox from '../../../../src/Data Entry/Checkbox/index';
 
 class CheckboxPage extends Component {
-
   state = {
     check: true
-  };
+  }
 
   render() {
 
