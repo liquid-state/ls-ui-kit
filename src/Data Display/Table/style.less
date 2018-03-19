@@ -1,0 +1,94 @@
+@import '../../variables.less';
+
+// Header
+.ant-table-wrapper.ls-ui-kit{
+  th {
+    height: @ls-table-head-height;
+    font-family: @ls-table-font-family;
+    font-size: @ls-table-head-font-size;
+    font-weight: @ls-table-font-weight;
+    color: @ls-table-head-font-color;
+    text-shadow: @ls-table-font-shadow;
+    background: @ls-table-head-background;
+    border-width: @ls-table-head-border-width;
+    border-color: @ls-table-head-border-color;
+  }
+
+  th:first-child {
+    text-align: @ls-table-head-alignment;
+  }
+
+  th:nth-child(2) {
+    @ls-table-head-alignment: left;
+    text-align: @ls-table-head-alignment;
+  }
+
+  th:last-child {
+    @ls-table-head-alignment: center;
+    text-align: @ls-table-head-alignment;
+  }
+}
+
+// Rows
+.ant-table-wrapper.ls-ui-kit {
+  tbody {
+    font-family: @ls-table-font-family;
+    font-size: @ls-table-body-font-size;
+    text-shadow: @ls-table-font-shadow;
+    color: @ls-table-body-color;
+  }
+
+  h2.title {
+
+    margin: 0;
+    font-weight: @ls-table-font-weight;
+    text-align: @ls-table-body-alignment; 
+    text-shadow: @ls-table-font-shadow;
+  }
+
+  p.sub-title {
+    @ls-table-font-weight: normal;
+
+    font-weight: @ls-table-font-weight;
+    text-align: @ls-table-body-alignment;
+    text-shadow: @ls-table-font-shadow;
+  }
+
+  td {
+    padding-top: @ls-table-body-vertical-padding;
+    padding-bottom: @ls-table-body-vertical-padding;
+    border-width: @ls-table-body-border-width;
+    border-color: @ls-table-body-border-color;
+    background: @ls-table-body-background;
+  }
+
+  tr {
+    text-align: center;
+    &:hover td{
+      background: @ls-table-body-background;      
+    }
+  }
+
+  .ant-pagination {
+    display: none;
+  }
+
+  .anticon.type {
+    font-size: @ls-table-icon-size;
+    color: @ls-table-icon-color;
+  }
+
+  .anticon.status {
+    @ls-table-icon-size: 24pt;
+
+    font-size: @ls-table-icon-size;
+    color: @ls-table-icon-success;
+  }
+
+  .warning {
+    .anticon.status {
+      color: @ls-table-icon-warning;
+    }
+    background: @ls-table-body-background-warning;
+  }
+}
