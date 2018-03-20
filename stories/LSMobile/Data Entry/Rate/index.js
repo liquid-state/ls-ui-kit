@@ -1,36 +1,26 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import Rate from '../../../../src/Data Entry/Rate';
 
-class RatePage extends Component {
+export default () => (
+  <Fragment>
+    <h1 className="title">Rate</h1>
 
-  render() {
+    <p className="text">
+      Rate component.
+    </p>
 
-    return (
-      <Fragment>
-        <h1 className="title">Rate</h1>
+    <h2 className="title">When To Use</h2>
 
-        <p className="text">
-          Rate component.
-        </p>
+    <ul>
+      <li>Show evaluation.</li>
+      <li>A quick rating operation on something.</li>
+    </ul>
 
-        <h2 className="title">When To Use</h2>
+    <h2 className="title">Examples:</h2>
 
-        <ul>
-          <li>Show evaluation.</li>
-          <li>A quick rating operation on something.</li>
-        </ul>
-
-        <h2 className="title">Examples:</h2>
-
-        <section className="example">
-          <Rate />
-        </section>
-
-
-      </Fragment>
-    );
-  }
-}
- 
-export default RatePage;
+    <section className="example">
+      <Rate mobile />
+    </section>
+  </Fragment>
+);

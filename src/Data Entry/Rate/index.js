@@ -1,25 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Rate } from 'antd';
+import cn from 'classnames';
 
 import './style.less';
 
-class RateComponent extends Component {
-  state = {
-    value: 3,
-  };
+const CalledRate = (props) => {
+  const {
+    className,
+    mobile,
+    ...other
+  } = props;
 
-  render() {
-    const { value } = this.state;
+  const classNames = cn(
+    'ls-ui-kit',
+    { mobile },
+    className,
+  );
 
-    return (
-      <div>
-        <Rate className="ls-ui-kit" onChange={this.handleChange} value={value} />
-        <span className="ant-rate-text">{value} stars</span>
-      </div>
-    );
-  }
+  return (
+    <Rate className={classNames} {...other} />
+  );
+};
 
-  handleChange = value => this.setState({ value });
-}
- 
-export default RateComponent;
+CalledRate.propTypes = {
+  className: PropTypes.string,
+  mobile: PropTypes.bool,
+};
+
+CalledRate.defaultProps = {
+  className: '',
+  mobile: false,
+};
+
+export default CalledRate;
