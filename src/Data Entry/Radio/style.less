@@ -1,119 +1,50 @@
-@import '../../../src/variables.less';
+@import '../../variables.less';
 
-.ls-ui-kit-radio-mobile {
-  .ant-radio-group.ls-ui-kit {
-    .ant-radio-wrapper:hover .ant-radio-inner {
+
+
+// Radio
+.ant-radio-wrapper.ls-ui-kit {
+  &:hover .ant-radio-inner {
+    border-color: @ls-radio-color;
+  }
+
+  .ant-radio-inner {
+    width: @ls-radio-size;
+    height: @ls-radio-size;
+  }
+
+  .ant-radio-checked .ant-radio-inner {
+    overflow: hidden;
+    border-color: @ls-radio-color;
+    background: @ls-radio-color;
+    box-shadow: @ls-radio-shadow;
+
+    &::after {
+      background: @ls-radio-color;
       border-color: @ls-radio-color;
-    }
-
-    .ant-radio-inner {
-      width: @ls-radio-mobile-size;
-      height: @ls-radio-mobile-size;
-      box-shadow: @ls-radio-mobile-shadow;
-    }
-
-    .ant-radio + span {
-      padding-left: @ls-radio-mobile-spacing;
-      font-family: @ls-radio-font-family;
-      font-size: @ls-radio-mobile-font-size;
-      color: @ls-radio-mobile-font-color;
     }
   }
 
-  .ant-radio-group.ls-ui-kit .ant-radio-checked{
+  .ant-radio-checked:after {
+    background: @ls-radio-color;
+    border-color: @ls-radio-color;
+  }
 
-    .ant-radio-inner::after {
-      display: none;
-    }
-
-    .ant-radio-inner {
-      border-color: @ls-radio-color;
-      background: @ls-radio-color;
-    }
-
-    &::after {
-      border-color: @ls-radio-color;
-    }
+  & > span:nth-child(2) {
+    margin-left: @ls-radio-spacing;
+    font-size: @ls-radio-font-size;
   }
 }
 
-.ls-ui-kit-radio-desktop {
-
-  .ant-radio-group.ls-ui-kit {
-    .ant-radio-wrapper:hover .ant-radio-inner {
-      border-color: @ls-radio-color;
-    }
-
-    .ant-radio-inner {
-      width: @ls-radio-desktop-size;
-      height: @ls-radio-desktop-size;
-      box-shadow: @ls-radio-desktop-shadow;
-    }
-
-    .ant-radio + span {
-      padding-left: @ls-radio-desktop-spacing;
-      font-family: @ls-radio-font-family;
-      font-size: @ls-radio-desktop-font-size;
-      color: @ls-radio-desktop-font-color;
-    }
+// Mobile
+.ant-radio-wrapper.ls-ui-kit.mobile {
+  .ant-radio-inner {
+    width: @ls-radio-mobile-size;
+    height: @ls-radio-mobile-size;
   }
 
-  .ant-radio-group.ls-ui-kit .ant-radio-checked{
-
-    .ant-radio-inner::after {
-      display: none;
-    }
-
-    .ant-radio-inner {
-      border-color: @ls-radio-color;
-      background: @ls-radio-color;
-    }
-
-    &::after {
-      border-color: @ls-radio-color;
-    }
-  }
-}
-
-.ls-ui-kit-radio-vertical {
-
-  .ant-radio-group.ls-ui-kit {
-    .ant-radio-wrapper {
-      display: block;
-      height: @ls-radio-vertical-space;
-    }
-
-    .ant-radio-wrapper:hover .ant-radio-inner {
-      border-color: @ls-radio-color;
-    }
-
-    .ant-radio-inner {
-      width: @ls-radio-vertical-size;
-      height: @ls-radio-vertical-size;
-      box-shadow: @ls-radio-vertical-shadow;
-    }
-
-    .ant-radio + span {
-      padding-left: @ls-radio-vertical-spacing;
-      font-family: @ls-radio-font-family;
-      font-size: @ls-radio-vertical-font-size;
-      color: @ls-radio-vertical-font-color;
-    }
-  }
-
-  .ant-radio-group.ls-ui-kit .ant-radio-checked{
-
-    .ant-radio-inner::after {
-      display: none;
-    }
-
-    .ant-radio-inner {
-      border-color: @ls-radio-color;
-      background: @ls-radio-color;
-    }
-
-    &::after {
-      border-color: @ls-radio-color;
-    }
+  & > span:nth-child(2) {
+    margin-left: @ls-radio-mobile-spacing;
+    font-size: @ls-radio-mobile-font-size;
   }
 }

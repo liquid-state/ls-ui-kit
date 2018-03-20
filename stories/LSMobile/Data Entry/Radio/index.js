@@ -1,35 +1,16 @@
 import React, { Component, Fragment } from 'react';
+import Radio from '../../../../src/Data Entry/Radio/Radio';
 
-import Radio from '../../../../src/Data Entry/Radio';
-
-const data = [
-  {
-    value: 1,
-    text: 'A'
-  },
-  {
-    value: 2,
-    text: 'B'
-  },
-  {
-    value: 3,
-    text: 'C'
-  },
-  {
-    value: 4,
-    text: 'D'
-  },
-  {
-    value: 5,
-    text: 'E',
-    disabled: true
-  }
-];
+const { Group } = Radio;
 
 class RadioPage extends Component {
+  state = {
+    value: 1,
+  };
+
+  handleChange = event => this.setState({ value: event.target.value });
 
   render() {
-
     return (
       <Fragment>
         <h1 className="title">Radio</h1>
@@ -38,29 +19,37 @@ class RadioPage extends Component {
 
         <ul>
           <li>Used to select a single state in multiple options.</li>
-          <li>The difference between Select is that Radio is visible to user and can facilitate the comparison of choice. So, when you want to use Radio, option should not be too much.</li>
+          <li>
+            The difference between Select is that Radio is visible to user
+            and can facilitate the comparison of choice. So, when you want
+            to use Radio, option should not be too much.
+          </li>
         </ul>
 
         <h2 className="title">Examples:</h2>
 
         <section className="example">
-          <h3 className="ex-title">Mobile</h3>
-          <Radio type="mobile" data={data} />
-        </section>
-
-        <section className="example">
           <h3 className="ex-title">Desktop</h3>
-          <Radio data={data} />
+          <Radio>Desktop</Radio>
         </section>
 
         <section className="example">
-          <h3 className="ex-title">Vertical</h3>
-          <Radio type="vertical" data={data} />
+          <h3 className="ex-title">Mobile</h3>
+          <Radio mobile>Mobile</Radio>
+        </section>
+
+        <section className="example">
+          <h3 className="ex-title">Group</h3>
+          <Group value={this.state.value} onChange={this.handleChange}>
+            <Radio value={1} mobile>Test</Radio>
+            <Radio value={2} mobile>Test</Radio>
+            <Radio value={3} mobile>Test</Radio>
+          </Group>
         </section>
 
       </Fragment>
     );
   }
 }
- 
+
 export default RadioPage;
