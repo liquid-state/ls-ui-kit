@@ -7,6 +7,7 @@ import './Data Display/MediaButton';
 
 // Data Entry
 import Slider from './Data Entry/Slider';
+import Checkbox from './Data Entry/Checkbox';
 import Rate from './Data Entry/Rate';
 
 // General
@@ -24,5 +25,6 @@ storiesOf('LS Mobile/Data Display', module)
 
 // Data Entry
 storiesOf('LS Mobile/Data Entry', module)
+  .add('Checkbox', () => <Checkbox />)
   .add('Slider', () => <Slider />)
   .add('Rate', () => <Rate />);
