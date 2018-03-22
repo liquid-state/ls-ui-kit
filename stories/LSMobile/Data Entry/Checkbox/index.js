@@ -4,11 +4,12 @@ import Checkbox from '../../../../src/Data Entry/Checkbox/index';
 
 class CheckboxPage extends Component {
   state = {
-    check: true
+    check: true,
   }
 
-  render() {
+  handleChange = () => this.setState({ check: !this.state.check });
 
+  render() {
     return (
       <Fragment>
         <h1 className="title">Checkbox</h1>
@@ -31,19 +32,19 @@ class CheckboxPage extends Component {
         <section className="example">
           <Row>
             <Col span={24}>
-              <Checkbox className="ls-ui-kit mb20">Default</Checkbox>
+              <Checkbox className="mb20" mobile>Default</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls-ui-kit mb20" onChange={this.handleChange} checked={this.state.check}>Selected</Checkbox>
+              <Checkbox className="mb20" onChange={this.handleChange} checked={this.state.check} mobile>Selected</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls-ui-kit mb20" disabled>Disabled</Checkbox>
+              <Checkbox className="mb20" disabled mobile>Disabled</Checkbox>
             </Col>
 
             <Col span={24}>
-              <Checkbox className="ls-ui-kit" disabled checked>Disabled + Selected</Checkbox>
+              <Checkbox disabled checked mobile>Disabled + Selected</Checkbox>
             </Col>
           </Row>
         </section>
@@ -51,8 +52,6 @@ class CheckboxPage extends Component {
       </Fragment>
     );
   }
-
-  handleChange = () => this.setState({ check: !this.state.check });
 }
- 
+
 export default CheckboxPage;

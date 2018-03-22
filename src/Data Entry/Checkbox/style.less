@@ -1,22 +1,17 @@
 @import '../../variables.less';
 
-.ant-checkbox-wrapper.ls-ui-kit {
+.ant-checkbox-wrapper.ls-ui-kit.mobile {
   width: 100%;
 
-  span:last-child {
-    padding-left: @ls-checkox-spacing;
-    font-size: @ls-checkbox-font-size;
-  }
-
   .ant-checkbox-inner {
-    width: @ls-checkbox-size;
-    height: @ls-checkbox-size;
+    width: @ls-checkbox-mobile-size;
+    height: @ls-checkbox-mobile-size;
 
     &::after {
-      left: @ls-checkbox-size / 3;
-      top: @ls-checkbox-size / 8;
-      width: @ls-checkbox-size / 4;
-      height: @ls-checkbox-size / 2;
+      left: @ls-checkbox-mobile-size / 3;
+      top: @ls-checkbox-mobile-size / 8;
+      width: @ls-checkbox-mobile-size / 4;
+      height: @ls-checkbox-mobile-size / 2;
     }
   }
 }
