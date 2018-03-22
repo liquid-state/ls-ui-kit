@@ -1,12 +1,7 @@
 @import '../../variables.less';
 
-
-
 // Radio
 .ant-radio-wrapper.ls-ui-kit {
-  &:hover .ant-radio-inner {
-    border-color: @ls-radio-color;
-  }
 
   .ant-radio-inner {
     width: @ls-radio-size;
@@ -17,22 +12,11 @@
     overflow: hidden;
     border-color: @ls-radio-color;
     background: @ls-radio-color;
-    box-shadow: @ls-radio-shadow;
-
-    &::after {
-      background: @ls-radio-color;
-      border-color: @ls-radio-color;
-    }
   }
 
   .ant-radio-checked:after {
     background: @ls-radio-color;
     border-color: @ls-radio-color;
-  }
-
-  & > span:nth-child(2) {
-    margin-left: @ls-radio-spacing;
-    font-size: @ls-radio-font-size;
   }
 }
 
@@ -41,10 +25,5 @@
   .ant-radio-inner {
     width: @ls-radio-mobile-size;
     height: @ls-radio-mobile-size;
-  }
-
-  & > span:nth-child(2) {
-    margin-left: @ls-radio-mobile-spacing;
-    font-size: @ls-radio-mobile-font-size;
   }
 }

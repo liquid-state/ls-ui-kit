@@ -41,9 +41,10 @@ class RadioPage extends Component {
         <section className="example">
           <h3 className="ex-title">Group</h3>
           <Group value={this.state.value} onChange={this.handleChange}>
-            <Radio value={1} mobile>Test</Radio>
-            <Radio value={2} mobile>Test</Radio>
-            <Radio value={3} mobile>Test</Radio>
+            <Radio value={1} mobile>A</Radio>
+            <Radio value={2} mobile>B</Radio>
+            <Radio value={3} mobile>C</Radio>
+            <Radio value={4} mobile>D</Radio>
           </Group>
         </section>
 

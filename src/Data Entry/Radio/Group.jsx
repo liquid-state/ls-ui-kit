@@ -1,39 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Radio } from 'antd';
 import cn from 'classnames';
 
 const { Group } = Radio;
 
-class RadioGroup extends Component {
-  static propTypes = {
-    mobile: PropTypes.bool,
-    value: PropTypes.number,
-    children: PropTypes.arrayOf(PropTypes.element),
-    onChange: PropTypes.func,
-  };
+const RadioGroup = (props) => {
+  const {
+    mobile,
+    className,
+    children,
+    ...other
+  } = props;
 
-  static defaultProps = {
-    mobile: false,
-    value: null,
-    children: [],
-    onChange: null,
-  };
+  return (
+    <Group className={cn('ls-ui-kit', className, { mobile })} {...other}>
+      {
+        children
+      }
+    </Group>
+  );
+};
 
-  getClass() {
-    let { mobile } = this.props;
-    mobile = mobile ? 'mobile' : null;
-    return cn('ls-ui-kit', mobile);
-  }
-  render() {
-    return (
-      <Group value={this.props.value} onChange={this.props.onChange} className={this.getClass()}>
-        {
-          this.props.children
-        }
-      </Group>
-    );
-  }
-}
+RadioGroup.propTypes = {
+  mobile: PropTypes.bool,
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+RadioGroup.defaultProps = {
+  mobile: false,
+  children: null,
+  className: '',
+};
 
 export default RadioGroup;
