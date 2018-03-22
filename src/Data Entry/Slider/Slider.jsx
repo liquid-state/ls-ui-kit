@@ -1,14 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { Slider } from 'antd';
+import { Slider as AntSlider } from 'antd';
 
 import './style.less';
 
-export default (props) => {
+const Slider = (props) => {
   const {
     className,
+    mobile,
     ...otherProps
   } = props;
-  const name = cn(className, 'ls-ui-kit');
-  return <Slider className={name} {...otherProps} />;
+  const name = cn('ls-ui-kit', className, { mobile });
+  return <AntSlider className={name} {...otherProps} />;
 };
+
+Slider.propTypes = {
+  className: PropTypes.string,
+  mobile: PropTypes.bool,
+};
+
+Slider.defaultProps = {
+  className: '',
+  mobile: false,
+}
+
+export default Slider;
