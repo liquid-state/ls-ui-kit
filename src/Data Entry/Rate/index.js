@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Rate } from 'antd';
+import { Rate as AntRate } from 'antd';
 import cn from 'classnames';
 
 import './style.less';
 
-const CalledRate = (props) => {
+const Rate = (props) => {
   const {
     className,
     mobile,
@@ -19,18 +19,18 @@ const CalledRate = (props) => {
   );
 
   return (
-    <Rate className={classNames} {...other} />
+    <AntRate className={classNames} {...other} />
   );
 };
 
-CalledRate.propTypes = {
+Rate.propTypes = {
   className: PropTypes.string,
   mobile: PropTypes.bool,
 };
 
-CalledRate.defaultProps = {
+Rate.defaultProps = {
   className: '',
   mobile: false,
 };
 
-export default CalledRate;
+export default Rate;
