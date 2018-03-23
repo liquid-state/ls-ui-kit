@@ -2,29 +2,15 @@ import React, { Fragment } from 'react';
 
 import Rate from '../../../../src/Data Entry/Rate';
 
-class ExampleWithText extends React.Component {
-  state = {
-    value: 3
-  };
+class WithState extends React.Component {
+  static displayName = 'WithState';
 
-  onChange = (value) => {
-    this.setState({ value });
-  }
+  state = this.props.initial || {};
 
   render() {
-    return (
-      <React.Fragment>
-        <Rate
-          mobile
-          value={this.state.value}
-          onChange={this.onChange}
-        />
-        <span className="ant-rate-text">{this.state.value} Stars</span>
-      </React.Fragment>
-    );
+    return this.props.children(this.state, this.setState.bind(this));
   }
 }
-
 
 export default () => (
   <Fragment>
@@ -48,7 +34,18 @@ export default () => (
     </section>
 
     <section className="example">
-      <ExampleWithText />
+      <WithState initial={{ value: 1 }} >
+        {(state, setState) => (
+          <React.Fragment>
+            <Rate
+              mobile
+              value={state.value}
+              onChange={value => setState({ value })}
+            />
+            <span className="ant-rate-text">{state.value} Stars</span>
+          </React.Fragment>
+        )}
+      </WithState>
     </section>
   </Fragment>
 );
