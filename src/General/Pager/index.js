@@ -10,6 +10,13 @@ export default class Pager extends React.Component {
   static propTypes = {
     steps: PropTypes.number.isRequired,
     current: PropTypes.number.isRequired,
+    hideLeftArrow: PropTypes.bool,
+    hideRightArrow: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    hideLeftArrow: false,
+    hideRightArrow: false,
   }
 
   steps() {
@@ -20,13 +27,19 @@ export default class Pager extends React.Component {
   }
 
   render() {
+    const {
+      current,
+      hideLeftArrow,
+      hideRightArrow,
+    } = this.props;
+
     return (
       <div className="ls-ui-kit pager">
-        <Icon type="left" />
-        <Steps progressDot current={this.props.current}>
+        <Icon type="left" className={hideLeftArrow && 'hidden'} />
+        <Steps progressDot current={current}>
           {this.steps()}
         </Steps>
-        <Icon type="right" />
+        <Icon type="right" className={hideRightArrow && 'hidden'} />
       </div>
     );
   }
