@@ -1,16 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Rate from '../../../../src/Data Entry/Rate';
-
-class WithState extends React.Component {
-  static displayName = 'WithState';
-
-  state = this.props.initial || {};
-
-  render() {
-    return this.props.children(this.state, this.setState.bind(this));
-  }
-}
+import WithState from '../../../utils/WithState';
 
 export default () => (
   <Fragment>

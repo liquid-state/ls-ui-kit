@@ -1,7 +1,6 @@
 import React from 'react';
 import Pager from '../../../../src/General/Pager';
-
-const { Step } = Pager;
+import WithState from '../../../utils/WithState';
 
 export default () => (
   <div>
@@ -20,6 +19,28 @@ export default () => (
     <section className="example">
       <h2 className="ex-title">Hidden left arrow</h2>
       <Pager steps={5} hideLeftArrow />
+    </section>
+
+    <section className="example">
+      <h2 className="ex-title">Default value</h2>
+      <Pager steps={5} defaultValue={4} />
+    </section>
+
+    <section className="example">
+      <h2 className="ex-title">A fully controlled pager</h2>
+      <WithState initial={{ value: 2 }}>
+        {(state, setState) => {
+          const onChange = (value) => setState({ value });
+
+          return (
+            <Pager
+              steps={5}
+              current={state.value}
+              onChange={onChange}
+            />
+          );
+        }}
+      </WithState>
     </section>
   </div>
 );

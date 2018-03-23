@@ -11,16 +11,28 @@ export default class Pager extends React.Component {
     defaultValue: PropTypes.number,
     hideLeftArrow: PropTypes.bool,
     hideRightArrow: PropTypes.bool,
-    onPrevious: PropTypes.func,
-    onNext: PropTypes.func,
+    onChange: PropTypes.func,
   }
 
   static defaultProps = {
     defaultValue: 1,
     hideLeftArrow: false,
     hideRightArrow: false,
-    onPrevious: () => { },
-    onNext: () => { },
+    onChange: () => { },
+  }
+
+  onPrevious = () => {
+    if (this.props.current === 0) {
+      return;
+    }
+    this.props.onChange(this.props.current - 1);
+  }
+
+  onNext = () => {
+    if (this.props.current === this.props.steps - 1) {
+      return;
+    }
+    this.props.onChange(this.props.current + 1);
   }
 
   steps() {
@@ -36,17 +48,15 @@ export default class Pager extends React.Component {
       defaultValue,
       hideLeftArrow,
       hideRightArrow,
-      onPrevious,
-      onNext,
     } = this.props;
 
     return (
       <div className="ls-ui-kit pager">
-        <Icon type="left" className={hideLeftArrow && 'hidden'} onClick={onPrevious} />
+        <Icon type="left" className={hideLeftArrow && 'hidden'} onClick={this.onPrevious} />
         <Steps progressDot current={current || defaultValue}>
           {this.steps()}
         </Steps>
-        <Icon type="right" className={hideRightArrow && 'hidden'} onClick={onNext} />
+        <Icon type="right" className={hideRightArrow && 'hidden'} onClick={this.onNext} />
       </div>
     );
   }
