@@ -1,46 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Steps } from 'antd';
 
+import Pager from './Pager';
+import UncontrolledPager from './UncontrolledPager';
 import './styles.less';
 
-export default class Pager extends React.Component {
-  static Step = Steps.Step;
-
-  static propTypes = {
-    steps: PropTypes.number.isRequired,
-    current: PropTypes.number.isRequired,
-    hideLeftArrow: PropTypes.bool,
-    hideRightArrow: PropTypes.bool,
+const PagerSwitch = ({ current, ...props }) => {
+  if (current === null) {
+    return <UncontrolledPager {...props} />;
   }
+  return <Pager current={current} {...props} />;
+};
 
-  static defaultProps = {
-    hideLeftArrow: false,
-    hideRightArrow: false,
-  }
+PagerSwitch.displayName = 'PagerSwitch';
 
-  steps() {
-    return new Array(this.props.steps)
-      .fill(null)
-      // eslint-disable-next-line react/no-array-index-key
-      .map((v, index) => <Steps.Step key={index} />);
-  }
+PagerSwitch.propTypes = {
+  steps: PropTypes.number.isRequired,
+  current: PropTypes.number,
+  defaultValue: PropTypes.number,
+  hideLeftArrow: PropTypes.bool,
+  hideRightArrow: PropTypes.bool,
+  onPrevious: PropTypes.func,
+  onNext: PropTypes.func,
+};
 
-  render() {
-    const {
-      current,
-      hideLeftArrow,
-      hideRightArrow,
-    } = this.props;
+PagerSwitch.defaultProps = {
+  current: null,
+  defaultValue: 0,
+  hideLeftArrow: false,
+  hideRightArrow: false,
+  onPrevious: () => { },
+  onNext: () => { },
+};
 
-    return (
-      <div className="ls-ui-kit pager">
-        <Icon type="left" className={hideLeftArrow && 'hidden'} />
-        <Steps progressDot current={current}>
-          {this.steps()}
-        </Steps>
-        <Icon type="right" className={hideRightArrow && 'hidden'} />
-      </div>
-    );
-  }
-}
+export default PagerSwitch;
