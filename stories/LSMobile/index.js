@@ -10,14 +10,14 @@ import Rate from './Data Entry/Rate';
 import Radio from './Data Entry/Radio';
 
 // General
-import Button from './General/StretchButton';
+import Button from './General/Button';
 import PagerStories from './General/Pager';
 
 storiesOf('LS Mobile', module);
 
 // General
 storiesOf('LS Mobile/General', module)
-  .add('Stretch Button', () => <Button />)
+  .add('Button', () => <Button />)
   .add('Pager', PagerStories)
 
 // Data Entry

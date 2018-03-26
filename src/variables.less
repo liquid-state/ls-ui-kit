@@ -1,7 +1,7 @@
 @import "~antd/lib/style/themes/default.less";
 
 // We define white as a variable so that a theme which wants to invert light and dark colours can make all white sections dark.
-@white: 'white';
+@white: white;
 
 /*===================================================
 **       Data Display
@@ -49,11 +49,9 @@
 **       General
 ====================================================*/
 // Button
-@ls-stretch-button-width: 100%;
-@ls-stretch-button-font-family: @font-family;
-@ls-stretch-button-font-size: @font-size-base;
-@ls-stretch-button-radius-default: @btn-border-radius-base;
-@ls-stretch-button-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-@ls-stretch-button-rounded: @ls-stretch-button-font-size;
+@ls-button-inverted-color: @white;
+@ls-button-inverted-background: @text-color;
+@ls-button-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+@ls-button-rounded: @font-size-base;
 
 /*==================================================*/

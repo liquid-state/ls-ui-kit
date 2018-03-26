@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'antd';
 
-import Button from '../../../../src/General/StretchButton';
+import Button from '../../../../src/General/Button';
 
 class ButtonPage extends Component {
   render() {
@@ -16,6 +16,7 @@ class ButtonPage extends Component {
           <Button className="mb20" type="dashed">Dashed</Button>
           <Button className="mb20" type="primary" icon="global">Icon</Button>
           <Button type="danger">Danger</Button>
+          <Button type="inverted">Inverted</Button>
         </section>
 
         <section className="example">
@@ -53,6 +54,17 @@ class ButtonPage extends Component {
             <Button className="mb20" type="dashed" ghost>Dashed</Button>
             <Button className="mb20" type="primary" icon="global" ghost>Icon</Button>
             <Button type="danger" ghost>Danger</Button>
+          </div>
+        </section>
+
+        <section className="example">
+          <h3 className="ex-title">Stretched</h3>
+          <div>
+            <Button className="mb20" stretched>Default</Button>
+            <Button className="mb20" type="primary" stretched>Primary</Button>
+            <Button className="mb20" type="dashed" stretched>Dashed</Button>
+            <Button className="mb20" type="primary" icon="global" stretched>Icon</Button>
+            <Button type="danger" stretched>Danger</Button>
           </div>
         </section>
       </Fragment>

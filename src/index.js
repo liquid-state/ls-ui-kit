@@ -5,7 +5,7 @@
 // To correct this we make sure to import all antd styles here directly.
 import 'antd/dist/antd.less';
 
-export { default as StretchButton } from './General/StretchButton';
+export { default as Button } from './General/Button';
 export { default as Pager } from './General/Pager';
 
 export { default as Checkbox } from './Data Entry/Checkbox';

@@ -13,6 +13,7 @@ class StretchButton extends Component {
     block: PropTypes.bool,
     round: PropTypes.bool,
     raised: PropTypes.bool,
+    stretched: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -21,19 +22,33 @@ class StretchButton extends Component {
     block: false,
     round: false,
     raised: false,
+    stretched: false,
     children: null,
   };
 
-  getClass() {
+  getClass(extra) {
     const {
-      block, round, raised, className,
+      block,
+      round,
+      raised,
+      stretched,
+      className,
     } = this.props;
-    return cn('ls-ui-kit stretch-button', className, { block, round, raised });
+    return cn('ls-ui-kit', className, extra, {
+      block, round, raised, stretched,
+    });
   }
 
   render() {
     const {
-      type, className, children, block, round, raised, ...other
+      type,
+      className,
+      children,
+      block,
+      round,
+      raised,
+      stretched,
+      ...other
     } = this.props;
 
     return (
@@ -42,7 +57,7 @@ class StretchButton extends Component {
         className={this.getClass()}
         {...other}
       >
-        { children }
+        {children}
       </Button>
     );
   }
