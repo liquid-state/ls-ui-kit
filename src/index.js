@@ -6,8 +6,10 @@
 import 'antd/dist/antd.less';
 
 export { default as StretchButton } from './General/StretchButton';
+export { default as Pager } from './General/Pager';
 
 export { default as Checkbox } from './Data Entry/Checkbox';
+export { default as Radio } from './Data Entry/Radio';
 export { default as Rate } from './Data Entry/Rate';
 export { default as Slider } from './Data Entry/Slider/Slider';
 
