@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-// Data Display
-import Card from './Data Display/Card';
 import './Data Display/MediaButton';
 
 // Data Entry
@@ -21,10 +19,6 @@ storiesOf('LS Mobile', module);
 storiesOf('LS Mobile/General', module)
   .add('Stretch Button', () => <Button />)
   .add('Pager', PagerStories)
-
-// Data Display
-storiesOf('LS Mobile/Data Display', module)
-  .add('Card', () => <Card />);
 
 // Data Entry
 storiesOf('LS Mobile/Data Entry', module)
