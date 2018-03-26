@@ -1,6 +1,6 @@
 {
   "name": "@liquid-state/ui-kit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Liquid State UI Kit for Desktop and Mobile.",
   "main": "dist/index.js",
   "scripts": {
