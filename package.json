@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "lint:fix": "eslint ./src --fix --ext .js,.jsx",
     "build": "webpack -p",
     "prepack": "npm run build"
   },
@@ -21,7 +21,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ]

@@ -23,6 +23,6 @@ Slider.propTypes = {
 Slider.defaultProps = {
   className: '',
   mobile: false,
-}
+};
 
 export default Slider;
