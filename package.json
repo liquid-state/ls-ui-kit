@@ -1,14 +1,18 @@
 {
   "name": "@liquid-state/ui-kit",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "description": "Liquid State UI Kit for Desktop and Mobile.",
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "prepack": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "husky": {
