@@ -7,8 +7,12 @@
     "storybook": "start-storybook -p 9002 -c .storybook",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "prepack": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "husky": {
