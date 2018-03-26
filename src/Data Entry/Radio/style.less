@@ -1,0 +1,29 @@
+@import '../../variables.less';
+
+// Radio
+.ant-radio-wrapper.ls-ui-kit {
+
+  .ant-radio-inner {
+    width: @ls-radio-size;
+    height: @ls-radio-size;
+  }
+
+  .ant-radio-checked .ant-radio-inner {
+    overflow: hidden;
+    border-color: @primary-color;
+    background: @primary-color;
+  }
+
+  .ant-radio-checked:after {
+    background: @primary-color;
+    border-color: @primary-color;
+  }
+}
+
+// Mobile
+.ant-radio-wrapper.ls-ui-kit.mobile {
+  .ant-radio-inner {
+    width: @ls-radio-mobile-size;
+    height: @ls-radio-mobile-size;
+  }
+}

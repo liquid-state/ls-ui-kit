@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Data Display
@@ -9,6 +9,7 @@ import './Data Display/MediaButton';
 import Slider from './Data Entry/Slider';
 import Checkbox from './Data Entry/Checkbox';
 import Rate from './Data Entry/Rate';
+import Radio from './Data Entry/Radio';
 
 // General
 import Button from './General/StretchButton';
@@ -29,4 +30,5 @@ storiesOf('LS Mobile/Data Display', module)
 storiesOf('LS Mobile/Data Entry', module)
   .add('Checkbox', () => <Checkbox />)
   .add('Slider', () => <Slider />)
-  .add('Rate', () => <Rate />);
+  .add('Rate', () => <Rate />)
+  .add('Radio', () => <Radio />);

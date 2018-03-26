@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { Slider as AntSlider } from 'antd';
@@ -17,12 +17,12 @@ const Slider = (props) => {
 
 Slider.propTypes = {
   className: PropTypes.string,
-  mobile: PropTypes.bool
+  mobile: PropTypes.bool,
 };
 
 Slider.defaultProps = {
   className: '',
-  mobile: false
+  mobile: false,
 }
 
 export default Slider;
