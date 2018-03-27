@@ -1,4 +1,6 @@
-## Liquid State UI Kit
+# Liquid State UI Kit
+
+[![npm](https://img.shields.io/npm/v/@liquid-state/ui-kit.svg?style=flat-square)](https://www.npmjs.com/package/@liquid-state/ui-kit)
 
 Liquid state UI kit for Desktop (Web) and Mobile (Web) applications, based on ant design.
 
@@ -6,10 +8,4 @@ This repository contains custom components and a storybook showing off all of th
 
 ## Using the UI Kit
 
-Get a compiled version of the kit from and include it in your project to get started.
-
-## TODO:
-
-- [ ] Publish and link to npm
-- [ ] Getting started guide
-- [ ] Contributing guide
+Get a compiled version of the kit from [npm](https://www.npmjs.com/package/@liquid-state/ui-kit) and include it in your project to get started.
