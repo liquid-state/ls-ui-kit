@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Radio from '../../../../src/Data Entry/Radio/Radio';
+import Radio from '../../../../src/components/Radio/Radio';
 
 const { Group } = Radio;
 

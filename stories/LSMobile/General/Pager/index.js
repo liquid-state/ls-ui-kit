@@ -1,5 +1,5 @@
 import React from 'react';
-import Pager from '../../../../src/General/Pager';
+import Pager from '../../../../src/components/Pager';
 import WithState from '../../../utils/WithState';
 
 export default () => (

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Rate from '../../../../src/Data Entry/Rate';
+import Rate from '../../../../src/components/Rate';
 import WithState from '../../../utils/WithState';
 
 export default () => (
