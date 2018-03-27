@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'antd';
-import Checkbox from '../../../../src/Data Entry/Checkbox/index';
+import Checkbox from '../../../../src/components/Checkbox/index';
 
 class CheckboxPage extends Component {
   state = {

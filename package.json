@@ -7,7 +7,7 @@
     "storybook": "start-storybook -p 9002 -c .storybook",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --fix --ext .js,.jsx",
-    "build": "webpack -p",
+    "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
     "prepack": "npm run build"
   },
   "files": [
@@ -37,10 +37,11 @@
   "devDependencies": {
     "@storybook/react": "^3.3.6",
     "antd": "^3.3.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^6.4.1",
-    "babel-plugin-import": "^1.6.3",
+    "babel-plugin-import": "^1.6.7",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",

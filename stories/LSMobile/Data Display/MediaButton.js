@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { storiesOf, addDecorator } from '@storybook/react';
-import MediaButton from '../../../src/Data Display/MediaButton';
+import MediaButton from '../../../src/components/MediaButton';
 
 storiesOf('LS Mobile/Data Display', module)
     .addWithChapters('Media Button', {

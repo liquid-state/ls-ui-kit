@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import SliderComponent from '../../../../src/Data Entry/Slider/Slider';
+import SliderComponent from '../../../../src/components/Slider/Slider';
 
 class Slider extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'antd';
 
-import Button from '../../../../src/General/Button';
+import Button from '../../../../src/components/Button';
 
 class ButtonPage extends Component {
   render() {
