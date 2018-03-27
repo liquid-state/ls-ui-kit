@@ -1,16 +1,8 @@
-// Due to the way the antd import plugin only imports styles for components which are
-// passed through babel any ant components which are only imported in a library
-// will be missing their styles.
+export { default as Button } from './components/Button';
+export { default as Checkbox } from './components/Checkbox';
+export { default as MediaButton } from './components/MediaButton';
+export { default as Pager } from './components/Pager';
+export { default as Radio } from './components/Radio';
+export { default as Rate } from './components/Rate';
+export { default as Slider } from './components/Slider';
 
-// To correct this we make sure to import all antd styles here directly.
-import 'antd/dist/antd.less';
-
-export { default as Button } from './General/Button';
-export { default as Pager } from './General/Pager';
-
-export { default as Checkbox } from './Data Entry/Checkbox';
-export { default as Radio } from './Data Entry/Radio';
-export { default as Rate } from './Data Entry/Rate';
-export { default as Slider } from './Data Entry/Slider/Slider';
-
-export { default as MediaButton } from './Data Display/MediaButton';

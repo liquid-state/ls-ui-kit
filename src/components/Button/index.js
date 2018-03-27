@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'antd';
+import { Button as AntButton } from 'antd';
 import cn from 'classnames';
 
 import './style.less';
 
-class StretchButton extends Component {
+class Button extends Component {
   static propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
@@ -52,15 +52,15 @@ class StretchButton extends Component {
     } = this.props;
 
     return (
-      <Button
+      <AntButton
         type={type}
         className={this.getClass()}
         {...other}
       >
         {children}
-      </Button>
+      </AntButton>
     );
   }
 }
 
-export default StretchButton;
+export default Button;
