@@ -23,13 +23,13 @@ The UI kit code is a set of es6 modules, you will probably need a code bundler s
 
 Additionally the style components are currently uncompiled less files, to enable the theme support, you will need to configure your bundler to support less.
 
-(Creating a simple getting started version with compiled CSS is tracked in #20)
+*Note*: Creating a simple getting started version with compiled CSS is tracked in [this issue](https://github.com/liquid-state/ls-ui-kit/issues/20)
 
 ## Storybook
 
 This project includes a storybook which helps to document each of the components and how to use them.
 
-TODO: Host the storybook so it can be accessed without cloning the repository.
+*Todo*: Host the storybook so it can be accessed without cloning the repository.
 
 
 ## Contributing
