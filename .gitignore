@@ -59,3 +59,4 @@ typings/
 
 # built assets
 /dist
+/storybook-compiled

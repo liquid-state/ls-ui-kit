@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import SliderComponent from '../../../../src/components/Slider/Slider';
+import { Slider as SliderComponent } from '../../../../src/index';
 
 class Slider extends Component {
   render() {

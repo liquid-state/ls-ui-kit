@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o storybook-compiled",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --fix --ext .js,.jsx",
     "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
