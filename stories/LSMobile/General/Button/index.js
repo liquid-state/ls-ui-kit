@@ -48,7 +48,7 @@ class ButtonPage extends Component {
 
         <section className="example">
           <h3 className="ex-title">Ghost</h3>
-          <div style={{padding: 20, background: '#4e3488'}}>
+          <div style={{padding: 20, background: '#212121'}}>
             <Button className="mb20" ghost>Default</Button>
             <Button className="mb20" type="primary" ghost>Primary</Button>
             <Button className="mb20" type="dashed" ghost>Dashed</Button>
