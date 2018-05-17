@@ -13,8 +13,7 @@ addDecorator((story) => (
 setAddon(chaptersAddon);
 
 function loadStories() {
-  require('../stories/AntDefault');
-  require('../stories/LSMobile');
+  require('../stories/index');
 }
 
 configure(loadStories, module);

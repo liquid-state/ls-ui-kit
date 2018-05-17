@@ -12,7 +12,8 @@
     "prepack": "npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "stories"
   ],
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
