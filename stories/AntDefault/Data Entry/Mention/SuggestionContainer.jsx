@@ -16,7 +16,7 @@ class SuggestionContainer extends Component {
 
     return (
       <section className="example">
-        <h3 className="ex-title">SuggestionContainer</h3>
+        <h3 className="ex-title">Suggestion Container</h3>
 
         <Row>
           <Col sm={16} lg={7}>

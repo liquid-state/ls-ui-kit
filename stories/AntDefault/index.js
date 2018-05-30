@@ -11,6 +11,7 @@ import Steps from './Navigation/Steps';
 import Affix from './Navigation/Affix';
 import Breadcrumbs from './Navigation/Breadcrumbs';
 import Dropdown from './Navigation/Dropdown';
+import PagerStories from './Navigation/Pager';
 
 // Data Entry
 import AutoComplate from './Data Entry/AutoComplate';
@@ -30,6 +31,9 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
+
+// Buttons
+import MediaButton from './Buttons/MediaButton';
 
 // Data Display
 import Avatar from './Data Display/Avatar';
@@ -69,30 +73,27 @@ import ScatterPlot from './G2/ScatterPlot';
 import MultipleLineCharts from './G2/MultipleLineCharts';
 import BasicLine from './G2/BasicLine';
 
-storiesOf('Ant Default', module);
-storiesOf('Ant Default/General', module)
+storiesOf('Liquid State UI Kit', module);
+storiesOf('Liquid State UI Kit/General', module)
   .add('Button', () => <Button />)
   .add('Icon', () => <Icon />);
 
-storiesOf('Ant Default/Navigation', module)
+storiesOf('Liquid State UI Kit/Navigation', module)
   .add('Pagination', () => <Pagination />)
   .add('Steps', () => <Steps />)
   .add('Affix', () => <Affix />)
   .add('Breadcrumbs', () => <Breadcrumbs />)
-  .add('Dropdown', () => <Dropdown />);
+  .add('Dropdown', () => <Dropdown />)
+  .add('Pager', PagerStories);
 
-storiesOf('Ant Default/Data Entry', module)
+storiesOf('Liquid State UI Kit/Data Entry', module)
   .add('AutoComplate', () => <AutoComplate />)
   .add('Cascader', () => <Cascader />)
-  .add('Checkbox', () => <Checkbox />)
   .add('DatePicker', () => <DatePicker />)
   .add('Form', () => <Form />)
   .add('InputNumber', () => <InputNumber />)
   .add('Input', () => <Input />)
   .add('Mention', () => <Mention />)
-  .add('Rate', () => <Rate />)
-  .add('Radio', () => <Radio />)
-  .add('Slider', () => <Slider />)
   .add('Switch', () => <Switch />)
   .add('Select', () => <Select />)
   .add('TimePicker', () => <TimePicker />)
@@ -100,7 +101,7 @@ storiesOf('Ant Default/Data Entry', module)
   .add('TreeSelect', () => <TreeSelect />)
   .add('Upload', () => <Upload />);
 
-storiesOf('Ant Default/Data Display', module)
+storiesOf('Liquid State UI Kit/Data Display', module)
   .add('Avatar', () => <Avatar />)
   .add('Badge', () => <Badge />)
   .add('Calendar', () => <Calendar />)
@@ -115,7 +116,7 @@ storiesOf('Ant Default/Data Display', module)
   .add('Tooltip', () => <Tooltip />)
   .add('Tree', () => <Tree />);
 
-storiesOf('Ant Default/Feedback', module)
+storiesOf('Liquid State UI Kit/Feedback', module)
   .add('Alert', () => <Alert />)
   .add('Modal', () => <Modal />)
   .add('Message', () => <Message />)
@@ -124,16 +125,28 @@ storiesOf('Ant Default/Feedback', module)
   .add('Popconfirm', () => <Popconfirm />)
   .add('Spin', () => <Spin />);
 
-storiesOf('Ant Default/Other', module)
+storiesOf('Liquid State UI Kit/Other', module)
   .add('Divider', () => <Divider />)
   .add('Anchor', () => <Anchor />)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
 
-storiesOf('Ant Default/G2', module)
+storiesOf('Liquid State UI Kit/G2', module)
   .add('Curve line chart', () => <CurveLineChart />)
   .add('Stack histogram', () => <StackHistogram />)
   .add('Group histogram', () => <GroupHistogram />)
   .add('Scatter plot', () => <ScatterPlot />)
   .add('Multiple line charts', () => <MultipleLineCharts />)
   .add('The basic line chart', () => <BasicLine />);
+
+storiesOf('Liquid State UI Kit/Radio Mobile', module)
+  .add('Radio', () => <Radio />);
+
+storiesOf('Liquid State UI Kit/Rate Mobile', module)
+  .add('Rate', () => <Rate />);
+
+storiesOf('Liquid State UI Kit/Slider Mobile', module)
+  .add('Slider', () => <Slider />);
+
+storiesOf('Liquid State UI Kit/Checkbox Mobile', module)
+  .add('Checkbox', () => <Checkbox />);

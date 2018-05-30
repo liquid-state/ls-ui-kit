@@ -20,7 +20,7 @@ class DividerPage extends Component {
           <li>Divide inline text and links such as the operation column of table.</li>
         </ul>
 
-        <h2 className="title">Exemples:</h2>
+        <h2 className="title">Examples:</h2>
 
         <Horizontal />
         <Vertical />
