@@ -12,9 +12,9 @@ class AutoComplatePage extends Component {
   render() { 
     return (
       <Fragment>
-        <h1 className="title">AutoComplate</h1>
+        <h1 className="title">Auto сomplate</h1>
         <p className="text">
-          Autocomplete function of input field.
+          Auto complete function of input field.
         </p>
 
         <h2 className="title">When To Use</h2>

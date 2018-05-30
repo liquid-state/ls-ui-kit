@@ -33,7 +33,7 @@ class Group extends Component {
           </span>
 
           <span>
-            <Group className="mr20 mb20">
+            <Group className="ml20 mr20 mb20">
               <Button type="primary" onClick={action('Go Back')}>
                 <Icon type="left" />Go back
               </Button>

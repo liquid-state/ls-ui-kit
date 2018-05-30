@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import Basic from './Basic';
 import Placement from './Placement';
 import ArrowPointing from './ArrowPointing';
+import '../../../css/style.css';
 
 class Popover extends Component {
 

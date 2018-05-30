@@ -14,7 +14,7 @@ storiesOf('LS Mobile/Data Display', module)
                     {
                         title: 'Square Image',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800" />
                                     <MediaButton.Text>Square</MediaButton.Text>
@@ -25,7 +25,7 @@ storiesOf('LS Mobile/Data Display', module)
                     {
                         title: 'Circle Image',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800" circle />
                                     <MediaButton.Text>Circle</MediaButton.Text>
@@ -37,7 +37,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Rounded Image',
                         info: 'A MediaButton containing an image which has rounded corners.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image
                                         src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800"
@@ -51,7 +51,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Rounded Image With Shadow',
                         info: 'A MediaButton containing an image which has rounded corners and a shadow.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image
                                         src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800"
@@ -66,7 +66,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Rounded Image with Custom Shadow',
                         info: 'A MediaButton containing an image with custom rounding on the corners and a custom shadow.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image
                                         src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800"
@@ -80,7 +80,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Image Without Text',
                         info: 'A MediaButton containing an image without text',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Image
                                         src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800"
@@ -97,7 +97,7 @@ storiesOf('LS Mobile/Data Display', module)
                     {
                         title: 'Square Icon',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon type="heart" />
                                     <MediaButton.Text>Square</MediaButton.Text>
@@ -108,7 +108,7 @@ storiesOf('LS Mobile/Data Display', module)
                     {
                         title: 'Circle Icon',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon type="heart" circle />
                                     <MediaButton.Text>Circle</MediaButton.Text>
@@ -120,7 +120,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Rounded Icon',
                         info: 'A MediaButton containing an icon which has custom rounded corners.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon
                                         type="heart"
@@ -134,7 +134,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Shadowed Icon',
                         info: 'A MediaButton containing an icon which has a shadow.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon
                                         type="heart"
@@ -149,7 +149,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Shadowed Icon With Fill',
                         info: 'A MediaButton containing an icon which has a shadow and a custom fill.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon
                                         type="heart"
@@ -164,7 +164,7 @@ storiesOf('LS Mobile/Data Display', module)
                         title: 'Custom Icon Styles',
                         info: 'A MediaButton containing an icon which has a shadow and a custom fill.',
                         sectionFn: () => (
-                            <div style={{ width: 100 }}>
+                            <div style={{ width: 100, cursor: 'pointer' }}>
                                 <MediaButton>
                                     <MediaButton.Icon
                                         type="smile"

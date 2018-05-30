@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Button, Icon, Row, Col } from 'antd';
+import '../../../css/style.css';
 
 const menu = (
   <Menu>
@@ -21,44 +22,35 @@ class Placement extends Component {
       <section className="example">
         <h3 className="ex-title">Placement</h3>
         
-        <Row className="mb20" gutter={16}>
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="bottomLeft">
-              <Button>bottomLeft</Button>
-            </Dropdown>
-          </Col>
+        <Row className="mb20">
 
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="bottomCenter">
-              <Button>bottomCenter</Button>
-            </Dropdown>
-          </Col>
+          <Dropdown overlay={menu} placement="bottomLeft">
+            <Button>bottomLeft</Button>
+          </Dropdown>
 
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="bottomRight">
-              <Button>bottomRight</Button>
-            </Dropdown>
-          </Col>
+          <Dropdown overlay={menu} placement="bottomCenter">
+            <Button className="tooltip">bottomCenter</Button>
+          </Dropdown>
+
+          <Dropdown overlay={menu} placement="bottomRight">
+            <Button>bottomRight</Button>
+          </Dropdown>
+
         </Row>
 
         <Row>
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="topLeft">
-              <Button>topLeft</Button>
-            </Dropdown>
-          </Col>
 
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="topCenter">
-              <Button>topCenter</Button>
-            </Dropdown>
-          </Col>
+          <Dropdown overlay={menu} placement="topLeft">
+            <Button>topLeft</Button>
+          </Dropdown>
 
-          <Col sm={12} lg={2}>
-            <Dropdown overlay={menu} placement="topRight">
-              <Button>topRight</Button>
-            </Dropdown>
-          </Col>
+          <Dropdown overlay={menu} placement="topCenter">
+            <Button className="tooltip">topCenter</Button>
+          </Dropdown>
+
+          <Dropdown overlay={menu} placement="topRight">
+            <Button>topRight</Button>
+          </Dropdown>
 
         </Row>
       </section>

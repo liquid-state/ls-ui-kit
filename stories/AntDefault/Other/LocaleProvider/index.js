@@ -9,13 +9,13 @@ class LocaleProvider extends Component {
   render() { 
     return (
       <div>
-        <h1 className="title">LocaleProvider</h1>
+        <h1 className="title">Locale Provider</h1>
 
         <p className="text">
-          LocaleProvider provides a uniform localization support for built-in text of components.
+          Locale Provider provides a uniform localization support for built-in text of components.
         </p>
 
-        <h2 className="title">Exemples:</h2>
+        <h2 className="title">Examples:</h2>
 
         <Localization />
         <AllComponents />
