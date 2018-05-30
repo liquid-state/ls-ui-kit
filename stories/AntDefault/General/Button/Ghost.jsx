@@ -7,7 +7,7 @@ class ButtonGhost extends Component {
     return (
       <Fragment>
         <h3 className="ex-title">Ghost Button</h3>
-        <div style={{ background: 'rgb(47, 45, 165)', padding: '26px 16px 16px' }}>
+        <div style={{ background: '#BDC8C8', padding: '26px 16px 16px' }}>
           <Button className="mr20 mb20" type="primary" ghost onClick={action('Primary Ghost Button Clicked')}>Primary</Button>
           <Button className="mr20 mb20" ghost onClick={action('Default Ghost Button Clicked')}>Default</Button>
           <Button className="mr20 mb20" type="dashed" ghost onClick={action('Dashed Ghost Button Clicked')}>Dashed</Button>

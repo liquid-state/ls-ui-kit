@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import './style.css';
+import './style.less';
 
 import Basic from './Basic';
 import Custom from './Custom';
@@ -22,7 +22,7 @@ class BackTop extends Component {
           <li>When you need to go back to the top very frequently in order to view the contents.</li>
         </ul>
 
-        <h2 className="title">Exemples:</h2>
+        <h2 className="title">Examples:</h2>
 
         <Basic />
         <Custom />

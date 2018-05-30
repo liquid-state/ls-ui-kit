@@ -19,7 +19,7 @@ class Anchor extends Component {
           For displaying anchor hyperlinks on page and jumping between them.
         </p>
 
-        <h2 className="title">Exemples:</h2>
+        <h2 className="title">Examples:</h2>
 
         <Basic />
         <StaticAnchor />

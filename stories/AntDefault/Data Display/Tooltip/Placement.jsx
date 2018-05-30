@@ -14,35 +14,35 @@ class Placement extends Component {
         <div className="demo">
           <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
             <Tooltip placement="topLeft" title={text}>
-              <Button>TL</Button>
+              <Button className="tooltip" >TL</Button>
             </Tooltip>
             <Tooltip placement="top" title={text}>
-              <Button>Top</Button>
+              <Button className="tooltip" >Top</Button>
             </Tooltip>
             <Tooltip placement="topRight" title={text}>
-              <Button>TR</Button>
+              <Button className="tooltip" >TR</Button>
             </Tooltip>
           </div>
           <div style={{ width: buttonWidth, float: 'left' }}>
             <Tooltip placement="leftTop" title={text}>
-              <Button>LT</Button>
+              <Button className="tooltip" >LT</Button>
             </Tooltip>
             <Tooltip placement="left" title={text}>
-              <Button>Left</Button>
+              <Button className="tooltip" >Left</Button>
             </Tooltip>
             <Tooltip placement="leftBottom" title={text}>
-              <Button>LB</Button>
+              <Button className="tooltip" >LB</Button>
             </Tooltip>
           </div>
           <div style={{ width: buttonWidth, marginLeft: 260 }}>
             <Tooltip placement="rightTop" title={text}>
-              <Button>RT</Button>
+              <Button className="tooltip" >RT</Button>
             </Tooltip>
             <Tooltip placement="right" title={text}>
-              <Button>Right</Button>
+              <Button className="tooltip" >Right</Button>
             </Tooltip>
             <Tooltip placement="rightBottom" title={text}>
-              <Button>RB</Button>
+              <Button className="tooltip" >RB</Button>
             </Tooltip>
           </div>
           <div style={{ marginLeft: buttonWidth, clear: 'both', whiteSpace: 'nowrap' }}>
@@ -50,10 +50,10 @@ class Placement extends Component {
               <Button>BL</Button>
             </Tooltip>
             <Tooltip placement="bottom" title={text}>
-              <Button>Bottom</Button>
+              <Button className="tooltip" >Bottom</Button>
             </Tooltip>
             <Tooltip placement="bottomRight" title={text}>
-              <Button>BR</Button>
+              <Button className="tooltip" >BR</Button>
             </Tooltip>
           </div>
         </div>
