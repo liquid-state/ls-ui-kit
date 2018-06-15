@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
 
 const menu = (
@@ -15,20 +15,15 @@ const menu = (
   </Menu>
 );
 
-class Basic extends Component {
-  render() {
-    return (
+const Basic = () => (
       <section className="example">
         <h3 className="ex-title">Basic</h3>
-
         <Dropdown overlay={menu}>
           <a className="ant-dropdown-link" href="#">
             Hover me <Icon type="down" />
           </a>
         </Dropdown>
       </section>
-    );
-  }
-}
- 
+);
+
 export default Basic;
