@@ -28,6 +28,17 @@
     align-items: stretch;
     outline: none;
 
+    &:hover {
+      color: @primary-color;
+
+      .uikit-icon .uikit-media-wrapper {
+        border-color: @primary-color;
+        .anticon {
+          color: @primary-color;
+        }
+      }
+    }
+
     .uikit-icon .uikit-media-wrapper {
         .inner-icon-wrapper {
             position: relative;
