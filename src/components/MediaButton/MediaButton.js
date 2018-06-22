@@ -17,17 +17,17 @@ export default class extends React.Component {
     static propTypes = {
       type: PropTypes.string,
       className: PropTypes.string,
-      style: PropTypes.object,
       children: PropTypes.oneOfType([
         PropTypes.node,
         PropTypes.arrayOf(PropTypes.node),
       ]).isRequired,
+      size: PropTypes.string,
     };
 
     static defaultProps = {
       type: undefined,
       className: undefined,
-      style: {},
+      size: undefined,
     }
 
     state = {
@@ -53,10 +53,11 @@ export default class extends React.Component {
         children,
         type,
         className,
+        size,
         ...props
       } = this.props;
 
-      const cname = cx('ls-ui-kit', 'media-button', className, { animating: this.state.animating });
+      const cname = cx('ls-ui-kit', 'media-button', className, size, { animating: this.state.animating });
 
       if (type) {
         // Make this an actual button.

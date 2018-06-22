@@ -19,6 +19,40 @@
     }
 }
 
+.sized-media-button(@padding, @font-size) {
+  display: inline-block;
+
+  .uikit-media-wrapper {
+    // For images
+    height: auto;
+    width: @padding * 8;
+  }
+
+  .uikit-icon .uikit-media-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: auto;
+
+    padding: @padding;
+
+    .inner-icon-wrapper {
+      width: auto;
+      padding-bottom: 0;
+    }
+
+    .anticon {
+      font-size: @font-size;
+      position: relative;
+      top: initial;
+      left: initial;
+      transform: none;
+    }
+  }
+}
+
 // Default icon styles.
 .media-button-icon(@ls-media-button-icon-font-size, @text-color, @white, @border-color-base);
 
@@ -79,6 +113,18 @@
                 box-shadow: @ls-media-button-shadow;
             }
         }
+    }
+
+    &.small {
+      .sized-media-button(@padding-sm, 3em);
+    }
+
+    &.medium {
+      .sized-media-button(@padding-md, 4em);
+    }
+
+    &.large {
+      .sized-media-button(@padding-lg, 5em);
     }
 
     .uikit-text {
