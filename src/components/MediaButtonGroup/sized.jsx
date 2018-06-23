@@ -45,8 +45,9 @@ class SizedMediaButtonGroup extends React.Component {
     const rows = buildRows(children, isTripples && this.state.isLarge);
     return (
       <div {...props} className={className}>
-        {rows.map(row => (
-          <div className="media-button-group-row">
+        {rows.map((row, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div className="media-button-group-row" key={index}>
             {row}
           </div>
         ))}

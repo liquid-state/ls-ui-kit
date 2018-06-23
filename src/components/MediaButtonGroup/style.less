@@ -38,6 +38,13 @@
 }
 
 .ls-ui-kit.media-button-group.small {
+  @media screen and (max-width: 340px) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 
   .media-button {
     .sized-media-button(@padding-sm, 3em);
@@ -47,6 +54,14 @@
 }
 
 .ls-ui-kit.media-button-group.medium {
+  @media screen and (max-width: 340px) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
   .media-button {
     .sized-media-button(@padding-md, 4em);
 
@@ -55,6 +70,13 @@
 }
 
 .ls-ui-kit.media-button-group.large {
+  @media screen and (max-width: @screen-xs-max) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 
   .media-button {
     .sized-media-button(@padding-lg, 5em);
