@@ -1,6 +1,7 @@
 @import '../../variables.less';
+@import '../MediaButton/style.less';
 
-.ls-ui-kit.media-button-group {
+.ls-ui-kit.media-button-group.scaling {
   .media-button {
     margin: 24px;
 
@@ -33,5 +34,53 @@
         font-size: 4rem;
       }
     }
+  }
+}
+
+.ls-ui-kit.media-button-group.small {
+  @media screen and (max-width: 340px) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .media-button {
+    .sized-media-button(@padding-sm, 3em);
+
+    margin: @padding-sm / 2;
+  }
+}
+
+.ls-ui-kit.media-button-group.medium {
+  @media screen and (max-width: 340px) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .media-button {
+    .sized-media-button(@padding-md, 4em);
+
+    margin: @padding-md / 2;
+  }
+}
+
+.ls-ui-kit.media-button-group.large {
+  @media screen and (max-width: @screen-xs-max) {
+    .media-button-group-row {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .media-button {
+    .sized-media-button(@padding-lg, 5em);
+
+    margin: @padding-lg / 2;
   }
 }

@@ -185,6 +185,70 @@ storiesOf('LS Mobile/Data Display', module)
                         )
                     },
                 ]
+            },
+            {
+              title: 'Sized Icon Media Buttons',
+                sections: [
+                    {
+                        title: 'Small',
+                        sectionFn: () => (
+                                <MediaButton size="small">
+                                    <MediaButton.Icon type="heart" />
+                                    <MediaButton.Text>Small</MediaButton.Text>
+                                </MediaButton>
+                        )
+                    },
+                    {
+                      title: 'Medium',
+                      sectionFn: () => (
+                              <MediaButton size="medium">
+                                  <MediaButton.Icon type="heart" />
+                                  <MediaButton.Text>Medium</MediaButton.Text>
+                              </MediaButton>
+                      )
+                    },
+                    {
+                      title: 'Large',
+                      sectionFn: () => (
+                            <MediaButton size="large">
+                                <MediaButton.Icon type="heart" />
+                                <MediaButton.Text>Large</MediaButton.Text>
+                            </MediaButton>
+                      )
+                    },
+                ]
+            },
+            {
+              title: 'Sized Image Media Buttons',
+                sections: [
+                    {
+                        title: 'Small',
+                        sectionFn: () => (
+                                <MediaButton size="small">
+                                    <MediaButton.Image src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800" />
+                                    <MediaButton.Text>Small</MediaButton.Text>
+                                </MediaButton>
+                        )
+                    },
+                    {
+                      title: 'Medium',
+                      sectionFn: () => (
+                              <MediaButton size="medium">
+                                  <MediaButton.Image src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800" />
+                                  <MediaButton.Text>Medium</MediaButton.Text>
+                              </MediaButton>
+                      )
+                    },
+                    {
+                      title: 'Large',
+                      sectionFn: () => (
+                            <MediaButton size="large">
+                                <MediaButton.Image src="https://avatars.mds.yandex.net/get-pdb/33827/4731cfc0-877e-4052-9179-0522e0a84f40/s800" />
+                                <MediaButton.Text>Large</MediaButton.Text>
+                            </MediaButton>
+                      )
+                    },
+                ]
             }
         ]
     });
