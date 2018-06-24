@@ -9,6 +9,9 @@ import Info from './Info';
 import Internationalization from './Internationalization';
 import Destroy from './Destroy';
 import Position from './Position';
+import AlertModalMobile from './AlertModalMobile';
+import PopupModalMobile from './PopupModalMobile';
+import TwoButAlertModalMobile from './TwoButAlertModalMobile';
 
 class ModalPage extends Component {
   render() { 
@@ -42,6 +45,9 @@ class ModalPage extends Component {
         <Internationalization />
         <Destroy />
         <Position />
+        <AlertModalMobile />
+        <PopupModalMobile />
+        <TwoButAlertModalMobile />
 
       </Fragment>
     );
