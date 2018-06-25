@@ -66,12 +66,12 @@ import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
 // G2
-import CurveLineChart from './G2/CurveLineChart';
-import StackHistogram from './G2/StackHistogram';
-import GroupHistogram from './G2/GroupHistogram';
-import ScatterPlot from './G2/ScatterPlot';
-import MultipleLineCharts from './G2/MultipleLineCharts';
-import BasicLine from './G2/BasicLine';
+// import CurveLineChart from './G2/CurveLineChart';
+// import StackHistogram from './G2/StackHistogram';
+// import GroupHistogram from './G2/GroupHistogram';
+// import ScatterPlot from './G2/ScatterPlot';
+// import MultipleLineCharts from './G2/MultipleLineCharts';
+// import BasicLine from './G2/BasicLine';
 
 storiesOf('Liquid State UI Kit', module);
 storiesOf('Liquid State UI Kit/General', module)
@@ -131,13 +131,13 @@ storiesOf('Liquid State UI Kit/Other', module)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
 
-storiesOf('Liquid State UI Kit/G2', module)
-  .add('Curve line chart', () => <CurveLineChart />)
-  .add('Stack histogram', () => <StackHistogram />)
-  .add('Group histogram', () => <GroupHistogram />)
-  .add('Scatter plot', () => <ScatterPlot />)
-  .add('Multiple line charts', () => <MultipleLineCharts />)
-  .add('The basic line chart', () => <BasicLine />);
+// storiesOf('Liquid State UI Kit/G2', module)
+//   .add('Curve line chart', () => <CurveLineChart />)
+//   .add('Stack histogram', () => <StackHistogram />)
+//   .add('Group histogram', () => <GroupHistogram />)
+//   .add('Scatter plot', () => <ScatterPlot />)
+//   .add('Multiple line charts', () => <MultipleLineCharts />)
+//   .add('The basic line chart', () => <BasicLine />);
 
 storiesOf('Liquid State UI Kit/Radio Mobile', module)
   .add('Radio', () => <Radio />);
