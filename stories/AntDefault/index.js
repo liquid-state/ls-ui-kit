@@ -131,13 +131,13 @@ storiesOf('Liquid State UI Kit/Other', module)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
 
-// storiesOf('Liquid State UI Kit/G2', module)
-//   .add('Curve line chart', () => <CurveLineChart />)
-//   .add('Stack histogram', () => <StackHistogram />)
-//   .add('Group histogram', () => <GroupHistogram />)
-//   .add('Scatter plot', () => <ScatterPlot />)
-//   .add('Multiple line charts', () => <MultipleLineCharts />)
-//   .add('The basic line chart', () => <BasicLine />);
+storiesOf('Liquid State UI Kit/G2', module)
+  .add('Curve line chart', () => <CurveLineChart />)
+  .add('Stack histogram', () => <StackHistogram />)
+  .add('Group histogram', () => <GroupHistogram />)
+  .add('Scatter plot', () => <ScatterPlot />)
+  .add('Multiple line charts', () => <MultipleLineCharts />)
+  .add('The basic line chart', () => <BasicLine />);
 
 storiesOf('Liquid State UI Kit/Radio Mobile', module)
   .add('Radio', () => <Radio />);
