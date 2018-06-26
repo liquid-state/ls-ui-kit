@@ -35,8 +35,6 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
-import '../AntDefault/Data Display/MediaButton/MediaButton';
-
 
 // Data Display
 import Avatar from './Data Display/Avatar';
