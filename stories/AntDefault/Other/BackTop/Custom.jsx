@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BackTop } from 'antd';
+import './style.less';
 
 class Custom extends Component {
   render() { 
@@ -12,7 +13,7 @@ class Custom extends Component {
             <div className="backtop-blue">UP</div>
           </BackTop>
           Scroll down to see the bottom-right
-          <strong style={{ color: '#1088e9' }}> blue </strong>
+          <span className="strongtext"> blue </span>
           button.
         </div>
       </section>

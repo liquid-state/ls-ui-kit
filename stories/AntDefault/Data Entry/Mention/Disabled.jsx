@@ -7,7 +7,7 @@ class Disabled extends Component {
   render() { 
     return (
       <section className="example">
-        <h3 className="ex-title">disabled or readOnly</h3>
+        <h3 className="ex-title">Disabled or ReadOnly</h3>
 
         <Row>
           <Col sm={16} lg={7}>

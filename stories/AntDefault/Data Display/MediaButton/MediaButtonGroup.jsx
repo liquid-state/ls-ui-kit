@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import MediaButtonGroup from '../src/components/MediaButtonGroup';
-import { MediaButton } from '../src';
+import MediaButtonGroup from '../../../../src/components/MediaButtonGroup';
+import { MediaButton } from '../../../../src';
 
 
-storiesOf('LS Mobile/Data Display/Media Button Group/Scaling', module)
+storiesOf('Liquid State UI Kit/Data Display/Media Button Group/Scaling', module)
   .addDecorator(story => (
     <div style={{ maxWidth: 550, margin: 'auto' }}>
       {story()}
@@ -79,8 +79,7 @@ storiesOf('LS Mobile/Data Display/Media Button Group/Scaling', module)
     </MediaButtonGroup>
   ));
 
-
-  storiesOf('LS Mobile/Data Display/Media Button Group/Sized', module)
+storiesOf('Liquid State UI Kit/Data Display/Media Button Group/Sized', module)
   .addDecorator(story => (
     <div style={{ maxWidth: 768, margin: 'auto', display: 'flex', justifyContent: 'center' }}>
       {story()}
@@ -265,4 +264,5 @@ storiesOf('LS Mobile/Data Display/Media Button Group/Scaling', module)
         <MediaButton.Text>APPOINTMENTS</MediaButton.Text>
       </MediaButton>
     </MediaButtonGroup>
-  ))
+  ));
+

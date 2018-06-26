@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // General
 import Button from './General/Button';
 import Icon from './General/Icon';
+import PagerStories from './General/Pager';
 
 // Navigation
 import Pagination from './Navigation/Pagination';
@@ -15,13 +16,17 @@ import Dropdown from './Navigation/Dropdown';
 // Data Entry
 import AutoComplate from './Data Entry/AutoComplate';
 import Checkbox from './Data Entry/Checkbox';
+import CheckboxMobile from './Data Entry/Checkbox Mobile';
 import DatePicker from './Data Entry/DatePicker';
 import Form from './Data Entry/Form';
 import InputNumber from './Data Entry/InputNumber';
 import Input from './Data Entry/Input';
 import Rate from './Data Entry/Rate';
+import RateMobile from './Data Entry/Rate Mobile';
 import Radio from './Data Entry/Radio';
+import RadioMobile from './Data Entry/Radio Mobile';
 import Slider from './Data Entry/Slider';
+import SliderMobile from './Data Entry/Slider Mobile';
 import Switch from './Data Entry/Switch';
 import Select from './Data Entry/Select';
 import Upload from './Data Entry/Upload';
@@ -61,30 +66,28 @@ import Anchor from './Other/Anchor';
 import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
-storiesOf('Ant Default', module);
-storiesOf('Ant Default/General', module)
-  .add('Button', () => <Button />)
-  .add('Icon', () => <Icon />);
 
-storiesOf('Ant Default/Navigation', module)
+storiesOf('Liquid State UI Kit', module);
+storiesOf('Liquid State UI Kit/General', module)
+  .add('Buttons', () => <Button />)
+  .add('Icon', () => <Icon />)
+  .add('Pager', PagerStories);
+
+storiesOf('Liquid State UI Kit/Navigation', module)
   .add('Pagination', () => <Pagination />)
   .add('Steps', () => <Steps />)
   .add('Affix', () => <Affix />)
   .add('Breadcrumbs', () => <Breadcrumbs />)
   .add('Dropdown', () => <Dropdown />);
 
-storiesOf('Ant Default/Data Entry', module)
+storiesOf('Liquid State UI Kit/Data Entry', module)
   .add('AutoComplate', () => <AutoComplate />)
   .add('Cascader', () => <Cascader />)
-  .add('Checkbox', () => <Checkbox />)
   .add('DatePicker', () => <DatePicker />)
   .add('Form', () => <Form />)
   .add('InputNumber', () => <InputNumber />)
   .add('Input', () => <Input />)
   .add('Mention', () => <Mention />)
-  .add('Rate', () => <Rate />)
-  .add('Radio', () => <Radio />)
-  .add('Slider', () => <Slider />)
   .add('Switch', () => <Switch />)
   .add('Select', () => <Select />)
   .add('TimePicker', () => <TimePicker />)
@@ -92,7 +95,8 @@ storiesOf('Ant Default/Data Entry', module)
   .add('TreeSelect', () => <TreeSelect />)
   .add('Upload', () => <Upload />);
 
-storiesOf('Ant Default/Data Display', module)
+
+storiesOf('Liquid State UI Kit/Data Display', module)
   .add('Avatar', () => <Avatar />)
   .add('Badge', () => <Badge />)
   .add('Calendar', () => <Calendar />)
@@ -107,7 +111,7 @@ storiesOf('Ant Default/Data Display', module)
   .add('Tooltip', () => <Tooltip />)
   .add('Tree', () => <Tree />);
 
-storiesOf('Ant Default/Feedback', module)
+storiesOf('Liquid State UI Kit/Feedback', module)
   .add('Alert', () => <Alert />)
   .add('Modal', () => <Modal />)
   .add('Message', () => <Message />)
@@ -116,8 +120,24 @@ storiesOf('Ant Default/Feedback', module)
   .add('Popconfirm', () => <Popconfirm />)
   .add('Spin', () => <Spin />);
 
-storiesOf('Ant Default/Other', module)
+storiesOf('Liquid State UI Kit/Other', module)
   .add('Divider', () => <Divider />)
   .add('Anchor', () => <Anchor />)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
+
+storiesOf('Liquid State UI Kit/Data Entry/Radio', module)
+  .add('Radio', () => <Radio />)
+  .add('Radio Mobile', () => <RadioMobile />);
+
+storiesOf('Liquid State UI Kit/Data Entry/Rate', module)
+  .add('Rate', () => <Rate />)
+  .add('Rate Mobile', () => <RateMobile />);
+
+storiesOf('Liquid State UI Kit/Data Entry/Slider', module)
+  .add('Slider', () => <Slider />)
+  .add('Slider Mobile', () => <SliderMobile />);
+
+storiesOf('Liquid State UI Kit/Data Entry/Checkbox', module)
+  .add('Checkbox', () => <Checkbox />)
+  .add('Checkbox Mobile', () => <CheckboxMobile />);

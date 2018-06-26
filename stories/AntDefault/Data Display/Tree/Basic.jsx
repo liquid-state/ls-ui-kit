@@ -21,7 +21,7 @@ class Basic extends Component {
               <TreeNode title="leaf" key="0-0-0-1" />
             </TreeNode>
             <TreeNode title="parent 1-1" key="0-0-1">
-              <TreeNode title={<span style={{ color: '#1890ff' }}>sss</span>} key="0-0-1-0" />
+              <TreeNode title="sss" key="0-0-1-0" />
             </TreeNode>
           </TreeNode>
         </Tree>
