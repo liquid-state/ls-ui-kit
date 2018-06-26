@@ -1,0 +1,71 @@
+@import "../../variables.less";
+.rounded-collapse {
+  .ant-collapse-item:last-child .ant-collapse-header {
+    border-radius: 20px;
+  }
+  .ant-collapse-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid @primary-color;
+    border-radius: 20px;
+    padding: 12px @padding-xs 12px @padding-xs !important;
+
+    > .wrapheader {
+      padding-left: .5 * @padding-xs;
+      > span {
+        color: @primary-color;
+      }
+      > i {
+        color: @success-color;
+      }
+    }
+  }
+  .ant-collapse-content-box  a:hover {
+    text-decoration: underline !important;
+  }
+  
+  .panelbtn {
+    border: none;
+    margin-bottom: 1.5rem;
+  }
+  .example {
+    width: 600px;
+  }
+  .iconstart {
+    font-size: 28px;
+    padding-right: .5 * @padding-xs;
+    color: @primary-color;
+  }
+  .iconend {
+    font-size: 28px;
+  }
+  .dropicon {
+    font-size: 16px;
+    color: @primary-color;
+    padding-right: .5rem;
+
+  }
+  .droprow {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: .5rem;
+    margin-top: 0.5rem;
+  }
+  .health {
+    font-size: 26px;
+    color: @primary-color;
+      &::before {
+        padding-top: .5 * @padding-xs;
+    }
+  }
+  .anticon-up-square-o:before {
+    padding-top: 4px;
+  }
+  .wrapheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+  }
+}
