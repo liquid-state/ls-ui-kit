@@ -1,4 +1,5 @@
 import AntDefault from './AntDefault';
-import LSMobile from './LSMobile';
 
-import './MediaButtonGroup';
+import '../stories/AntDefault/Data Display/MediaButton/MediaButtonGroup';
+
+

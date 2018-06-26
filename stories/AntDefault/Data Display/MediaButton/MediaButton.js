@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf, addDecorator } from '@storybook/react';
-import MediaButton from '../../../src/components/MediaButton';
+import MediaButton from '../../../../src/components/MediaButton';
 
-storiesOf('LS Mobile/Data Display', module)
+storiesOf('Liquid State UI Kit/Data Display', module)
   .addWithChapters('Media Button', {
     subtitle: 'Buttons which combine media and text',
     chapters: [

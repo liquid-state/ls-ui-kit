@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 // General
 import Button from './General/Button';
 import Icon from './General/Icon';
+import PagerStories from './General/Pager';
 
 // Navigation
 import Pagination from './Navigation/Pagination';
@@ -15,13 +16,17 @@ import Dropdown from './Navigation/Dropdown';
 // Data Entry
 import AutoComplate from './Data Entry/AutoComplate';
 import Checkbox from './Data Entry/Checkbox';
+import CheckboxMobile from './Data Entry/Checkbox Mobile';
 import DatePicker from './Data Entry/DatePicker';
 import Form from './Data Entry/Form';
 import InputNumber from './Data Entry/InputNumber';
 import Input from './Data Entry/Input';
 import Rate from './Data Entry/Rate';
+import RateMobile from './Data Entry/Rate Mobile';
 import Radio from './Data Entry/Radio';
+import RadioMobile from './Data Entry/Radio Mobile';
 import Slider from './Data Entry/Slider';
+import SliderMobile from './Data Entry/Slider Mobile';
 import Switch from './Data Entry/Switch';
 import Select from './Data Entry/Select';
 import Upload from './Data Entry/Upload';
@@ -30,6 +35,7 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
+import '../AntDefault/Data Display/MediaButton/MediaButton';
 
 
 // Data Display
@@ -65,8 +71,9 @@ import LocaleProvider from './Other/LocaleProvider';
 
 storiesOf('Liquid State UI Kit', module);
 storiesOf('Liquid State UI Kit/General', module)
-  .add('Button', () => <Button />)
-  .add('Icon', () => <Icon />);
+  .add('Buttons', () => <Button />)
+  .add('Icon', () => <Icon />)
+  .add('Pager', PagerStories);
 
 storiesOf('Liquid State UI Kit/Navigation', module)
   .add('Pagination', () => <Pagination />)
@@ -89,6 +96,7 @@ storiesOf('Liquid State UI Kit/Data Entry', module)
   .add('Transfer', () => <Transfer />)
   .add('TreeSelect', () => <TreeSelect />)
   .add('Upload', () => <Upload />);
+
 
 storiesOf('Liquid State UI Kit/Data Display', module)
   .add('Avatar', () => <Avatar />)
@@ -120,14 +128,18 @@ storiesOf('Liquid State UI Kit/Other', module)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />);
 
-storiesOf('Liquid State UI Kit/Radio Mobile', module)
-  .add('Radio', () => <Radio />);
+storiesOf('Liquid State UI Kit/Data Entry/Radio', module)
+  .add('Radio', () => <Radio />)
+  .add('Radio Mobile', () => <RadioMobile />);
 
-storiesOf('Liquid State UI Kit/Rate Mobile', module)
-  .add('Rate', () => <Rate />);
+storiesOf('Liquid State UI Kit/Data Entry/Rate', module)
+  .add('Rate', () => <Rate />)
+  .add('Rate Mobile', () => <RateMobile />);
 
-storiesOf('Liquid State UI Kit/Slider Mobile', module)
-  .add('Slider', () => <Slider />);
+storiesOf('Liquid State UI Kit/Data Entry/Slider', module)
+  .add('Slider', () => <Slider />)
+  .add('Slider Mobile', () => <SliderMobile />);
 
-storiesOf('Liquid State UI Kit/Checkbox Mobile', module)
-  .add('Checkbox', () => <Checkbox />);
+storiesOf('Liquid State UI Kit/Data Entry/Checkbox', module)
+  .add('Checkbox', () => <Checkbox />)
+  .add('Checkbox Mobile', () => <CheckboxMobile />);
