@@ -1,8 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
 import Button from '../../../../src/components/Button';
+import CheckedButton from '../../../../src/components/ButCheckList';
 
 class ButtonPage extends Component {
+  componentDidMount = () => {
+  }
   render() {
     return (
       <Fragment>
@@ -64,6 +67,13 @@ class ButtonPage extends Component {
             <Button className="mb20" type="dashed" stretched>Dashed</Button>
             <Button className="mb20" type="primary" icon="global" stretched>Icon</Button>
             <Button type="danger" stretched>Danger</Button>
+          </div>
+        </section>
+
+        <section className="example">
+          <h3 className="ex-title">Checked</h3>
+          <div>
+            <CheckedButton size="large" />
           </div>
         </section>
       </Fragment>
