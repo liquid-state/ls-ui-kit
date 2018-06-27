@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { Modal, Button, Icon as AntIcon } from 'antd';
+import { Button } from 'antd';
+import AlertModal from '../../../../src/components/AlertModal';
 
 class AlertModalMobile extends Component {
   state = { visible: false };
+
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  }
 
   showModal = () => {
     this.setState({
@@ -16,34 +23,25 @@ class AlertModalMobile extends Component {
     });
   }
 
-  handleCancel = () => {
-    this.setState({
-      visible: false,
-    });
-  }
-
   render() {
     return (
       <section className="example">
         <h3 className="ex-title">Alert Modal Mobile</h3>
-
-        <div>
+        <div >
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
-          <Modal
+          <AlertModal
             visible={this.state.visible}
-            width={300}
             footer={false}
-            onCancel={this.handleCancel}
+            title="Modal Alert"
+            buttonTitle="Primary"
+            icon="question-circle-o"
+            onClose={this.onClose}
+            handleOk={this.handleOk}
           >
-            <div className="modal-container-alert-mobile">
-              <div className="modal-icon-ontainer-alert-mobile">
-                <AntIcon type="question-circle-o" />
-                <h2 className="modal-title-alert-mobile">Alert Modal Mobile</h2>
-              </div>
-              <span className="modal-text-alert-mobile">Body here is a notice reminder that the price of the shirt is nine.</span>
-              <Button className="modal-button-alert-mobile" type="primary" onClick={this.handleOk}>PRIMARY</Button>
-            </div>
-          </Modal>
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+          </AlertModal>
         </div>
       </section>
     );

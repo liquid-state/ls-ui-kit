@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { Modal, Button, Icon as AntIcon } from 'antd';
+import { Button } from 'antd';
+import TwoButModal from '../../../../src/components/TwoButModal';
 
 class TwoButAlertModalMobile extends Component {
   state = { visible: false };
+
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  }
 
   showModal = () => {
     this.setState({
@@ -29,24 +36,21 @@ class TwoButAlertModalMobile extends Component {
 
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
-          <Modal
+          <TwoButModal
             visible={this.state.visible}
-            width={300}
             footer={false}
-            onCancel={this.handleCancel}
+            title="Modal Alert"
+            buttonTitleDefault="Default"
+            buttonTitle="Primary"
+            icon="question-circle-o"
+            onClose={this.onClose}
+            handleOk={this.handleOk}
+            handleCancel={this.handleCancel}
           >
-            <div className="modal-container-twoalert-mobile">
-              <div className="modal-icon-ontainer-twoalert-mobile">
-                <AntIcon type="question-circle-o" />
-                <h2 className="modal-title-twoalert-mobile">Two But Modal </h2>
-              </div>
-              <span className="modal-text-twoalert-mobile">Body here is a notice reminder that the price of the shirt is nine.</span>
-              <div className="modal-btncontainer-twoalert-mobile">
-                <Button className="modal-button-twoalert-mobile" onClick={this.handleOk}>Default</Button>
-                <Button className="modal-button-twoalert-mobile" type="primary" onClick={this.handleOk}>PRIMARY</Button>
-              </div>
-            </div>
-          </Modal>
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+          </TwoButModal>
         </div>
       </section>
     );

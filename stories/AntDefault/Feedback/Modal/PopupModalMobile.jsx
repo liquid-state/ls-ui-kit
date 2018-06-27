@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { Modal, Button } from 'antd';
+import { Button } from 'antd';
+import PopupModal from '../../../../src/components/PopupModal';
 
 class PopupModalMobile extends Component {
   state = { visible: false };
+
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  }
 
   showModal = () => {
     this.setState({
@@ -16,12 +23,6 @@ class PopupModalMobile extends Component {
     });
   }
 
-  handleCancel = () => {
-    this.setState({
-      visible: false,
-    });
-  }
-
   render() {
     return (
       <section className="example">
@@ -29,18 +30,22 @@ class PopupModalMobile extends Component {
 
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
-          <Modal
+          <PopupModal
             visible={this.state.visible}
-            width={300}
             footer={false}
-            onCancel={this.handleCancel}
+            title="Popup Modal"
+            buttonTitle="Primary"
+            icon="question-circle-o"
+            onClose={this.onClose}
+            handleOk={this.handleOk}
           >
-            <div className="modal-container-popup-mobile">
-              <h2 className="modal-title-popup-mobile">Popup Modal Mobile</h2>
-              <span className="modal-text-popup-mobile">Body here is a notice reminder that the price of the shirt is nine.</span>
-              <Button className="modal-button-popup-mobile" type="primary" onClick={this.handleOk}>PRIMARY</Button>
-            </div>
-          </Modal>
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+            Here the body of the modal window will be transmitted as a child.
+          </PopupModal>
         </div>
       </section>
     );
