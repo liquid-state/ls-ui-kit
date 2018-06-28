@@ -4,6 +4,7 @@ import Basic from './Basic';
 import Color from './Color';
 import LastNode from './LastNode';
 import Custom from './Custom';
+import BigButTimeline from './BigButTimeline';
 
 class TimelinePage extends Component {
   render() { 
@@ -28,6 +29,8 @@ class TimelinePage extends Component {
         <Color />
         <LastNode />
         <Custom />
+        <BigButTimeline />
+        
 
       </Fragment>
     );
