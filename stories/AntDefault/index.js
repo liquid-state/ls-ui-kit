@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Button from './General/Button';
 import Icon from './General/Icon';
 import PagerStories from './General/Pager';
+import FullCentralImage from './General/FullCentralWithImage/FullCentral';
 
 // Navigation
 import Pagination from './Navigation/Pagination';
@@ -71,7 +72,8 @@ storiesOf('Liquid State UI Kit', module);
 storiesOf('Liquid State UI Kit/General', module)
   .add('Buttons', () => <Button />)
   .add('Icon', () => <Icon />)
-  .add('Pager', PagerStories);
+  .add('Pager', PagerStories)
+  .add('FullCentralImage', () => <FullCentralImage />);
 
 storiesOf('Liquid State UI Kit/Navigation', module)
   .add('Pagination', () => <Pagination />)
