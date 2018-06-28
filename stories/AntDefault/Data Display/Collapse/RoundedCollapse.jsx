@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Icon } from 'antd';
 
+import './style.css';
 import RoundedCollapse from '../../../../src/components/RoundedCollapse/Collapse';
 
 const { Panel } = Collapse;

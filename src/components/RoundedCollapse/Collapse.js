@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Collapse as RoundedCollapse } from 'antd';
 import cn from 'classnames';
 
-import './style.less';
 
 export default class Collapse extends Component {
   static propTypes = {
