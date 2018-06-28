@@ -37,10 +37,22 @@
   }
 }
 
+.ls-ui-kit.media-button-group {
+  .media-button-group-row {
+    display: flex;
+    .media-button {
+      flex: 0 0 50%;
+    }
+  }
+
+  &.tripples .media-button-group-row .media-button {
+    flex: 0 0 33%;
+  }
+}
+
 .ls-ui-kit.media-button-group.small {
   @media screen and (max-width: 340px) {
     .media-button-group-row {
-      display: flex;
       justify-content: center;
       flex-direction: column;
     }
@@ -48,7 +60,6 @@
 
   .media-button {
     .sized-media-button(@padding-sm, 3em);
-
     margin: @padding-sm / 2;
   }
 }
@@ -56,7 +67,6 @@
 .ls-ui-kit.media-button-group.medium {
   @media screen and (max-width: 340px) {
     .media-button-group-row {
-      display: flex;
       justify-content: center;
       flex-direction: column;
     }
@@ -72,7 +82,6 @@
 .ls-ui-kit.media-button-group.large {
   @media screen and (max-width: @screen-xs-max) {
     .media-button-group-row {
-      display: flex;
       justify-content: center;
       flex-direction: column;
     }
