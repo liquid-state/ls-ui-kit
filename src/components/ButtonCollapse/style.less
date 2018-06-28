@@ -1,0 +1,69 @@
+@import '../../variables';
+
+.el-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: @padding-lg;
+  .anticon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+.head-title{
+  text-align: center;
+  color: @text-color;
+  opacity: 0.4;
+  font-size: 18px;
+}
+
+.el-fc {
+  color: @primary-color !important;
+  text-decoration: underline;
+}
+
+.ant-collapse-item-completed {
+  .ant-collapse-header {
+    color: white !important;
+    background-color: @primary-color;
+    border-radius: @btn-height-lg * 0.5;
+  }
+
+  .el-row {
+    .anticon {
+      color: @primary-color !important;
+    }
+  }
+}
+
+.ant-collapse-item-progress {
+  .ant-collapse-header {
+    color: white !important;
+    background-color: @success-color;
+    border-radius: @btn-height-lg * 0.5;
+  }
+
+  .el-row {
+    .anticon {
+      color: @primary-color !important;
+    }
+  }
+}
+
+.ant-collapse-item-waiting {
+  .ant-collapse-header {
+    color: @primary-color !important;
+    opacity: 0.5;
+    border: @primary-color 2px solid;
+    border-radius: @btn-height-lg * 0.7 !important;
+    background-color: white !important;
+  }
+
+  .el-row {
+    .anticon {
+      color: @primary-color !important;
+    }
+  }
+}
