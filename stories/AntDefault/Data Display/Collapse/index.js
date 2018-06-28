@@ -6,6 +6,7 @@ import Nested from './Nested';
 import Borderless from './Borderless';
 import Custom from './Custom';
 import NoArrow from './NoArrow';
+import RoundedCollapse from './RoundedCollapse';
 
 class CollapsePage extends Component {
   render() { 
@@ -31,6 +32,7 @@ class CollapsePage extends Component {
         <Borderless />
         <Custom />
         <NoArrow />
+        <RoundedCollapse />
 
       </Fragment>
     );

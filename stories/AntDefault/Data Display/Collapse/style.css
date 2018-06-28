@@ -1,0 +1,65 @@
+.rounded-collapse .ant-collapse-item:last-child .ant-collapse-header {
+  border-radius: 20px;
+}
+.rounded-collapse .ant-collapse-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #1890ff;
+  border-radius: 20px;
+  padding: 12px 8px 12px 8px !important;
+}
+.rounded-collapse .ant-collapse-header > .wrapheader {
+  padding-left: 4px;
+}
+.rounded-collapse .ant-collapse-header > .wrapheader > span {
+  color: #1890ff;
+}
+.rounded-collapse .ant-collapse-header > .wrapheader > i {
+  color: #52c41a;
+}
+.rounded-collapse .ant-collapse-content-box a:hover {
+  text-decoration: underline !important;
+}
+.rounded-collapse .panelbtn {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+.rounded-collapse .example {
+  width: 600px;
+}
+.rounded-collapse .iconstart {
+  font-size: 28px;
+  padding-right: 4px;
+  color: #1890ff;
+}
+.rounded-collapse .iconend {
+  font-size: 28px;
+}
+.rounded-collapse .dropicon {
+  font-size: 16px;
+  color: #1890ff;
+  padding-right: .5rem;
+}
+.rounded-collapse .droprow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+}
+.rounded-collapse .health {
+  font-size: 26px;
+  color: #1890ff;
+}
+.rounded-collapse .health::before {
+  padding-top: 4px;
+}
+.rounded-collapse .anticon-up-square-o:before {
+  padding-top: 4px;
+}
+.rounded-collapse .wrapheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
