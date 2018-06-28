@@ -4,7 +4,7 @@ import Table from '../../../../src/components/tableChecklist';
 export default class TableChecklist extends Component {
   render() {
     return (
-        <Table />
+        <Table rows={7} cells={5}/>
     )
   }
 }
