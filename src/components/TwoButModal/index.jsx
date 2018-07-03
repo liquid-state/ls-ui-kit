@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Modal, Button, Icon as AntIcon } from 'antd';
+import { Modal, Icon as AntIcon } from 'antd';
+import PropTypes from 'prop-types';
+import Button from '../../components/Button';
 import './style.less';
 
 type Props = {
@@ -48,10 +50,10 @@ class TwoButModal extends PureComponent <Props, *> {
             <span className="el-text-center">{children}</span>
           </div>
           <div className="el-center">
-            <Button className="modal-button button-default" onClick={handleCancel}>
+            <Button className="button-default" onClick={handleCancel} stretched>
               {buttonTitleDefault}
             </Button>
-            <Button className="modal-button" type="primary" onClick={handleOk}>
+            <Button type="primary" onClick={handleOk} stretched>
               {buttonTitle}
             </Button>
           </div>
@@ -60,6 +62,27 @@ class TwoButModal extends PureComponent <Props, *> {
     );
   }
 }
+
+TwoButModal.propTypes = {
+  visible: PropTypes.bool,
+  title: PropTypes.string,
+  buttonTitle: PropTypes.string,
+  icon: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  footer: PropTypes.bool,
+  onClose: PropTypes.func,
+  handleOk: PropTypes.func,
+};
+
+TwoButModal.defaultProps = {
+  visible: true,
+  title: '',
+  buttonTitle: '',
+  icon: '',
+  footer: false,
+  onClose: () => {},
+  handleOk: () => {},
+};
 
 export default TwoButModal;
 

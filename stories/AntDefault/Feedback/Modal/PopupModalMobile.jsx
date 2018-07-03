@@ -27,12 +27,11 @@ class PopupModalMobile extends Component {
     return (
       <section className="example">
         <h3 className="ex-title">Popup Modal Mobile</h3>
-
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <PopupModal
             visible={this.state.visible}
-            footer={false}
+            footer={null}
             title="Popup Modal"
             buttonTitle="Primary"
             icon="question-circle-o"

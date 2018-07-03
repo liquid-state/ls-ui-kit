@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
+import PropTypes from 'prop-types';
+import Button from '../../../src/components/Button';
 import './style.less';
 
 
@@ -42,7 +44,7 @@ class PopupModal extends PureComponent <Props, *> {
             <span className="el-text-center">{children}</span>
           </div>
           <div className="el-center">
-            <Button className="modal-button-alert-mobile" type="primary" onClick={handleOk}>
+            <Button type="primary" onClick={handleOk} stretched>
               {buttonTitle}
             </Button>
           </div>
@@ -52,4 +54,22 @@ class PopupModal extends PureComponent <Props, *> {
   }
 }
 
+PopupModal.propTypes = {
+  visible: PropTypes.bool,
+  title: PropTypes.string,
+  buttonTitle: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  footer: PropTypes.bool,
+  onClose: PropTypes.func,
+  handleOk: PropTypes.func,
+};
+
+PopupModal.defaultProps = {
+  visible: true,
+  title: '',
+  buttonTitle: '',
+  footer: false,
+  onClose: () => {},
+  handleOk: () => {},
+};
 export default PopupModal;

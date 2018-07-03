@@ -1,19 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Modal, Button, Icon as AntIcon } from 'antd';
+import { Modal, Icon as AntIcon } from 'antd';
+import PropTypes from 'prop-types';
+import Button from '../../../src/components/Button';
 import './style.less';
 
-type Props = {
-  visible: boolean,
-  title?: string,
-  buttonTitle?: string,
-  icon?: string,
-  children?: Node,
-  footer?: boolean,
-  onClose: () => {},
-  handleOk?: () => {},
-}
-
-class AlertModal extends PureComponent <Props, *> {
+class AlertModal extends PureComponent {
   render() {
     const {
       visible,
@@ -44,7 +35,7 @@ class AlertModal extends PureComponent <Props, *> {
             <span className="el-text-center">{children}</span>
           </div>
           <div className="el-center">
-            <Button className="modal-button-alert-mobile" type="primary" onClick={handleOk}>
+            <Button type="primary" onClick={handleOk} stretched>
               {buttonTitle}
             </Button>
           </div>
@@ -53,5 +44,26 @@ class AlertModal extends PureComponent <Props, *> {
     );
   }
 }
+
+AlertModal.propTypes = {
+  visible: PropTypes.bool,
+  title: PropTypes.string,
+  buttonTitle: PropTypes.string,
+  icon: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  footer: PropTypes.bool,
+  onClose: PropTypes.func,
+  handleOk: PropTypes.func,
+};
+
+AlertModal.defaultProps = {
+  visible: true,
+  title: '',
+  buttonTitle: '',
+  icon: '',
+  footer: false,
+  onClose: () => {},
+  handleOk: () => {},
+};
 
 export default AlertModal;
