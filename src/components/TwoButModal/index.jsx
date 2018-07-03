@@ -4,20 +4,8 @@ import PropTypes from 'prop-types';
 import Button from '../../components/Button';
 import './style.less';
 
-type Props = {
-  visible: boolean,
-  title?: string,
-  buttonTitle?: string,
-  buttonTitleDefault?: string,
-  icon?: string,
-  children?: Node,
-  footer?: boolean,
-  onClose: () => {},
-  handleOk?: () => {},
-  handleCancel?: () => {},
-}
 
-class TwoButModal extends PureComponent <Props, *> {
+class TwoButModal extends PureComponent {
   render() {
     const {
       visible,
@@ -68,20 +56,24 @@ TwoButModal.propTypes = {
   title: PropTypes.string,
   buttonTitle: PropTypes.string,
   icon: PropTypes.string,
+  buttonTitleDefault: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
   onClose: PropTypes.func,
   handleOk: PropTypes.func,
+  handleCancel: PropTypes.func,
 };
 
 TwoButModal.defaultProps = {
   visible: true,
   title: '',
   buttonTitle: '',
+  buttonTitleDefault: '',
   icon: '',
   footer: false,
   onClose: () => {},
   handleOk: () => {},
+  handleCancel: () => {},
 };
 
 export default TwoButModal;

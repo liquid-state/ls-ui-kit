@@ -4,18 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../../../src/components/Button';
 import './style.less';
 
-
-type Props = {
-  visible: boolean,
-  title?: string,
-  buttonTitle?: string,
-  children?: Node,
-  footer?: boolean,
-  onClose: () => {},
-  handleOk?: () => {},
-}
-
-class PopupModal extends PureComponent <Props, *> {
+class PopupModal extends PureComponent {
   render() {
     const {
       visible,
@@ -72,4 +61,5 @@ PopupModal.defaultProps = {
   onClose: () => {},
   handleOk: () => {},
 };
+
 export default PopupModal;
