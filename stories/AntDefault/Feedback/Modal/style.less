@@ -1,0 +1,45 @@
+@import '../../../../src/variables.less';
+
+.ls-ui-kit {
+  .vertical-center-modal {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .vertical-center-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  .vertical-center-modal .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+
+  .modal-header {
+    color: @primary-color;
+  }
+
+  .modal-body {
+    min-height: 112px;
+  }
+
+  .anticon {
+    margin-right: @padding-xs;
+  }
+
+  .btn-margin-top {
+    margin-top: @padding-md;
+  }
+
+  &.popup-modal {
+    .modal-header, .modal-body {
+      text-align: center;
+    }
+  }
+}

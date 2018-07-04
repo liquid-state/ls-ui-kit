@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .title {
   margin: 25px;
 }
@@ -60,6 +62,7 @@ section.example {
 }
 
 /* ================================== */
+
 .global-search-wrapper {
   width: 300px;
 }
