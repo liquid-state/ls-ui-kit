@@ -30,7 +30,6 @@ class AlertModal extends PureComponent {
           visible={visible}
           footer={footer}
           onCancel={onClose}
-          wrapClassName="modal-wrapper"
           iconClassName="anticon"
           className={this.getClass()}
         >
@@ -39,7 +38,7 @@ class AlertModal extends PureComponent {
               <AntIcon type={icon} />
               {title}
             </h2>
-            <div>{children}</div>
+            <div className="modal-body">{children}</div>
           </div>
           <div className="btn-margin-top">
             <Button type="primary" onClick={handleOk} stretched>

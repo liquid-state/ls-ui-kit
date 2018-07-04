@@ -34,16 +34,11 @@ class PopupModalMobile extends Component {
             footer={null}
             title="Popup Modal"
             buttonTitle="Primary"
-            icon="question-circle-o"
             onClose={this.onClose}
             handleOk={this.handleOk}
           >
             Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
+
           </PopupModal>
         </div>
       </section>

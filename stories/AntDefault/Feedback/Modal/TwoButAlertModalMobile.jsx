@@ -42,7 +42,7 @@ class TwoButAlertModalMobile extends Component {
             title="Modal Alert"
             buttonTitleDefault="Default"
             buttonTitle="Primary"
-            icon="question-circle-o"
+            icon="check-circle"
             onClose={this.onClose}
             handleOk={this.handleOk}
             handleCancel={this.handleCancel}

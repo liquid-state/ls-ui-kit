@@ -32,7 +32,6 @@ class TwoButModal extends PureComponent {
           visible={visible}
           footer={footer}
           onCancel={onClose}
-          wrapClassName="modal-wrapper"
           iconClassName="anticon"
           className={this.getClass()}
         >
@@ -41,7 +40,7 @@ class TwoButModal extends PureComponent {
               <AntIcon type={icon} />
               {title}
             </h2>
-            <span>{children}</span>
+            <div className="modal-body">{children}</div>
           </div>
           <Row gutter={16} className="btn-margin-top">
             <Col span={12}>

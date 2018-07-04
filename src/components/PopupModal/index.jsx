@@ -29,8 +29,6 @@ class PopupModal extends PureComponent {
           visible={visible}
           footer={footer}
           onCancel={onClose}
-          wrapClassName="modal-wrapper"
-          iconClassName="anticon"
           className={this.getClass('popup-modal')}
         >
           <div>
