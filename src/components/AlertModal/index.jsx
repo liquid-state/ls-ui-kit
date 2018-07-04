@@ -1,10 +1,17 @@
 import React, { PureComponent } from 'react';
 import { Modal, Icon as AntIcon } from 'antd';
+import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../../../src/components/Button';
-import './style.less';
 
 class AlertModal extends PureComponent {
+  getClass(extra) {
+    const {
+      className,
+    } = this.props;
+    return cn('ls-ui-kit', 'modal', className, extra);
+  }
+
   render() {
     const {
       visible,
@@ -25,16 +32,16 @@ class AlertModal extends PureComponent {
           onCancel={onClose}
           wrapClassName="modal-wrapper"
           iconClassName="anticon"
-          iconType="question-circle-o"
+          className={this.getClass()}
         >
-          <div className="el-center el-col">
-            <h2 className="el-center el-row modal-title-alert-mobile">
+          <div>
+            <h2 className="modal-header">
               <AntIcon type={icon} />
               {title}
             </h2>
-            <span className="el-text-center">{children}</span>
+            <div>{children}</div>
           </div>
-          <div className="el-center">
+          <div className="btn-margin-top">
             <Button type="primary" onClick={handleOk} stretched>
               {buttonTitle}
             </Button>
@@ -54,6 +61,7 @@ AlertModal.propTypes = {
   footer: PropTypes.bool,
   onClose: PropTypes.func,
   handleOk: PropTypes.func,
+  className: PropTypes.string,
 };
 
 AlertModal.defaultProps = {
@@ -64,6 +72,7 @@ AlertModal.defaultProps = {
   footer: null,
   onClose: () => {},
   handleOk: () => {},
+  className: '',
 };
 
 export default AlertModal;

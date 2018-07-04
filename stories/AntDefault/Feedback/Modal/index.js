@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './style.css';
+import './style.less';
 
 import Basic from './Basic';
 import Async from './Async';

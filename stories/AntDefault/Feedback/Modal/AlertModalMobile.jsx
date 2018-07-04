@@ -34,7 +34,7 @@ class AlertModalMobile extends Component {
             footer={null}
             title="Modal Alert"
             buttonTitle="Primary"
-            icon="question-circle-o"
+            icon="check-circle"
             onClose={this.onClose}
             handleOk={this.handleOk}
           >

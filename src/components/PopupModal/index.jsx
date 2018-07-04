@@ -1,10 +1,17 @@
 import React, { PureComponent } from 'react';
 import { Modal } from 'antd';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import Button from '../../../src/components/Button';
-import './style.less';
 
 class PopupModal extends PureComponent {
+  getClass(extra) {
+    const {
+      className,
+    } = this.props;
+    return cn('ls-ui-kit', 'modal', className, extra);
+  }
+
   render() {
     const {
       visible,
@@ -24,15 +31,15 @@ class PopupModal extends PureComponent {
           onCancel={onClose}
           wrapClassName="modal-wrapper"
           iconClassName="anticon"
-          iconType="question-circle-o"
+          className={this.getClass('popup-modal')}
         >
-          <div className="el-center el-col">
-            <h2 className="el-center el-row modal-title-alert-mobile">
+          <div>
+            <h2 className="modal-header">
               {title}
             </h2>
-            <span className="el-text-center">{children}</span>
+            <div className="modal-body">{children}</div>
           </div>
-          <div className="el-center">
+          <div className="btn-margin-top">
             <Button type="primary" onClick={handleOk} stretched>
               {buttonTitle}
             </Button>
@@ -51,6 +58,7 @@ PopupModal.propTypes = {
   footer: PropTypes.bool,
   onClose: PropTypes.func,
   handleOk: PropTypes.func,
+  className: PropTypes.string,
 };
 
 PopupModal.defaultProps = {
@@ -60,6 +68,7 @@ PopupModal.defaultProps = {
   footer: null,
   onClose: () => {},
   handleOk: () => {},
+  className: '',
 };
 
 export default PopupModal;

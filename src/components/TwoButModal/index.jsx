@@ -1,11 +1,17 @@
 import React, { PureComponent } from 'react';
-import { Modal, Icon as AntIcon } from 'antd';
+import { Modal, Icon as AntIcon, Row, Col } from 'antd';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import Button from '../../components/Button';
-import './style.less';
-
 
 class TwoButModal extends PureComponent {
+  getClass(extra) {
+    const {
+      className,
+    } = this.props;
+    return cn('ls-ui-kit', 'modal', className, extra);
+  }
+
   render() {
     const {
       visible,
@@ -28,23 +34,27 @@ class TwoButModal extends PureComponent {
           onCancel={onClose}
           wrapClassName="modal-wrapper"
           iconClassName="anticon"
-          iconType="question-circle-o"
+          className={this.getClass()}
         >
-          <div className="el-center el-col">
-            <h2 className="el-center el-row modal-title">
+          <div>
+            <h2 className="modal-header">
               <AntIcon type={icon} />
               {title}
             </h2>
-            <span className="el-text-center">{children}</span>
+            <span>{children}</span>
           </div>
-          <div className="el-center">
-            <Button className="button-default" onClick={handleCancel} stretched>
-              {buttonTitleDefault}
-            </Button>
-            <Button type="primary" onClick={handleOk} stretched>
-              {buttonTitle}
-            </Button>
-          </div>
+          <Row gutter={16} className="btn-margin-top">
+            <Col span={12}>
+              <Button onClick={handleCancel} stretched>
+                {buttonTitleDefault}
+              </Button>
+            </Col>
+            <Col span={12}>
+              <Button type="primary" onClick={handleOk} stretched>
+                {buttonTitle}
+              </Button>
+            </Col>
+          </Row>
         </Modal>
       </div>
     );
@@ -62,6 +72,7 @@ TwoButModal.propTypes = {
   onClose: PropTypes.func,
   handleOk: PropTypes.func,
   handleCancel: PropTypes.func,
+  className: PropTypes.string,
 };
 
 TwoButModal.defaultProps = {
@@ -74,6 +85,7 @@ TwoButModal.defaultProps = {
   onClose: () => {},
   handleOk: () => {},
   handleCancel: () => {},
+  className: '',
 };
 
 export default TwoButModal;
