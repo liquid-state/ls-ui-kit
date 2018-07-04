@@ -57,7 +57,7 @@ PopupModal.defaultProps = {
   visible: true,
   title: '',
   buttonTitle: '',
-  footer: false,
+  footer: null,
   onClose: () => {},
   handleOk: () => {},
 };

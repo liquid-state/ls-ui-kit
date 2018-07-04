@@ -70,7 +70,7 @@ TwoButModal.defaultProps = {
   buttonTitle: '',
   buttonTitleDefault: '',
   icon: '',
-  footer: false,
+  footer: null,
   onClose: () => {},
   handleOk: () => {},
   handleCancel: () => {},

@@ -31,7 +31,7 @@ class AlertModalMobile extends Component {
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <AlertModal
             visible={this.state.visible}
-            footer={false}
+            footer={null}
             title="Modal Alert"
             buttonTitle="Primary"
             icon="question-circle-o"

@@ -61,7 +61,7 @@ AlertModal.defaultProps = {
   title: '',
   buttonTitle: '',
   icon: '',
-  footer: false,
+  footer: null,
   onClose: () => {},
   handleOk: () => {},
 };

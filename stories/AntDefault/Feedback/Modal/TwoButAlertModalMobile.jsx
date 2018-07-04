@@ -38,7 +38,7 @@ class TwoButAlertModalMobile extends Component {
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <TwoButModal
             visible={this.state.visible}
-            footer={false}
+            footer={null}
             title="Modal Alert"
             buttonTitleDefault="Default"
             buttonTitle="Primary"
