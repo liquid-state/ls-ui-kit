@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Modal } from 'antd';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+
 import Button from '../../../src/components/Button';
 
 class PopupModal extends PureComponent {
@@ -24,26 +25,22 @@ class PopupModal extends PureComponent {
     } = this.props;
 
     return (
-      <div>
-        <Modal
-          visible={visible}
-          footer={footer}
-          onCancel={onClose}
-          className={this.getClass('popup-modal')}
-        >
-          <div>
-            <h2 className="modal-header">
-              {title}
-            </h2>
-            <div className="modal-body">{children}</div>
-          </div>
-          <div className="btn-margin-top">
-            <Button type="primary" onClick={handleOk} stretched>
-              {buttonTitle}
-            </Button>
-          </div>
-        </Modal>
-      </div>
+      <Modal
+        visible={visible}
+        footer={footer}
+        onCancel={onClose}
+        className={this.getClass('popup-modal')}
+      >
+        <h2 className="modal-header">
+          {title}
+        </h2>
+        <div className="modal-body">{children}</div>
+        <div className="modal-controls">
+          <Button type="primary" onClick={handleOk} stretched>
+            {buttonTitle}
+          </Button>
+        </div>
+      </Modal>
     );
   }
 }

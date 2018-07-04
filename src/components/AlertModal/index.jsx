@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Modal, Icon as AntIcon } from 'antd';
-import cn from 'classnames';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
+
 import Button from '../../../src/components/Button';
 
 class AlertModal extends PureComponent {
@@ -25,28 +26,23 @@ class AlertModal extends PureComponent {
     } = this.props;
 
     return (
-      <div>
-        <Modal
-          visible={visible}
-          footer={footer}
-          onCancel={onClose}
-          iconClassName="anticon"
-          className={this.getClass()}
-        >
-          <div>
-            <h2 className="modal-header">
-              <AntIcon type={icon} />
-              {title}
-            </h2>
-            <div className="modal-body">{children}</div>
-          </div>
-          <div className="btn-margin-top">
-            <Button type="primary" onClick={handleOk} stretched>
-              {buttonTitle}
-            </Button>
-          </div>
-        </Modal>
-      </div>
+      <Modal
+        visible={visible}
+        footer={footer}
+        onCancel={onClose}
+        className={this.getClass()}
+      >
+        <h2 className="modal-header">
+          <AntIcon type={icon} />
+          {title}
+        </h2>
+        <div className="modal-body">{children}</div>
+        <div className="modal-controls">
+          <Button type="primary" onClick={handleOk} stretched>
+            {buttonTitle}
+          </Button>
+        </div>
+      </Modal>
     );
   }
 }
