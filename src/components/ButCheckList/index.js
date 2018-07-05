@@ -10,15 +10,14 @@ export default class ButCheckList extends Component {
   static propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
+    onClicked: PropTypes.func.isRequired,
+    checked: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
     type: 'default',
     className: null,
   };
-  state = {
-    Checked: false,
-  }
   getClass() {
     const {
       className,
@@ -30,17 +29,18 @@ export default class ButCheckList extends Component {
     const {
       type,
       className,
+      checked,
+      onClicked,
       ...props
     } = this.props;
-    const { Checked } = this.state;
     return (
         <Button
-          type={Checked ? 'primary' : 'default'}
-          icon={Checked ? 'check' : ''}
+          type={checked ? 'primary' : 'default'}
+          icon={checked ? 'check' : ''}
           shape="circle"
           className={this.getClass()}
           {...props}
-          onClick={() => this.setState({ Checked: !this.state.Checked })}
+          onClick={onClicked}
         />
     );
   }

@@ -4,7 +4,11 @@ import Button from '../../../../src/components/Button';
 import CheckedButton from '../../../../src/components/ButCheckList';
 
 class ButtonPage extends Component {
-  componentDidMount = () => {
+  state = {
+    checked: false,
+  }
+  onCheckedButtonClick = () => {
+    this.setState({ checked: !this.state.checked });
   }
   render() {
     return (
@@ -73,7 +77,7 @@ class ButtonPage extends Component {
         <section className="example">
           <h3 className="ex-title">Checked</h3>
           <div>
-            <CheckedButton size="large" />
+            <CheckedButton size="large" checked={this.state.checked} onClicked={() => this.onCheckedButtonClick()} />
           </div>
         </section>
       </Fragment>
