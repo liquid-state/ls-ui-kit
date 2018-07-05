@@ -38,9 +38,7 @@ class AlertModalMobile extends Component {
             onClose={this.onClose}
             handleOk={this.handleOk}
           >
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
-            Here the body of the modal window will be transmitted as a child.
+            Body here is a notice reminder that the price of the shirt is nine.
           </AlertModal>
         </div>
       </section>

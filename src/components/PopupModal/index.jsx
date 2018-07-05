@@ -21,7 +21,7 @@ class PopupModal extends PureComponent {
       onCancel,
       onOk,
       children,
-      buttonTitle,
+      okText,
     } = this.props;
 
     return (
@@ -37,7 +37,7 @@ class PopupModal extends PureComponent {
         <div className="modal-body">{children}</div>
         <div className="modal-controls">
           <Button type="primary" onClick={onOk} stretched>
-            {buttonTitle}
+            {okText}
           </Button>
         </div>
       </Modal>
@@ -48,7 +48,7 @@ class PopupModal extends PureComponent {
 PopupModal.propTypes = {
   visible: PropTypes.bool,
   title: PropTypes.string,
-  buttonTitle: PropTypes.string,
+  okText: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
   onCancel: PropTypes.func,
@@ -59,7 +59,7 @@ PopupModal.propTypes = {
 PopupModal.defaultProps = {
   visible: true,
   title: '',
-  buttonTitle: '',
+  okText: '',
   footer: null,
   onCancel: () => {},
   onOk: () => {},

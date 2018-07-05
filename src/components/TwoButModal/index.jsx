@@ -22,8 +22,8 @@ class TwoButModal extends PureComponent {
       onCancel,
       onOk,
       children,
-      buttonTitle,
-      buttonTitleDefault,
+      okText,
+      cancelText,
     } = this.props;
 
     return (
@@ -41,12 +41,12 @@ class TwoButModal extends PureComponent {
         <Row gutter={16} className="modal-controls">
           <Col span={12}>
             <Button onClick={onCancel} stretched>
-              {buttonTitleDefault}
+              {cancelText}
             </Button>
           </Col>
           <Col span={12}>
             <Button type="primary" onClick={onOk} stretched>
-              {buttonTitle}
+              {okText}
             </Button>
           </Col>
         </Row>
@@ -58,9 +58,9 @@ class TwoButModal extends PureComponent {
 TwoButModal.propTypes = {
   visible: PropTypes.bool,
   title: PropTypes.string,
-  buttonTitle: PropTypes.string,
+  okText: PropTypes.string,
   icon: PropTypes.string,
-  buttonTitleDefault: PropTypes.string,
+  cancelText: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
   onCancel: PropTypes.func,
@@ -71,8 +71,8 @@ TwoButModal.propTypes = {
 TwoButModal.defaultProps = {
   visible: true,
   title: '',
-  buttonTitle: '',
-  buttonTitleDefault: '',
+  okText: '',
+  cancelText: '',
   icon: '',
   footer: null,
   onCancel: () => {},

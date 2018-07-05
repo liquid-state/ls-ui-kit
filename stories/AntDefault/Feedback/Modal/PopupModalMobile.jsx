@@ -37,8 +37,7 @@ class PopupModalMobile extends Component {
             onClose={this.onClose}
             handleOk={this.handleOk}
           >
-            Here the body of the modal window will be transmitted as a child.
-
+            Body here is a notice reminder that the price of the shirt is nine.
           </PopupModal>
         </div>
       </section>

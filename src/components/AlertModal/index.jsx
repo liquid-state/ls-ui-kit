@@ -22,7 +22,7 @@ class AlertModal extends PureComponent {
       onCancel,
       onOk,
       children,
-      buttonTitle,
+      okText,
     } = this.props;
 
     return (
@@ -39,7 +39,7 @@ class AlertModal extends PureComponent {
         <div className="modal-body">{children}</div>
         <div className="modal-controls">
           <Button type="primary" onClick={onOk} stretched>
-            {buttonTitle}
+            {okText}
           </Button>
         </div>
       </Modal>
@@ -50,7 +50,7 @@ class AlertModal extends PureComponent {
 AlertModal.propTypes = {
   visible: PropTypes.bool,
   title: PropTypes.string,
-  buttonTitle: PropTypes.string,
+  okText: PropTypes.string,
   icon: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
@@ -62,7 +62,7 @@ AlertModal.propTypes = {
 AlertModal.defaultProps = {
   visible: true,
   title: '',
-  buttonTitle: '',
+  okText: '',
   icon: '',
   footer: null,
   onCancel: () => {},
