@@ -18,8 +18,8 @@ class PopupModal extends PureComponent {
       visible,
       title,
       footer,
-      onClose,
-      handleOk,
+      onCancel,
+      onOk,
       children,
       buttonTitle,
     } = this.props;
@@ -28,7 +28,7 @@ class PopupModal extends PureComponent {
       <Modal
         visible={visible}
         footer={footer}
-        onCancel={onClose}
+        onCancel={onCancel}
         className={this.getClass('popup-modal')}
       >
         <h2 className="modal-header">
@@ -36,7 +36,7 @@ class PopupModal extends PureComponent {
         </h2>
         <div className="modal-body">{children}</div>
         <div className="modal-controls">
-          <Button type="primary" onClick={handleOk} stretched>
+          <Button type="primary" onClick={onOk} stretched>
             {buttonTitle}
           </Button>
         </div>
@@ -51,8 +51,8 @@ PopupModal.propTypes = {
   buttonTitle: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
-  onClose: PropTypes.func,
-  handleOk: PropTypes.func,
+  onCancel: PropTypes.func,
+  onOk: PropTypes.func,
   className: PropTypes.string,
 };
 
@@ -61,8 +61,8 @@ PopupModal.defaultProps = {
   title: '',
   buttonTitle: '',
   footer: null,
-  onClose: () => {},
-  handleOk: () => {},
+  onCancel: () => {},
+  onOk: () => {},
   className: '',
 };
 

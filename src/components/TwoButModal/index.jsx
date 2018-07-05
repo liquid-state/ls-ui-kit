@@ -19,9 +19,8 @@ class TwoButModal extends PureComponent {
       title,
       icon,
       footer,
-      onClose,
-      handleOk,
-      handleCancel,
+      onCancel,
+      onOk,
       children,
       buttonTitle,
       buttonTitleDefault,
@@ -31,7 +30,7 @@ class TwoButModal extends PureComponent {
       <Modal
         visible={visible}
         footer={footer}
-        onCancel={onClose}
+        onCancel={onCancel}
         className={this.getClass()}
       >
         <h2 className="modal-header">
@@ -41,12 +40,12 @@ class TwoButModal extends PureComponent {
         <div className="modal-body">{children}</div>
         <Row gutter={16} className="modal-controls">
           <Col span={12}>
-            <Button onClick={handleCancel} stretched>
+            <Button onClick={onCancel} stretched>
               {buttonTitleDefault}
             </Button>
           </Col>
           <Col span={12}>
-            <Button type="primary" onClick={handleOk} stretched>
+            <Button type="primary" onClick={onOk} stretched>
               {buttonTitle}
             </Button>
           </Col>
@@ -64,9 +63,8 @@ TwoButModal.propTypes = {
   buttonTitleDefault: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
-  onClose: PropTypes.func,
-  handleOk: PropTypes.func,
-  handleCancel: PropTypes.func,
+  onCancel: PropTypes.func,
+  onOk: PropTypes.func,
   className: PropTypes.string,
 };
 
@@ -77,9 +75,8 @@ TwoButModal.defaultProps = {
   buttonTitleDefault: '',
   icon: '',
   footer: null,
-  onClose: () => {},
-  handleOk: () => {},
-  handleCancel: () => {},
+  onCancel: () => {},
+  onOk: () => {},
   className: '',
 };
 
