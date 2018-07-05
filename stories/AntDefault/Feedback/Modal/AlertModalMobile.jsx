@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import AlertModal from '../../../../src/components/AlertModal';
+import { AlertModal } from '../../../../src/components/Modals';
 
 class AlertModalMobile extends Component {
   state = { visible: false };
 
-  onClose = () => {
+  onCancel = () => {
+    this.setState({
+      visible: false,
+    });
+  }
+
+  onOk = () => {
     this.setState({
       visible: false,
     });
@@ -17,26 +23,20 @@ class AlertModalMobile extends Component {
     });
   }
 
-  handleOk = () => {
-    this.setState({
-      visible: false,
-    });
-  }
-
   render() {
     return (
       <section className="example">
         <h3 className="ex-title">Alert Modal Mobile</h3>
-        <div >
+        <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <AlertModal
             visible={this.state.visible}
             footer={null}
             title="Modal Alert"
-            buttonTitle="Primary"
+            okText="Primary"
             icon="check-circle"
-            onClose={this.onClose}
-            handleOk={this.handleOk}
+            onCancel={this.onCancel}
+            onOk={this.onOk}
           >
             Body here is a notice reminder that the price of the shirt is nine.
           </AlertModal>

@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Modal, Icon as AntIcon } from 'antd';
+import { Modal, Icon as AntIcon, Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-import Button from '../../../src/components/Button';
+import './style.less';
+import Button from '../../components/Button';
 
-class AlertModal extends PureComponent {
+export class TwoButModal extends PureComponent {
   getClass(extra) {
     const {
       className,
@@ -23,6 +24,7 @@ class AlertModal extends PureComponent {
       onOk,
       children,
       okText,
+      cancelText,
     } = this.props;
 
     return (
@@ -37,21 +39,29 @@ class AlertModal extends PureComponent {
           {title}
         </h2>
         <div className="modal-body">{children}</div>
-        <div className="modal-controls">
-          <Button type="primary" onClick={onOk} stretched>
-            {okText}
-          </Button>
-        </div>
+        <Row gutter={16} className="modal-controls">
+          <Col span={12}>
+            <Button onClick={onCancel} stretched>
+              {cancelText}
+            </Button>
+          </Col>
+          <Col span={12}>
+            <Button type="primary" onClick={onOk} stretched>
+              {okText}
+            </Button>
+          </Col>
+        </Row>
       </Modal>
     );
   }
 }
 
-AlertModal.propTypes = {
+TwoButModal.propTypes = {
   visible: PropTypes.bool,
   title: PropTypes.string,
   okText: PropTypes.string,
   icon: PropTypes.string,
+  cancelText: PropTypes.string,
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
   onCancel: PropTypes.func,
@@ -59,10 +69,11 @@ AlertModal.propTypes = {
   className: PropTypes.string,
 };
 
-AlertModal.defaultProps = {
+TwoButModal.defaultProps = {
   visible: true,
   title: '',
   okText: '',
+  cancelText: '',
   icon: '',
   footer: null,
   onCancel: () => {},
@@ -70,4 +81,4 @@ AlertModal.defaultProps = {
   className: '',
 };
 
-export default AlertModal;
+export default TwoButModal;

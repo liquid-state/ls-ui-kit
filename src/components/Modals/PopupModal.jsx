@@ -3,9 +3,10 @@ import { Modal } from 'antd';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import './style.less';
 import Button from '../../../src/components/Button';
 
-class PopupModal extends PureComponent {
+export class PopupModal extends PureComponent {
   getClass(extra) {
     const {
       className,

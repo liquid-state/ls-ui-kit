@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import PopupModal from '../../../../src/components/PopupModal';
+import { PopupModal } from '../../../../src/components/Modals';
 
 class PopupModalMobile extends Component {
   state = { visible: false };
 
-  onClose = () => {
+  onCancel = () => {
+    this.setState({
+      visible: false,
+    });
+  }
+
+  onOk = () => {
     this.setState({
       visible: false,
     });
@@ -14,12 +20,6 @@ class PopupModalMobile extends Component {
   showModal = () => {
     this.setState({
       visible: true,
-    });
-  }
-
-  handleOk = () => {
-    this.setState({
-      visible: false,
     });
   }
 
@@ -33,9 +33,9 @@ class PopupModalMobile extends Component {
             visible={this.state.visible}
             footer={null}
             title="Popup Modal"
-            buttonTitle="Primary"
-            onClose={this.onClose}
-            handleOk={this.handleOk}
+            okText="Primary"
+            onCancel={this.onCancel}
+            onOk={this.onOk}
           >
             Body here is a notice reminder that the price of the shirt is nine.
           </PopupModal>
