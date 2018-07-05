@@ -60,3 +60,5 @@ typings/
 # built assets
 /dist
 /storybook-compiled
+
+package-lock.json
