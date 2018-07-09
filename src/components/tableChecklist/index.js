@@ -15,9 +15,6 @@ export default class Table extends Component {
     const { rows, cells } = this.props;
     return Array(rows).fill(0).map((r, i) => (
       <React.Fragment key={`${i + (Math.random() * 33)}`}>
-      <tr key={`${i + 7}_key `} className="space-row">
-        {Array(cells).fill(0).map((c, index) => <td key={`${index + (Math.random() * 5)}_key `} />)}
-      </tr>
       <tr
         key={`${i + (Math.random() * 50)}_key `}
         className="content-row"
