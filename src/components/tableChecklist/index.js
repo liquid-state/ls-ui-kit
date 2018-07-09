@@ -7,10 +7,12 @@ export default class Table extends Component {
     rows: PropTypes.number,
     cells: PropTypes.number,
   }
+
   static defaultProps = {
     rows: null,
     cells: null,
   }
+
   renderRow = () => {
     const { rows, cells } = this.props;
     return Array(rows).fill(0).map((r, i) => (
@@ -28,6 +30,7 @@ export default class Table extends Component {
       </React.Fragment>
     ));
   }
+
   render() {
     return (
       <table className="checklist-table">
