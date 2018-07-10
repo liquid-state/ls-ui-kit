@@ -1,43 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './style.less';
 
-export default class Table extends Component {
-  static propTypes = {
-    rows: PropTypes.number,
-    cells: PropTypes.number,
-  }
 
-  static defaultProps = {
-    rows: null,
-    cells: null,
-  }
-
-  renderRow = () => {
-    const { rows, cells } = this.props;
-    return Array(rows).fill(0).map((r, i) => (
-      <React.Fragment key={`${i + (Math.random() * 33)}`}>
-      <tr
-        key={`${i + (Math.random() * 50)}_key `}
-        className="content-row"
+const Table = ({ children }) => (
+      <table
+        className="ls-ui-kit rounded-table"
       >
-        {Array(cells).fill(0).map((c, index) => (
-          <td key={`${index + (Math.random() * 15)}_key `}>
-            <div className="bg-content" />
-          </td>
-        ))}
-      </tr>
-      </React.Fragment>
-    ));
-  }
-
-  render() {
-    return (
-      <table className="checklist-table">
-       <tbody>
-         {this.renderRow()}
-       </tbody>
+        {children}
       </table>
-    );
-  }
-}
+);
+
+Table.propTypes = {
+  children: PropTypes.node,
+};
+Table.defaultProps = {
+  children: null,
+};
+
+export default Table;
+

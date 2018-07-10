@@ -1,31 +1,31 @@
 @import '../../variables.less'; 
 
-.checklist-table {
+.rounded-table {
   height: 560px; 
   border-spacing: 0 16px;
   border-collapse: separate;
-  .content-row {
+    tr {
     width: 320px;
-
     > td {
       width: 64px;
       height: 64px;
       padding: 0;
+      > div {
+          width: 100%;
+          height: 100%;
+          background-color: #d9d9d9;
+          margin: 0;
+          padding: 0;
+      }
     }
-    .bg-content {
-      width: 100%;
-      height: 100%;
-      background-color: #d9d9d9;
-      margin: 0;
-      padding: 0;
-    }
+    
   }
 
-  .content-row > td:last-child > .bg-content {
+  tr > td:last-child > div {
     border-radius:0 32px 32px 0;
   }
 
-  .content-row > td:first-child > .bg-content {
+  tr > td:first-child > div {
     border-radius: 32px 0 0 32px ;
   }
 }
