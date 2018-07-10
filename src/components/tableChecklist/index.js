@@ -4,9 +4,7 @@ import './style.less';
 
 
 const Table = ({ children }) => (
-      <table
-        className="ls-ui-kit rounded-table"
-      >
+      <table className="ls-ui-kit rounded-table">
         {children}
       </table>
 );
