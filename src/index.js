@@ -7,4 +7,5 @@ export { default as Pager } from './components/Pager';
 export { default as Radio } from './components/Radio';
 export { default as Rate } from './components/Rate';
 export { default as Slider } from './components/Slider';
+export { default as RoundedTable } from './components/RoundedTable';
 
