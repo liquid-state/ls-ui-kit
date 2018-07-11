@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './style.less';
-import Button from '../../../src/components/Button';
+import Button from '../Button';
 
 export class PopupModal extends PureComponent {
   getClass(extra) {

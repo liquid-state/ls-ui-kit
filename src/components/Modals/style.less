@@ -1,8 +1,10 @@
 @import '../../variables.less';
 
-.ls-ui-kit {
+.ls-ui-kit.modal {
   .modal-header {
-    color: @primary-color;
+    .anticon {
+      margin-right: @padding-xs;
+    }
   }
 
   .modal-body {
@@ -11,10 +13,6 @@
 
   .modal-controls {
     margin-top: @padding-md;
-  }
-
-  .anticon {
-    margin-right: @padding-xs;
   }
 
   &.popup-modal {
