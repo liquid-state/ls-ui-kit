@@ -23,6 +23,7 @@ import EditableRows from './EditableRows';
 import NestedTables from './NestedTables';
 import DragSorting from './DragSorting';
 import DynamicSettings from './DynamicSettings';
+import RoundedTabel from './Rounded';
 
 class TablePage extends Component {
   render() { 
@@ -65,6 +66,8 @@ class TablePage extends Component {
         <NestedTables />
         <DragSorting />
         <DynamicSettings />
+        <RoundedTabel />
+
 
       </Fragment>
     );
