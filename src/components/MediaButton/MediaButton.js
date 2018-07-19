@@ -22,24 +22,31 @@ export default class extends React.Component {
         PropTypes.arrayOf(PropTypes.node),
       ]).isRequired,
       size: PropTypes.string,
+      onClick: PropTypes.func,
     };
 
     static defaultProps = {
       type: undefined,
       className: undefined,
       size: undefined,
+      onClick: undefined,
     }
 
     state = {
       animating: false,
     };
 
-    onClick = () => {
+    onClick = (event) => {
       if (this.state.animating) {
         return;
       }
       this.setState({ animating: true });
-      setTimeout(() => this.setState({ animating: false }), 400);
+      setTimeout(() => {
+        this.setState({ animating: false });
+        if (this.props.onClick) {
+          this.props.onClick(event);
+        }
+      }, 400);
     }
 
     onKeyPress = (event) => {
