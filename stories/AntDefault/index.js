@@ -66,7 +66,7 @@ import Divider from './Other/Divider';
 import Anchor from './Other/Anchor';
 import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
-import SearchButtonList from './Other/SearchButtonList';
+import SearchList from './Other/SearchList';
 
 storiesOf('Liquid State UI Kit', module);
 storiesOf('Liquid State UI Kit/General', module)
@@ -127,7 +127,7 @@ storiesOf('Liquid State UI Kit/Other', module)
   .add('Anchor', () => <Anchor />)
   .add('BackTop', () => <BackTop />)
   .add('LocaleProvider', () => <LocaleProvider />)
-  .add('SearchButtonList', () => <SearchButtonList />);
+  .add('SearchList', () => <SearchList />);
 
 storiesOf('Liquid State UI Kit/Data Entry/Radio', module)
   .add('Radio', () => <Radio />)
