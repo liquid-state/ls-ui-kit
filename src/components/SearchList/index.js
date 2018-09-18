@@ -67,11 +67,11 @@ class SearchList extends Component {
             enterButton={this.props.button}
           />
         </div>
-        { this.state.error ? <Alert message={this.state.error} type="info" />
+        { this.state.error ? <Alert message={this.state.error} />
           : this.props.loading === true
             ? <div className="search-spinner"><Spin /></div> : this.props.results.length === 0
               ? this.state.value !== ''
-                ? <p>No Results</p> : null
+              ? <Alert message="No results found" type="warning" /> : null
               : <List>{this.props.results.map(this.props.renderItem)}</List> }
       </Form>);
   }
