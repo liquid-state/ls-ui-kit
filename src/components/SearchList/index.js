@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
-import { Form, Input, Alert, Spin } from 'antd';
+import { List, Form, Input, Alert, Spin, Icon } from 'antd';
 import PropTypes from 'prop-types';
 
 import './style.less';
+
+/**
+ * renderListItem
+ *
+ * The default renderListItem used when none is provided
+ */
+const renderListItem = ({
+  title, link, icon, selected,
+}) => (
+  <List.Item key={title} className={selected ? 'selected' : null} actions={icon ? [<Icon type={icon} />] : null}>
+    <a href={link}>
+      <span>{title}</span>
+    </a>
+  </List.Item>
+);
 
 /**
  * SearchList Component
@@ -52,20 +67,39 @@ class SearchList extends Component {
             enterButton={this.props.button}
           />
         </div>
-        { this.state.error ? <Alert message={this.state.error} type="error" /> : null }
-        { this.props.loading ? <div className="search-spinner"><Spin /></div> : null }
-        { this.props.results.length === 0 && this.props.loading === false
-          ? <p>No Results</p>
-          : this.props.results.map(this.props.renderItem) }
+        { this.state.error ? <Alert message={this.state.error} type="info" />
+          : this.props.loading === true
+            ? <div className="search-spinner"><Spin /></div> : this.props.results.length === 0
+              ? this.state.value !== ''
+                ? <p>No Results</p> : null
+              : <List>{this.props.results.map(this.props.renderItem)}</List> }
       </Form>);
   }
 }
+
+renderListItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  link: PropTypes.string,
+  selected: PropTypes.bool,
+};
+
+renderListItem.defaultProps = {
+  icon: false,
+  selected: false,
+  link: 'nolink', // @todo remove this
+};
 
 SearchList.propTypes = {
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
   minInput: PropTypes.number,
-  results: PropTypes.array,
+  results: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.string,
+    link: PropTypes.string,
+    selected: PropTypes.bool,
+  })),
   loading: PropTypes.bool,
   button: PropTypes.bool,
   renderItem: PropTypes.func,
@@ -79,7 +113,7 @@ SearchList.defaultProps = {
   results: [],
   loading: false,
   button: true,
-  renderItem: v => (<div key={v.title}>{v.title}</div>),
+  renderItem: renderListItem,
   value: '',
 };
 
