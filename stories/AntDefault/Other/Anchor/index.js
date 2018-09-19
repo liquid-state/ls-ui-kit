@@ -4,7 +4,7 @@ import Basic from './Basic';
 import StaticAnchor from './StaticAnchor';
 
 class Anchor extends Component {
-  render() { 
+  render() {
     return (
       <Fragment>
         <h1 className="title">Anchor</h1>

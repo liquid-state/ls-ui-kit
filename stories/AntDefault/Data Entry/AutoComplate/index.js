@@ -35,5 +35,5 @@ class AutoComplatePage extends Component {
     );
   }
 }
- 
+
 export default AutoComplatePage;
