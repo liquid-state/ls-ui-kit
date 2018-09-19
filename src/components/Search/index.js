@@ -64,7 +64,7 @@ class SearchList extends Component {
     } = this.props;
     const { error, value } = this.state;
     return (
-      <Form className="search-list">
+      <Form className="ls-ui-kit search">
         <div className="search-input-wrap">
           <Input.Search
             value={value}
