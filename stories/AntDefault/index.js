@@ -36,6 +36,7 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
+import {SearchMinInput, SearchOnChange, SearchOnSubmit} from './Data Entry/Search';
 
 // Data Display
 import Avatar from './Data Display/Avatar';
@@ -66,7 +67,6 @@ import Divider from './Other/Divider';
 import Anchor from './Other/Anchor';
 import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
-import SearchList from './Other/SearchList';
 
 storiesOf('Liquid State UI Kit', module);
 storiesOf('Liquid State UI Kit/General', module)
@@ -97,6 +97,10 @@ storiesOf('Liquid State UI Kit/Data Entry', module)
   .add('TreeSelect', () => <TreeSelect />)
   .add('Upload', () => <Upload />);
 
+storiesOf('Liquid State UI Kit/Data Entry/Search', module)
+  .add('MinInput', () => <SearchMinInput />)
+  .add('With Data', () => <SearchOnChange />)
+  .add('OnSubmit', () => <SearchOnSubmit />);
 
 storiesOf('Liquid State UI Kit/Data Display', module)
   .add('Avatar', () => <Avatar />)
@@ -126,8 +130,7 @@ storiesOf('Liquid State UI Kit/Other', module)
   .add('Divider', () => <Divider />)
   .add('Anchor', () => <Anchor />)
   .add('BackTop', () => <BackTop />)
-  .add('LocaleProvider', () => <LocaleProvider />)
-  .add('SearchList', () => <SearchList />);
+  .add('LocaleProvider', () => <LocaleProvider />);
 
 storiesOf('Liquid State UI Kit/Data Entry/Radio', module)
   .add('Radio', () => <Radio />)

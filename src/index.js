@@ -10,4 +10,4 @@ export { default as Radio } from './components/Radio';
 export { default as Rate } from './components/Rate';
 export { default as Slider } from './components/Slider';
 export { default as RoundedTable } from './components/RoundedTable';
-
+export { default as Search } from './components/Search';

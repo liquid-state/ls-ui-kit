@@ -9,13 +9,14 @@ import './style.less';
  *
  * The default renderListItem used when none is provided
  */
-const renderListItem = ({
-  title, link, icon, selected,
-}) => (
-  <List.Item key={title} className={selected ? 'selected' : null} actions={icon ? [<Icon type={icon} />] : null}>
-    <a href={link}>
-      <span>{title}</span>
-    </a>
+const renderListItem = onItemClick => item => (
+  <List.Item
+    onClick={() => onItemClick(item)}
+    key={item.id ? item.id : item.title}
+    className={item.className ? item.className : null}
+    actions={item.icon ? [<Icon type={item.icon} />] : null}
+  >
+    <span className="search-item-inner">{item.title}</span>
   </List.Item>
 );
 
@@ -26,9 +27,10 @@ const renderListItem = ({
  *
  * @param {function} onChange - Binds to onChange events
  * @param {function} onSubmit - Binds to submit via keyboard or button press
+ * @param {function} onItemClick - Bind to all item clicks and returns the item object back
  * @param {number} minInput - When above 0, will eat onChange/onSubmit events and
  *  display validation message
- * @param {Array<Result>} results - Where result has properties of: title, link, icon, selected
+ * @param {Array<Result>} results - Where result has properties of: title, icon, className
  * @param {boolean} loading - If true, will display a loading spinner
  * @param {boolean} button - If true, a search button will be appended to the input
  * @param {function} renderItem - By default uses LinkList to render out the list of results
@@ -57,49 +59,45 @@ class SearchList extends Component {
   error = v => (typeof v === 'undefined' ? this.setState({ error: false }) : this.setState({ error: v }));
 
   render() {
+    const {
+      results, button, renderItem, loading, onItemClick,
+    } = this.props;
+    const { error, value } = this.state;
     return (
       <Form className="search-list">
         <div className="search-input-wrap">
           <Input.Search
-            value={this.state.value}
+            value={value}
             onChange={this.onChange}
             onSearch={this.onSubmit}
-            enterButton={this.props.button}
+            enterButton={button}
           />
         </div>
-        { this.state.error ? <Alert message={this.state.error} />
-          : this.props.loading === true
-            ? <div className="search-spinner"><Spin /></div> : this.props.results.length === 0
-              ? this.state.value !== ''
-              ? <Alert message="No results found" type="warning" /> : null
-              : <List>{this.props.results.map(this.props.renderItem)}</List> }
+        { error !== false ? <Alert message={error} />
+          : loading === true ? <div className="search-spinner"><Spin /></div>
+          : results.length === 0 ? value !== '' ? <Alert message="No results found" type="warning" /> : null
+          : <List>{results.map(renderItem(onItemClick))}</List> }
       </Form>);
   }
 }
 
 renderListItem.propTypes = {
+  id: PropTypes.node,
   title: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  link: PropTypes.string,
-  selected: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 renderListItem.defaultProps = {
   icon: false,
-  selected: false,
-  link: 'nolink', // @todo remove this
 };
 
 SearchList.propTypes = {
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
+  onItemClick: PropTypes.func,
   minInput: PropTypes.number,
-  results: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    icon: PropTypes.string,
-    link: PropTypes.string,
-    selected: PropTypes.bool,
-  })),
+  results: PropTypes.arrayOf(PropTypes.shape(renderListItem.propTypes)),
   loading: PropTypes.bool,
   button: PropTypes.bool,
   renderItem: PropTypes.func,
@@ -109,6 +107,7 @@ SearchList.propTypes = {
 SearchList.defaultProps = {
   onChange: e => e,
   onSubmit: e => e,
+  onItemClick: e => e,
   minInput: 0,
   results: [],
   loading: false,
