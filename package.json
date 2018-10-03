@@ -70,7 +70,6 @@
     "react-infinite-scroller": "^1.1.3",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-storybook-addon-chapters": "^2.1.3",
     "react-virtualized": "^9.18.5",
     "style-loader": "^0.20.1",
     "webpack": "^3.11.0"
