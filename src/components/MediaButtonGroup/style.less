@@ -46,7 +46,11 @@
   }
 
   &.tripples .media-button-group-row .media-button {
-    flex: 0 0 33%;
+    // When in mobile mode we still display tripples as 2 by 2
+    flex: 0 0 50%;
+    @media screen and (min-width: 768px) {
+      flex: 0 0 33%;
+    }
   }
 }
 
