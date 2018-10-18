@@ -36,7 +36,13 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
-import {SearchMinInput, SearchOnChange, SearchOnSubmit} from './Data Entry/Search';
+import {
+  SearchMinInput,
+  SearchOnChange,
+  SearchOnSubmit,
+  SearchLoading,
+  SearchHeading,
+} from './Data Entry/Search';
 
 // Data Display
 import Avatar from './Data Display/Avatar';
@@ -98,7 +104,9 @@ storiesOf('Liquid State UI Kit/Data Entry', module)
   .add('Upload', () => <Upload />);
 
 storiesOf('Liquid State UI Kit/Data Entry/Search', module)
-  .add('MinInput', () => <SearchMinInput />)
+  .add('Minimun Input', () => <SearchMinInput />)
+  .add('Loading', () => <SearchLoading />)
+  .add('Heading', () => <SearchHeading />)
   .add('With Data', () => <SearchOnChange />)
   .add('OnSubmit', () => <SearchOnSubmit />);
 
