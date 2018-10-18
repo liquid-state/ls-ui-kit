@@ -1,6 +1,7 @@
 import React from 'react';
 import Pager from '../../../../src/components/Pager';
 import WithState from '../../../utils/WithState';
+import { action } from '@storybook/addon-actions';
 
 export default () => (
   <div>
@@ -24,6 +25,16 @@ export default () => (
     <section className="example">
       <h2 className="ex-title">Default value</h2>
       <Pager steps={5} defaultValue={4} />
+    </section>
+
+    <section className="example">
+      <h2 className="ex-title">Text arrow overwrite</h2>
+      <Pager steps={5} defaultValue={4} textRightArrow="Next" textLeftArrow="Back" />
+    </section>
+
+    <section className="example">
+      <h2 className="ex-title">Unlock onChange</h2>
+      <Pager steps={5} defaultValue={4} unlockChange onChange={console.log} />
     </section>
 
     <section className="example">
