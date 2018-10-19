@@ -29,7 +29,7 @@ export default () => (
 
     <section className="example">
       <h2 className="ex-title">Text arrow overwrite</h2>
-      <Pager steps={5} defaultValue={4} textRightArrow="Next" textLeftArrow="Back" />
+      <Pager steps={5} defaultValue={4} onChange={action('change')} TextRight={(props) => <a {...props}>NEXT</a>} />
     </section>
 
     <section className="example">

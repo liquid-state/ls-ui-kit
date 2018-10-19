@@ -10,8 +10,8 @@ export default class Pager extends React.Component {
     current: PropTypes.number.isRequired,
     hideLeftArrow: PropTypes.bool,
     hideRightArrow: PropTypes.bool,
-    textLeftArrow: PropTypes.oneOf([PropTypes.string, false]),
-    textRightArrow: PropTypes.oneOf([PropTypes.string, false]),
+    TextLeft: PropTypes.oneOf([PropTypes.node, false]),
+    TextRight: PropTypes.oneOf([PropTypes.node, false]),
     onChange: PropTypes.func,
     unlockChange: PropTypes.bool,
   }
@@ -19,8 +19,8 @@ export default class Pager extends React.Component {
   static defaultProps = {
     hideLeftArrow: false,
     hideRightArrow: false,
-    textLeftArrow: false,
-    textRightArrow: false,
+    TextLeft: false,
+    TextRight: false,
     onChange: () => { },
     unlockChange: false,
   }
@@ -54,23 +54,23 @@ export default class Pager extends React.Component {
       current,
       hideLeftArrow,
       hideRightArrow,
-      textRightArrow,
-      textLeftArrow,
+      TextRight,
+      TextLeft,
     } = this.props;
 
     return (
       <div className="ls-ui-kit pager">
-        { textLeftArrow === false
+        { TextLeft === false
           ? <Icon type="left" className={hideLeftArrow && 'hidden'} onClick={this.onPrevious} />
           // eslint-disable-next-line
-          : <a role="link" onClick={this.onNext}>{textLeftArrow}</a> }
+          : <TextLeft onClick={this.onPrevious} /> }
         <Steps progressDot current={current}>
           {this.steps()}
         </Steps>
-        { textRightArrow === false
+        { TextRight === false
           ? <Icon type="right" className={hideRightArrow && 'hidden'} onClick={this.onNext} />
           // eslint-disable-next-line
-          : <a role="link" onClick={this.onNext}>{textRightArrow}</a> }
+        : <TextRight onClick={this.onNext} /> }
       </div>
     );
   }
