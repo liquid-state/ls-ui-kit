@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Steps } from 'antd';
 
+const onEnter = cb => e => (e.key === 'Enter' ? cb(e) : false);
+
 export default class Pager extends React.Component {
   static displayName = 'Pager';
 
@@ -10,24 +12,25 @@ export default class Pager extends React.Component {
     current: PropTypes.number.isRequired,
     hideLeftArrow: PropTypes.bool,
     hideRightArrow: PropTypes.bool,
-    TextLeft: PropTypes.oneOf([PropTypes.node, false]),
-    TextRight: PropTypes.oneOf([PropTypes.node, false]),
+    previous: PropTypes.node,
+    next: PropTypes.node,
     onChange: PropTypes.func,
-    unlockChange: PropTypes.bool,
+    onClick: PropTypes.func,
   }
 
   static defaultProps = {
     hideLeftArrow: false,
     hideRightArrow: false,
-    TextLeft: false,
-    TextRight: false,
+    previous: false,
+    next: false,
     onChange: () => { },
-    unlockChange: false,
+    onClick: e => e,
   }
 
   onPrevious = () => {
-    const { current, onChange, unlockChange } = this.props;
-    if (!unlockChange && current === 0) { return; }
+    const { current, onChange, onClick } = this.props;
+    onClick(current - 1);
+    if (current === 0) { return; }
     onChange(current - 1);
   }
 
@@ -36,9 +39,10 @@ export default class Pager extends React.Component {
       current,
       steps,
       onChange,
-      unlockChange,
+      onClick,
     } = this.props;
-    if (!unlockChange && current === steps - 1) { return; }
+    onClick(current + 1);
+    if (current === steps - 1) { return; }
     onChange(current + 1);
   }
 
@@ -54,23 +58,21 @@ export default class Pager extends React.Component {
       current,
       hideLeftArrow,
       hideRightArrow,
-      TextRight,
-      TextLeft,
+      previous,
+      next,
     } = this.props;
 
     return (
       <div className="ls-ui-kit pager">
-        { TextLeft === false
-          ? <Icon type="left" className={hideLeftArrow && 'hidden'} onClick={this.onPrevious} />
-          // eslint-disable-next-line
-          : <TextLeft onClick={this.onPrevious} /> }
+        <div tabIndex={0} role="button" onClick={this.onPrevious} onKeyPress={onEnter(this.onPrevious)}>
+          { previous || <Icon type="left" className={hideLeftArrow && 'hidden'} /> }
+        </div>
         <Steps progressDot current={current}>
           {this.steps()}
         </Steps>
-        { TextRight === false
-          ? <Icon type="right" className={hideRightArrow && 'hidden'} onClick={this.onNext} />
-          // eslint-disable-next-line
-        : <TextRight onClick={this.onNext} /> }
+        <div tabIndex={0} role="button" onClick={this.onNext} onKeyPress={onEnter(this.onNext)}>
+          { next || <Icon type="right" className={hideRightArrow && 'hidden'} /> }
+        </div>
       </div>
     );
   }

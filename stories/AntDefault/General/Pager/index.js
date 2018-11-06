@@ -28,13 +28,18 @@ export default () => (
     </section>
 
     <section className="example">
-      <h2 className="ex-title">Text arrow overwrite</h2>
-      <Pager steps={5} defaultValue={4} onChange={action('change')} TextRight={(props) => <a {...props}>NEXT</a>} />
+      <h2 className="ex-title">Text arrow overwrite (With component)</h2>
+      <Pager steps={5} defaultValue={4} onChange={action('change')} next={(props) => <a {...props}>NEXT</a>} />
     </section>
 
     <section className="example">
-      <h2 className="ex-title">Unlock onChange</h2>
-      <Pager steps={5} defaultValue={4} unlockChange onChange={console.log} />
+      <h2 className="ex-title">Text arrow overwrite (With Text)</h2>
+      <Pager steps={5} defaultValue={4} onChange={action('change')} next="NEXT?" />
+    </section>
+
+    <section className="example">
+      <h2 className="ex-title">OnClick to capture all clicks</h2>
+      <Pager steps={5} defaultValue={4}  onClick={console.log} />
     </section>
 
     <section className="example">
