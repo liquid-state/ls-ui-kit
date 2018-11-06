@@ -19,6 +19,26 @@ export const SearchMinInput = () => (
     <SearchList minInput={10} button={false} />
   </Fragment>);
 
+export const SearchLoading = () => (
+  <Fragment>
+    <h1>Search Loading</h1>
+    <p>Using <tt>loading = true</tt></p>
+    <SearchList loading />
+    <hr />
+    <h2>Loading with results</h2>
+    <SearchList results={exampleData} loading />
+  </Fragment>);
+
+export const SearchHeading = () => (
+  <Fragment>
+    <h1>Headings</h1>
+    <p>Define <tt>heading</tt></p>
+    <SearchList heading={<h4>SEARCH RESULTS</h4>} results={exampleData} />
+    <hr />
+    <h2>Another example</h2>
+    <SearchList heading="Previous Searches" results={exampleData} />
+  </Fragment>);
+
 export class SearchOnChange extends Component {
   constructor() {
     super();
