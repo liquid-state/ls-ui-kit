@@ -21,8 +21,8 @@ export default class Pager extends React.Component {
   static defaultProps = {
     hideLeftArrow: false,
     hideRightArrow: false,
-    previous: false,
-    next: false,
+    previous: undefined,
+    next: undefined,
     onChange: () => { },
     onClick: e => e,
   }
