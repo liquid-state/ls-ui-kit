@@ -36,7 +36,7 @@ import Mention from './Data Entry/Mention';
 import TreeSelect from './Data Entry/TreeSelect';
 import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
-import {SearchMinInput, SearchOnChange, SearchOnSubmit} from './Data Entry/Search';
+import { SearchMinInput, SearchOnChange, SearchOnSubmit } from './Data Entry/Search';
 
 // Data Display
 import Avatar from './Data Display/Avatar';
