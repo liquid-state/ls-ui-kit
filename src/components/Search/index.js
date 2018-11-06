@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Form, Input, Alert, Spin, Icon } from 'antd';
+import { List, Form, Input, Spin, Icon } from 'antd';
 import PropTypes from 'prop-types';
 
 import './style.less';
@@ -41,7 +41,7 @@ class SearchList extends Component {
     super(props);
     this.state = {
       value: props.value,
-      error: false,
+      error: props.error,
     };
   }
 
@@ -60,22 +60,24 @@ class SearchList extends Component {
 
   render() {
     const {
-      results, button, renderItem, loading, onItemClick,
+      results, button, renderItem, loading, onItemClick, heading, noResultsMessage,
     } = this.props;
     const { error, value } = this.state;
+    const help = error || (results.length === 0 && value !== '' ? noResultsMessage : null);
+
     return (
       <Form className="ls-ui-kit search">
-        <div className="search-input-wrap">
+        <Form.Item className="search-input-wrap" help={help}>
           <Input.Search
             value={value}
             onChange={this.onChange}
             onSearch={this.onSubmit}
             enterButton={button}
           />
-        </div>
-        { error !== false ? <Alert message={error} />
-          : loading === true ? <div className="search-spinner"><Spin /></div>
-          : results.length === 0 ? value !== '' ? <Alert message="No results found" type="warning" /> : null
+        </Form.Item>
+        { heading }
+        { loading === true
+          ? <div className="search-spinner"><Spin /></div>
           : <List>{results.map(renderItem(onItemClick))}</List> }
       </Form>);
   }
@@ -96,24 +98,30 @@ SearchList.propTypes = {
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
   onItemClick: PropTypes.func,
+  heading: PropTypes.node,
+  noResultsMessage: PropTypes.node,
   minInput: PropTypes.number,
   results: PropTypes.arrayOf(PropTypes.shape(renderListItem.propTypes)),
   loading: PropTypes.bool,
   button: PropTypes.bool,
   renderItem: PropTypes.func,
   value: PropTypes.string,
+  error: PropTypes.string,
 };
 
 SearchList.defaultProps = {
   onChange: e => e,
   onSubmit: e => e,
   onItemClick: e => e,
+  heading: null,
+  noResultsMessage: 'No Results found',
   minInput: 0,
   results: [],
   loading: false,
   button: true,
   renderItem: renderListItem,
   value: '',
+  error: false,
 };
 
 export default SearchList;
