@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Steps } from 'antd';
 
-const onEnter = cb => e => (e.key === 'Enter' ? cb(e) : false);
+const onPress = cb => (e) => {
+  e.preventDefault();
+  return ['Enter', ' '].includes(e.key) ? cb(e) : false;
+};
 
 export default class Pager extends React.Component {
   static displayName = 'Pager';
@@ -64,13 +67,13 @@ export default class Pager extends React.Component {
 
     return (
       <div className="ls-ui-kit pager">
-        <div tabIndex={0} role="button" onClick={this.onPrevious} onKeyPress={onEnter(this.onPrevious)}>
+        <div tabIndex={0} role="button" onClick={this.onPrevious} onKeyPress={onPress(this.onPrevious)}>
           { previous || <Icon type="left" className={hideLeftArrow && 'hidden'} /> }
         </div>
         <Steps progressDot current={current}>
           {this.steps()}
         </Steps>
-        <div tabIndex={0} role="button" onClick={this.onNext} onKeyPress={onEnter(this.onNext)}>
+        <div tabIndex={0} role="button" onClick={this.onNext} onKeyPress={onPress(this.onNext)}>
           { next || <Icon type="right" className={hideRightArrow && 'hidden'} /> }
         </div>
       </div>
