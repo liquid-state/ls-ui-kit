@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Steps } from 'antd';
 
+const onPress = cb => (e) => {
+  e.preventDefault();
+  return ['Enter', ' '].includes(e.key) ? cb(e) : false;
+};
+
 export default class Pager extends React.Component {
   static displayName = 'Pager';
 
@@ -10,27 +15,36 @@ export default class Pager extends React.Component {
     current: PropTypes.number.isRequired,
     hideLeftArrow: PropTypes.bool,
     hideRightArrow: PropTypes.bool,
+    previous: PropTypes.node,
+    next: PropTypes.node,
     onChange: PropTypes.func,
+    onClick: PropTypes.func,
   }
 
   static defaultProps = {
     hideLeftArrow: false,
     hideRightArrow: false,
+    previous: undefined,
+    next: undefined,
     onChange: () => { },
+    onClick: e => e,
   }
 
   onPrevious = () => {
-    if (this.props.current === 0) {
-      return;
-    }
-    this.props.onChange(this.props.current - 1);
+    const { current, onChange, onClick } = this.props;
+    onClick('previous', current);
+    if (current !== 0) { onChange(current - 1); }
   }
 
   onNext = () => {
-    if (this.props.current === this.props.steps - 1) {
-      return;
-    }
-    this.props.onChange(this.props.current + 1);
+    const {
+      current,
+      steps,
+      onChange,
+      onClick,
+    } = this.props;
+    onClick('next', current);
+    if (current !== steps - 1) { onChange(current + 1); }
   }
 
   steps() {
@@ -45,15 +59,21 @@ export default class Pager extends React.Component {
       current,
       hideLeftArrow,
       hideRightArrow,
+      previous,
+      next,
     } = this.props;
 
     return (
       <div className="ls-ui-kit pager">
-        <Icon type="left" className={hideLeftArrow && 'hidden'} onClick={this.onPrevious} />
+        <div tabIndex={0} role="button" onClick={this.onPrevious} onKeyPress={onPress(this.onPrevious)}>
+          { previous || <Icon type="left" className={hideLeftArrow && 'hidden'} /> }
+        </div>
         <Steps progressDot current={current}>
           {this.steps()}
         </Steps>
-        <Icon type="right" className={hideRightArrow && 'hidden'} onClick={this.onNext} />
+        <div tabIndex={0} role="button" onClick={this.onNext} onKeyPress={onPress(this.onNext)}>
+          { next || <Icon type="right" className={hideRightArrow && 'hidden'} /> }
+        </div>
       </div>
     );
   }

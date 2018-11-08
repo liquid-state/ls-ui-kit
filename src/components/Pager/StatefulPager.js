@@ -9,18 +9,23 @@ export default class StatefulPager extends React.Component {
 
   static propTypes = {
     steps: PropTypes.number.isRequired,
+    onChange: PropTypes.func,
     defaultValue: PropTypes.number,
   }
 
   static defaultProps = {
     defaultValue: 0,
+    onChange: e => e,
   }
 
   state = {
     value: this.props.defaultValue,
   }
 
-  onChange = value => this.setState({ value });
+  onChange = (value) => {
+    this.props.onChange(value);
+    this.setState({ value });
+  }
 
   render() {
     return (<Pager
