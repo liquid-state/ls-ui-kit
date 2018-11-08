@@ -28,7 +28,7 @@ PagerSwitch.defaultProps = {
   defaultValue: 0,
   hideLeftArrow: false,
   hideRightArrow: false,
-  onChange: () => { },
+  onChange: e => e,
 };
 
 export default PagerSwitch;
