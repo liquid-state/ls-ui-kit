@@ -32,9 +32,8 @@ export default class Pager extends React.Component {
 
   onPrevious = () => {
     const { current, onChange, onClick } = this.props;
-    onClick('previous', current - 1);
-    if (current === 0) { return; }
-    onChange(current - 1);
+    onClick('previous', current);
+    if (current !== 0) { onChange(current - 1); }
   }
 
   onNext = () => {
@@ -44,9 +43,8 @@ export default class Pager extends React.Component {
       onChange,
       onClick,
     } = this.props;
-    onClick('next', current + 1);
-    if (current === steps - 1) { return; }
-    onChange(current + 1);
+    onClick('next', current);
+    if (current !== steps - 1) { onChange(current + 1); }
   }
 
   steps() {
