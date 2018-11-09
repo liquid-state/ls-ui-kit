@@ -38,6 +38,7 @@ import TimePicker from './Data Entry/TimePicker';
 import Transfer from './Data Entry/Transfer';
 import {
   SearchMinInput,
+  SearchError,
   SearchOnChange,
   SearchOnSubmit,
   SearchLoading,
@@ -105,6 +106,7 @@ storiesOf('Liquid State UI Kit/Data Entry', module)
 
 storiesOf('Liquid State UI Kit/Data Entry/Search', module)
   .add('Minimun Input', () => <SearchMinInput />)
+  .add('Search Error', () => <SearchError />)
   .add('Loading', () => <SearchLoading />)
   .add('Heading', () => <SearchHeading />)
   .add('With Data', () => <SearchOnChange />)

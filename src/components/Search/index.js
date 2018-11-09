@@ -94,6 +94,9 @@ renderListItem.defaultProps = {
   icon: false,
 };
 
+// const isFalse = v => (v === false
+//  ? true
+//  : new Error(`Invalid prop ${v} supplied to Search, expected false`));
 SearchList.propTypes = {
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
@@ -106,7 +109,7 @@ SearchList.propTypes = {
   button: PropTypes.bool,
   renderItem: PropTypes.func,
   value: PropTypes.string,
-  error: PropTypes.string,
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 SearchList.defaultProps = {
