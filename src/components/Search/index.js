@@ -56,7 +56,7 @@ class SearchList extends Component {
     return this.props.onChange(value);
   }
 
-  error = v => (typeof v === 'undefined' ? this.setState({ error: false }) : this.setState({ error: v }));
+  error = v => (typeof v === 'undefined' ? this.setState({ error: null }) : this.setState({ error: v }));
 
   render() {
     const {
@@ -94,9 +94,6 @@ renderListItem.defaultProps = {
   icon: false,
 };
 
-// const isFalse = v => (v === false
-//  ? true
-//  : new Error(`Invalid prop ${v} supplied to Search, expected false`));
 SearchList.propTypes = {
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
@@ -109,7 +106,7 @@ SearchList.propTypes = {
   button: PropTypes.bool,
   renderItem: PropTypes.func,
   value: PropTypes.string,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  error: PropTypes.string,
 };
 
 SearchList.defaultProps = {
@@ -124,7 +121,7 @@ SearchList.defaultProps = {
   button: true,
   renderItem: renderListItem,
   value: '',
-  error: false,
+  error: null,
 };
 
 export default SearchList;

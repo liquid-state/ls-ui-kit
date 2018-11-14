@@ -23,8 +23,8 @@ export const SearchError = () => (
   <Fragment>
     <h1>Search with error set</h1>
     <SearchList error="This is an error" />
-    <h2>With error set to false</h2>
-    <SearchList error={false} />
+    <h2>With error set to null</h2>
+    <SearchList error={null} />
   </Fragment>
 );
 
