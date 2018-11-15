@@ -56,7 +56,7 @@ class SearchList extends Component {
     return this.props.onChange(value);
   }
 
-  error = v => (typeof v === 'undefined' ? this.setState({ error: false }) : this.setState({ error: v }));
+  error = v => (typeof v === 'undefined' ? this.setState({ error: null }) : this.setState({ error: v }));
 
   render() {
     const {
@@ -121,7 +121,7 @@ SearchList.defaultProps = {
   button: true,
   renderItem: renderListItem,
   value: '',
-  error: false,
+  error: null,
 };
 
 export default SearchList;

@@ -19,6 +19,15 @@ export const SearchMinInput = () => (
     <SearchList minInput={10} button={false} />
   </Fragment>);
 
+export const SearchError = () => (
+  <Fragment>
+    <h1>Search with error set</h1>
+    <SearchList error="This is an error" />
+    <h2>With error set to null</h2>
+    <SearchList error={null} />
+  </Fragment>
+);
+
 export const SearchLoading = () => (
   <Fragment>
     <h1>Search Loading</h1>
