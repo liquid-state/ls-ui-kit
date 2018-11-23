@@ -24,6 +24,7 @@ export class AlertModal extends PureComponent {
       onOk,
       children,
       okText,
+      buttonType,
     } = this.props;
 
     return (
@@ -39,7 +40,7 @@ export class AlertModal extends PureComponent {
         </h2>
         <div className="modal-body">{children}</div>
         <div className="modal-controls">
-          <Button type="primary" onClick={onOk} stretched>
+          <Button type={buttonType} onClick={onOk} stretched>
             {okText}
           </Button>
         </div>
@@ -49,6 +50,7 @@ export class AlertModal extends PureComponent {
 }
 
 AlertModal.propTypes = {
+  buttonType: PropTypes.string,
   visible: PropTypes.bool,
   title: PropTypes.string,
   okText: PropTypes.string,
@@ -61,6 +63,7 @@ AlertModal.propTypes = {
 };
 
 AlertModal.defaultProps = {
+  buttonType: 'primary',
   visible: true,
   title: '',
   okText: '',
