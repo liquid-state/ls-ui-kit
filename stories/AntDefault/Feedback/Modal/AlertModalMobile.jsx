@@ -30,10 +30,11 @@ class AlertModalMobile extends Component {
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <AlertModal
+            buttonType="danger"
             visible={this.state.visible}
             footer={null}
             title="Modal Alert"
-            okText="Primary"
+            okText="Danger"
             icon="check-circle"
             onCancel={this.onCancel}
             onOk={this.onOk}

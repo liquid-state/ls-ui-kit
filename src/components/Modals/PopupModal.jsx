@@ -23,6 +23,7 @@ export class PopupModal extends PureComponent {
       onOk,
       children,
       okText,
+      buttonType,
     } = this.props;
 
     return (
@@ -37,7 +38,7 @@ export class PopupModal extends PureComponent {
         </h2>
         <div className="modal-body">{children}</div>
         <div className="modal-controls">
-          <Button type="primary" onClick={onOk} stretched>
+          <Button type={buttonType} onClick={onOk} stretched>
             {okText}
           </Button>
         </div>
@@ -47,6 +48,7 @@ export class PopupModal extends PureComponent {
 }
 
 PopupModal.propTypes = {
+  buttonType: PropTypes.string,
   visible: PropTypes.bool,
   title: PropTypes.string,
   okText: PropTypes.string,
@@ -58,6 +60,7 @@ PopupModal.propTypes = {
 };
 
 PopupModal.defaultProps = {
+  buttonType: 'primary',
   visible: true,
   title: '',
   okText: '',

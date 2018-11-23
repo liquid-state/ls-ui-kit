@@ -45,15 +45,23 @@ class SearchList extends Component {
     };
   }
 
+  static getDerivedStateFromProps = (props, state) => ({
+    ...state,
+    error: props.error,
+    value: props.value,
+  });
+
   onSubmit = () => (this.state.value.length >= this.props.minInput
-    ? this.props.onSubmit(this.state.value) : this.error());
+    ? this.props.onSubmit(this.state.value)
+    : this.error());
 
   onChange = ({ target: { value } }) => {
+    const { minInput, onChange, onEmpty } = this.props;
     this.setState({ value });
-    if (value.length < this.props.minInput) {
-      return this.error(`Please enter at least ${this.props.minInput} characters`);
-    } this.error();
-    return this.props.onChange(value);
+    if (value === '') { return onEmpty(); }
+    if (value.length < minInput) { return this.error(`Please enter at least ${minInput} characters`); }
+    this.error();
+    return onChange(value);
   }
 
   error = v => (typeof v === 'undefined' ? this.setState({ error: null }) : this.setState({ error: v }));
@@ -95,6 +103,7 @@ renderListItem.defaultProps = {
 };
 
 SearchList.propTypes = {
+  onEmpty: PropTypes.func,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
   onItemClick: PropTypes.func,
@@ -110,6 +119,7 @@ SearchList.propTypes = {
 };
 
 SearchList.defaultProps = {
+  onEmpty: e => e,
   onChange: e => e,
   onSubmit: e => e,
   onItemClick: e => e,
