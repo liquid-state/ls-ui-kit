@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import SearchList from '../../../../src/components/Search';
+import { action } from '@storybook/addon-actions';
 
 const exampleData = [
   { title: 'Test Title' },
@@ -16,7 +17,7 @@ export const SearchMinInput = () => (
   <Fragment>
     <h1>Default Search Component</h1>
     <p>Using <tt>minInput</tt> and no button</p>
-    <SearchList minInput={10} button={false} />
+    <SearchList minInput={10} button={false} onChange={action('change')} onEmpty={action('empty')} />
   </Fragment>);
 
 export const SearchError = () => (
