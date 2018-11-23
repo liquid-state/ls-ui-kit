@@ -45,6 +45,12 @@ class SearchList extends Component {
     };
   }
 
+  static getDerivedStateFromProps = (props, state) => ({
+    ...state,
+    error: props.error,
+    value: props.value,
+  });
+
   onSubmit = () => (this.state.value.length >= this.props.minInput
     ? this.props.onSubmit(this.state.value)
     : this.error());
