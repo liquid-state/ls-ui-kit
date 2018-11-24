@@ -1,0 +1,28 @@
+{
+  "name": "@liquid-state/stories",
+  "version": "0.4.0",
+  "description": "Storybook stories for Liquid State UI Kit",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9002 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o storybook-compiled",
+    "lint": "eslint ./src --ext .js,.jsx",
+    "lint:fix": "eslint ./src --fix --ext .js,.jsx"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^3.2.0",
+    "react": "^16.2.0",
+    "@liquid-state/ui-kit": "0.3.13"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.3.6",
+    "react-dom": "^16.2.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1"
+  }
+}
