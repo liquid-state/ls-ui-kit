@@ -4,12 +4,28 @@
   "description": "Liquid State UI Kit for Desktop and Mobile.",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "storybook": "start-storybook -p 9002 -c packages/stories/.storybook",
+    "lint": "eslint packages/*/src/**/*.{js,jsx}",
+    "lint:fix": "eslint packages/*/src/**/*.{js,jsx} --fix"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "lint-staged": "^8.1.0",
+    "husky": "1.2.0",
     "lerna": "^3.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
