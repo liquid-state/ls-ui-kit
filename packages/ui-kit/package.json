@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
-    "prepack": "npm run build"
+    "prepack": "yarn build"
   },
   "files": [
     "dist",
