@@ -26,8 +26,6 @@ const renderListItem = onItemClick => item => (
   </List.Item>
 );
 
-const renderLoading = () => (<Spin />);
-
 /**
  * SearchList Component
  *
@@ -76,7 +74,7 @@ class SearchList extends Component {
 
   render() {
     const {
-      results, button, renderItem, loading, onItemClick, heading, noResultsMessage, Spinner,
+      results, button, renderItem, loading, onItemClick, heading, noResultsMessage, spinner,
     } = this.props;
     const { error, value } = this.state;
     const help = error || (results.length === 0 && value !== '' ? noResultsMessage : null);
@@ -92,7 +90,7 @@ class SearchList extends Component {
         </Form.Item>
         { heading }
         { loading === true
-          ? <div className="search-spinner"><Spinner /></div>
+          ? <div className="search-spinner">{ spinner }</div>
           : <List>{results.map(renderItem(onItemClick))}</List> }
       </Form>);
   }
@@ -121,7 +119,7 @@ SearchList.propTypes = {
   loading: PropTypes.bool,
   button: PropTypes.bool,
   renderItem: PropTypes.func,
-  Spinner: PropTypes.func,
+  spinner: PropTypes.node,
   value: PropTypes.string,
   error: PropTypes.string,
 };
@@ -138,7 +136,7 @@ SearchList.defaultProps = {
   loading: false,
   button: true,
   renderItem: renderListItem,
-  Spinner: renderLoading,
+  spinner: <Spin />,
   value: '',
   error: null,
 };
