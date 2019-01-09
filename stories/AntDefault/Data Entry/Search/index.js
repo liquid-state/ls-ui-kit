@@ -37,6 +37,8 @@ export const SearchLoading = () => (
     <hr />
     <h2>Loading with results</h2>
     <SearchList results={exampleData} loading />
+    <h2>Custom Spinner</h2>
+    <SearchList spinner={<img src="///placehold.it/100x100" />} loading />
   </Fragment>);
 
 export const SearchHeading = () => (
