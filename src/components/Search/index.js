@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { List, Form, Input, Spin, Icon } from 'antd';
+import {
+  List,
+  Form,
+  Input,
+  Spin,
+  Icon,
+} from 'antd';
 import PropTypes from 'prop-types';
 
 import './style.less';
@@ -19,6 +25,8 @@ const renderListItem = onItemClick => item => (
     <span className="search-item-inner">{item.title}</span>
   </List.Item>
 );
+
+const renderLoading = () => (<Spin />);
 
 /**
  * SearchList Component
@@ -47,13 +55,13 @@ class SearchList extends Component {
 
   static getDerivedStateFromProps = (props, state) => ({
     ...state,
-    error: props.error,
-    value: props.value,
+    error: !state.error && props.error ? props.error : state.error,
   });
 
-  onSubmit = () => (this.state.value.length >= this.props.minInput
-    ? this.props.onSubmit(this.state.value)
-    : this.error());
+  onSubmit = () => {
+    const { state: { value }, props: { minInput, onSubmit }, error } = this;
+    return value.length >= minInput ? onSubmit(value) : error();
+  };
 
   onChange = ({ target: { value } }) => {
     const { minInput, onChange, onEmpty } = this.props;
@@ -68,11 +76,10 @@ class SearchList extends Component {
 
   render() {
     const {
-      results, button, renderItem, loading, onItemClick, heading, noResultsMessage,
+      results, button, renderItem, loading, onItemClick, heading, noResultsMessage, Spinner,
     } = this.props;
     const { error, value } = this.state;
     const help = error || (results.length === 0 && value !== '' ? noResultsMessage : null);
-
     return (
       <Form className="ls-ui-kit search">
         <Form.Item className="search-input-wrap" help={help}>
@@ -85,7 +92,7 @@ class SearchList extends Component {
         </Form.Item>
         { heading }
         { loading === true
-          ? <div className="search-spinner"><Spin /></div>
+          ? <div className="search-spinner"><Spinner /></div>
           : <List>{results.map(renderItem(onItemClick))}</List> }
       </Form>);
   }
@@ -114,6 +121,7 @@ SearchList.propTypes = {
   loading: PropTypes.bool,
   button: PropTypes.bool,
   renderItem: PropTypes.func,
+  Spinner: PropTypes.func,
   value: PropTypes.string,
   error: PropTypes.string,
 };
@@ -130,6 +138,7 @@ SearchList.defaultProps = {
   loading: false,
   button: true,
   renderItem: renderListItem,
+  Spinner: renderLoading,
   value: '',
   error: null,
 };
