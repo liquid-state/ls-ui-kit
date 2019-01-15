@@ -3,10 +3,8 @@
   "version": "0.4.0",
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
-    "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
-    "prepack": "yarn build",
     "storybook": "start-storybook -p 9002 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o storybook-compiled",
+    "build": "build-storybook -c .storybook -o dist",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --fix --ext .js,.jsx"
   },
@@ -16,9 +14,6 @@
   ],
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
-  "peerDependencies": {
-    "@liquid-state/ui-kit": "0.4.0"
-  },
   "dependencies": {
     "@liquid-state/ui-kit": "0.4.0",
     "antd": "^3.2.0",
@@ -26,10 +21,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^4.0.8",
+    "@storybook/addon-actions": "^4.1.6",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^8.0.4",

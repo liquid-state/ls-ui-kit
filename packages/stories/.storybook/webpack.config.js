@@ -1,9 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-
-// load the default config generator.
-const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
-
 // Load package.json
 const pkgPath = path.join(__dirname, '../', 'package.json');
 const pkg = fs.existsSync(pkgPath) ? require(pkgPath) : {};
@@ -21,10 +17,9 @@ if (pkg.theme && typeof (pkg.theme) === 'string') {
   theme = pkg.theme;
 }
 
-module.exports = (baseConfig, env) => {
-  const config = genDefaultConfig(baseConfig, env);
+module.exports = (basicConfig, env, defaultConfig) => {
   // add less support
-  config.module.rules.push({
+  defaultConfig.module.rules.push({
     test: /\.less$/,
     use: [
       { loader: 'style-loader' },
@@ -32,13 +27,14 @@ module.exports = (baseConfig, env) => {
       {
         loader: "less-loader",
         options: {
-          modifyVars: theme
+          modifyVars: theme,
+          javascriptEnabled: true
         }
       }
     ]
   });
 
-  config.resolve.extensions.push('.less')
+  defaultConfig.resolve.extensions.push('.less')
 
-  return config;
+  return defaultConfig;
 };
