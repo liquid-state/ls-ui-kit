@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { Rate } from '@liquid-state/ui-kit';
-import WithState from '../../../utils/WithState';
+import WithState from '../../utils/WithState';
 
 export default () => (
   <Fragment>

@@ -10,7 +10,7 @@ import Status from './Status';
 
 class BadgePage extends Component {
   state = {}
-  render() { 
+  render() {
     return (
       <Fragment>
         <h1 className="title">Badge</h1>
@@ -37,5 +37,5 @@ class BadgePage extends Component {
     );
   }
 }
- 
+
 export default BadgePage;

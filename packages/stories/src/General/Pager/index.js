@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pager } from '@liquid-state/ui-kit';
-import WithState from '../../../utils/WithState';
+import WithState from '../../utils/WithState';
 import { action } from '@storybook/addon-actions';
 
 export default () => (

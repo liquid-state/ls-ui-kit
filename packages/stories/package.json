@@ -15,7 +15,11 @@
   "dependencies": {
     "@liquid-state/ui-kit": "^0.4.0-alpha.1",
     "antd": "^3.2.0",
-    "react": "^16.2.0"
+    "immutability-helper": "^2.9.0",
+    "react": "^16.2.0",
+    "react-dnd": "^7.0.2",
+    "react-dnd-html5-backend": "^7.0.2",
+    "react-infinite-scroller": "^1.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -28,6 +32,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+
     "react-dom": "^16.2.0"
   },
   "gitHead": "cefaaf095c67fe5bf2a1e5108f77fbd9fe00ae08"

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Popconfirm, message, Button } from 'antd';
-import '../../../css/style.css';
 
 const text = 'Are you sure delete this task?';
 
@@ -64,5 +63,5 @@ class Placement extends Component {
     );
   }
 }
- 
+
 export default Placement;

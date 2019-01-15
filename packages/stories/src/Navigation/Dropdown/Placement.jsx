@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Dropdown, Button, Icon, Row, Col } from 'antd';
-import '../../../css/style.css';
+import { Menu, Dropdown, Button, Row } from 'antd';
 
 const menu = (
   <Menu>
@@ -21,7 +20,7 @@ class Placement extends Component {
     return (
       <section className="example">
         <h3 className="ex-title">Placement</h3>
-        
+
         <Row className="mb20">
 
           <Dropdown overlay={menu} placement="bottomLeft">
@@ -57,5 +56,5 @@ class Placement extends Component {
     );
   }
 }
- 
+
 export default Placement;
