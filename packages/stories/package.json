@@ -4,7 +4,8 @@
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
-    "build": "babel --copy-files --source-maps --out-dir ./dist ./src"
+    "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
+    "prepack": "yarn build"
   },
   "main": "dist/index.js",
   "files": [

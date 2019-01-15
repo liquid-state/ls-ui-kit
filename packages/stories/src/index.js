@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import "./css/style.css";
+import "./css/icons.css";
 
 // General
 import Button from './General/Button';
