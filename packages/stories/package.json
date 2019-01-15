@@ -4,7 +4,7 @@
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
-    "build": "build-storybook -c .storybook -o dist",
+    "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint:fix": "eslint ./src --fix --ext .js,.jsx"
   },
@@ -33,5 +33,6 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "react-dom": "^16.2.0"
-  }
+  },
+  "gitHead": "cefaaf095c67fe5bf2a1e5108f77fbd9fe00ae08"
 }
