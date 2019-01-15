@@ -5,7 +5,6 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "prepack": "yarn build",
     "storybook": "start-storybook -p 9002 -c packages/stories/.storybook",
     "lint": "eslint packages/*/src/**/*.{js,jsx}",
     "lint:fix": "eslint packages/*/src/**/*.{js,jsx} --fix"
