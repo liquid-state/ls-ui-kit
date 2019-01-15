@@ -1,22 +1,23 @@
 {
-  "name": "@liquid-state/ui-kit",
-  "version": "0.3.15",
+  "name": "ui-kit-root",
+  "version": "0.4.0",
   "description": "Liquid State UI Kit for Desktop and Mobile.",
-  "main": "dist/index.js",
+  "private": true,
   "scripts": {
-    "storybook": "start-storybook -p 9002 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o storybook-compiled",
-    "lint": "eslint ./src --ext .js,.jsx",
-    "lint:fix": "eslint ./src --fix --ext .js,.jsx",
-    "build": "babel --copy-files --source-maps --out-dir ./dist ./src",
-    "prepack": "npm run build"
+    "build": "lerna run build",
+    "prepack": "yarn build",
+    "storybook": "start-storybook -p 9002 -c packages/stories/.storybook",
+    "lint": "eslint packages/*/src/**/*.{js,jsx}",
+    "lint:fix": "eslint packages/*/src/**/*.{js,jsx} --fix"
   },
-  "files": [
-    "dist",
-    "stories"
+  "workspaces": [
+    "packages/*"
   ],
-  "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
-  "license": "MIT",
+  "devDependencies": {
+    "husky": "1.2.0",
+    "lerna": "^3.4.3",
+    "lint-staged": "^8.1.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -27,54 +28,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "dependencies": {
-    "classnames": "^2.2.5"
-  },
-  "peerDependencies": {
-    "antd": "^3.2.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0"
-  },
-  "devDependencies": {
-    "@storybook/react": "^3.3.6",
-    "antd": "^3.3.1",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-import": "^1.6.7",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "copy-webpack-plugin": "^4.5.0",
-    "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.6.1",
-    "husky": "^0.15.0-rc.13",
-    "immutability-helper": "^2.6.6",
-    "less": "^2.7.0",
-    "less-loader": "^4.0.5",
-    "lint-staged": "^7.0.0",
-    "lodash.debounce": "^4.0.8",
-    "moment": "^2.20.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dnd": "^2.6.0",
-    "react-dnd-html5-backend": "^2.6.0",
-    "react-dom": "^16.2.0",
-    "react-infinite-scroller": "^1.1.3",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-virtualized": "^9.18.5",
-    "style-loader": "^0.20.1",
-    "webpack": "^3.11.0"
-  },
-  "theme": {
-    "font-size-base": "16px"
   }
 }

@@ -58,8 +58,8 @@ typings/
 .env
 
 # built assets
-/dist
-/storybook-compiled
+packages/*/dist
+packages/stories/storybook-compiled
 
 package-lock.json
 
