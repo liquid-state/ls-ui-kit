@@ -1,6 +1,6 @@
 {
   "name": "@liquid-state/ui-kit-stories",
-  "version": "0.4.0",
+  "version": "0.4.0-alpha.0",
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
@@ -15,7 +15,7 @@
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "dependencies": {
-    "@liquid-state/ui-kit": "0.4.0",
+    "@liquid-state/ui-kit": "^0.4.0-alpha.0",
     "antd": "^3.2.0",
     "react": "^16.2.0"
   },
@@ -23,8 +23,8 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/react": "^4.0.8",
     "@storybook/addon-actions": "^4.1.6",
+    "@storybook/react": "^4.0.8",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^8.0.4",
