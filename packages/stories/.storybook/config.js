@@ -9,7 +9,7 @@ addDecorator((story) => (
 ));
 
 function loadStories() {
-  require('../src/index');
+  require('../src/index').default();
 }
 
 configure(loadStories, module);
