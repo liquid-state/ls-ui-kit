@@ -30,17 +30,16 @@ export const SearchError = () => (
 );
 
 export const SearchLoading = () => (
-  <Fragment>
-    <h1>Search Loading</h1>
+  <section className="example">
+    <h2 className="title">Search Loading</h2>
     <p>Using <tt>loading = true</tt></p>
     <Search loading />
     <hr />
-    <h2>Loading with results</h2>
+    <h2 className="title">Loading with results</h2>
     <Search results={exampleData} loading />
-    <h2>Custom Spinner</h2>
+    <h2 className="title">Custom Spinner</h2>
     <Search spinner={<img src="///placehold.it/100x100" />} loading />
-    <Search results={exampleData} loading />
-  </Fragment>);
+  </section>);
 
 export const SearchHeading = () => (
   <Fragment>

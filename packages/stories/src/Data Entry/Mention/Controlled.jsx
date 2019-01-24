@@ -7,17 +7,16 @@ class Controlled extends Component {
   state = {
     value: toContentState('@afc163')
   };
-  
+
   render() {
     return (
       <section className="example">
         <h3 className="ex-title">Controlled</h3>
-
         <Row>
           <Col sm={16} lg={7}>
           <Mention
               ref={ele => this.mention = ele}
-              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
               value={this.state.value}
               onChange={this.handleChange}
               style={{width: '100%'}}

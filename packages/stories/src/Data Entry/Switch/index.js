@@ -6,8 +6,8 @@ import Icon from './Icon';
 import Size from './Size';
 import Loading from './Loading';
 
-class DatePickerPage extends Component {
-  render() { 
+class SwitchPage extends Component {
+  render() {
     return (
       <Fragment>
         <h1 className="title">Switch</h1>
@@ -46,5 +46,5 @@ class DatePickerPage extends Component {
     );
   }
 }
- 
-export default DatePickerPage;
+
+export default SwitchPage;

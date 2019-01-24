@@ -5,6 +5,7 @@ import "./css/style.css";
 import "./css/icons.css";
 
 // General
+import Typography from './General/Typography';
 import Button from './General/Button';
 import Icon from './General/Icon';
 import PagerStories from './General/Pager';
@@ -79,10 +80,31 @@ import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
 const $module = module;
-export default function (prefix = 'Liquid State UI Kit', storiesOf = defStory) {
+
+// Create storiesOf
+const create = (storiesOf, filters = []) => {
+  const match = n => filters.includes(n);
+  return (name, module = $module) => {
+    const anchor = storiesOf(name, module);
+    const proxy = {
+      add: ( cName, component ) => {
+        !match(cName)
+          ? anchor.add(cName, component)
+          : console.info('Component Filtered:', `${name}/${cName}`);
+        return proxy;
+      },
+    };
+    return proxy;
+  };
+};
+
+export default function (prefix = 'Liquid State UI Kit', stories_of = defStory, filters = []) {
+
+  const storiesOf = create(stories_of, filters);
   storiesOf(prefix, $module);
 
   storiesOf(`${prefix}/General`, $module)
+    .add('Typography', () => <Typography />)
     .add('Buttons', () => <Button />)
     .add('Icon', () => <Icon />)
     .add('Pager', PagerStories)

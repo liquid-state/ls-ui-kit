@@ -1,34 +1,31 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
 
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-        code: 752100,
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
+      code: 2000,
     }],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua Men',
-        code: 453400,
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
+      code: 4000,
     }],
-  }
-];
+  }],
+}];
 
 const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
   const option = selectedOptions[i];
@@ -44,7 +41,7 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
 
 
 class CustomRender extends Component {
-  render() { 
+  render() {
     return (
       <section className="example">
         <h3 className="ex-title">Custom Render</h3>
@@ -53,7 +50,7 @@ class CustomRender extends Component {
             <Cascader
               style={{width: '100%'}}
               options={options}
-              defaultValue={['zhejiang', 'hangzhou', 'xihu']}
+              defaultValue={['wa', 'perth', 'freemantle']}
               displayRender={displayRender}
             />
           </Col>
@@ -62,5 +59,5 @@ class CustomRender extends Component {
     );
   }
 }
- 
+
 export default CustomRender;
