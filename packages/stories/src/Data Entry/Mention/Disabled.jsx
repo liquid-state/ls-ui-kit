@@ -16,6 +16,7 @@ class Disabled extends Component {
                 style={{ width: '100%' }}
                 placeholder="this is disabled Mention"
                 suggestions={users}
+                notFoundContent="Results not found"
                 disabled
               />
             </div>
@@ -23,6 +24,7 @@ class Disabled extends Component {
               style={{ width: '100%' }}
               placeholder="this is readOnly Mention"
               suggestions={users}
+              notFoundContent="Results not found"
               readOnly
             />
           </Col>

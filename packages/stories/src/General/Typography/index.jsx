@@ -11,6 +11,9 @@ export default () => (
       <h1 className="reversed">Heading 1 Reversed</h1>
     </section>
     <section className="example">
+      <h1 className="t1">Heading 1 Title</h1>
+    </section>
+    <section className="example">
       <h2>Heading 2</h2>
     </section>
     <section className="example">

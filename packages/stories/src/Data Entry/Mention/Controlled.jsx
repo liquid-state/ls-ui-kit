@@ -16,6 +16,7 @@ class Controlled extends Component {
           <Col sm={16} lg={7}>
           <Mention
               ref={ele => this.mention = ele}
+              notFoundContent="Results not found"
               suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
               value={this.state.value}
               onChange={this.handleChange}

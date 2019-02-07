@@ -10,15 +10,11 @@ import Status from './Status';
 
 class BadgePage extends Component {
   state = {}
+
   render() {
     return (
       <Fragment>
         <h1 className="title">Badge</h1>
-        <p className="text">
-          Badge
-        </p>
-
-        <h2 className="title">When to use</h2>
 
         <p className="text">
           Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying unread messages count.

@@ -33,7 +33,8 @@ class WithForm extends Component {
                   initialValue: this.state.initValue,
                 })(
                   <Mention
-                    suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+                    suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
+                    notFoundContent="Results not found"
                   />
                 )}
               </FormItem>

@@ -13,8 +13,9 @@ class Placement extends Component {
           <Col sm={16} lg={7}>
             <Mention
               style={{ width: '100%' }}
-              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
               placement="top"
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>
