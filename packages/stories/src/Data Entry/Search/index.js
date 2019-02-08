@@ -17,7 +17,7 @@ export const SearchMinInput = () => (
   <Fragment>
     <h1>Default Search Component</h1>
     <p>Using <tt>minInput</tt> and no button</p>
-    <Search minInput={10} button={false} onChange={action('change')} onEmpty={action('empty')} />
+    <Search placeholder="Placeholder text" minInput={10} button={false} onChange={action('change')} onEmpty={action('empty')} />
   </Fragment>);
 
 export const SearchError = () => (
