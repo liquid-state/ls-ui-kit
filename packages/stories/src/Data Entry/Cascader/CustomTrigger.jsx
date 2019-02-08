@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
 
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
     }],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua Men',
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
     }],
-  }
-];
+  }],
+}];
 
 class CustomTrigger extends Component {
   state = {

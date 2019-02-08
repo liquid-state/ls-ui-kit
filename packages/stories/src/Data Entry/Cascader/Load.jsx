@@ -3,13 +3,13 @@ import { Cascader, Col, Row } from 'antd';
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: 'nsw',
+    label: 'New South Wales',
     isLeaf: false,
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: 'wa',
+    label: 'Western Australia',
     isLeaf: false,
   }
 ];

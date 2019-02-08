@@ -4,7 +4,7 @@ import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 class Container extends Component {
-  render() { 
+  render() {
     return (
       <section className="example">
         <h3 className="ex-title">Container of card type Tab</h3>
