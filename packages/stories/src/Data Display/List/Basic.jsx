@@ -3,16 +3,16 @@ import { List, Avatar } from 'antd';
 
 const data = [
   {
-    title: 'Ant Design Title 1',
+    title: 'Title 1',
   },
   {
-    title: 'Ant Design Title 2',
+    title: 'Title 2',
   },
   {
-    title: 'Ant Design Title 3',
+    title: 'Title 3',
   },
   {
-    title: 'Ant Design Title 4',
+    title: 'Title 4',
   },
 ];
 
@@ -30,7 +30,7 @@ class Basic extends Component {
               <List.Item.Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                 title={<a href="#">{item.title}</a>}
-                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum libero at ipsum eleifend"
               />
             </List.Item>
           )}

@@ -4,11 +4,11 @@ import { List, Avatar, Icon } from 'antd';
 const listData = [];
 for (let i = 0; i < 3; i++) {
   listData.push({
-    href: 'http://ant.design',
-    title: `ant design part ${i}`,
+    href: '#',
+    title: `Ui Kit part ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum libero',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum libero at ipsum eleifend, ac porta quam dapibus. Praesent vel nisl elementum, dignissim est quis, rutrum odio. Suspendisse potenti. ',
   });
 }
 

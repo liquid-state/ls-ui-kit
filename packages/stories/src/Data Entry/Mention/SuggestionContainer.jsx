@@ -9,8 +9,9 @@ class SuggestionContainer extends Component {
       <Mention
         style={{ width: '100%' }}
         defaultValue={toContentState('@afc163')}
-        suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+        suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
         getSuggestionContainer={this.getSuggestionContainer}
+        notFoundContent="Results not found"
       />
     );
 

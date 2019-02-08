@@ -8,7 +8,7 @@ import Custom from './Custom';
 import NoArrow from './NoArrow';
 
 class CollapsePage extends Component {
-  render() { 
+  render() {
     return (
       <Fragment>
         <h1 className="title">Collapse</h1>
