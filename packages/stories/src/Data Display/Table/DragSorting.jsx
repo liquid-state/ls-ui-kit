@@ -174,6 +174,6 @@ class DragSorting extends Component {
   }
 }
 
-DragSorting = DragDropContext(HTML5Backend)(DragSorting);
- 
-export default DragSorting;
+const FinalDragSorting = DragDropContext(HTML5Backend)(DragSorting);
+
+export default FinalDragSorting;
