@@ -21,12 +21,12 @@ import FixedColumnsAndHeader from './FixedColumnsAndHeader';
 import GroupingTable from './GroupingTable';
 import EditableRows from './EditableRows';
 import NestedTables from './NestedTables';
-import DragSorting from './DragSorting';
+// import DragSorting from './DragSorting';
 import DynamicSettings from './DynamicSettings';
 import RoundedTabel from './Rounded';
 
 class TablePage extends Component {
-  render() { 
+  render() {
     return (
       <Fragment>
         <h1 className="title">Table</h1>
@@ -64,7 +64,7 @@ class TablePage extends Component {
         <GroupingTable />
         <EditableRows />
         <NestedTables />
-        <DragSorting />
+        {/* <DragSorting /> */}
         <DynamicSettings />
         <RoundedTabel />
 
@@ -73,5 +73,5 @@ class TablePage extends Component {
     );
   }
 }
- 
+
 export default TablePage;

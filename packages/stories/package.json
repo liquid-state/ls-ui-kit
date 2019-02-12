@@ -14,7 +14,7 @@
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "dependencies": {
-    "@liquid-state/ui-kit": "^0.4.0-alpha.1",
+    "@liquid-state/ui-kit": "^0.4.0",
     "antd": "^3.2.0",
     "immutability-helper": "^2.9.0",
     "react": "^16.2.0",
