@@ -21,7 +21,6 @@ import FixedColumnsAndHeader from './FixedColumnsAndHeader';
 import GroupingTable from './GroupingTable';
 import EditableRows from './EditableRows';
 import NestedTables from './NestedTables';
-// import DragSorting from './DragSorting';
 import DynamicSettings from './DynamicSettings';
 import RoundedTabel from './Rounded';
 
@@ -64,7 +63,6 @@ class TablePage extends Component {
         <GroupingTable />
         <EditableRows />
         <NestedTables />
-        {/* <DragSorting /> */}
         <DynamicSettings />
         <RoundedTabel />
 
