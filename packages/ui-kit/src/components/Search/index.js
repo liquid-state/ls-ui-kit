@@ -48,9 +48,12 @@ class SearchList extends Component {
     this.state = {
       value: props.value,
       error: props.error,
+      hasSubmitted: false,
     };
   }
 
+  // Only override the error state from props if the error state is currently empty. The
+  // error state should be cleared internally through onChange
   static getDerivedStateFromProps = (props, state) => ({
     ...state,
     error: !state.error && props.error ? props.error : state.error,
@@ -58,15 +61,17 @@ class SearchList extends Component {
 
   onSubmit = () => {
     const { state: { value }, props: { minInput, onSubmit }, error } = this;
+    this.setState({ hasSubmitted: true });
     return value.length >= minInput ? onSubmit(value) : error();
   };
 
   onChange = ({ target: { value } }) => {
-    const { minInput, onChange, onEmpty } = this.props;
+    const { props: { minInput, onChange, onEmpty } } = this;
     this.setState({ value });
     if (value === '') { return onEmpty(); }
     if (value.length < minInput) { return this.error(`Please enter at least ${minInput} characters`); }
     this.error();
+    this.setState({ hasSubmitted: false });
     return onChange(value);
   }
 
@@ -74,14 +79,24 @@ class SearchList extends Component {
 
   render() {
     const {
-      results, button, renderItem, loading, onItemClick, heading, noResultsMessage, spinner,
+      results,
+      button,
+      renderItem,
+      loading,
+      onItemClick,
+      heading,
+      noResultsMessage,
+      spinner,
+      placeholder,
     } = this.props;
-    const { error, value } = this.state;
-    const help = error || (results.length === 0 && value !== '' ? noResultsMessage : null);
+    const { error, value, hasSubmitted } = this.state;
+    const help = error || (results.length === 0 && value !== '' && hasSubmitted ? noResultsMessage : null);
+
     return (
       <Form className="ls-ui-kit search">
         <Form.Item className="search-input-wrap" help={help}>
           <Input.Search
+            placeholder={placeholder}
             value={value}
             onChange={this.onChange}
             onSearch={this.onSubmit}
@@ -122,6 +137,7 @@ SearchList.propTypes = {
   spinner: PropTypes.node,
   value: PropTypes.string,
   error: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 SearchList.defaultProps = {
@@ -139,6 +155,7 @@ SearchList.defaultProps = {
   spinner: <Spin />,
   value: '',
   error: null,
+  placeholder: '',
 };
 
 export default SearchList;
