@@ -1,6 +1,6 @@
 {
   "name": "@liquid-state/ui-kit-stories",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
@@ -14,7 +14,7 @@
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
   "dependencies": {
-    "@liquid-state/ui-kit": "^0.4.0",
+    "@liquid-state/ui-kit": "^0.4.1",
     "antd": "^3.2.0",
     "immutability-helper": "^2.9.0",
     "react": "^16.2.0",
