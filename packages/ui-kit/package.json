@@ -40,7 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "immutability-helper": "^2.6.6",
-    "less": "^2.7.0",
+    "less": "^3.9.0",
     "less-loader": "^4.0.5",
     "lodash.debounce": "^4.0.8",
     "moment": "^2.20.1",
