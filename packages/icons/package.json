@@ -16,6 +16,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "install": "npm run generate",
     "build": "npm run build:lib && npm run build:index-es &&  npm run build:umd",
     "build:lib": "cross-env NODE_ENV=production rimraf lib && tsc --project ./tsconfig.json --outDir lib",
     "build:index-es": "cross-env NODE_ENV=production rimraf lib/index.es.js && babel --extensions '.ts' --presets @babel/preset-typescript src/index.ts --out-file lib/index.es.js",
