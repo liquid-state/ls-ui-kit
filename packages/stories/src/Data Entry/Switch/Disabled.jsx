@@ -6,13 +6,15 @@ class Disabled extends Component {
     disabled: true,
   }
 
-  render() { 
+  render() {
     return (
       <section className="example">
         <h3 className="ex-title">Disabled</h3>
         <div>
-          <Switch disabled={this.state.disabled} defaultChecked />
-          <br /><br/>
+          <Switch className="mr20" disabled={this.state.disabled} defaultChecked />
+          <Switch checkedChildren="On" unCheckedChildren="Off" disabled={this.state.disabled} defaultChecked />
+          <br />
+          <br/>
           <Button type="primary" onClick={this.toggle}>Toggle disabled</Button>
         </div>
       </section>
@@ -25,5 +27,5 @@ class Disabled extends Component {
     });
   }
 }
- 
+
 export default Disabled;

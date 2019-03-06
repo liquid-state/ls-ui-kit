@@ -4,16 +4,16 @@ import { Select, Row, Col } from 'antd';
 const Option = Select.Option;
 
 const data = [
-  {value: "阿迪达斯", text: "阿迪达斯"},
-  {value: "阿迪达斯男鞋", text: "阿迪达斯男鞋"},
+  {value: "adidas", text: "Adidas"},
+  {value: "apple", text: "Apple"},
   {value: "aj1", text: "aj1"},
-  {value: "a字裙 半身裙", text: "a字裙 半身裙"},
-  {value: "阿迪达斯官方旗舰店男", text: "阿迪达斯官方旗舰店男"},
-  {value: "安踏官方旗舰店 正品", text: "安踏官方旗舰店 正品"},
+  {value: "microsoft", text: "Microsoft"},
+  {value: "uber", text: "Uber"},
+  {value: "kfc", text: "KFC"},
   {value: "aj", text: "aj"},
-  {value: "爱奇艺会员", text: "爱奇艺会员"},
-  {value: "阿迪达斯女鞋", text: "阿迪达斯女鞋"},
-  {value: "昂贵", text: "昂贵"}
+  {value: "google", text: "Google"},
+  {value: "yahoo", text: "Yahoo"},
+  {value: "zebra", text: "Zebra"}
 ];
 
 let timeout;
