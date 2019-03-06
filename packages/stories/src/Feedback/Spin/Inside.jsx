@@ -9,7 +9,7 @@ class Inside extends Component {
       alignItems: 'center',
       width: 300,
       height: 100,
-      backgroundColor: '#ccc'
+      backgroundColor: '#E5E9F2'
     };
 
     return (

@@ -11,7 +11,7 @@ class CustomizeTriggerToken extends Component {
     suggestions: []
   };
 
-  render() { 
+  render() {
     return (
       <section className="example">
         <h3 className="ex-title">Customize Trigger Token</h3>
@@ -24,6 +24,7 @@ class CustomizeTriggerToken extends Component {
               prefix={['@', '#']}
               onSearchChange={this.onSearchChange}
               suggestions={this.state.suggestions}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>

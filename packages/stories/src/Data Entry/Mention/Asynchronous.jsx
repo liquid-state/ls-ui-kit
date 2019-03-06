@@ -23,6 +23,7 @@ class Asynchronous extends Component {
               loading={loading}
               suggestions={suggestions}
               onSearchChange={this.onSearchChange}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>

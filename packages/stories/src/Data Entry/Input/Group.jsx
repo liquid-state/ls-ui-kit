@@ -5,32 +5,29 @@ const InputGroup = Input.Group;
 
 const Option = Select.Option;
 
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
     }],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua Men',
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
     }],
-  }
-];
+  }],
+}];
 
 class Basic extends Component {
   state = {
@@ -57,11 +54,11 @@ class Basic extends Component {
         </InputGroup>
 
         <InputGroup compact className="mb20">
-          <Select defaultValue="Zhejiang">
-            <Option value="Zhejiang">Zhejiang</Option>
-            <Option value="Jiangsu">Jiangsu</Option>
+          <Select defaultValue="NSW">
+            <Option value="NSW">New South Wales</Option>
+            <Option value="WA">Western Australia</Option>
           </Select>
-          <Input style={{ width: '50%' }} defaultValue="Xihu District, Hangzhou" />
+          <Input style={{ width: '50%' }} />
         </InputGroup>
         
         <InputGroup compact className="mb20">

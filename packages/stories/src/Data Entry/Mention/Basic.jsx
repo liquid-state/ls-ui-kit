@@ -14,7 +14,8 @@ class Basic extends Component {
             <Mention
               style={{ width: '100%' }}
               defaultValue={toContentState('@afc163')}
-              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', 'Jason', 'Mike', 'Sven', 'James']}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>

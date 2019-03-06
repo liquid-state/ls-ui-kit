@@ -27,6 +27,7 @@ class Icon extends Component {
               style={{ width: '100%' }}
               suggestions={suggestions}
               onSearchChange={this.onSearchChange}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>
