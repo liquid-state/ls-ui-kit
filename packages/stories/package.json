@@ -13,6 +13,9 @@
   ],
   "author": "Liquid State <dev@liquid-state.com> https://github.com/liquid-state",
   "license": "MIT",
+  "peerDependencies": {
+    "@storybook/react": "^4.0.8"
+  },
   "dependencies": {
     "@liquid-state/ui-kit": "^0.4.1",
     "antd": "^3.2.0",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf as defStory } from '@storybook/react';
 
 import "./css/style.css";
 import "./css/icons.css";
@@ -78,85 +78,110 @@ import Anchor from './Other/Anchor';
 import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
-storiesOf('Liquid State UI Kit', module);
-storiesOf('Liquid State UI Kit/General', module)
-  .add('Buttons', () => <Button />)
-  .add('Icon', () => <Icon />)
-  .add('Pager', PagerStories)
-  .add('FullCentralImage', () => <FullCentralImage />);
+const $module = module;
 
-storiesOf('Liquid State UI Kit/Navigation', module)
-  .add('Pagination', () => <Pagination />)
-  .add('Steps', () => <Steps />)
-  .add('Affix', () => <Affix />)
-  .add('Breadcrumbs', () => <Breadcrumbs />)
-  .add('Dropdown', () => <Dropdown />);
+// Create storiesOf
+const create = (storiesOf, filters = []) => {
+  const match = n => filters.includes(n);
+  return (name, module = $module) => {
+    const anchor = storiesOf(name, module);
+    const proxy = {
+      add: ( cName, component ) => {
+        !match(cName)
+          ? anchor.add(cName, component)
+          : console.info('Component Filtered:', `${name}/${cName}`);
+        return proxy;
+      },
+    };
+    return proxy;
+  };
+};
 
-storiesOf('Liquid State UI Kit/Data Entry', module)
-  .add('AutoComplate', () => <AutoComplate />)
-  .add('Cascader', () => <Cascader />)
-  .add('DatePicker', () => <DatePicker />)
-  .add('Form', () => <Form />)
-  .add('InputNumber', () => <InputNumber />)
-  .add('Input', () => <Input />)
-  .add('Mention', () => <Mention />)
-  .add('Switch', () => <Switch />)
-  .add('Select', () => <Select />)
-  .add('TimePicker', () => <TimePicker />)
-  .add('Transfer', () => <Transfer />)
-  .add('TreeSelect', () => <TreeSelect />)
-  .add('Upload', () => <Upload />);
+export default function (prefix = 'Liquid State UI Kit', stories_of = defStory, filters = []) {
 
-storiesOf('Liquid State UI Kit/Data Entry/Search', module)
-  .add('Minimun Input', () => <SearchMinInput />)
-  .add('Search Error', () => <SearchError />)
-  .add('Loading', () => <SearchLoading />)
-  .add('Heading', () => <SearchHeading />)
-  .add('With Data', () => <SearchOnChange />)
-  .add('OnSubmit', () => <SearchOnSubmit />);
+  const storiesOf = create(stories_of, filters);
+  storiesOf(prefix, $module);
 
-storiesOf('Liquid State UI Kit/Data Display', module)
-  .add('Avatar', () => <Avatar />)
-  .add('Badge', () => <Badge />)
-  .add('Calendar', () => <Calendar />)
-  .add('Card', () => <Card />)
-  .add('Collapse', () => <Collapse />)
-  .add('Carousel', () => <Carousel />)
-  .add('List', () => <List />)
-  .add('Popover', () => <Popover />)
-  .add('Table', () => <Table />)
-  .add('Tabs', () => <Tabs />)
-  .add('Timeline', () => <Timeline />)
-  .add('Tooltip', () => <Tooltip />)
-  .add('Tree', () => <Tree />);
+  storiesOf(`${prefix}/General`, $module)
+    .add('Typography', () => <Typography />)
+    .add('Buttons', () => <Button />)
+    .add('Icon', () => <Icon />)
+    .add('Pager', PagerStories)
+    .add('FullCentralImage', () => <FullCentralImage />);
 
-storiesOf('Liquid State UI Kit/Feedback', module)
-  .add('Alert', () => <Alert />)
-  .add('Modal', () => <Modal />)
-  .add('Message', () => <Message />)
-  .add('Notification', () => <Notification />)
-  .add('Progress', () => <Progress />)
-  .add('Popconfirm', () => <Popconfirm />)
-  .add('Spin', () => <Spin />);
+  storiesOf(`${prefix}/Navigation`, $module)
+    .add('Pagination', () => <Pagination />)
+    .add('Steps', () => <Steps />)
+    .add('Affix', () => <Affix />)
+    .add('Breadcrumbs', () => <Breadcrumbs />)
+    .add('Dropdown', () => <Dropdown />);
 
-storiesOf('Liquid State UI Kit/Other', module)
-  .add('Divider', () => <Divider />)
-  .add('Anchor', () => <Anchor />)
-  .add('BackTop', () => <BackTop />)
-  .add('LocaleProvider', () => <LocaleProvider />);
+  storiesOf(`${prefix}/Data Entry`, $module)
+    .add('AutoComplate', () => <AutoComplate />)
+    .add('Cascader', () => <Cascader />)
+    .add('DatePicker', () => <DatePicker />)
+    .add('Form', () => <Form />)
+    .add('InputNumber', () => <InputNumber />)
+    .add('Input', () => <Input />)
+    .add('Mention', () => <Mention />)
+    .add('Switch', () => <Switch />)
+    .add('Select', () => <Select />)
+    .add('TimePicker', () => <TimePicker />)
+    .add('Transfer', () => <Transfer />)
+    .add('TreeSelect', () => <TreeSelect />)
+    .add('Upload', () => <Upload />);
 
-storiesOf('Liquid State UI Kit/Data Entry/Radio', module)
-  .add('Radio', () => <Radio />)
-  .add('Radio Mobile', () => <RadioMobile />);
+  storiesOf(`${prefix}/Data Entry/Search`, $module)
+    .add('Minimun Input', () => <SearchMinInput />)
+    .add('Search Error', () => <SearchError />)
+    .add('Loading', () => <SearchLoading />)
+    .add('Heading', () => <SearchHeading />)
+    .add('With Data', () => <SearchOnChange />)
+    .add('OnSubmit', () => <SearchOnSubmit />);
 
-storiesOf('Liquid State UI Kit/Data Entry/Rate', module)
-  .add('Rate', () => <Rate />)
-  .add('Rate Mobile', () => <RateMobile />);
+  storiesOf(`${prefix}/Data Display`, $module)
+    .add('Avatar', () => <Avatar />)
+    .add('Badge', () => <Badge />)
+    .add('Calendar', () => <Calendar />)
+    .add('Card', () => <Card />)
+    .add('Collapse', () => <Collapse />)
+    .add('Carousel', () => <Carousel />)
+    .add('List', () => <List />)
+    .add('Popover', () => <Popover />)
+    .add('Table', () => <Table />)
+    .add('Tabs', () => <Tabs />)
+    .add('Timeline', () => <Timeline />)
+    .add('Tooltip', () => <Tooltip />)
+    .add('Tree', () => <Tree />);
 
-storiesOf('Liquid State UI Kit/Data Entry/Slider', module)
-  .add('Slider', () => <Slider />)
-  .add('Slider Mobile', () => <SliderMobile />);
+  storiesOf(`${prefix}/Feedback`, $module)
+    .add('Alert', () => <Alert />)
+    .add('Modal', () => <Modal />)
+    .add('Message', () => <Message />)
+    .add('Notification', () => <Notification />)
+    .add('Progress', () => <Progress />)
+    .add('Popconfirm', () => <Popconfirm />)
+    .add('Spin', () => <Spin />);
 
-storiesOf('Liquid State UI Kit/Data Entry/Checkbox', module)
-  .add('Checkbox', () => <Checkbox />)
-  .add('Checkbox Mobile', () => <CheckboxMobile />);
+  storiesOf(`${prefix}/Other`, $module)
+    .add('Divider', () => <Divider />)
+    .add('Anchor', () => <Anchor />)
+    .add('BackTop', () => <BackTop />)
+    .add('LocaleProvider', () => <LocaleProvider />);
+
+  storiesOf(`${prefix}/Data Entry/Radio`, $module)
+    .add('Radio', () => <Radio />)
+    .add('Radio Mobile', () => <RadioMobile />);
+
+  storiesOf(`${prefix}/Data Entry/Rate`, $module)
+    .add('Rate', () => <Rate />)
+    .add('Rate Mobile', () => <RateMobile />);
+
+  storiesOf(`${prefix}/Data Entry/Slider`, $module)
+    .add('Slider', () => <Slider />)
+    .add('Slider Mobile', () => <SliderMobile />);
+
+  storiesOf(`${prefix}/Data Entry/Checkbox`, $module)
+    .add('Checkbox', () => <Checkbox />)
+    .add('Checkbox Mobile', () => <CheckboxMobile />);
+}
