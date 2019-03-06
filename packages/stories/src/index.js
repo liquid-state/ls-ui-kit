@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf as defStory } from '@storybook/react';
 
-import "./css/style.css";
-import "./css/icons.css";
+import './css/style.css';
+import './css/icons.css';
 
 // General
 import Button from './General/Button';
@@ -80,13 +80,19 @@ import LocaleProvider from './Other/LocaleProvider';
 
 const $module = module;
 
+export const defaultConfig = {
+  name: 'Liquid State UI Kit',
+  storiesOf: defStory,
+  filters: [],
+};
+
 // Create storiesOf
 const create = (storiesOf, filters = []) => {
   const match = n => filters.includes(n);
   return (name, module = $module) => {
     const anchor = storiesOf(name, module);
     const proxy = {
-      add: ( cName, component ) => {
+      add: (cName, component) => {
         !match(cName)
           ? anchor.add(cName, component)
           : console.info('Component Filtered:', `${name}/${cName}`);
@@ -97,13 +103,13 @@ const create = (storiesOf, filters = []) => {
   };
 };
 
-export default function (prefix = 'Liquid State UI Kit', stories_of = defStory, filters = []) {
+export function configureStories(config = defaultConfig) {
+  const storiesOf = create(config.storiesOf, config.filters);
+  const prefix = config.name;
 
-  const storiesOf = create(stories_of, filters);
   storiesOf(prefix, $module);
 
   storiesOf(`${prefix}/General`, $module)
-    .add('Typography', () => <Typography />)
     .add('Buttons', () => <Button />)
     .add('Icon', () => <Icon />)
     .add('Pager', PagerStories)
@@ -185,3 +191,5 @@ export default function (prefix = 'Liquid State UI Kit', stories_of = defStory, 
     .add('Checkbox', () => <Checkbox />)
     .add('Checkbox Mobile', () => <CheckboxMobile />);
 }
+
+export default configureStories();
