@@ -17,6 +17,7 @@
     "antd": "^3.2",
     "@liquid-state/ui-kit": "^0.4",
     "@storybook/react": "^4",
+    "@storybook/core": "^4",
     "@storybook/addon-actions": "^4",
     "react": "^16",
     "react-dom": "^16"
