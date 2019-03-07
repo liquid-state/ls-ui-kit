@@ -12,7 +12,15 @@
   "workspaces": [
     "packages/*"
   ],
+  "dependencies": {
+    "antd": "^3.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "@storybook/react": "^4",
+    "@storybook/addon-actions": "^4"
+  },
   "devDependencies": {
+    "@babel/core": "^7",
     "husky": "1.2.0",
     "lerna": "^3.4.3",
     "lint-staged": "^8.1.0"
