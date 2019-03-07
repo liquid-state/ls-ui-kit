@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const content = (
   <div>
@@ -11,13 +12,12 @@ const content = (
 class Basic extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Popover content={content} title="Title">
           <Button type="primary">Hover me</Button>
         </Popover>
-      </section>
+      </Example>
     );
   }
 }

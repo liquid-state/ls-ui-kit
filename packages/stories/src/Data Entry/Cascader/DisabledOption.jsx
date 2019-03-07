@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -29,14 +30,13 @@ const options = [{
 class DisabledOption extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled option</h3>
+      <Example title="Disabled option">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader style={{width: '100%  '}} options={options} placeholder="Please select" />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

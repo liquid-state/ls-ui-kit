@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse } from 'antd';
+import Example from '../../utils/Example';
 
 const Panel = Collapse.Panel;
 
@@ -12,8 +13,7 @@ const text = `
 class Nested extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Nested Panel</h3>
+      <Example title="Nested Panel">
 
         <Collapse>
           <Panel header="This is panel header 1" key="1">
@@ -30,7 +30,7 @@ class Nested extends Component {
             <p>{text}</p>
           </Panel>
         </Collapse>
-      </section>
+      </Example>
     );
   }
 }

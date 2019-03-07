@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Disabled extends Component {
   state = {
@@ -8,8 +9,7 @@ class Disabled extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled</h3>
+      <Example title="Disabled">
         <div>
           <Switch className="mr20" disabled={this.state.disabled} defaultChecked />
           <Switch checkedChildren="On" unCheckedChildren="Off" disabled={this.state.disabled} defaultChecked />
@@ -17,7 +17,7 @@ class Disabled extends Component {
           <br/>
           <Button type="primary" onClick={this.toggle}>Toggle disabled</Button>
         </div>
-      </section>
+      </Example>
     );
   }
 

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Spin, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomIndicator extends Component {
   render() {
     const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom spinning indicator</h3>
-        
+      <Example title="Custom spinning indicator">
         <Spin indicator={antIcon} />
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default CustomIndicator;

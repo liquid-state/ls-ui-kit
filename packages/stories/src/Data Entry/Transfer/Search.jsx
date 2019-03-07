@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Transfer } from 'antd';
+import Example from '../../utils/Example';
 
 class Search extends Component {
   state = {
@@ -7,11 +8,9 @@ class Search extends Component {
     targetKeys: []
   };
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title"></h3>
-
+      <Example title="Transfer Search">
         <Transfer
           dataSource={this.state.mockData}
           showSearch
@@ -20,10 +19,10 @@ class Search extends Component {
           onChange={this.handleChange}
           render={item => item.title}
         />
-      </section>
+      </Example>
     );
   }
-  
+
   componentDidMount() {
     this.getMock();
   }

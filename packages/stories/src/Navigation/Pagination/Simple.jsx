@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
+import Example from '../../utils/Example';
 
 class Simple extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Simple mode</h3>
-
+      <Example title="Simple mode">
         <Pagination simple defaultCurrent={2} total={50} />
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Simple;

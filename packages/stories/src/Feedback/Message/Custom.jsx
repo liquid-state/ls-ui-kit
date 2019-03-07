@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { message, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Customize duration</h3>
+      <Example title="Customize duration">
         <Button onClick={this.success}>Customized display duration</Button>
-      </section>
+      </Example>
     );
   }
 

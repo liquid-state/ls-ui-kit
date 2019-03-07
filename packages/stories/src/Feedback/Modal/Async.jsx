@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   state = {
@@ -12,8 +13,7 @@ class Basic extends Component {
     const { visible, confirmLoading, ModalText } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Asynchronously close</h3>
+      <Example title="Asynchronously close">
 
         <div>
           <Button type="primary" onClick={this.showModal}>Open</Button>
@@ -26,7 +26,7 @@ class Basic extends Component {
             <p>{ModalText}</p>
           </Modal>
         </div>
-      </section>
+      </Example>
     );
   }
 

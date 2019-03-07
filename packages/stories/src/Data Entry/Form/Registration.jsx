@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -77,9 +78,7 @@ class Registration extends Component {
     ));
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Registration</h3>
-
+      <Example title="Registration">
         <Form onSubmit={this.handleSubmit}>
 
           <FormItem
@@ -218,7 +217,7 @@ class Registration extends Component {
         </FormItem>
 
       </Form>
-        </section>
+    </Example>
     );
   }
 

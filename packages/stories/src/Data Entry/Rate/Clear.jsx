@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Rate } from 'antd';
+import Example from '../../utils/Example';
 
 class Clear extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Clear Star</h3>
+      <Example title="Clear Star">
         <Rate defaultValue={3} /> allowClear: true
         <br />
         <Rate allowClear={false} defaultValue={3} /> allowClear: false
-      </section>
+      </Example>
     );
   }
 }

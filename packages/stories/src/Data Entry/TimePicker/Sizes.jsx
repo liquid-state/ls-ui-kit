@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { TimePicker, Row, Col } from 'antd';
 import moment from 'moment';
+import Example from '../../utils/Example';
 
 class Sizes extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Three Sizes</h3>
+      <Example title="Three Sizes">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -26,7 +26,7 @@ class Sizes extends Component {
           </Col>
         </Row>
 
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Checkbox, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Controll extends Component {
 
@@ -11,8 +12,7 @@ class Controll extends Component {
   render() {
     const label = `${this.state.checked ? 'Checked' : 'Unchecked'}-${this.state.disabled ? 'Disabled' : 'Enabled'}`;
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlled Checkbox</h3>
+      <Example title="Controlled Checkbox">
 
         <p style={{ marginBottom: '20px' }}>
           <Checkbox
@@ -41,7 +41,7 @@ class Controll extends Component {
             {!this.state.disabled ? 'Disable' : 'Enable'}
           </Button>
         </p>
-      </section>
+      </Example>
     );
   }
 

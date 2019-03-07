@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Calendar, Alert } from 'antd';
 import moment from 'moment';
+import Example from '../../utils/Example';
 
 class Select extends Component {
   state = {
@@ -12,14 +13,13 @@ class Select extends Component {
     const { value, selectedValue } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Selectable Calendar</h3>
+      <Example title="Selectable Calendar">
         
         <div>
           <Alert message={`You selected date: ${selectedValue && selectedValue.format('YYYY-MM-DD')}`} />
           <Calendar value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange} />
         </div>
-      </section>
+      </Example>
     );
   }
 

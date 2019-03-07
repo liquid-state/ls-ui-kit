@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse } from 'antd';
 const Panel = Collapse.Panel;
+import Example from '../../utils/Example';
 
 const text = `
   A dog is a type of domesticated animal.
@@ -11,8 +12,7 @@ const text = `
 class Accordion extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Accordion</h3>
+      <Example title="Accordion">
 
         <Collapse accordion>
           <Panel header="This is panel header 1" key="1">
@@ -25,7 +25,7 @@ class Accordion extends Component {
             <p>{text}</p>
           </Panel>
         </Collapse>
-      </section>
+      </Example>
     );
   }
 }

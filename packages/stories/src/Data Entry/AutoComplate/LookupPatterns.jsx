@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Input, AutoComplete } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Pattern extends Component {
   state = {}
@@ -64,8 +65,7 @@ class Pattern extends Component {
     ]);
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Lookup-Patterns - Certain Category</h3>
+      <Example title="Lookup-Patterns - Certain Category">
         <Row>
           <Col md={12} lg={6}>
             <AutoComplete
@@ -83,7 +83,7 @@ class Pattern extends Component {
               </AutoComplete>
             </Col>
           </Row>
-      </section>
+      </Example>
     );
   }
 

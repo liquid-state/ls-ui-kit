@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -32,8 +33,7 @@ class CustomTrigger extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom Trigger</h3>
+      <Example title="Custom Trigger">
         <Row>
           <Col sm={16} lg={6}>{this.state.text}</Col>
           <Col sm={16} lg={7}>
@@ -42,7 +42,7 @@ class CustomTrigger extends Component {
             </Cascader>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

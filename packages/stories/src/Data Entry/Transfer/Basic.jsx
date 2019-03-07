@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Transfer } from 'antd';
+import Example from '../../utils/Example';
 
 const mockData = [];
 for (let i = 0; i < 20; i++) {
@@ -25,8 +26,7 @@ class Basic extends Component {
     const state = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Transfer
           dataSource={mockData}
@@ -38,7 +38,7 @@ class Basic extends Component {
           render={item => item.title}
         />
 
-      </section>
+      </Example>
     );
   }
 

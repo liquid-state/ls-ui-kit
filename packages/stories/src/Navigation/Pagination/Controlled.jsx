@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
+import Example from '../../utils/Example';
 
 class Controlled extends Component {
   state = {
@@ -8,11 +9,9 @@ class Controlled extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlled pagination</h3>
-
+      <Example title="Controlled pagination">
         <Pagination current={this.state.current} onChange={this.onChange} total={50} />
-      </section>
+      </Example>
     );
   }
 

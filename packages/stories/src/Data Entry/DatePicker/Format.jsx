@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import moment from 'moment';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Format extends Component {
   render() {
@@ -10,8 +11,7 @@ class Format extends Component {
     const monthFormat = 'YYYY/MM';
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Date Format</h3>
+      <Example title="Date Format">
         <Row className="mb20">
           <Col md={12} lg={6}>
             <DatePicker style={{width: '100%'}} defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
@@ -32,7 +32,7 @@ class Format extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Avatar, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const UserList = ['U', 'Lucy', 'Tom', 'Edward'];
 const colorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
@@ -13,8 +14,7 @@ class Autoset extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Autoset Font Size</h3>
+      <Example title="Autoset Font Size">
 
         <div>
           <Avatar style={{ backgroundColor: this.state.color, verticalAlign: 'middle' }} size="large">
@@ -24,7 +24,7 @@ class Autoset extends Component {
             Change
           </Button>
         </div>
-      </section>
+      </Example>
     );
   }
 

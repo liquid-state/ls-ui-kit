@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Spin } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic Usage</h3>
+      <Example title="Basic Usage">
         <Spin />
-      </section>
+      </Example>
     );
   }
 }

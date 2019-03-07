@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [
   {
@@ -21,8 +22,7 @@ class Load extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Load Options Lazily</h3>
+      <Example title="Load Options Lazily">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -34,7 +34,7 @@ class Load extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

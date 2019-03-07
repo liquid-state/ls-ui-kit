@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import Example from '../../utils/Example'import React, { Component } from 'react';;
+
 import { Divider } from 'antd';
 
 class Vertical extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Vertical</h3>
-
+      <Example title="Vertical">
         <div>
           Text
           <Divider type="vertical" />
@@ -14,9 +13,9 @@ class Vertical extends Component {
           <Divider type="vertical" />
           <a href="#">Link</a>
         </div>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Vertical;

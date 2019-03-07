@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TreeSelect, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
@@ -56,15 +57,13 @@ class Checkable extends Component {
       }
     };
     return (
-      <section className="example">
-        <h3 className="ex-title">Checkable</h3>
-
+      <Example title="Checkable">/h3>
         <Row>
           <Col sm={16} lg={7}>
             <TreeSelect {...tProps} />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
   onChange = value => this.setState({ value });

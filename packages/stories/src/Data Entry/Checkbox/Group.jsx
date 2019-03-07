@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Checkbox } from 'antd';
+import Example from '../../utils/Example';
 
 class Group extends Component {
   render() {
@@ -20,15 +21,14 @@ class Group extends Component {
     ];
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Checkbox Group</h3>
+      <Example title="Checkbox Group">
 
         <CheckboxGroup options={plainOptions} defaultValue={['Apple']} />
         <br /><br />
         <CheckboxGroup options={options} defaultValue={['Pear']} />
         <br /><br />
         <CheckboxGroup options={optionsWithDisabled} disabled defaultValue={['Apple']} />
-      </section>
+      </Example>
     );
   }
 }

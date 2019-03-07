@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TreeSelect, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = TreeSelect.TreeNode;
 
@@ -8,10 +9,9 @@ class MultipleSelection extends Component {
     value: undefined
   }
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Multiple Selection</h3>
+      <Example title="Multiple Selection">
         <Row>
           <Col sm={16} lg={7}>
             <TreeSelect
@@ -37,11 +37,11 @@ class MultipleSelection extends Component {
             </TreeSelect>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 
   onChange = value => this.setState({ value });
 }
- 
+
 export default MultipleSelection;

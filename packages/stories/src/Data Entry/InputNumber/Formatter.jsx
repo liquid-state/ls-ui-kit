@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { InputNumber } from 'antd';
+import Example from '../../utils/Example';
 
 class Formatter extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Formatter</h3>
+      <Example title="Formatter">
 
         <InputNumber
           defaultValue={1000}
@@ -20,7 +20,7 @@ class Formatter extends Component {
           formatter={value => `${value}%`}
           parser={value => value.replace('%', '')}
         />
-      </section>
+      </Example>
     );
   }
 }

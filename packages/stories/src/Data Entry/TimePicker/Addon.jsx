@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { TimePicker, Button, Row, Col } from 'antd';
 import moment from 'moment';
+import Example from '../../utils/Example';
 
 class Addon extends Component {
   state = { open: false };
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Addon</h3>
+      <Example title="Addon">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -24,7 +24,7 @@ class Addon extends Component {
             />
           </Col>
         </Row>
-      </section>
+        </Example>
     );
   }
 

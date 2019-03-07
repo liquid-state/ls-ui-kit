@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Input, Button, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {
@@ -81,10 +82,9 @@ class CustomizedFilter extends Component {
     ];
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized filter panel</h3>
+      <Example title="Customized filter panel">
         <Table columns={columns} dataSource={this.state.data} />
-      </section>
+      </Example>
     );
   }
 

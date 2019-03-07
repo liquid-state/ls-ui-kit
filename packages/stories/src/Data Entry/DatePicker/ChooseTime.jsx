@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class ChooseTime extends Component {
   render() {
     const { RangePicker } = DatePicker;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Choose Time</h3>
+      <Example title="Choose Time">
 
         <Row className="mb20">
           <Col md={12} lg={6}>
@@ -31,7 +31,7 @@ class ChooseTime extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

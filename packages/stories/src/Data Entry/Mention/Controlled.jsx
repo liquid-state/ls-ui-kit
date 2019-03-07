@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toContentState } = Mention;
 
@@ -10,8 +11,7 @@ class Controlled extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlled</h3>
+      <Example title="Controlled">
         <Row>
           <Col sm={16} lg={7}>
           <Mention
@@ -24,7 +24,7 @@ class Controlled extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

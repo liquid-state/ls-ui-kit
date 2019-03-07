@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, message, Button, Icon, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const props = {
   name: 'file',
@@ -22,14 +23,13 @@ const props = {
 class Click extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Upload by clicking</h3>
+      <Example title="Upload by clicking">
         <Upload {...props}>
           <Button>
             <Icon type="upload" /> Click to Upload
           </Button>
         </Upload>
-      </section>
+      </Example>
     );
   }
 }

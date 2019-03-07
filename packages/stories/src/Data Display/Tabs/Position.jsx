@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Select } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 const Option = Select.Option;
@@ -11,8 +12,7 @@ class Position extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Position</h3>
+      <Example title="Position">
 
         <div>
           <div style={{ marginBottom: 16 }}>
@@ -34,7 +34,7 @@ class Position extends Component {
             <TabPane tab="Tab 3" key="3">Content of Tab 3</TabPane>
           </Tabs>
         </div>
-      </section>
+      </Example>
     );
   }
 

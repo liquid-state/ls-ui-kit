@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Radio } from 'antd';
+import Example from '../../utils/Example';
 
 const RadioGroup = Radio.Group;
 
@@ -26,9 +27,7 @@ class Optional extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">RadioGroup group - optional</h3>
-
+      <Example title="RadioGroup group - optional">
         <div>
           <RadioGroup options={plainOptions} onChange={this.onChange1} value={this.state.value1} />
           <br/><br/>
@@ -36,7 +35,7 @@ class Optional extends Component {
           <br/><br/>
           <RadioGroup options={optionsWithDisabled} onChange={this.onChange3} value={this.state.value3} />
         </div>
-      </section>
+      </Example>
     );
   }
 

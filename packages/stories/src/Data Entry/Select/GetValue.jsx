@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
 class GetValue extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Get value of selected item</h3>
+      <Example title="Get value of selected item">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -17,7 +17,7 @@ class GetValue extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

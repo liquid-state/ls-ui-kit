@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 
 class Disabled extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled or ReadOnly</h3>
+      <Example title="Disabled or ReadOnly">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -29,7 +29,7 @@ class Disabled extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

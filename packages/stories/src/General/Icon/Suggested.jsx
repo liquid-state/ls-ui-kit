@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Icon from './Icon';
+import Example from '../../utils/Example';
 
 class SuggestedIcons extends Component {
   render() {
@@ -44,11 +45,11 @@ class SuggestedIcons extends Component {
     return (
       <Fragment>
         <h3 className="title">Suggested Icons</h3>
-        <section className="icons">
+        <Example title="">
           {
             icons.map((icon, i) => <Icon key={i} icon={icon} />)
           }
-        </section>
+        </Example>
       </Fragment>
     );
   }

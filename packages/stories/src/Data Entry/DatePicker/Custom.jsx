@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
 
@@ -13,8 +14,7 @@ class Custom extends Component {
   render() {
     const { startValue, endValue, endOpen } = this.state;
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Range Picker</h3>
+      <Example title="Customized Range Picker">
 
         <Row gutter={24}>
           <Col md={12} lg={6}>
@@ -44,7 +44,7 @@ class Custom extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

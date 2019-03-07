@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -11,8 +12,7 @@ for (let i = 10; i < 36; i++) {
 class AutomaticTokenization extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Automatic tokenization</h3>
+      <Example title="Automatic tokenization">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -25,7 +25,7 @@ class AutomaticTokenization extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

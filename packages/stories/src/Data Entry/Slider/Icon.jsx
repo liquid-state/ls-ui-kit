@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class SliderIcon extends Component {
   state = {
@@ -24,15 +25,13 @@ class SliderIcon extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Slider with icon</h3>
-        
+      <Example title="Slider with icon">
         <div className="icon-wrapper" style={{position: 'relative', padding: '0 30px'}}>
           <Icon style={{ color: preColor, left: 0, ...anticon }} type="frown-o" />
           <Slider {...this.props} onChange={this.handleChange} value={value} />
           <Icon style={{ color: nextColor, right: 0, ...anticon }} type="smile-o" />
         </div>
-      </section>
+      </Example>
     );
   }
   

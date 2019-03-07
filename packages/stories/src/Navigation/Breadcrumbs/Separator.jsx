@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { Breadcrumb } from 'antd';
+import Example from '../../utils/Example';
 
 class Separator extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Configuring the Separator</h3>
-
+      <Example title="Configuring the Separator">
         <Breadcrumb separator=">">
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item href="">Application Center</Breadcrumb.Item>
           <Breadcrumb.Item href="">Application List</Breadcrumb.Item>
           <Breadcrumb.Item>An Application</Breadcrumb.Item>
         </Breadcrumb>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Separator;

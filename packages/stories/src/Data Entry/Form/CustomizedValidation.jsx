@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, DatePicker, Row, Col, TimePicker, Select, Cascader, InputNumber } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -20,8 +21,7 @@ class CustomizedValidation extends Component {
   state = {}
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Validation</h3>
+      <Example title="Customized Validation">
 
         <Form>
           <Row>
@@ -169,7 +169,7 @@ class CustomizedValidation extends Component {
             </FormItem>
           </Row>
         </Form>
-      </section>
+      </Example>
     );
   }
 }

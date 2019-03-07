@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 import { TreeSelect, Row, Col } from 'antd';
 
 const treeData = [
@@ -31,9 +32,7 @@ class Generate extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Generate form tree data</h3>
-
+      <Example title="Generate form tree data">
         <Row>
           <Col sm={16} lg={7}>
           <TreeSelect
@@ -47,7 +46,7 @@ class Generate extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

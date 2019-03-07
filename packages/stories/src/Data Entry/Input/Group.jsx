@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
+import Example from '../../utils/Example';
 
 const InputGroup = Input.Group;
 
@@ -36,8 +37,7 @@ class Basic extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Input Group</h3>
+      <Example title="Input Group">
 
         <InputGroup size="large" className="mb20">
           <Col span={4}>
@@ -117,7 +117,7 @@ class Basic extends Component {
           <Cascader style={{ width: '70%' }} options={options} placeholder="Select Address" />
         </InputGroup>
 
-      </section>
+      </Example>
     );
   }
 

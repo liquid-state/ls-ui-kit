@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Timeline } from 'antd';
+import Example from '../../utils/Example';
 
 class Color extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Color</h3>
+      <Example title="Color">
 
         <Timeline>
           <Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
@@ -21,7 +21,7 @@ class Color extends Component {
             <p>Technical testing 3 2015-09-01</p>
           </Timeline.Item>
         </Timeline>
-      </section>
+      </Example>
     );
   }
 }

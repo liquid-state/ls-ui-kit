@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Select } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
 class Search extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Select with search field</h3>
+      <Example title="Select with search field">
 
         <Select
           showSearch
@@ -20,7 +20,7 @@ class Search extends Component {
           <Option value="lucy">Lucy</Option>
           <Option value="tom">Tom</Option>
         </Select>
-      </section>
+      </Example>
     );
   }
 }

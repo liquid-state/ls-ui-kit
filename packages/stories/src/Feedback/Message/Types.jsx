@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { message, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Types extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Normal prompt</h3>
-        
+      <Example title="Normal prompt">
         <Button onClick={this.success}>Success</Button>
         <Button className="ml20" onClick={this.error}>Error</Button>
         <Button className="ml20" onClick={this.warning}>Warning</Button>
-      </section>
+      </Example>
     );
   }
 

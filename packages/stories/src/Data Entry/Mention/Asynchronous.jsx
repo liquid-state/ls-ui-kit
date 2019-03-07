@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 
@@ -13,8 +14,7 @@ class Asynchronous extends Component {
     const { suggestions, loading } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Asynchronous Loading</h3>
+      <Example title="Asynchronous Loading">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -27,7 +27,7 @@ class Asynchronous extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

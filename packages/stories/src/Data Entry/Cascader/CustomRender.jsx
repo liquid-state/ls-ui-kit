@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -43,8 +44,7 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
 class CustomRender extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom Render</h3>
+      <Example title="Custom Render">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -55,7 +55,7 @@ class CustomRender extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

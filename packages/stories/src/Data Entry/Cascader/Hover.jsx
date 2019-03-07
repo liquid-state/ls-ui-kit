@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -32,8 +33,7 @@ function displayRender(label) {
 class Hover extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Hover</h3>
+      <Example title="Hover">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -44,7 +44,7 @@ class Hover extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

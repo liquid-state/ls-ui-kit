@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popconfirm, message, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const text = 'Are you sure delete this task?';
 
@@ -10,9 +11,7 @@ function confirm() {
 class Placement extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Placement</h3>
-
+      <Example title="Placement">
         <div className="demo">
           <div style={{ marginLeft: 80, whiteSpace: 'nowrap' }}>
             <Popconfirm placement="topLeft" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
@@ -59,7 +58,7 @@ class Placement extends Component {
             </Popconfirm>
           </div>
         </div>
-      </section>
+      </Example>
     );
   }
 }

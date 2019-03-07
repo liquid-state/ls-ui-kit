@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider } from 'antd';
+import Example from '../../utils/Example';
 
 const marks = {
   0: '0°C',
@@ -16,8 +17,7 @@ const marks = {
 class Graduated extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Graduated slider</h3>
+      <Example title="Graduated slider">
 
         <div>
           <h4>included=true</h4>
@@ -33,7 +33,7 @@ class Graduated extends Component {
           <h4>step=null</h4>
           <Slider marks={marks} step={null} defaultValue={37} />
         </div>
-      </section>
+      </Example>
     );
   }
 }

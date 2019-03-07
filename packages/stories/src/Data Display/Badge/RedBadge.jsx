@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Badge, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class RedBadge extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Red Badge</h3>
+      <Example title="Red Badge">
 
         <div>
           <Badge dot>
@@ -15,7 +15,7 @@ class RedBadge extends Component {
             <a href="#">Link something</a>
           </Badge>
         </div>
-      </section>
+      </Example>
     );
   }
 }

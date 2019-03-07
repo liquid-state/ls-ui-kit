@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Spin, Switch, Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class EmbeddedMode extends Component {
   state = { loading: false };
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Embedded mode</h3>
-        
+      <Example title="Embedded mode">
         <Spin spinning={this.state.loading}>
           <Alert
             message="Alert message title"
@@ -19,11 +18,11 @@ class EmbeddedMode extends Component {
         <div style={{ marginTop: 16 }}>
           Loading state：<Switch checked={this.state.loading} onChange={this.toggle} />
         </div>
-      </section>
+      </Example>
     );
   }
 
   toggle = value => this.setState({ loading: value });
 }
- 
+
 export default EmbeddedMode;

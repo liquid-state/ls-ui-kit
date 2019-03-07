@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -10,10 +11,9 @@ for (let i = 10; i < 36; i++) {
 }
 
 class Multiple extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Multiple Selection</h3>
+      <Example title="Multiple Selection">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -27,7 +27,7 @@ class Multiple extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { Button, notification } from 'antd';
+import Example from '../../utils/Example';
 
 class Icon extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Notification with icon</h3>
-
+      <Example title="Notification with icon">
         <div>
           <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('success')}>Success</Button>
           <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('info')}>Info</Button>
           <Button className="mr20 mb20" onClick={() => this.openNotificationWithIcon('warning')}>Warning</Button>
           <Button onClick={() => this.openNotificationWithIcon('error')}>Error</Button>
         </div>
-      </section>
+      </Example>
     );
   }
 

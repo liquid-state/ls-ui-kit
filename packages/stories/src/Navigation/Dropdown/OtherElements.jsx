@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -17,15 +18,13 @@ const menu = (
 class OtherElements extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Other elements</h3>
-
+      <Example title="Other elements">
         <Dropdown overlay={menu}>
           <a className="ant-dropdown-link" href="#">
             Hover me <Icon type="down" />
           </a>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 }

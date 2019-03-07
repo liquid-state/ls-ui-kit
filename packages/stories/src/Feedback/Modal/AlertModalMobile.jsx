@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { AlertModal } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 class AlertModalMobile extends Component {
   state = { visible: false };
@@ -25,8 +26,7 @@ class AlertModalMobile extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Alert Modal Mobile</h3>
+      <Example title="Alert Modal Mobile">
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <AlertModal
@@ -42,7 +42,7 @@ class AlertModalMobile extends Component {
             Body here is a notice reminder that the price of the shirt is nine.
           </AlertModal>
         </div>
-      </section>
+      </Example>
     );
   }
 }

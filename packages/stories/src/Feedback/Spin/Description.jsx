@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Spin, Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class Description extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized description</h3>
-        
+      <Example title="Customized description">
         <Spin tip="Loading...">
           <Alert
             message="Alert message title"
@@ -14,7 +13,7 @@ class Description extends Component {
             type="info"
           />
         </Spin>
-      </section>
+      </Example>
     );
   }
 }

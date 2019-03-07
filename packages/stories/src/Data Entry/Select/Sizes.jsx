@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select, Radio, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -18,9 +19,7 @@ class Sizes extends Component {
     const { size } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Sizes</h3>
-
+      <Example title="Sizes">
         <Row>
           <Col sm={16} lg={7} className="mb20">
             <Radio.Group value={size} onChange={this.handleSizeChange}>
@@ -86,7 +85,7 @@ class Sizes extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

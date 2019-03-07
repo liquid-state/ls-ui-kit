@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Radio, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Disabled extends Component {
   state = {
@@ -8,9 +9,7 @@ class Disabled extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled</h3>
-
+      <Example title="Disabled">
         <Radio defaultChecked={false} disabled={this.state.disabled}>Disabled</Radio>
         <br />
         <Radio defaultChecked disabled={this.state.disabled}>Disabled</Radio>
@@ -19,7 +18,7 @@ class Disabled extends Component {
             Toggle disabled
           </Button>
         </div>
-      </section>
+      </Example>
     );
   }
 

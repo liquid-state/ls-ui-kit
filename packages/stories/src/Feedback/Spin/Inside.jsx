@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Spin } from 'antd';
+import Example from '../../utils/Example';
 
 class Inside extends Component {
   render() {
@@ -13,12 +14,11 @@ class Inside extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Inside a container</h3>
+      <Example title="Inside a container">
         <div style={style}>
           <Spin size="large" />
         </div>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popconfirm, Switch, message } from 'antd';
+import Example from '../../utils/Example';
 
 class Trigger extends Component {
   state = {
@@ -9,8 +10,7 @@ class Trigger extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Conditional trigger</h3>
+      <Example title="Conditional trigger">
 
         <div>
           <Popconfirm
@@ -28,7 +28,7 @@ class Trigger extends Component {
           <br />
           Whether directly execute：<Switch defaultChecked onChange={this.changeCondition} />
         </div>
-      </section>
+      </Example>
     );
   }
 

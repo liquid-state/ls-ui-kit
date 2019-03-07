@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, Icon, Modal } from 'antd';
+import Example from '../../utils/Example';
 
 class PicturesWall extends Component {
   state = {
@@ -24,8 +25,7 @@ class PicturesWall extends Component {
     );
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Pictures Wall</h3>
+      <Example title="Pictures Wall">
 
         <div className="clearfix">
           <Upload
@@ -41,7 +41,7 @@ class PicturesWall extends Component {
             <img alt="example" style={{ width: '100%' }} src={previewImage} />
           </Modal>
         </div>
-      </section>
+      </Example>
     );
   }
 

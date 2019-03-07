@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse } from 'antd';
+import Example from '../../utils/Example';
+
 const Panel = Collapse.Panel;
 
 const text = `
@@ -11,8 +13,7 @@ const text = `
 class CollapseBasic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Collapse</h3>
+      <Example title="Collapse">
 
         <Collapse defaultActiveKey={['1']}>
           <Panel header="This is panel header 1" key="1">
@@ -25,7 +26,7 @@ class CollapseBasic extends Component {
             <p>{text}</p>
           </Panel>
         </Collapse>
-      </section>
+      </Example>
     );
   }
 }

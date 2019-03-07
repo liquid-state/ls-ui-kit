@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Avatar, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const listData = [];
 for (let i = 0; i < 3; i++) {
@@ -29,8 +30,7 @@ const IconText = ({ type, text }) => (
 class Vertical extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Vertical</h3>
+      <Example title="Vertical">
 
         <List
           itemLayout="vertical"
@@ -52,7 +52,7 @@ class Vertical extends Component {
             </List.Item>
           )}
         />
-      </section>
+      </Example>
     );
   }
 }

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { Progress } from 'antd';
+import Example from '../../utils/Example';
 
 class ProgressBar extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Progress bar</h3>
-
+      <Example title="Progress bar">
         <Progress percent={30} />
         <Progress percent={50} status="active" />
         <Progress percent={70} status="exception" />
         <Progress percent={100} />
         <Progress percent={50} showInfo={false} />
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default ProgressBar;

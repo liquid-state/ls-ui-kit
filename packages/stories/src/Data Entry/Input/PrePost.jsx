@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Select, Icon, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -22,8 +23,7 @@ const selectAfter = (
 class PrePost extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Pre / Post tab</h3>
+      <Example title="Pre and Post tab">
 
         <Row>
           <Col span={24} className="mb20">
@@ -36,7 +36,7 @@ class PrePost extends Component {
             <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

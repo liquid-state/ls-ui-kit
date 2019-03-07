@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Tabs, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 
 class IconTabs extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Icon</h3>
+      <Example title="Icon">
 
         <Tabs>
           <TabPane tab={<span><Icon type="apple" />Tab 1</span>} key="1">
@@ -17,7 +17,7 @@ class IconTabs extends Component {
             Tab 2
           </TabPane>
         </Tabs>
-      </section>
+      </Example>
     );
   }
 }

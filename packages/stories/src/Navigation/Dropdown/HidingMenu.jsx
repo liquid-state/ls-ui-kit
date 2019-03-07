@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
-
+import Example from '../../utils/Example';
 
 class HidingMenu extends Component {
   state = {
@@ -17,9 +17,7 @@ class HidingMenu extends Component {
     );
 
     return (
-      <section className="example">
-        <h3 className="ex-title">The way of hiding menu.</h3>
-
+      <Example title="The way of hiding menu.">
         <Dropdown overlay={menu}
           onVisibleChange={this.handleVisibleChange}
           visible={this.state.visible}
@@ -28,7 +26,7 @@ class HidingMenu extends Component {
             Hover me <Icon type="down" />
           </a>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 

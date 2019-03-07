@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
+import Example from '../../utils/Example';
 
 class Size extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
+      <Example title="">
         <h3 className="title">Mini pagination</h3>
         <div className="mb20">
           <Pagination size="small" total={50} />
@@ -21,5 +22,5 @@ class Size extends Component {
     return `Total ${total} items`;
   }
 }
- 
+
 export default Size;

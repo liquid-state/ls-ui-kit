@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -28,8 +29,7 @@ const options = [{
 class ChangeOnSelect extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Change On Select</h3>
+      <Example title="Change On Select">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -40,7 +40,7 @@ class ChangeOnSelect extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

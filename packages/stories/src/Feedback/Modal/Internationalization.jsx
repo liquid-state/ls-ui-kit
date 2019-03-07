@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 function confirm() {
   Modal.confirm({
@@ -15,10 +16,9 @@ class Internationalization extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Internationalization</h3>
+      <Example title="Internationalization">
         <Button onClick={confirm}>Confirm</Button>
-      </section>
+      </Example>
     );
   }
 

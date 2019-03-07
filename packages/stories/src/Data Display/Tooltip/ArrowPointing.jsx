@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Tooltip, Button, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class ArrowPointing extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Arrow pointing at the center</h3>
+      <Example title="Arrow pointing at the center">
 
         <Row getter={32}>
           <Col className="mb20" sm={16} lg={5}>
@@ -20,7 +20,7 @@ class ArrowPointing extends Component {
             </Tooltip>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

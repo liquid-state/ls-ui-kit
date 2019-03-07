@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -42,8 +43,7 @@ class SearchBox extends Component {
   render() {
     const options = this.state.data.map(d => <Option key={d.value}>{d.text}</Option>);
     return (
-      <section className="example">
-        <h3 className="ex-title">Search Box</h3>
+      <Example title="Search Box">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -61,7 +61,7 @@ class SearchBox extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

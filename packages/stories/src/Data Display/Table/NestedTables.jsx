@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Badge, Menu, Dropdown, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -80,8 +81,7 @@ for (let i = 0; i < 3; ++i) {
 class NestedTables extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Nested Tables</h3>
+      <Example title="Nested Tables">
 
         <Table
           className="components-table-demo-nested"
@@ -89,7 +89,7 @@ class NestedTables extends Component {
           expandedRowRender={expandedRowRender}
           dataSource={data}
         />
-      </section>
+      </Example>
     );
   }
 }

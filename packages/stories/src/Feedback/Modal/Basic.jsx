@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   state = { visible: false };
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <div>
           <Button type="primary" onClick={this.showModal}>Open</Button>
@@ -22,7 +22,7 @@ class Basic extends Component {
             <p>Some contents...</p>
           </Modal>
         </div>
-      </section>
+      </Example>
     );
   }
 

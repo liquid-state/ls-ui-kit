@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Avatar } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {
@@ -19,8 +20,7 @@ const data = [
 class Basic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic List</h3>
+      <Example title="Basic List">
 
         <List
           itemLayout="horizontal"
@@ -35,7 +35,7 @@ class Basic extends Component {
             </List.Item>
           )}
         />
-      </section>
+      </Example>
     );
   }
 }

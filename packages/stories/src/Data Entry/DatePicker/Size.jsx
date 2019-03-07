@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker, Radio } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Size extends Component {
 
@@ -13,9 +14,7 @@ class Size extends Component {
     const { size } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Three Sizes</h3>
-
+      <Example title="Three Sizes">
         <Row className="mb20">
           <Col md={12} lg={6}>
             <Radio.Group value={size} onChange={this.handleSizeChange}>
@@ -49,8 +48,7 @@ class Size extends Component {
             <WeekPicker className="fw" size={size} placeholder="Select Week" />
           </Col>
         </Row>
-
-      </section>
+      </Example>
     );
   }
 

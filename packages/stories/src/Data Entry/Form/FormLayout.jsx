@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 import { Form, Input, Button, Radio } from 'antd';
 
 const FormItem = Form.Item;
@@ -21,9 +22,7 @@ class FormLayout extends Component {
     } : null;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Form Layout</h3>
-
+      <Example title="Form Layout">/h3>
         <Form layout={formLayout}>
           <FormItem
             label="Form Layout"
@@ -51,7 +50,7 @@ class FormLayout extends Component {
             <Button type="primary">Submit</Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tree, Input } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 const Search = Input.Search;
@@ -91,8 +92,7 @@ class Searchable extends Component {
     });
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Searchable</h3>
+      <Example title="Searchable">
 
         <div>
           <Search style={{ marginBottom: 8 }} placeholder="Search" onChange={this.onChange} />
@@ -104,7 +104,7 @@ class Searchable extends Component {
             {loop(gData)}
           </Tree>
         </div>
-      </section>
+      </Example>
     );
   }
 

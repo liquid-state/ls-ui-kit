@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Button, notification } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomStyle extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized style</h3>
+      <Example title="Customized style">
 
         <Button type="primary" onClick={this.openNotification}>Open the notification box</Button>
-      </section>
+      </Example>
     );
   }
 

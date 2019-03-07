@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const text = <span>Title</span>;
 
@@ -15,8 +16,7 @@ const buttonWidth = 60;
 class Placement extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Placement</h3>
+      <Example title="Placement">
 
         <div className="demo">
           <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
@@ -64,7 +64,7 @@ class Placement extends Component {
             </Popover>
           </div>
         </div>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, Button, Icon, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class CompleteControl extends Component {
   state = {
@@ -19,8 +20,7 @@ class CompleteControl extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Complete control over file list</h3>
+      <Example title="Complete control over file list">
         <Row>
           <Col sm={16} lg={7}>
             <Upload {...props} fileList={this.state.fileList}>
@@ -30,7 +30,7 @@ class CompleteControl extends Component {
             </Upload>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

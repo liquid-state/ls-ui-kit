@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toString } = Mention;
 
@@ -13,8 +14,7 @@ class CustomizeTriggerToken extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Customize Trigger Token</h3>
+      <Example title="Customize Trigger Token">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -28,7 +28,7 @@ class CustomizeTriggerToken extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

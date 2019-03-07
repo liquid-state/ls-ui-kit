@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { MonthPicker, RangePicker } = DatePicker;
 
@@ -44,10 +45,7 @@ function disabledRangeTime(_, type) {
 class DisDate extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled Date & Time</h3>
-
-
+      <Example title="Disabled Date & Time">
         <Row className="mb20">
           <Col md={12} lg={6}>
             <DatePicker
@@ -82,7 +80,7 @@ class DisDate extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

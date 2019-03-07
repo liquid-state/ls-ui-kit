@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Steps, Popover } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
   render() {
@@ -12,15 +13,14 @@ class Custom extends Component {
     );
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Dot Style</h3>
+      <Example title="Customized Dot Style">
 
         <Steps current={1} progressDot={customDot}>
           <Step title="Finished" description="You can hover on the dot." />
           <Step title="In Progress" description="You can hover on the dot." />
           <Step title="Waiting" description="You can hover on the dot." />
         </Steps>
-      </section>
+      </Example>
     );
   }
 }

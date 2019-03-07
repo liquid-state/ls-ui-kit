@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-
 import { Slider as SliderComponent } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 class Slider extends Component {
   render() {
@@ -20,10 +20,9 @@ class Slider extends Component {
 
         <h2 className="title">Examples:</h2>
 
-        <section className="example">
-          <h3 className="ex-title mb20">Slider</h3>
+        <Example title="Slider">
           <SliderComponent mobile />
-        </section>
+        </Example>
       </Fragment>
     );
   }

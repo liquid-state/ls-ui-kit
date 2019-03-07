@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Radio } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 
@@ -11,8 +12,7 @@ class Slide extends Component {
   render() {
     const { mode } = this.state;
     return (
-      <section className="example">
-        <h3 className="ex-title">Slide</h3>
+      <Example title="Slide">
         <div>
           <Radio.Group onChange={this.handleModeChange} value={mode} style={{ marginBottom: 8 }}>
             <Radio.Button value="top">Horizontal</Radio.Button>
@@ -36,7 +36,7 @@ class Slide extends Component {
             <TabPane tab="Tab 11" key="11">Content of tab 11</TabPane>
           </Tabs>
         </div>
-      </section>
+      </Example>
     );
   }
 

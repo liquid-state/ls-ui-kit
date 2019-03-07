@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toString } = Mention;
 
 class MultiLines extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Multi Lines Mode</h3>
+      <Example title="Multi Lines Mode">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -19,7 +19,7 @@ class MultiLines extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

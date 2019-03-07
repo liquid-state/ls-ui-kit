@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
+import Example from '../../utils/Example';
 
 class Grid extends Component {
   render() {
@@ -9,8 +10,7 @@ class Grid extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Grid card</h3>
+      <Example title="Grid card">
 
         <Card title="Card Title">
           <Card.Grid style={gridStyle}>Content</Card.Grid>
@@ -21,7 +21,7 @@ class Grid extends Component {
           <Card.Grid style={gridStyle}>Content</Card.Grid>
           <Card.Grid style={gridStyle}>Content</Card.Grid>
         </Card>
-      </section>
+      </Example>
     );
   }
 }

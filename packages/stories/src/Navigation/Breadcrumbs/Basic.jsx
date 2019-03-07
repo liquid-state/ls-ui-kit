@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Breadcrumb } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic Usage</h3>
+      <Example title="Basic Usage">
         <Breadcrumb>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item><a href="">Application Center</a></Breadcrumb.Item>
           <Breadcrumb.Item><a href="">Application List</a></Breadcrumb.Item>
           <Breadcrumb.Item>An Application</Breadcrumb.Item>
         </Breadcrumb>
-      </section>
+      </Example>
     );
   }
 }

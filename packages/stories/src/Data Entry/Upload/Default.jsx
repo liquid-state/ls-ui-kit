@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, Button, Icon, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const props = {
   action: '//jsonplaceholder.typicode.com/posts/',
@@ -31,8 +32,7 @@ const props = {
 class Default extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Default Files</h3>
+      <Example title="Default Files">
         <Row>
           <Col sm={16} lg={7}>
             <Upload {...props}>
@@ -42,7 +42,7 @@ class Default extends Component {
             </Upload>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

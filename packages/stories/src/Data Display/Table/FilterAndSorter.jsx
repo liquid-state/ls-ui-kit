@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -72,13 +73,11 @@ const data = [
 ];
 
 class FilterAndSorter extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Filter and sorter</h3>
-
+      <Example title="Filter and sorter">
         <Table columns={columns} dataSource={data} />
-      </section>
+      </Example>
     );
   }
 }

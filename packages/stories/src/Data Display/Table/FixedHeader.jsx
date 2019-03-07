@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -29,11 +30,9 @@ for (let i = 0; i < 100; i++) {
 class FixedHeader extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Fixed Header</h3>
-        
+      <Example title="Fixed Header">
         <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />
-      </section>
+      </Example>
     );
   }
 }

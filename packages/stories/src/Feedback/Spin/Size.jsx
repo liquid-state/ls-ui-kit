@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Spin } from 'antd';
+import Example from '../../utils/Example';
 
 class Size extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Size</h3>
-
+      <Example title="Size">
         <Spin size="small" />
         <Spin className="ml20" />
         <Spin className="ml20" size="large" />
-      </section>
+      </Example>
     );
   }
 }

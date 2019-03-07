@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Radio } from 'antd';
+import Example from '../../utils/Example';
 
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
@@ -7,8 +8,7 @@ const RadioGroup = Radio.Group;
 class RadioButtonPage extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">RadioButton Style</h3>
+      <Example title="RadioButton Style">
 
         <div>
           <RadioGroup defaultValue="a">
@@ -42,7 +42,7 @@ class RadioButtonPage extends Component {
             <RadioButton value="d">Melbourne</RadioButton>
           </RadioGroup>
         </div>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Avatar, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Nav = Mention.Nav;
 
@@ -18,8 +19,7 @@ class Icon extends Component {
     const { suggestions } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Icon Image</h3>
+      <Example title="Icon Image">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -31,7 +31,7 @@ class Icon extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, Icon, message } from 'antd';
+import Example from '../../utils/Example';
 
 function getBase64(img, callback) {
   const reader = new FileReader();
@@ -34,8 +35,7 @@ class Avatar extends Component {
     const imageUrl = this.state.imageUrl;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Avatar</h3>
+      <Example title="Avatar">
 
         <Upload
           name="avatar"
@@ -48,7 +48,7 @@ class Avatar extends Component {
         >
           {imageUrl ? <img src={imageUrl} alt="" /> : uploadButton}
         </Upload>
-      </section>
+      </Example>
     );
   }
 

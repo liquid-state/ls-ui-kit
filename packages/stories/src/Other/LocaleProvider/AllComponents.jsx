@@ -5,6 +5,8 @@ import zhCN from 'antd/lib/locale-provider/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 moment.locale('en');
+import Example from '../../utils/Example';
+
 
 const Option = Select.Option;
 const RangePicker = DatePicker.RangePicker;
@@ -99,8 +101,7 @@ class AllComponents extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">All components</h3>
+      <Example title="All components">
 
         <div>
           <div className="change-locale">
@@ -114,7 +115,7 @@ class AllComponents extends Component {
             <Page key={forceRerender++} />
           </LocaleProvider>
         </div>
-      </section>
+      </Example>
     );
   }
 

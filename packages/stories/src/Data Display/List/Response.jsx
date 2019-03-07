@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Card } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {
@@ -23,11 +24,9 @@ const data = [
 ];
 
 class Response extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Responsive grid list</h3>
-
+      <Example title="Responsive grid list">
         <List
           grid={{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 6, xxl: 3 }}
           dataSource={data}
@@ -37,10 +36,9 @@ class Response extends Component {
             </List.Item>
           )}
         />
-        
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Response;

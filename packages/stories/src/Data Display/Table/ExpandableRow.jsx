@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   { title: 'Name', dataIndex: 'name', key: 'name' },
@@ -17,15 +18,14 @@ const data = [
 class ExpandableRow extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Expandable Row</h3>
+      <Example title="Expandable Row">
 
         <Table
           columns={columns}
           expandedRowRender={record => <p style={{ margin: 0 }}>{record.description}</p>}
           dataSource={data}
         />
-      </section>
+      </Example>
     );
   }
 }

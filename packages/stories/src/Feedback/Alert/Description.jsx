@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class Description extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Description</h3>
-        
+      <Example title="Description">
         <Alert
           className="mb20"
           message="Success Text"
@@ -30,7 +29,7 @@ class Description extends Component {
           description="Error Description Error Description Error Description Error Description"
           type="error"
         />
-      </section>
+      </Example>
     );
   }
 }

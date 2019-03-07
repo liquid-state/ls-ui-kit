@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Close Text</h3>
+      <Example title="Customized Close Text">
         <Alert message="Info Text" type="info" closeText="Close Now" />
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Custom;

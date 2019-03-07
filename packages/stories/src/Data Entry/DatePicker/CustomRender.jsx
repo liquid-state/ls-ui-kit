@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomRender extends Component {
   render() {
     const { RangePicker } = DatePicker;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Date Rendering</h3>
+      <Example title="Customized Date Rendering">
 
         <Row className="mb20">
           <Col md={12} lg={6}>
@@ -49,7 +49,7 @@ class CustomRender extends Component {
             />
           </Col>
         </Row>
-      </section>
+        </Example>
     );
   }
 }

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Tree } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 
 class Line extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Tree With Line</h3>
+      <Example title="Tree With Line">
 
         <Tree
           showLine
@@ -28,7 +28,7 @@ class Line extends Component {
             </TreeNode>
           </TreeNode>
         </Tree>
-      </section>
+      </Example>
     );
   }
 }

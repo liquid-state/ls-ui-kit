@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = AutoComplete.Option;
 
@@ -52,10 +53,7 @@ class Uncertain extends Component {
   render() {
     const { dataSource } = this.state;
     return (
-      <section className="example">
-        <h3 className="ex-title">Lookup-Patterns - Uncertain Category</h3>
-
-
+      <Example title="Lookup-Patterns - Uncertain Category">
         <Row>
           <Col md={12} lg={6}>
             <div className="global-search-wrapper" style={{width: '100%'}}>
@@ -80,7 +78,7 @@ class Uncertain extends Component {
             </div>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

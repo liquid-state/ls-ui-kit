@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toString } = Mention;
 
 class Placement extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Placement</h3>
+      <Example title="Placement">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -19,7 +19,7 @@ class Placement extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

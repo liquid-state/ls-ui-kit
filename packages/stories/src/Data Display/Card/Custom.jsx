@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
   render() {
     const { Meta } = Card;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized content</h3>
+      <Example title="Customized content">
 
         <Card
           hoverable
@@ -19,7 +19,7 @@ class Custom extends Component {
             description="www.instagram.com"
           />
         </Card>
-      </section>
+      </Example>
     );
   }
 }

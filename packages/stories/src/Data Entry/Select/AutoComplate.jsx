@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -8,11 +9,9 @@ class AutoComplate extends Component {
     options: []
   };
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Automatic completion</h3>
-
+      <Example title="Automatic completion">
         <Select
           mode="combobox"
           style={{ width: 200 }}
@@ -22,7 +21,7 @@ class AutoComplate extends Component {
         >
           {this.state.options}
         </Select>
-      </section>
+      </Example>
     );
   }
 

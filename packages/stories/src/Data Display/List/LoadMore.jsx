@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Avatar, Button, Spin } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {gender: "female", name: {title: "miss", first: "beatriz", last: "roman"}, email: "afet.kuday@example.com", nat: "TR"},
@@ -27,8 +28,7 @@ class LoadMore extends Component {
     ) : null;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Load More</h3>
+      <Example title="Load More">
 
         <List
           className="demo-loadmore-list"
@@ -47,7 +47,7 @@ class LoadMore extends Component {
             </List.Item>
           )}
         />
-      </section>
+      </Example>
     );
   }
 

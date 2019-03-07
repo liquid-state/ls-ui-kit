@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AutoComplete } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
   state = {
@@ -15,8 +16,7 @@ class Custom extends Component {
     });
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized</h3>
+      <Example title="Customized">
 
         <Row>
             <Col md={12} lg={6}>
@@ -29,7 +29,7 @@ class Custom extends Component {
               </AutoComplete>
             </Col>
           </Row>
-      </section>
+      </Example>
     );
   }
 

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class Closeble extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Closeble</h3>
-        
+      <Example title="Closeble">
         <Alert
           className="mb20"
           message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
@@ -19,7 +18,7 @@ class Closeble extends Component {
           type="error"
           closable
         />
-      </section>
+      </Example>
     );
   }
 }

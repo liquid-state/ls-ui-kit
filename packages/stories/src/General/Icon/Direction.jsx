@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Ic from './Icon';
 import { Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class DirectionalIcons extends Component {
   render() {
@@ -62,11 +63,11 @@ class DirectionalIcons extends Component {
     return (
       <Fragment>
         <h3 className="title">Directional Icons</h3>
-        <section className="icons ml20">
+        <Example title="">
           {
             icons.map((icon, i) => <Ic key={i} icon={icon} />)
           }
-        </section>
+        </Example>
       </Fragment>
     );
   }

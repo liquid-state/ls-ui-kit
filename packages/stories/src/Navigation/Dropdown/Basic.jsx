@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -16,14 +17,13 @@ const menu = (
 );
 
 const Basic = () => (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
-        <Dropdown overlay={menu}>
-          <a className="ant-dropdown-link" href="#">
-            Hover me <Icon type="down" />
-          </a>
-        </Dropdown>
-      </section>
+  <Example title="Basic">
+    <Dropdown overlay={menu}>
+      <a className="ant-dropdown-link" href="#">
+        Hover me <Icon type="down" />
+      </a>
+    </Dropdown>
+  </Example>
 );
 
 export default Basic;

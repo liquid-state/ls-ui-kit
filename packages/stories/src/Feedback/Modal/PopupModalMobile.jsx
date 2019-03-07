@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { PopupModal } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 class PopupModalMobile extends Component {
   state = { visible: false };
@@ -25,8 +26,7 @@ class PopupModalMobile extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Popup Modal Mobile</h3>
+      <Example title="Popup Modal Mobile">
         <div>
           <Button type="primary" onClick={this.showModal}>Show Modal</Button>
           <PopupModal
@@ -40,7 +40,7 @@ class PopupModalMobile extends Component {
             Body here is a notice reminder that the price of the shirt is nine.
           </PopupModal>
         </div>
-      </section>
+      </Example>
     );
   }
 }

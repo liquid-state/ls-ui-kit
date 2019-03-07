@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const content = (
   <div>
@@ -13,8 +14,7 @@ const text = <span>Title</span>;
 class ArrowPointing extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Arrow pointing</h3>
+      <Example title="Arrow pointing">
 
         <Row getter={32}>
           <Col className="mb20" sm={16} lg={5}>
@@ -29,7 +29,7 @@ class ArrowPointing extends Component {
             </Popover>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

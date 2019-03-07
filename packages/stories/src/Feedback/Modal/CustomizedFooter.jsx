@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomizedFooter extends Component {
   state = {
@@ -11,8 +12,7 @@ class CustomizedFooter extends Component {
     const { visible, loading } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Footer</h3>
+      <Example title="Customized Footer">
 
         <div>
           <Button type="primary" onClick={this.showModal}>
@@ -37,7 +37,7 @@ class CustomizedFooter extends Component {
             <p>Some contents...</p>
           </Modal>
         </div>
-      </section>
+      </Example>
     );
   }
   

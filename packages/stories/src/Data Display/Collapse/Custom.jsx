@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse } from 'antd';
+import Example from '../../utils/Example';
 
 const Panel = Collapse.Panel;
 
@@ -20,8 +21,7 @@ const customPanelStyle = {
 class Custom extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom Panel</h3>
+      <Example title="Custom Panel">
 
         <Collapse bordered={false} defaultActiveKey={['1']}>
           <Panel header="This is panel header 1" key="1" style={customPanelStyle}>
@@ -34,7 +34,7 @@ class Custom extends Component {
             <p>{text}</p>
           </Panel>
         </Collapse>
-      </section>
+      </Example>
     );
   }
 }

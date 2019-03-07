@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const content = (
   <div>
@@ -11,8 +12,7 @@ const content = (
 class Ways extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Three ways to trigger</h3>
+      <Example title="Three ways to trigger">
 
         <Row gutter={32}>
           <Col className="mb20" sm={16} lg={3}>
@@ -33,7 +33,7 @@ class Ways extends Component {
             </Popover>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

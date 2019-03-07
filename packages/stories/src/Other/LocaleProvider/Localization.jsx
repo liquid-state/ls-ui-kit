@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Pagination, LocaleProvider } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
+import Example from '../../utils/Example';
 
 const App = () => (
   <div>
@@ -9,17 +10,15 @@ const App = () => (
 );
 
 class Localization extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Localization</h3>
-
+      <Example title="Localization">
         <LocaleProvider locale={enUS}>
           <App />
         </LocaleProvider>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Localization;

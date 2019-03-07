@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Rate } from 'antd';
+import Example from '../../utils/Example';
 
 class ReadOnly extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Read Only</h3>
+      <Example title="Read Only">
         <Rate disabled defaultValue={2} />
-      </section>
+      </Example>
     );
   }
 }

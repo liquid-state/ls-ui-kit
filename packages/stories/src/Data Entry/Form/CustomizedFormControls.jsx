@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Select, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -75,8 +76,7 @@ class CustomizedFormControls extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Form Controls</h3>
+      <Example title="Customized Form Controls">
 
         <Form layout="inline" onSubmit={this.handleSubmit}>
           <FormItem label="Price">
@@ -89,7 +89,7 @@ class CustomizedFormControls extends Component {
             <Button type="primary" htmlType="submit">Submit</Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

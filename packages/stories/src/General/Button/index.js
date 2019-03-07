@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import Example from '../../utils/Example';
 import { Button, CheckableButton } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 class ButtonPage extends Component {
   state = {

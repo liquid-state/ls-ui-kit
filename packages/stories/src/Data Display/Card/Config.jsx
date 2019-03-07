@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Card, Icon, Avatar } from 'antd';
 const { Meta } = Card;
+import Example from '../../utils/Example';
 
 class Config extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Support more content configuration</h3>
+      <Example title="Support more content configuration">
 
         <Card
           style={{ width: 300 }}
@@ -19,7 +19,7 @@ class Config extends Component {
             description="This is the description"
           />
         </Card>
-      </section>
+      </Example>
     );
   }
 }

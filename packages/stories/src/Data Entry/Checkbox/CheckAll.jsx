@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Checkbox } from 'antd';
+import Example from '../../utils/Example';
 
 const defaultCheckedList = ['Apple', 'Orange'];
 const CheckboxGroup = Checkbox.Group;
@@ -15,8 +16,7 @@ class CheckAll extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Check All</h3>
+      <Example title="Check All">
 
         <div style={{ borderBottom: '1px solid #E9E9E9' }}>
           <Checkbox
@@ -29,7 +29,7 @@ class CheckAll extends Component {
         </div>
         <br />
         <CheckboxGroup options={plainOptions} value={this.state.checkedList} onChange={this.onChange} />
-      </section>
+      </Example>
     );
   }
 

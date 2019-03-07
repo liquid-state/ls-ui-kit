@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   render() {
     const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
 
         <Row>
@@ -34,7 +34,7 @@ class Basic extends Component {
           </Col>
         </Row>
 
-      </section>
+      </Example>
     );
   }
 }

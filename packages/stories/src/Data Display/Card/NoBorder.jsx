@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
+import Example from '../../utils/Example';
 
 class NoBorder extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">No border</h3>
+      <Example title="No border">
 
         <div style={{ background: '#ECECEC', padding: '30px' }}>
           <Card title="Card title" bordered={false} style={{ width: 300 }}>
@@ -14,7 +14,7 @@ class NoBorder extends Component {
             <p>Card content</p>
           </Card>
         </div>
-      </section>
+      </Example>
     );
   }
 }

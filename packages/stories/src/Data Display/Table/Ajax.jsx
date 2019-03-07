@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -44,8 +45,7 @@ class Ajax extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Ajax</h3>
+      <Example title="Ajax">
 
         <Table columns={columns}
           rowKey={record => record.registered}
@@ -54,7 +54,7 @@ class Ajax extends Component {
           loading={this.state.loading}
           onChange={this.handleTableChange}
         />
-      </section>
+      </Example>
     );
   }
 

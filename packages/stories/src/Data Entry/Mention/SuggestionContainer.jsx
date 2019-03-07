@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Popover, Button, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toString, toContentState } = Mention;
 
@@ -16,8 +17,7 @@ class SuggestionContainer extends Component {
     );
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Suggestion Container</h3>
+      <Example title="Suggestion Container">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -26,7 +26,7 @@ class SuggestionContainer extends Component {
           </Popover>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

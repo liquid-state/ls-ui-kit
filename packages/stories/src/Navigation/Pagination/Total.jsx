@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
+import Example from '../../utils/Example';
 
 class TotalNumber extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Total Number</h3>
+      <Example title="Total Number">
 
         <div className="mb20">
           <Pagination
@@ -22,7 +22,7 @@ class TotalNumber extends Component {
           pageSize={20}
           defaultCurrent={1}
         />
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const options = [{
   value: 'nsw',
@@ -28,8 +29,7 @@ const options = [{
 class Size extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Size</h3>
+      <Example title="Size">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader className="mb20" size="large" style={{width: '100%  '}} options={options} placeholder="Please select" />
@@ -37,7 +37,7 @@ class Size extends Component {
             <Cascader size="small" style={{width: '100%  '}} options={options} placeholder="Please select" />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

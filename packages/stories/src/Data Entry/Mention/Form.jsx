@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col, Form, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const { toContentState, getMentions } = Mention;
 
@@ -14,8 +15,7 @@ class WithForm extends Component {
     const { getFieldDecorator, getFieldValue } = this.props.form;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">With Form</h3>
+      <Example title="With Form">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -46,7 +46,7 @@ class WithForm extends Component {
             </Form>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 
@@ -60,11 +60,9 @@ class WithForm extends Component {
     e.preventDefault();
     this.props.form.validateFields((errors, values) => {
       if (errors) {
-        console.log('Errors in form!!!');
+        console.log('Errors in form!!!', errors);
         return;
       }
-      console.log('Submit!!!');
-      console.log(values);
     });
   }
 

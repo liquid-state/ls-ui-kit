@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Badge } from 'antd';
+import Example from '../../utils/Example';
 
 class Overflow extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Overflow</h3>
+      <Example title="Overflow">
 
         <div>
           <Badge className="badge" count={99}>
@@ -21,7 +21,7 @@ class Overflow extends Component {
             <a href="#" className="head-example" />
           </Badge>
         </div>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, message, Icon, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Dragger = Upload.Dragger;
 
@@ -25,8 +26,7 @@ class DnD extends Component {
   render() {
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Drag and Drop</h3>
+      <Example title="Drag and Drop">
         <Row>
           <Col sm={16} lg={8}>
             <Dragger {...props}>
@@ -38,7 +38,7 @@ class DnD extends Component {
             </Dragger>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

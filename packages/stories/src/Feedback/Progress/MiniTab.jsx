@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { Progress } from 'antd';
+import Example from '../../utils/Example';
 
 class MiniTab extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Mini size progress bar</h3>
-
+      <Example title="Mini size progress bar">
         <div style={{ width: 170 }}>
           <Progress percent={30} size="small" />
           <Progress percent={50} size="small" status="active" />
           <Progress percent={70} size="small" status="exception" />
           <Progress percent={100} size="small" />
         </div>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default MiniTab;

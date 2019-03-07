@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Calendar, Card } from 'antd';
+import Example from '../../utils/Example';
 
 class CardPage extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Card</h3>
+      <Example title="Card">
         <Card className="calendar" size="small" style={{width: 320}}>
           <Calendar fullscreen={false} />
         </Card>
-      </section>
+      </Example>
     );
   }
 }
