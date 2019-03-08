@@ -57,7 +57,7 @@ class Checkable extends Component {
       }
     };
     return (
-      <Example title="Checkable">/h3>
+      <Example title="Checkable">
         <Row>
           <Col sm={16} lg={7}>
             <TreeSelect {...tProps} />
