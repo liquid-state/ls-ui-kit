@@ -1,4 +1,5 @@
-import Example from '../../utils/Example'import React, { Component } from 'react';;
+import React, { Component } from 'react';
+import Example from '../../utils/Example';
 
 import { Divider } from 'antd';
 

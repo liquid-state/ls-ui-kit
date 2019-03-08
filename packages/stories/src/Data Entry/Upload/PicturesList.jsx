@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Upload, Button, Icon } from 'antd';
-import Example from '../../utils/Example'import './style.css';;
+import Example from '../../utils/Example';
+import './style.css';
 
 
 const fileList = [{

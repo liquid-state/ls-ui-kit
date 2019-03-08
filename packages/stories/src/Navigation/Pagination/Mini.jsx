@@ -14,7 +14,7 @@ class Size extends Component {
           <Pagination size="small" total={50} showSizeChanger showQuickJumper />
         </div>
         <Pagination size="small" total={50} showTotal={this.showTotal} />
-      </section>
+      </Example>
     );
   }
 

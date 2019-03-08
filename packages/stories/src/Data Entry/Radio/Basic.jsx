@@ -7,7 +7,7 @@ class Basic extends Component {
     return (
       <Example title="Basic">
         <Radio>Radio</Radio>
-      </section>
+      </Example>
     );
   }
 }
