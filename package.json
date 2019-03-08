@@ -5,14 +5,22 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "storybook": "lerna run build --scope @liquid-state/ui-kit && start-storybook -p 9002 -c packages/stories/.storybook",
+    "storybook": "yarn workspace @liquid-state/ui-kit-stories run storybook",
     "lint": "eslint packages/*/src/**/*.{js,jsx}",
     "lint:fix": "eslint packages/*/src/**/*.{js,jsx} --fix"
   },
   "workspaces": [
     "packages/*"
   ],
+  "dependencies": {
+    "antd": "^3.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "@storybook/react": "^4",
+    "@storybook/addon-actions": "^4"
+  },
   "devDependencies": {
+    "@babel/core": "^7",
     "husky": "1.2.0",
     "lerna": "^3.4.3",
     "lint-staged": "^8.1.0"
