@@ -78,18 +78,15 @@ import Anchor from './Other/Anchor';
 import BackTop from './Other/BackTop';
 import LocaleProvider from './Other/LocaleProvider';
 
-const $module = module;
-
 export const defaultConfig = {
   name: 'Liquid State UI Kit',
-  storiesOf: defStory,
   filters: [],
 };
 
 // Create storiesOf
 const create = (storiesOf, filters = []) => {
   const match = n => filters.includes(n);
-  return (name, module = $module) => {
+  return (name, module) => {
     const anchor = storiesOf(name, module);
     const proxy = {
       add: (cName, component) => {
@@ -103,26 +100,26 @@ const create = (storiesOf, filters = []) => {
   };
 };
 
-export function configureStories(config = defaultConfig) {
-  const storiesOf = create(config.storiesOf, config.filters);
+export function configureStories(storiesOf = defStory, config = defaultConfig) {
+  storiesOf = create(storiesOf, config.filters);
   const prefix = config.name;
 
-  storiesOf(prefix, $module);
+  storiesOf(prefix, module);
 
-  storiesOf(`${prefix}/General`, $module)
+  storiesOf(`${prefix}/General`, module)
     .add('Buttons', () => <Button />)
     .add('Icon', () => <Icon />)
     .add('Pager', PagerStories)
     .add('FullCentralImage', () => <FullCentralImage />);
 
-  storiesOf(`${prefix}/Navigation`, $module)
+  storiesOf(`${prefix}/Navigation`, module)
     .add('Pagination', () => <Pagination />)
     .add('Steps', () => <Steps />)
     .add('Affix', () => <Affix />)
     .add('Breadcrumbs', () => <Breadcrumbs />)
     .add('Dropdown', () => <Dropdown />);
 
-  storiesOf(`${prefix}/Data Entry`, $module)
+  storiesOf(`${prefix}/Data Entry`, module)
     .add('AutoComplate', () => <AutoComplate />)
     .add('Cascader', () => <Cascader />)
     .add('DatePicker', () => <DatePicker />)
@@ -137,7 +134,7 @@ export function configureStories(config = defaultConfig) {
     .add('TreeSelect', () => <TreeSelect />)
     .add('Upload', () => <Upload />);
 
-  storiesOf(`${prefix}/Data Entry/Search`, $module)
+  storiesOf(`${prefix}/Data Entry/Search`, module)
     .add('Minimun Input', () => <SearchMinInput />)
     .add('Search Error', () => <SearchError />)
     .add('Loading', () => <SearchLoading />)
@@ -145,7 +142,7 @@ export function configureStories(config = defaultConfig) {
     .add('With Data', () => <SearchOnChange />)
     .add('OnSubmit', () => <SearchOnSubmit />);
 
-  storiesOf(`${prefix}/Data Display`, $module)
+  storiesOf(`${prefix}/Data Display`, module)
     .add('Avatar', () => <Avatar />)
     .add('Badge', () => <Badge />)
     .add('Calendar', () => <Calendar />)
@@ -160,7 +157,7 @@ export function configureStories(config = defaultConfig) {
     .add('Tooltip', () => <Tooltip />)
     .add('Tree', () => <Tree />);
 
-  storiesOf(`${prefix}/Feedback`, $module)
+  storiesOf(`${prefix}/Feedback`, module)
     .add('Alert', () => <Alert />)
     .add('Modal', () => <Modal />)
     .add('Message', () => <Message />)
@@ -169,25 +166,25 @@ export function configureStories(config = defaultConfig) {
     .add('Popconfirm', () => <Popconfirm />)
     .add('Spin', () => <Spin />);
 
-  storiesOf(`${prefix}/Other`, $module)
+  storiesOf(`${prefix}/Other`, module)
     .add('Divider', () => <Divider />)
     .add('Anchor', () => <Anchor />)
     .add('BackTop', () => <BackTop />)
     .add('LocaleProvider', () => <LocaleProvider />);
 
-  storiesOf(`${prefix}/Data Entry/Radio`, $module)
+  storiesOf(`${prefix}/Data Entry/Radio`, module)
     .add('Radio', () => <Radio />)
     .add('Radio Mobile', () => <RadioMobile />);
 
-  storiesOf(`${prefix}/Data Entry/Rate`, $module)
+  storiesOf(`${prefix}/Data Entry/Rate`, module)
     .add('Rate', () => <Rate />)
     .add('Rate Mobile', () => <RateMobile />);
 
-  storiesOf(`${prefix}/Data Entry/Slider`, $module)
+  storiesOf(`${prefix}/Data Entry/Slider`, module)
     .add('Slider', () => <Slider />)
     .add('Slider Mobile', () => <SliderMobile />);
 
-  storiesOf(`${prefix}/Data Entry/Checkbox`, $module)
+  storiesOf(`${prefix}/Data Entry/Checkbox`, module)
     .add('Checkbox', () => <Checkbox />)
     .add('Checkbox Mobile', () => <CheckboxMobile />);
 }
