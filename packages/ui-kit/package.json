@@ -1,6 +1,6 @@
 {
   "name": "@liquid-state/ui-kit",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Liquid State UI Kit for Desktop and Mobile.",
   "main": "dist/index.js",
   "scripts": {
@@ -19,10 +19,10 @@
   },
   "peerDependencies": {
     "antd": "^3.2",
+    "moment": "^2.20",
     "prop-types": "^15.6.0",
     "react": "^16",
-    "react-dom": "^16.2.0",
-    "moment": "^2.20"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
