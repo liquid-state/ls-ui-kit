@@ -32,7 +32,7 @@ class Basic extends Component {
       <Example title="Basic">
         <Row>
           <Col sm={16} lg={7} >
-            <Cascader style={{width: '100%'}} options={options} placeholder="Please select" />
+            <Cascader options={options} placeholder="Please select" />
           </Col>
         </Row>
       </Example>
