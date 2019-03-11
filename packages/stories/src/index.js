@@ -189,4 +189,4 @@ export function configureStories(storiesOf = defStory, config = defaultConfig) {
     .add('Checkbox Mobile', () => <CheckboxMobile />);
 }
 
-export default configureStories();
+export default () => configureStories();

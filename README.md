@@ -27,7 +27,18 @@ Additionally the style components are currently uncompiled less files, to enable
 
 ## Storybook
 
-This project includes a storybook which helps to document each of the components and how to use them.
+This project includes a storybook which helps to document each of the components and how to use them. You can include this storybook in your own project by including @liquid-state/ui-kit-stories in your project's storybook configuration. For the basic stories, add the following to your storybook configuration.
+
+```
+require('@liquid-state/ui-kit-stories').default();
+```
+
+Note that unlike normal stories the export is a function which you need to call to build the storybook. This supports advanced subsetting of the UI kit as required for your own projects. See `configureStories()` for details.
+
+Alternatively you can clone this project and run the stories yourself via
+```
+yarn storybook
+```
 
 *Todo*: Host the storybook so it can be accessed without cloning the repository.
 
