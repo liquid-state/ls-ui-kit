@@ -62,8 +62,7 @@ class DirectionalIcons extends Component {
 
     return (
       <Fragment>
-        <h3 className="title">Directional Icons</h3>
-        <Example title="">
+        <Example className="icons" title="Directional Icons">
           {
             icons.map((icon, i) => <Ic key={i} icon={icon} />)
           }

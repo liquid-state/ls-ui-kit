@@ -41,18 +41,15 @@ class SuggestedIcons extends Component {
       "clock-circle-o",
       "clock-circle",
       "warning"
-    ]; 
+    ];
     return (
       <Fragment>
-        <h3 className="title">Suggested Icons</h3>
-        <Example title="">
-          {
-            icons.map((icon, i) => <Icon key={i} icon={icon} />)
-          }
+        <Example title="Suggested Icons" className="icons">
+          { icons.map((icon, i) => <Icon key={i} icon={icon} />) }
         </Example>
       </Fragment>
     );
   }
-}
- 
+};
+
 export default SuggestedIcons;

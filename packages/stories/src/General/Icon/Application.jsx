@@ -159,8 +159,7 @@ class Application extends Component {
     ];
     return (
       <Fragment>
-        <h3 className="title">Application Icons</h3>
-        <Example title="">
+        <Example title="Application Icons" className="icons">
           {
             icons.map((icon, i) => <Icon key={i} icon={icon} />)
           }
@@ -168,6 +167,6 @@ class Application extends Component {
       </Fragment>
     );
   }
-}
- 
+};
+
 export default Application;
