@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
-    "storybook": "yarn workspace @liquid-state/ui-kit-stories run storybook",
+    "storybook": "yarn build && yarn workspace @liquid-state/ui-kit-stories run storybook",
     "lint": "eslint packages/*/src/**/*.{js,jsx}",
     "lint:fix": "eslint packages/*/src/**/*.{js,jsx} --fix"
   },
