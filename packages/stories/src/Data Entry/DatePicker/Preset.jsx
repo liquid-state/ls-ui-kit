@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
 import moment from 'moment';
-
+import Example from '../../utils/Example';
 
 class Preset extends Component {
   state = {}
@@ -10,8 +10,7 @@ class Preset extends Component {
   render() {
     const RangePicker = DatePicker.RangePicker;
     return (
-      <section className="example">
-        <h3 className="ex-title">Presetted Ranges</h3>
+      <Example title="Presetted Ranges">
 
         <Row className="mb20">
           <Col md={12} lg={6}>
@@ -33,7 +32,7 @@ class Preset extends Component {
           </Col>
         </Row>
         
-      </section>
+      </Example>
     );
   }
 }

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { BackTop } from 'antd';
 import './style.less';
+import Example from '../../utils/Example';
 
 class Custom extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom Style</h3>
-
+      <Example title="Custom Style">
         <div>
           <BackTop>
             <div className="backtop-blue">UP</div>
@@ -16,9 +15,9 @@ class Custom extends Component {
           <span className="strongtext"> blue </span>
           button.
         </div>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Custom;

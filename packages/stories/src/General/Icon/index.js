@@ -5,14 +5,7 @@ import ApplicationIcons from './Application';
 import Brands from './Brands';
 
 class IconPage extends Component {
-  render() { 
-    const exampleStyle = {
-      display: 'inline-block',
-      marginLeft: '20px',
-      padding: '10px 20px',
-      background: '#eee'
-    };
-
+  render() {
     return (
       <Fragment>
         <h1 className="title">Icon</h1>
@@ -27,6 +20,6 @@ class IconPage extends Component {
       </Fragment>
     );
   }
-}
- 
+};
+
 export default IconPage;

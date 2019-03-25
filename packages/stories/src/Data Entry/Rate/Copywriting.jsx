@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Rate } from 'antd';
+import Example from '../../utils/Example';
 
 class Copywriting extends Component {
   state = {
@@ -9,12 +10,11 @@ class Copywriting extends Component {
   render() {
     const { value } = this.state; 
     return (
-      <section className="example">
-        <h3 className="ex-title">Show copywriting</h3>
+      <Example title="Show copywriting">
 
         <Rate onChange={this.handleChange} value={value} />
         {value && <span className="ant-rate-text">{value} stars</span>}
-      </section>
+      </Example>
     );
   }
 

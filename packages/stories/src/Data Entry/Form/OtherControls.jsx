@@ -3,6 +3,7 @@ import {
   Form, Select, InputNumber, Switch, Radio,
   Slider, Button, Upload, Icon, Rate,
 } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -20,9 +21,7 @@ class OtherControls extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Other Form Controls</h3>
-
+      <Example title="Other Form Controls">
         <Form onSubmit={this.handleSubmit}>
           <FormItem
             {...formItemLayout}
@@ -144,7 +143,7 @@ class OtherControls extends Component {
                 </Button>
               </Upload>
             )}
-          </FormItem>
+p          </FormItem>
 
           <FormItem
             {...formItemLayout}
@@ -172,7 +171,7 @@ class OtherControls extends Component {
             <Button type="primary" htmlType="submit">Submit</Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

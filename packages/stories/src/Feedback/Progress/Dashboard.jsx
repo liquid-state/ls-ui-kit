@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Progress } from 'antd';
+import Example from '../../utils/Example';
 
 class Dashboard extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Dashboard</h3>
-
+      <Example title="Dashboard">
         <Progress type="dashboard" percent={75} />
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Dashboard;

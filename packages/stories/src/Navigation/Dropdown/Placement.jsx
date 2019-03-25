@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Button, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -18,8 +19,7 @@ const menu = (
 class Placement extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Placement</h3>
+      <Example title="Placement">
 
         <Row className="mb20">
 
@@ -52,7 +52,7 @@ class Placement extends Component {
           </Dropdown>
 
         </Row>
-      </section>
+      </Example>
     );
   }
 }

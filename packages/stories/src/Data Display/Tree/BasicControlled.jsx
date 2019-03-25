@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tree } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 
@@ -51,8 +52,7 @@ class BasicControlled extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic Controlled Example</h3>
+      <Example title="Basic Controlled Example">
 
         <Tree
           checkable
@@ -66,7 +66,7 @@ class BasicControlled extends Component {
         >
           {this.renderTreeNodes(treeData)}
         </Tree>
-      </section>
+      </Example>
     );
   }
 

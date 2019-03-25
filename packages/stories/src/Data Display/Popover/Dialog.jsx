@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const content = (
   <div>
@@ -15,8 +16,7 @@ class Dialog extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlling the close of the dialog</h3>
+      <Example title="Controlling the close of the dialog">
 
         <Popover
           content={<a onClick={this.hide}>Close</a>}
@@ -27,7 +27,7 @@ class Dialog extends Component {
         >
           <Button type="primary">Click me</Button>
         </Popover>
-      </section>
+      </Example>
     );
   }
 

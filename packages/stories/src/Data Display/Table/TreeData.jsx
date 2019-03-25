@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -89,10 +90,9 @@ const rowSelection = {
 class TreeData extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Tree Data</h3>
+      <Example title="Tree Data">
         <Table columns={columns} dataSource={data} />
-      </section>
+      </Example>
     );
   }
 }

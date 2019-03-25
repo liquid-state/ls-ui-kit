@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
@@ -10,8 +11,7 @@ class AutomaticCompletion extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Automatic completion</h3>
+      <Example title="Automatic completion">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -26,7 +26,7 @@ class AutomaticCompletion extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

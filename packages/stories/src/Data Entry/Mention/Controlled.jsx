@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toContentState } = Mention;
 
@@ -7,24 +8,23 @@ class Controlled extends Component {
   state = {
     value: toContentState('@afc163')
   };
-  
+
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlled</h3>
-
+      <Example title="Controlled">
         <Row>
           <Col sm={16} lg={7}>
           <Mention
               ref={ele => this.mention = ele}
-              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+              notFoundContent="Results not found"
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai']}
               value={this.state.value}
               onChange={this.handleChange}
               style={{width: '100%'}}
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

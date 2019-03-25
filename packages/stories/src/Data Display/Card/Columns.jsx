@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Card, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 class Columns extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Card in column</h3>
+      <Example title="Card in column">
 
         <div style={{ background: '#ECECEC', padding: '30px' }}>
           <Row gutter={16}>
@@ -20,7 +20,7 @@ class Columns extends Component {
             </Col>
           </Row>
         </div>
-      </section>
+      </Example>
     );
   }
 }

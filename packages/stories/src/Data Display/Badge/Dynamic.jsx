@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Badge, Button, Icon, Switch } from 'antd';
+import Example from '../../utils/Example';
 
 class Dynamic extends Component {
   state = {
@@ -11,8 +12,7 @@ class Dynamic extends Component {
     const ButtonGroup = Button.Group;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic</h3>
+      <Example title="Dynamic">
 
         <div>
           <div>
@@ -35,7 +35,7 @@ class Dynamic extends Component {
             <Switch className="ml20" onChange={this.onChange} checked={this.state.show} />
           </div>
         </div>
-      </section>
+      </Example>
     );
   }
 

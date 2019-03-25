@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { RangePicker } = DatePicker;
 
@@ -66,9 +67,7 @@ class Panel extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Controlled Panels</h3>
-
+      <Example title="Controlled Panels">
         <Row className="mb20">
           <Col md={12} lg={6}>
             <ControlledDatePicker style={{width: '100%'}} />
@@ -80,8 +79,7 @@ class Panel extends Component {
             <ControlledRangePicker style={{width: '100%'}} />
           </Col>
         </Row>
-        
-      </section>
+      </Example>
     );
   }
 }

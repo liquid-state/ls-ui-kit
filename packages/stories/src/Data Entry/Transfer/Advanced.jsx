@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Transfer, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Advanced extends Component {
   state = {
@@ -9,9 +10,7 @@ class Advanced extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Advanced</h3>
-
+      <Example title="Advanced">
         <Transfer
           dataSource={this.state.mockData}
           showSearch
@@ -25,7 +24,7 @@ class Advanced extends Component {
           render={item => `${item.title}-${item.description}`}
           footer={this.renderFooter}
         />
-      </section>
+      </Example>
     );
   }
 

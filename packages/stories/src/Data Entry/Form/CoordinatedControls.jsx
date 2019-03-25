@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 import { Form, Select, Input, Button } from 'antd';
 
 const FormItem = Form.Item;
@@ -10,9 +11,7 @@ class CoordinatedControls extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Coordinated Controls</h3>
-
+      <Example title="Coordinated Controls">
         <Form onSubmit={this.handleSubmit}>
           <FormItem
             label="Note"
@@ -50,7 +49,7 @@ class CoordinatedControls extends Component {
             </Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

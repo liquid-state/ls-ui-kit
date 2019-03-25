@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Avatar, Button, Spin } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {gender: "female", name: {title: "miss", first: "beatriz", last: "roman"}, email: "afet.kuday@example.com", nat: "TR"},
@@ -27,8 +28,7 @@ class LoadMore extends Component {
     ) : null;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Load More</h3>
+      <Example title="Load More">
 
         <List
           className="demo-loadmore-list"
@@ -41,13 +41,13 @@ class LoadMore extends Component {
               <List.Item.Meta
                 avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                 title={<a href="#">{item.name.last}</a>}
-                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum libero at ipsum eleifend, ac porta quam dapibus. Praesent vel nisl elementum, dignissim est quis, rutrum odio. Suspendisse potenti. "
               />
               <div>content</div>
             </List.Item>
           )}
         />
-      </section>
+      </Example>
     );
   }
 

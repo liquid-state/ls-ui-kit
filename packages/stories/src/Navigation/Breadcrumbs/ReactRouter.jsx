@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch, Link, withRouter } from 'react-router-dom';
 import { Breadcrumb, Alert } from 'antd';
-
+import Example from '../../utils/Example';
 
 const Apps = () => (
   <ul className="app-list">
@@ -61,14 +61,11 @@ const Home = withRouter((props) => {
 class ReactRouter extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">React Router Integration</h3>
-
-        
+      <Example title="React Router Integration">
         <Router>
           <Home />
         </Router>
-      </section>
+      </Example>
     );
   }
 }

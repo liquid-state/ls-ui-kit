@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Tooltip, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 function formatNumber(value) {
   value += '';
@@ -67,8 +68,7 @@ class FormatTooltip extends Component {
   render() {
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Format Tooltip Input</h3>
+      <Example title="Format Tooltip Input">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -79,7 +79,7 @@ class FormatTooltip extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

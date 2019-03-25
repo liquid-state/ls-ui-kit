@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -15,9 +16,7 @@ class HorizontalLogin extends Component {
     const passwordError = isFieldTouched('password') && getFieldError('password');
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Horizontal Login Form</h3>
-
+      <Example title="Horizontal Login Form">
         <Form layout="inline" onSubmit={this.handleSubmit}>
           <FormItem
             validateStatus={userNameError ? 'error' : ''}
@@ -49,7 +48,7 @@ class HorizontalLogin extends Component {
             </Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

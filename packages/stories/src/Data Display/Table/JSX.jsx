@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Icon, Divider } from 'antd';
+import Example from '../../utils/Example';
 
 const { Column, ColumnGroup } = Table;
 
@@ -30,8 +31,7 @@ const data = [
 class JSX extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">JSX style API</h3>
+      <Example title="JSX style API">
 
         <Table dataSource={data}>
           <ColumnGroup title="Name">
@@ -72,7 +72,7 @@ class JSX extends Component {
             )}
           />
         </Table>
-      </section>
+      </Example>
     );
   }
 }

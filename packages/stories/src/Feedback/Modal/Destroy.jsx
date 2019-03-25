@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Destroy extends Component {
   state = { visible: false };
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Manual to destroy</h3>
+      <Example title="Manual to destroy">
         <Button onClick={this.success}>Success</Button>
-      </section>
+      </Example>
     );
   }
 
@@ -21,5 +21,5 @@ class Destroy extends Component {
     setTimeout(() => modal.destroy(), 1000);
   }
 }
- 
+
 export default Destroy;

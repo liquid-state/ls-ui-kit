@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Anchor } from 'antd';
+import Example from '../../utils/Example';
 
 const { Link } = Anchor;
 
 class Basic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
-
+      <Example title="Basic">
         <Anchor>
           <Link href="#components-anchor-demo-basic" title="Basic demo" />
           <Link href="#components-anchor-demo-fixed" title="Fixed demo" />
@@ -17,7 +16,7 @@ class Basic extends Component {
             <Link href="#Link-Props" title="Link Props" />
           </Link>
         </Anchor>
-      </section>
+      </Example>
     );
   }
 }

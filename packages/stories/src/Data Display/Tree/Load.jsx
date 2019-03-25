@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tree } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 
@@ -14,13 +15,12 @@ class Load extends Component {
   
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Load data asynchronously</h3>
+      <Example title="Load data asynchronously">
 
         <Tree loadData={this.onLoadData}>
           {this.renderTreeNodes(this.state.treeData)}
         </Tree>
-      </section>
+      </Example>
     );
   }
 

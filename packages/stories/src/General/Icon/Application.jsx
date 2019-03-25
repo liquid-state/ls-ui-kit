@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Icon from './Icon';
+import Example from '../../utils/Example';
 
 class Application extends Component {
   render() {
@@ -158,15 +159,14 @@ class Application extends Component {
     ];
     return (
       <Fragment>
-        <h3 className="title">Application Icons</h3>
-        <section className="icons">
+        <Example title="Application Icons" className="icons">
           {
             icons.map((icon, i) => <Icon key={i} icon={icon} />)
           }
-        </section>
+        </Example>
       </Fragment>
     );
   }
-}
- 
+};
+
 export default Application;

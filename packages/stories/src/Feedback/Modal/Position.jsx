@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Position extends Component {
   state = {
@@ -9,8 +10,7 @@ class Position extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">To customize the position of modal</h3>
+      <Example title="To customize the position of modal">
 
         <div>
           <Button type="primary" onClick={() => this.setModal1Visible(true)}>Display a modal dialog at 20px to Top</Button>
@@ -39,7 +39,7 @@ class Position extends Component {
             <p>some contents...</p>
           </Modal>
         </div>
-      </section>
+      </Example>
     );
   }
 

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 
 class Container extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Container of card type Tab</h3>
+      <Example title="Container of card type Tab">
 
         <div className="card-container">
           <Tabs type="card">
@@ -28,7 +28,7 @@ class Container extends Component {
             </TabPane>
           </Tabs>
         </div>
-      </section>
+      </Example>
     );
   }
 }

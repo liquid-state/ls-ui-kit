@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, DatePicker, TimePicker, Button, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 const MonthPicker = DatePicker.MonthPicker;
@@ -30,9 +31,7 @@ class TimeControls extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Time-related Controls</h3>
-
+      <Example title="Time-related Controls">
         <Form onSubmit={this.handleSubmit}>
           <FormItem
             {...formItemLayout}
@@ -98,7 +97,7 @@ class TimeControls extends Component {
             </FormItem>
 
         </Form>
-      </section>
+      </Example>
     );
   }
 

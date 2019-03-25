@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Button, notification } from 'antd';
+import Example from '../../utils/Example';
 
 class Never extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Duration after which the notification box is closed</h3>
+      <Example title="Duration after which the notification box is closed">
 
         <Button type="primary" onClick={this.openNotification}>Open the notification box</Button>
-      </section>
+      </Example>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Icon, Switch, Radio, Form, Divider } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -72,8 +73,7 @@ class DynamicSettings extends Component {
     const state = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic Settings</h3>
+      <Example title="Dynamic Settings">
         <div>
           <div className="components-table-demo-control-bar">
             <Form layout="inline">
@@ -115,7 +115,7 @@ class DynamicSettings extends Component {
           </div>
           <Table {...this.state} columns={columns} dataSource={data} />
         </div>
-      </section>
+      </Example>
     );
   }
 

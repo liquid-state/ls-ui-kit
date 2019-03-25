@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Footer extends Component {
   state = {}
@@ -8,8 +9,7 @@ class Footer extends Component {
   render() {
     const { RangePicker, MonthPicker } = DatePicker;
     return (
-      <section className="example">
-        <h3 className="ex-title">Extra Footer</h3>
+      <Example title="Extra Footer">
 
         <Row gutter={24}>
           <Col md={12} lg={6}>
@@ -37,7 +37,7 @@ class Footer extends Component {
           </Col>
         </Row>
         
-      </section>
+      </Example>
     );
   }
 }

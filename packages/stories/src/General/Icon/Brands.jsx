@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Icon from './Icon';
+import Example from '../../utils/Example';
 
 class Brands extends Component {
   render() {
@@ -45,12 +46,11 @@ class Brands extends Component {
     ];
     return (
       <Fragment>
-        <h3 className="title">Brand and Logos</h3>
-        <section className="icons">
+        <Example className="icons" title="Brand and Logos">
           {
             icons.map((icon, i) => <Icon key={i} icon={icon} />)
           }
-        </section>
+        </Example>
       </Fragment>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -38,11 +39,9 @@ const data = [
 ];
 
 class Elements extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Border, title and footer</h3>
-
+      <Example title="Extra Elements">
         <Table
           columns={columns}
           dataSource={data}
@@ -50,7 +49,7 @@ class Elements extends Component {
           title={() => 'Header'}
           footer={() => 'Footer'}
         />
-      </section>
+      </Example>
     );
   }
 }

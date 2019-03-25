@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Divider } from 'antd';
+import Example from '../../utils/Example';
 
 class Horizontal extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Horizontal</h3>
+      <Example title="Horizontal">
 
         <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</p>
@@ -16,7 +16,7 @@ class Horizontal extends Component {
           <Divider dashed />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen, quo modo.</p>
         </div>
-      </section>
+      </Example>
     );
   }
 }

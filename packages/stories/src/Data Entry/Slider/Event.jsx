@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider } from 'antd';
+import Example from '../../utils/Example';
 
 function formatter(value) {
   return `${value}%`;
@@ -8,13 +9,12 @@ function formatter(value) {
 class EventSlider extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Event</h3>
+      <Example title="Event">
         <div>
           <Slider defaultValue={30}/>
           <Slider range step={10} defaultValue={[20, 50]} />
         </div>
-      </section>
+      </Example>
     );
   }
 }

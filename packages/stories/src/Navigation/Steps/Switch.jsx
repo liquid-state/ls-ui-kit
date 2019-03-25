@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Steps, Button, message } from 'antd';
+import Example from '../../utils/Example';
 
 class Switch extends Component {
   state = {
@@ -33,9 +34,7 @@ class Switch extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Switch Step</h3>
-        
+      <Example title="Switch Step">
         <div>
           <Steps current={current}>
             {steps.map(item => <Step key={item.title} title={item.title} />)}
@@ -64,7 +63,7 @@ class Switch extends Component {
           </div>
         </div>
 
-      </section>
+      </Example>
     );
   }
 

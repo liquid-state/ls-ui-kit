@@ -5,6 +5,7 @@ import './css/style.css';
 import './css/icons.css';
 
 // General
+import Typography from './General/Typography';
 import Button from './General/Button';
 import Icon from './General/Icon';
 import PagerStories from './General/Pager';

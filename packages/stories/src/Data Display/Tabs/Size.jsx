@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Tabs, Radio } from 'antd';
 const { TabPane } = Tabs;
-
+import Example from '../../utils/Example';
 
 class Size extends Component {
   state = { size: 'small' };
@@ -10,9 +10,7 @@ class Size extends Component {
     const { size } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Size</h3>
-        
+      <Example title="Size">
         <div>
           <Radio.Group value={size} onChange={this.onChange} style={{ marginBottom: 16 }}>
             <Radio.Button value="small">Small</Radio.Button>
@@ -25,7 +23,7 @@ class Size extends Component {
             <TabPane tab="Tab 3" key="3">Content of tab 3</TabPane>
           </Tabs>
         </div>
-      </section>
+      </Example>
     );
   }
 

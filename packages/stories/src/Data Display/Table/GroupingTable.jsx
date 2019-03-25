@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -84,8 +85,7 @@ for (let i = 0; i < 100; i++) {
 class GroupingTable extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Grouping Table Head</h3>
+      <Example title="Grouping Table Head">
 
         <Table
           columns={columns}
@@ -94,7 +94,7 @@ class GroupingTable extends Component {
           size="middle"
           scroll={{ x: '130%', y: 240 }}
         />
-      </section>
+      </Example>
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Row, Col } from 'antd';
 import moment from 'moment';
+import Example from '../../utils/Example';
 
 class Disabled extends Component {
   render() {
@@ -9,9 +10,7 @@ class Disabled extends Component {
     const dateFormat = 'YYYY-MM-DD';
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled</h3>
-
+      <Example title="Disabled">
         <Row className="mb20">
           <Col md={12} lg={6}>
             <DatePicker style={{width: '100%'}} defaultValue={moment('2015-06-06', dateFormat)} disabled />
@@ -33,8 +32,7 @@ class Disabled extends Component {
             />
           </Col>
         </Row>
-        
-      </section>
+      </Example>
     );
   }
 }

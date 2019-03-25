@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Badge } from 'antd';
+import Example from '../../utils/Example';
 
 class Status extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Status</h3>
+      <Example title="Status">
 
         <div>
           <Badge status="success" />
@@ -24,7 +24,7 @@ class Status extends Component {
           <br />
           <Badge status="warning" text="Warning" />
         </div>
-      </section>
+      </Example>
     );
   }
 }

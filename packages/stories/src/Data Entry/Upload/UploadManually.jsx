@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Upload, Button, Icon, message, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class UploadManually extends Component {
   state = {
@@ -35,8 +36,7 @@ class UploadManually extends Component {
 
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Upload manually</h3>
+      <Example title="Upload manually">
         <Row>
           <Col sm={16} lg={7}>
             <Upload {...props}>
@@ -56,7 +56,7 @@ class UploadManually extends Component {
             </Button>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

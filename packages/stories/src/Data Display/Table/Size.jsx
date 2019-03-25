@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -38,14 +39,13 @@ const data = [
 class Size extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Size</h3>
+      <Example title="Size">
 
         <h4>Middle size table</h4>
         <Table columns={columns} dataSource={data} size="middle" />
         <h4>Small size table</h4>
         <Table columns={columns} dataSource={data} size="small" />
-      </section>
+      </Example>
     );
   }
 }

@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { toString, toContentState } = Mention;
 
 class Basic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Row>
           <Col sm={16} lg={7}>
             <Mention
               style={{ width: '100%' }}
               defaultValue={toContentState('@afc163')}
-              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
+              suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', 'Jason', 'Mike', 'Sven', 'James']}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

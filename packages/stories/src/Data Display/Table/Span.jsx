@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const renderContent = (value, row, index) => {
   const obj = {
@@ -106,10 +107,9 @@ const data = [
 class Span extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">ColSpan and RowSpan</h3>
+      <Example title="ColSpan and RowSpan">
         <Table columns={columns} dataSource={data} bordered />
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon, message } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu onClick={onClick}>
@@ -16,15 +17,13 @@ const onClick = ({ key }) => {
 class ClickEvent extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Click event</h3>
-
+      <Example title="Click event">
         <Dropdown overlay={menu}>
           <a className="ant-dropdown-link" href="#">
             Hover me, Click menu item <Icon type="down" />
           </a>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 }

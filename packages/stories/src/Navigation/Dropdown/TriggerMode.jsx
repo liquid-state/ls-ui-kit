@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -17,15 +18,13 @@ const menu = (
 class TriggerMode extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Trigger mode</h3>
-
+      <Example title="Trigger mode">
         <Dropdown overlay={menu} trigger={['click']}>
           <a className="ant-dropdown-link" href="#">
             Click me <Icon type="down" />
           </a>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 }

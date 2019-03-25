@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class Prefix extends Component {
   state = {
@@ -11,8 +12,7 @@ class Prefix extends Component {
     const suffix = userName ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
     
     return (
-      <section className="example">
-        <h3 className="ex-title">Prefix and Suffix</h3>
+      <Example title="Prefix and Suffix">
 
         <Input
           style={{maxWidth: 300}}
@@ -24,7 +24,7 @@ class Prefix extends Component {
           onChange={this.onChangeUserName}
           ref={node => this.userNameInput = node}
         />
-      </section>
+      </Example>
     );
   }
 

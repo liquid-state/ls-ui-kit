@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = Select.Option;
 
 class Basic extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic Usage</h3>
+      <Example title="Basic Usage">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -22,7 +22,7 @@ class Basic extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

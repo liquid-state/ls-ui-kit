@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Switch } from 'antd';
+import Example from '../../utils/Example';
 
 class Loading extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Loading</h3>
+      <Example title="Loading">
 
         <div>
           <Switch loading defaultChecked />
           <Switch className="ml20" size="small" loading />
         </div>
-      </section>
+      </Example>
     );
   }
 }

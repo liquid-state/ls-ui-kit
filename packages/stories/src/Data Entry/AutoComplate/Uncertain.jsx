@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Button, Input, AutoComplete } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Option = AutoComplete.Option;
 
@@ -24,16 +25,15 @@ function searchResult(query) {
 function renderOption(item) {
   return (
     <Option key={item.category} text={item.category}>
-      {item.query} 在
+      {item.query}
       <a
-        href={`https://s.taobao.com/search?q=${item.query}`}
+        href={`https://jsonplaceholder.typicode.com/users?q=${item.query}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         {item.category}
       </a>
-      区块中
-      <span className="global-search-item-count">约 {item.count} 个结果</span>
+      <span className="global-search-item-count">{item.count}</span>
     </Option>
   );
 }
@@ -53,10 +53,7 @@ class Uncertain extends Component {
   render() {
     const { dataSource } = this.state;
     return (
-      <section className="example">
-        <h3 className="ex-title">Lookup-Patterns - Uncertain Category</h3>
-
-
+      <Example title="Lookup-Patterns - Uncertain Category">
         <Row>
           <Col md={12} lg={6}>
             <div className="global-search-wrapper" style={{width: '100%'}}>
@@ -81,7 +78,7 @@ class Uncertain extends Component {
             </div>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

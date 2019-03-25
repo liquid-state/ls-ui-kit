@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
+import Example from '../../utils/Example';
 
 class Tab extends Component {
   state = {
@@ -39,8 +40,7 @@ class Tab extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Width Tabs</h3>
+      <Example title="Width Tabs">
 
         <div>
           <Card
@@ -61,7 +61,7 @@ class Tab extends Component {
             {contentListNoTitle[this.state.noTitleKey]}
           </Card>
         </div>
-      </section>
+      </Example>
     );
   }
 

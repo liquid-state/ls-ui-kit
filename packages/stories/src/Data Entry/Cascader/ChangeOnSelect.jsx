@@ -1,38 +1,35 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
     }],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua Men',
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
     }],
-  }
-];
+  }],
+}];
 
 class ChangeOnSelect extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Change On Select</h3>
+      <Example title="Change On Select">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -43,7 +40,7 @@ class ChangeOnSelect extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -50,15 +51,12 @@ class StoreFormData extends Component {
     const fields = this.state.fields;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Store Form Data into Upper Component</h3>
-
+      <Example title="Store Form Data into Upper Component">
         <CustomizedForm {...fields} onChange={this.handleFormChange} />
-        
         <pre className="language-bash">
           {JSON.stringify(fields, null, 2)}
         </pre>
-      </section>
+      </Example>
     );
   }
 }

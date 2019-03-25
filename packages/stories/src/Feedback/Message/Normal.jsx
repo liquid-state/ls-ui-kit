@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { message, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Normal extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Normal prompt</h3>
+      <Example title="Normal prompt">
         <Button type="primary" onClick={this.info}>Display normal message</Button>
-      </section>
+      </Example>
     );
   }
 
@@ -15,5 +15,5 @@ class Normal extends Component {
     message.info('This is a normal message');
   };
 }
- 
+
 export default Normal;

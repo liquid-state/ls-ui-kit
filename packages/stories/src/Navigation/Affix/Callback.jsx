@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Affix, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Callback extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Callback</h3>
-        
+      <Example title="Callback">
         <Affix offsetTop={120}>
           <Button>120px to affix top</Button>
         </Affix>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Callback;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Pagination } from 'antd';
+import Example from '../../utils/Example';
 
 class Text extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Prev and next</h3>
+      <Example title="Prev and next">
         <Pagination total={500} itemRender={this.itemRender} />
-      </section>
+      </Example>
     );
   }
 

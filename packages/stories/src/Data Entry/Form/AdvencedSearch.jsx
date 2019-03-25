@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 
 import { Form, Row, Col, Input, Button, Icon } from 'antd';
 const FormItem = Form.Item;
@@ -20,8 +21,7 @@ class AdvencedSearch extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Advanced search</h3>
+      <Example title="Advanced search">
 
         <Form className="ant-advanced-search-form" onSubmit={this.handleSearch} >
           <Row gutter={24}>{this.getFields()}</Row>
@@ -38,7 +38,7 @@ class AdvencedSearch extends Component {
           </Row>
         </Form>
         <div style={style}>Search Result List</div>
-      </section>
+      </Example>
     );
   }
 

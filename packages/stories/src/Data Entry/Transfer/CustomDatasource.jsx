@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Transfer } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomDatasource extends Component {
   state = {
@@ -9,8 +10,7 @@ class CustomDatasource extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom datasource</h3>
+      <Example title="Custom datasource">
 
         <Transfer
           dataSource={this.state.mockData}
@@ -22,7 +22,7 @@ class CustomDatasource extends Component {
           onChange={this.handleChange}
           render={this.renderItem}
         />
-      </section>
+      </Example>
     );
   }
 

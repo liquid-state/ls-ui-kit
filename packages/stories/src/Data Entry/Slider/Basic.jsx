@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider, Switch } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   state = {
@@ -10,14 +11,11 @@ class Basic extends Component {
     const { disabled } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
-
-
+      <Example title="Basic">
         <Slider defaultValue={30} disabled={disabled} />
         <Slider range defaultValue={[20, 50]} disabled={disabled} />
         Disabled: <Switch size="small" checked={disabled} onChange={this.handleDisabledChange} />
-      </section>
+      </Example>
     );
   }
 

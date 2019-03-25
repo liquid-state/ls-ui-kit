@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Spin, Alert, Switch } from 'antd';
+import Example from '../../utils/Example';
 
 class Delay extends Component {
   state = { loading: false };
@@ -14,17 +15,12 @@ class Delay extends Component {
     );
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Delay</h3>
-        
-        
-        <div>
-          <Spin spinning={this.state.loading} delay={500} >{container}</Spin>
-          <div style={{ marginTop: 16 }}>
-            Loading state：<Switch checked={this.state.loading} onChange={this.toggle} />
-          </div>
+      <Example title="Delay">
+        <Spin spinning={this.state.loading} delay={500} >{container}</Spin>
+        <div style={{ marginTop: 16 }}>
+          Loading state：<Switch checked={this.state.loading} onChange={this.toggle} />
         </div>
-      </section>
+      </Example>
     );
   }
 
@@ -33,5 +29,5 @@ class Delay extends Component {
     this.setState({ loading: value });
   }
 }
- 
+
 export default Delay;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Popover, Button, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const content = (
   <div>
@@ -13,23 +14,22 @@ const text = <span>Title</span>;
 class ArrowPointing extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Arrow pointing</h3>
+      <Example title="Arrow pointing">
 
         <Row getter={32}>
           <Col className="mb20" sm={16} lg={5}>
             <Popover placement="topLeft" title={text} content={content}>
-              <Button>Align edge / 边缘对齐</Button>
+              <Button>Align edge</Button>
             </Popover>
           </Col>
 
           <Col sm={16} lg={5}>
             <Popover placement="topLeft" title={text} content={content} arrowPointAtCenter>
-              <Button>Arrow points to center / 箭头指向中心</Button>
+              <Button>Arrow points to center</Button>
             </Popover>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

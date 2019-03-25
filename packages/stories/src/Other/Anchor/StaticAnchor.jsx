@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Anchor } from 'antd';
+import Example from '../../utils/Example';
 
 const { Link } = Anchor;
 
 class StaticAnchor extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Static Anchor</h3>
-
+      <Example title="Static Anchor">
         <Anchor affix={false}>
           <Link href="#components-anchor-demo-basic" title="Basic demo" />
           <Link href="#components-anchor-demo-fixed" title="Fixed demo" />
@@ -17,9 +16,9 @@ class StaticAnchor extends Component {
             <Link href="#Link-Props" title="Link Props" />
           </Link>
         </Anchor>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default StaticAnchor;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 const SubMenu = Menu.SubMenu;
 
@@ -21,15 +22,13 @@ const menu = (
 class CascadingMenu extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Cascading menu</h3>
-
+      <Example title="Cascading menu">
         <Dropdown overlay={menu}>
           <a className="ant-dropdown-link" href="#">
             Cascading menu <Icon type="down" />
           </a>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 }

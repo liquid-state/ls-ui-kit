@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Select, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const { Option, OptGroup } = Select;
 
 class Group extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Option Group</h3>
+      <Example title="Option Group">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -25,7 +25,7 @@ class Group extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

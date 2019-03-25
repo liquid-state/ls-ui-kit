@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {
@@ -76,8 +77,7 @@ class Reset extends Component {
     ];
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Reset filters and sorters</h3>
+      <Example title="Reset filters and sorters">
 
         <div className="table-operations">
           <Button onClick={this.setAgeSort}>Sort age</Button>
@@ -85,7 +85,7 @@ class Reset extends Component {
           <Button onClick={this.clearAll}>Clear filters and sorters</Button>
         </div>
         <Table columns={columns} dataSource={data} onChange={this.handleChange} />
-      </section>
+      </Example>
     );
   }
 

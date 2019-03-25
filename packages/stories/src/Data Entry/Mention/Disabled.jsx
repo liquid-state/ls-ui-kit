@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 
 class Disabled extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Disabled or ReadOnly</h3>
+      <Example title="Disabled or ReadOnly">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -16,6 +16,7 @@ class Disabled extends Component {
                 style={{ width: '100%' }}
                 placeholder="this is disabled Mention"
                 suggestions={users}
+                notFoundContent="Results not found"
                 disabled
               />
             </div>
@@ -23,11 +24,12 @@ class Disabled extends Component {
               style={{ width: '100%' }}
               placeholder="this is readOnly Mention"
               suggestions={users}
+              notFoundContent="Results not found"
               readOnly
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

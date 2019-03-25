@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { List, message, Avatar, Spin } from 'antd';
 import InfiniteScroll from 'react-infinite-scroller';
+import Example from '../../utils/Example';
 
 const data = [
   {gender: "female", name: {title: "miss", first: "olivia", last: "novak"}, email: "olivia.novak@example.com", nat: "CA"},
@@ -26,9 +27,7 @@ class ScrollLoad extends Component {
   render() {
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Scrolling loaded</h3>
-
+      <Example title="Scrolling loaded">
         <div className="demo-infinite-container">
           <InfiniteScroll
             initialLoad={false}
@@ -54,8 +53,7 @@ class ScrollLoad extends Component {
             </List>
           </InfiniteScroll>
         </div>
-        
-      </section>
+      </Example>
     );
   }
 

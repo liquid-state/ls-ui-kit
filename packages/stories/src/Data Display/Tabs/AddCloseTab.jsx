@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 
@@ -19,8 +20,7 @@ class AddCloseTab extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Add & close tab</h3>
+      <Example title="Add & close tab">
 
         <Tabs
           onChange={this.onChange}
@@ -30,7 +30,7 @@ class AddCloseTab extends Component {
         >
           {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>{pane.content}</TabPane>)}
         </Tabs>
-      </section>
+      </Example>
     );
   }
 

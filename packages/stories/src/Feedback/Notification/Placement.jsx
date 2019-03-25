@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Select, notification } from 'antd';
+import Example from '../../utils/Example';
 
 const { Option } = Select;
 const options = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
@@ -13,8 +14,7 @@ const openNotification = () => {
 class Placement extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Placement</h3>
+      <Example title="Placement">
 
         <Select
           defaultValue="topRight"
@@ -33,7 +33,7 @@ class Placement extends Component {
         >
           Open the notification box
         </Button>
-      </section>
+      </Example>
     );
   }
 

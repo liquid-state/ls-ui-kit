@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Rate } from 'antd';
+import Example from '../../utils/Example';
 
 class HalfStar extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Half Star</h3>
+      <Example title="Half Star">
         <Rate allowHalf defaultValue={2.5} />
-      </section>
+      </Example>
     );
   }
 }

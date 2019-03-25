@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AutoComplete, Input } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Textarea extends Component {
   state = {
@@ -11,8 +12,7 @@ class Textarea extends Component {
     const { TextArea } = Input;
     const { dataSource } = this.state;
     return (
-      <section className="example">
-        <h3 className="ex-title">Customize Input Component</h3>
+      <Example title="Customize Input Component">
 
         <Row>
           <Col md={12} lg={6}>
@@ -30,7 +30,7 @@ class Textarea extends Component {
             </AutoComplete>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

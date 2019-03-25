@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const confirm = Modal.confirm;
 
@@ -8,8 +9,7 @@ class Confirm extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Confirmation modal dialog</h3>
+      <Example title="Confirmation modal dialog">
 
         <div>
           <Button className="mr20 mb20" onClick={this.showConfirm}>
@@ -22,7 +22,7 @@ class Confirm extends Component {
             Confirm
           </Button>
         </div>
-      </section>
+      </Example>
     );
   }
 

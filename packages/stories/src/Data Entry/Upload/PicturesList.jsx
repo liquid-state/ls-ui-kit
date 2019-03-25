@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Upload, Button, Icon } from 'antd';
+import Example from '../../utils/Example';
 import './style.css';
+
 
 const fileList = [{
   uid: -1,
@@ -32,8 +34,7 @@ const props2 = {
 class PicturesList extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Pictures with list style</h3>
+      <Example title="Pictures with list style">
 
         <div>
           <Upload {...props}>
@@ -49,7 +50,7 @@ class PicturesList extends Component {
             </Button>
           </Upload>
         </div>
-      </section>
+      </Example>
     );
   }
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
+import Example from '../../utils/Example';
 
 class Inner extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Inner Card</h3>
+      <Example title="Inner Card">
 
         <Card title="Card title">
           <p
@@ -34,7 +34,7 @@ class Inner extends Component {
             Inner Card content
           </Card>
         </Card>
-      </section>
+      </Example>
     );
   }
 }

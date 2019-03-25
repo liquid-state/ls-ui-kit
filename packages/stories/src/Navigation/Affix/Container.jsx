@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Affix, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Container extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Container to scroll.</h3>
-        
+      <Example title="Container to scroll.">
         <div className="scrollable-container" ref={(node) => { this.container = node; }}>
           <div className="background">
             <Affix target={() => this.container}>
@@ -16,9 +15,9 @@ class Container extends Component {
             </Affix>
           </div>
         </div>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default Container;

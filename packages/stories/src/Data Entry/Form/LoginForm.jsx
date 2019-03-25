@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -8,8 +9,7 @@ class LoginForm extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Login Form</h3>
+      <Example title="Login Form">
 
         <Form onSubmit={this.handleSubmit} style={{maxWidth: '300px'}} className="login-form">
           <FormItem>
@@ -40,7 +40,7 @@ class LoginForm extends Component {
             Or <a href="">register now!</a>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 
@@ -54,6 +54,4 @@ class LoginForm extends Component {
   }
 }
 
-LoginForm = Form.create()(LoginForm);
- 
-export default LoginForm;
+export default Form.create()(LoginForm);

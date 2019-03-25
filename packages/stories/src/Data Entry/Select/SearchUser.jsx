@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Select, Spin, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 import debounce from 'lodash.debounce';
+
 
 const Option = Select.Option;
 
@@ -19,8 +21,7 @@ class SearchUsers extends Component {
     const { fetching, data, value } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Search and Select Users</h3>
+      <Example title="Search and Select Users">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -39,7 +40,7 @@ class SearchUsers extends Component {
             </Select>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, Form, Input, Radio } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -73,11 +74,9 @@ class FormInModal extends Component {
     this.form = form;
   }
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Form in Modal to Create</h3>
-
+      <Example title="Form in Modal to Create">
         <Button type="primary" onClick={this.showModal}>New Collection</Button>
         <CollectionCreateForm
           ref={this.saveFormRef}
@@ -85,7 +84,7 @@ class FormInModal extends Component {
           onCancel={this.handleCancel}
           onCreate={this.handleCreate}
         />
-      </section>
+      </Example>
     );
   }
 }

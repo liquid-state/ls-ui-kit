@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Radio } from 'antd';
+import Example from '../../utils/Example';
 
 const RadioGroup = Radio.Group;
 
@@ -10,16 +11,14 @@ class Group extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Radio Group</h3>
-
+      <Example title="Radio Group">
         <RadioGroup onChange={this.onChange} value={this.state.value}>
           <Radio value={1}>A</Radio>
           <Radio value={2}>B</Radio>
           <Radio value={3}>C</Radio>
           <Radio value={4}>D</Radio>
         </RadioGroup>
-      </section>
+      </Example>
     );
   }
 

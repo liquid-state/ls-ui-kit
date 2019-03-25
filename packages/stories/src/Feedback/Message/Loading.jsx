@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { message, Button } from 'antd';
+import Example from '../../utils/Example';
 
 class Loading extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Message of loading</h3>
+      <Example title="Message of loading">
         <Button onClick={this.success}>Display a loading indicator</Button>
-      </section>
+      </Example>
     );
   }
 
@@ -16,5 +16,5 @@ class Loading extends Component {
     setTimeout(hide, 2500);
   };
 }
- 
+
 export default Loading;

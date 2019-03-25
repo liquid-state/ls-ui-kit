@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 import { FullWidthCenterImage } from '@liquid-state/ui-kit';
 import image from './img.svg';
 
 export default class FullCentralImage extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">FullWidthCenterImage</h3>
+      <Example title="FullWidthCenterImage">
         <h4>Default</h4>
         <div>
         <FullWidthCenterImage image={image} />
@@ -17,7 +17,7 @@ export default class FullCentralImage extends Component {
         <div>
         <FullWidthCenterImage image={image} borderless />
         </div>
-      </section>
+      </Example>
     );
   }
 }

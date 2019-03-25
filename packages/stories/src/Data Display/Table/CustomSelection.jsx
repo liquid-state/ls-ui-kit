@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -79,10 +80,9 @@ class CustomSelection extends Component {
     };
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom selection</h3>
+      <Example title="Custom selection">
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
-      </section>
+      </Example>
     );
   }
 

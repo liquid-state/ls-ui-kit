@@ -1,41 +1,36 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
-const options = [ 
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-      }, {
-        value: 'xiasha',
-        label: 'Xia Sha',
-        disabled: true,
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
+      disabled: true
     }],
-  }, {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua men',
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
     }],
-  }
-];
+  }],
+}];
 
 class Search extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Search</h3>
+      <Example title="Search">
         <Row>
           <Col sm={16} lg={7} >
             <Cascader
@@ -46,7 +41,7 @@ class Search extends Component {
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 }

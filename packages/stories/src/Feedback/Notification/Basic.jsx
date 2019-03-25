@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Button, notification } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Button type="primary" onClick={this.openNotification}>Open the notification box</Button>
-      </section>
+      </Example>
     );
   }
 
@@ -19,5 +19,5 @@ class Basic extends Component {
     });
   };
 }
- 
+
 export default Basic;

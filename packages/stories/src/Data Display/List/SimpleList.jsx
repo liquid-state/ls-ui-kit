@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   'Racing car sprays burning fuel into crowd.',
@@ -12,8 +13,7 @@ const data = [
 class SimpleList extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Simple List</h3>
+      <Example title="Simple List">
 
         <div>
           <h3 style={{ marginBottom: 16 }}>Default Size</h3>
@@ -43,7 +43,7 @@ class SimpleList extends Component {
             renderItem={item => (<List.Item>{item}</List.Item>)}
           />
         </div>
-      </section>
+      </Example>
     );
   }
 }

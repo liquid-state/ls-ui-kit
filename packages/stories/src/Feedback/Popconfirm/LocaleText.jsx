@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { Popconfirm } from 'antd';
+import Example from '../../utils/Example';
 
 class LocaleText extends Component {
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Locale Text</h3>
-
+      <Example title="Locale Text">
         <Popconfirm title="Are you sure？" okText="Yes" cancelText="No">
           <a href="#">Delete</a>
         </Popconfirm>
-      </section>
+      </Example>
     );
   }
 }
- 
+
 export default LocaleText;

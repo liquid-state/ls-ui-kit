@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Alert } from 'antd';
+import Example from '../../utils/Example';
 
 class Icon extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Icon</h3>
-        
+      <Example title="Icon">
         <Alert className="mb20" message="Success Tips" type="success" showIcon />
         <Alert className="mb20" message="Informational Notes" type="info" showIcon />
         <Alert className="mb20" message="Warning" type="warning" showIcon />
@@ -38,7 +37,7 @@ class Icon extends Component {
           type="error"
           showIcon
         />
-      </section>
+      </Example>
     );
   }
 }

@@ -1,32 +1,30 @@
 import React, { Component } from 'react';
 import { Cascader, Col, Row } from 'antd';
+import Example from '../../utils/Example';
 
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+const options = [{
+  value: 'nsw',
+  label: 'NSW',
+  children: [{
+    value: 'sydney',
+    label: 'Sydney',
     children: [{
-      value: 'hangzhou',
-      label: 'Hangzhou',
-      children: [{
-        value: 'xihu',
-        label: 'West Lake',
-      }],
+      value: 'north-sydney',
+      label: 'North Sydney',
     }],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+  }],
+}, {
+  value: 'wa',
+  label: 'WA',
+  children: [{
+    value: 'perth',
+    label: 'Perth',
     children: [{
-      value: 'nanjing',
-      label: 'Nanjing',
-      children: [{
-        value: 'zhonghuamen',
-        label: 'Zhong Hua Men',
-      }],
+      value: 'freemantle',
+      label: 'Freemantle',
     }],
-  }
-];
+  }],
+}];
 
 class CustomTrigger extends Component {
   state = {
@@ -35,8 +33,7 @@ class CustomTrigger extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Custom Trigger</h3>
+      <Example title="Custom Trigger">
         <Row>
           <Col sm={16} lg={6}>{this.state.text}</Col>
           <Col sm={16} lg={7}>
@@ -45,7 +42,7 @@ class CustomTrigger extends Component {
             </Cascader>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const TabPane = Tabs.TabPane;
 
@@ -18,8 +19,7 @@ class Customized extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized trigger of new tab</h3>
+      <Example title="Customized trigger of new tab">
 
         <div>
           <div style={{ marginBottom: 16 }}>
@@ -35,7 +35,7 @@ class Customized extends Component {
             {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
           </Tabs>
         </div>
-      </section>
+      </Example>
     );
   }
 

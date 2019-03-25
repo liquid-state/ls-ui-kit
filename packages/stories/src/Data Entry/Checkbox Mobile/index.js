@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'antd';
 import { Checkbox } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 class CheckboxPage extends Component {
   state = {
@@ -29,7 +30,7 @@ class CheckboxPage extends Component {
 
         <h2 className="title">Examples:</h2>
 
-        <section className="example">
+        <Example title="Checkbox Mobile">
           <Row>
             <Col span={24}>
               <Checkbox className="mb20" mobile>Default</Checkbox>
@@ -47,7 +48,7 @@ class CheckboxPage extends Component {
               <Checkbox disabled checked mobile>Disabled + Selected</Checkbox>
             </Col>
           </Row>
-        </section>
+        </Example>
 
       </Fragment>
     );

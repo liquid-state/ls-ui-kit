@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Tree } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 
@@ -47,8 +48,7 @@ class Draggable extends Component {
     });
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Draggable</h3>
+      <Example title="Draggable">
 
         <Tree
           className="draggable-tree"
@@ -58,7 +58,7 @@ class Draggable extends Component {
         >
           {loop(this.state.gData)}
         </Tree>
-      </section>
+      </Example>
     );
   }
 

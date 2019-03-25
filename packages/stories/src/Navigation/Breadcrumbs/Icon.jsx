@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Breadcrumb, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class IconComponent extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">With an Icon</h3>
-        
+      <Example title="With an Icon">
         <Breadcrumb>
           <Breadcrumb.Item href="">
             <Icon type="home" />
@@ -19,7 +18,7 @@ class IconComponent extends Component {
             Application
           </Breadcrumb.Item>
         </Breadcrumb>
-      </section>
+      </Example>
     );
   }
 }

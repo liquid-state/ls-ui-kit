@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   {
@@ -43,8 +44,7 @@ class Selection extends Component {
     const hasSelected = selectedRowKeys.length > 0;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Selection and operation</h3>
+      <Example title="Selection and operation">
 
         <div style={{ marginBottom: 16 }}>
 
@@ -64,7 +64,7 @@ class Selection extends Component {
         </div>
 
         <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
-      </section>
+      </Example>
     );
   }
 

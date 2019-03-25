@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown } from 'antd';
+import Example from '../../utils/Example';
 
 const menu = (
   <Menu>
@@ -12,13 +13,12 @@ const menu = (
 class ContextMenu extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Context Menu</h3>
+      <Example title="Context Menu">
 
         <Dropdown overlay={menu} trigger={['contextMenu']}>
           <span style={{ userSelect: 'none' }}>Right Click on Me</span>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 }

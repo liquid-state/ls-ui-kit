@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Icon from './Icon';
+import Example from '../../utils/Example';
 
 class SuggestedIcons extends Component {
   render() {
@@ -40,18 +41,15 @@ class SuggestedIcons extends Component {
       "clock-circle-o",
       "clock-circle",
       "warning"
-    ]; 
+    ];
     return (
       <Fragment>
-        <h3 className="title">Suggested Icons</h3>
-        <section className="icons">
-          {
-            icons.map((icon, i) => <Icon key={i} icon={icon} />)
-          }
-        </section>
+        <Example title="Suggested Icons" className="icons">
+          { icons.map((icon, i) => <Icon key={i} icon={icon} />) }
+        </Example>
       </Fragment>
     );
   }
-}
- 
+};
+
 export default SuggestedIcons;

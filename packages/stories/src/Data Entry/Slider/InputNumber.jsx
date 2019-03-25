@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider, InputNumber, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class IntegerStep extends React.Component {
   state = {
@@ -65,12 +66,10 @@ class Basic extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Slider with InputNumber</h3>
-
+      <Example title="Slider with InputNumber">
         <IntegerStep />
         <DecimalStep />
-      </section>
+      </Example>
     );
   }
 }

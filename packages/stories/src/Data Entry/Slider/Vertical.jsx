@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Slider } from 'antd';
+import Example from '../../utils/Example';
 
 const style = {
   float: 'left',
@@ -22,8 +23,7 @@ const marks = {
 class Vertical extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Vertical</h3>
+      <Example title="Vertical">
 
         <div style={{ height: 200 }}>
           <div style={style}>
@@ -36,7 +36,7 @@ class Vertical extends Component {
             <Slider vertical range marks={marks} defaultValue={[26, 37]} />
           </div>
         </div>
-      </section>
+      </Example>
     );
   }
 }

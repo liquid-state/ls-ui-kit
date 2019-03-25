@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Progress, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const ButtonGroup = Button.Group;
 
@@ -8,17 +9,15 @@ class DynamicCircular extends Component {
     percent: 0,
   };
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic circular progress bar</h3>
-
+      <Example title="Dynamic circular progress bar">
         <Progress type="circle" percent={this.state.percent} />
         <ButtonGroup className="ml20">
           <Button onClick={this.decline} icon="minus" />
           <Button onClick={this.increase} icon="plus" />
         </ButtonGroup>
-      </section>
+      </Example>
     );
   }
 
@@ -38,5 +37,5 @@ class DynamicCircular extends Component {
     this.setState({ percent });
   }
 }
- 
+
 export default DynamicCircular;

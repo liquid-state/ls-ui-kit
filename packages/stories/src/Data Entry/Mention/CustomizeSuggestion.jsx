@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Mention, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const Nav = Mention.Nav;
 
@@ -20,8 +21,7 @@ class CustomizeSuggestion extends Component {
     const { suggestions } = this.state;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customize Suggestion</h3>
+      <Example title="Customize Suggestion">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -30,10 +30,11 @@ class CustomizeSuggestion extends Component {
               style={{ width: '100%' }}
               suggestions={suggestions}
               onSearchChange={this.onSearchChange}
+              notFoundContent="Results not found"
             />
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

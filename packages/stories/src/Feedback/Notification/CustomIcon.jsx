@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Button, notification, Icon } from 'antd';
+import Example from '../../utils/Example';
 
 class CustomIcon extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Customized Icon</h3>
+      <Example title="Customized Icon">
 
         <Button type="primary" onClick={this.openNotification}>Open the notification box</Button>
-      </section>
+      </Example>
     );
   }
 

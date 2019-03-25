@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Input, AutoComplete } from 'antd';
 import { Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 class Pattern extends Component {
   state = {}
@@ -9,36 +10,31 @@ class Pattern extends Component {
     const OptGroup = AutoComplete.OptGroup;
     const dataSource = [
       {
-        title: '话题',
+        title: 'Cats',
         children: [
-          {
-            title: 'AntDesign',
-            count: 10000,
-          },
-          {
-            title: 'AntDesign UI',
-            count: 10600,
-          }
+          { title: 'Persian', count: 10000, },
+          { title: 'White Russian', count: 10600, },
+          { title: 'Ragdoll', count: 10700, },
         ],
       },
       {
-        title: '问题',
+        title: 'Dogs',
         children: [
           {
-            title: 'AntDesign UI 有多好',
+            title: 'German Shapherd',
             count: 60100,
           },
           {
-            title: 'AntDesign 是啥',
+            title: 'Goldren Retriever',
             count: 30010,
           }
         ],
       },
       {
-        title: '文章',
+        title: 'Fish',
         children: [
           {
-            title: 'AntDesign 是一个设计语言',
+            title: 'Goldfish',
             count: 100000,
           }
         ],
@@ -52,7 +48,7 @@ class Pattern extends Component {
         {group.children.map(opt => (
           <Option key={opt.title} value={opt.title}>
             {opt.title}
-            <span className="certain-search-item-count">{opt.count} 人 关注</span>
+            <span className="certain-search-item-count">{opt.count}</span>
           </Option>
         ))}
       </OptGroup>
@@ -63,15 +59,13 @@ class Pattern extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          查看所有结果
+          View All Results
         </a>
       </Option>,
     ]);
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Lookup-Patterns - Certain Category</h3>
-        
+      <Example title="Lookup-Patterns - Certain Category">
         <Row>
           <Col md={12} lg={6}>
             <AutoComplete
@@ -89,8 +83,7 @@ class Pattern extends Component {
               </AutoComplete>
             </Col>
           </Row>
-        
-      </section>
+      </Example>
     );
   }
 

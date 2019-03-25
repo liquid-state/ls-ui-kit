@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TreeSelect, Row, Col } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = TreeSelect.TreeNode;
 
@@ -10,8 +11,7 @@ class Basic extends Component {
 
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Row>
           <Col sm={16} lg={7}>
@@ -37,7 +37,7 @@ class Basic extends Component {
             </TreeSelect>
           </Col>
         </Row>
-      </section>
+      </Example>
     );
   }
 

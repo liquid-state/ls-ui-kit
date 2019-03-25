@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Avatar, Badge } from 'antd';
+import Example from '../../utils/Example';
 
 class BadgeAvatar extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">With Badge</h3>
-        
+      <Example title="With Badge">
         <div>
           <span style={{ marginRight: 24 }}>
             <Badge count={1}><Avatar shape="square" icon="user" /></Badge>
@@ -15,7 +14,7 @@ class BadgeAvatar extends Component {
             <Badge dot><Avatar shape="square" icon="user" /></Badge>
           </span>
         </div>
-      </section>
+      </Example>
     );
   }
 }

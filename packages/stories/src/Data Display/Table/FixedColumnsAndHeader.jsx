@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import Example from '../../utils/Example';
 
 const columns = [
   { title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },
@@ -34,10 +35,9 @@ for (let i = 0; i < 100; i++) {
 class FixedColumnsAndHeader extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Fixed Columns And Header</h3>
+      <Example title="Fixed Columns And Header">
         <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
-      </section>
+      </Example>
     );
   }
 }

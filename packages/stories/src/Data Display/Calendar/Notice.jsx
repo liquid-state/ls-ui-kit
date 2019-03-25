@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Calendar, Badge } from 'antd';
+import Example from '../../utils/Example';
 
 class Notice extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Notice Calendar</h3>
+      <Example title="Notice Calendar">
         <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />
-      </section>
+      </Example>
     );
   }
 }

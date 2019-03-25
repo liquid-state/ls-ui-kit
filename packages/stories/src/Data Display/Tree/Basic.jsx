@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Tree } from 'antd';
+import Example from '../../utils/Example';
 
 const TreeNode = Tree.TreeNode;
 
 class Basic extends Component {
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Tree
           checkable
@@ -25,7 +25,7 @@ class Basic extends Component {
             </TreeNode>
           </TreeNode>
         </Tree>
-      </section>
+      </Example>
     );
   }
 }

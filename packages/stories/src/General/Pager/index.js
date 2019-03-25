@@ -2,33 +2,29 @@ import React from 'react';
 import { Pager } from '@liquid-state/ui-kit';
 import WithState from '../../utils/WithState';
 import { action } from '@storybook/addon-actions';
+import Example from '../../utils/Example';
 
 export default () => (
   <div>
     <h1 className="title">Pager</h1>
 
-    <section className="example">
-      <h2 className="ex-title">Basic Pager</h2>
+    <Example title="Basic Pager">
       <Pager steps={5} onClick={action('onClick')} />
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">Hidden right arrow</h2>
+    <Example title="Hidden right arrow">
       <Pager steps={5} hideRightArrow  onChange={action('onChange')}/>
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">Hidden left arrow</h2>
+    <Example title="Hidden left arrow">
       <Pager steps={5} hideLeftArrow />
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">Default value</h2>
+    <Example title="Default value">
       <Pager steps={5} defaultValue={4} />
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">Text arrow overwrite (With Text)</h2>
+    <Example title="Text arrow overwrite (With Text)">
       <Pager
         steps={5}
         defaultValue={4}
@@ -36,15 +32,13 @@ export default () => (
         onChange={action('onChange')}
         next="NEXT"
         previous="BACK" />
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">OnClick to capture all clicks</h2>
+    <Example title="OnClick to capture all clicks">
       <Pager steps={5} defaultValue={4}  onChange={action('onChange')} />
-    </section>
+    </Example>
 
-    <section className="example">
-      <h2 className="ex-title">A fully controlled pager</h2>
+    <Example title="A fully controlled pager">
       <WithState initial={{ value: 2 }}>
         {(state, setState) => {
           const onChange = (value) => setState({ value });
@@ -58,6 +52,6 @@ export default () => (
           );
         }}
       </WithState>
-    </section>
+    </Example>
   </div>
 );

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Radio } from '@liquid-state/ui-kit';
+import Example from '../../utils/Example';
 
 const { Group } = Radio;
 
@@ -28,25 +29,22 @@ class RadioPage extends Component {
 
         <h2 className="title">Examples:</h2>
 
-        <section className="example">
-          <h3 className="ex-title">Desktop</h3>
+        <Example title="Desktop">
           <Radio>Desktop</Radio>
-        </section>
+        </Example>
 
-        <section className="example">
-          <h3 className="ex-title">Mobile</h3>
+        <Example title="Mobile">
           <Radio mobile>Mobile</Radio>
-        </section>
+        </Example>
 
-        <section className="example">
-          <h3 className="ex-title">Group</h3>
+        <Example title="Group">
           <Group value={this.state.value} onChange={this.handleChange}>
             <Radio value={1} mobile>A</Radio>
             <Radio value={2} mobile>B</Radio>
             <Radio value={3} mobile>C</Radio>
             <Radio value={4} mobile>D</Radio>
           </Group>
-        </section>
+        </Example>
 
       </Fragment>
     );

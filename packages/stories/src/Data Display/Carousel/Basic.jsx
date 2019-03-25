@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Carousel } from 'antd';
+import Example from '../../utils/Example';
 
 class Basic extends Component {
   state = {}
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Basic</h3>
+      <Example title="Basic">
 
         <Carousel>
           <div><h3>1</h3></div>
@@ -14,7 +14,7 @@ class Basic extends Component {
           <div><h3>3</h3></div>
           <div><h3>4</h3></div>
         </Carousel>
-      </section>
+      </Example>
     );
   }
 }

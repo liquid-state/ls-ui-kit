@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Rate } from '@liquid-state/ui-kit';
 import WithState from '../../utils/WithState';
+import Example from '../../utils/Example';
 
 export default () => (
   <Fragment>
@@ -20,11 +21,11 @@ export default () => (
 
     <h2 className="title">Examples:</h2>
 
-    <section className="example">
+    <Example title="Default">
       <Rate mobile />
-    </section>
+    </Example>
 
-    <section className="example">
+    <Example title="With State">
       <WithState initial={{ value: 1 }} >
         {(state, setState) => (
           <React.Fragment>
@@ -37,6 +38,6 @@ export default () => (
           </React.Fragment>
         )}
       </WithState>
-    </section>
+    </Example>
   </Fragment>
 );

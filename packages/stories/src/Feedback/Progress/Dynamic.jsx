@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Progress, Button } from 'antd';
+import Example from '../../utils/Example';
 
 const ButtonGroup = Button.Group;
 
@@ -8,17 +9,15 @@ class Dynamic extends Component {
     percent: 0,
   };
 
-  render() { 
+  render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic</h3>
-
+      <Example title="Dynamic">
         <Progress className="mb20" percent={this.state.percent} />
         <ButtonGroup>
           <Button onClick={this.decline} icon="minus" />
           <Button onClick={this.increase} icon="plus" />
         </ButtonGroup>
-      </section>
+      </Example>
     );
   }
 
@@ -37,5 +36,5 @@ class Dynamic extends Component {
     this.setState({ percent });
   }
 }
- 
+
 export default Dynamic;

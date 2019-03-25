@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
+import Example from '../../utils/Example';
 
 const FormItem = Form.Item;
 
@@ -22,8 +23,7 @@ class DynamicRules extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic Rules</h3>
+      <Example title="Dynamic Rules">
 
         <FormItem {...formItemLayout} label="Name">
           {getFieldDecorator('username', {
@@ -61,7 +61,7 @@ class DynamicRules extends Component {
             Check
           </Button>
         </FormItem>
-      </section>
+      </Example>
     );
   }
 

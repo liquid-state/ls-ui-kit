@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Input, Popconfirm } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [];
 for (let i = 0; i < 100; i++) {
@@ -113,10 +114,9 @@ class EditableRows extends React.Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Editable Rows</h3>
+      <Example title="Editable Rows">
         <Table bordered dataSource={this.state.data} columns={this.columns} />
-      </section>
+      </Example>
     );
   }
 }

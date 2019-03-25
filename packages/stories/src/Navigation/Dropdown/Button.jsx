@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Button, Icon, message } from 'antd';
+import Example from '../../utils/Example';
 
 class ButtonComponent extends Component {
   menu = (
@@ -12,9 +13,7 @@ class ButtonComponent extends Component {
 
   render() {
     return (
-      <section className="example">
-        <h3 className="ex-title">Button with dropdown menu</h3>
-
+      <Example title="Button with dropdown menu">
         <Dropdown.Button onClick={this.handleButtonClick} overlay={this.menu}>
           Dropdown
         </Dropdown.Button>
@@ -31,14 +30,14 @@ class ButtonComponent extends Component {
             Button <Icon type="down" />
           </Button>
         </Dropdown>
-      </section>
+      </Example>
     );
   }
 
   handleButtonClick = (e) => message.info('Click on left button.');
 
   handleMenuClick = (e) => message.info('Click on menu item.');
-  
+
 }
- 
+
 export default ButtonComponent;

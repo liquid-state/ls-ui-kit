@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Example from '../../utils/Example';
 import { Form, Input, Icon, Button, Row, Col } from 'antd';
 
 const FormItem = Form.Item;
@@ -66,8 +67,7 @@ class DynamicFormItem extends Component {
     });
 
     return (
-      <section className="example">
-        <h3 className="ex-title">Dynamic Form Item</h3>
+      <Example title="Dynamic Form Item">
         <Form onSubmit={this.handleSubmit}>
           {formItems}
           <FormItem {...formItemLayoutWithOutLabel} className="fw">
@@ -80,7 +80,7 @@ class DynamicFormItem extends Component {
             <Button type="primary" htmlType="submit">Submit</Button>
           </FormItem>
         </Form>
-      </section>
+      </Example>
     );
   }
 

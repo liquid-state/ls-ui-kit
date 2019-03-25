@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { List, Card } from 'antd';
+import Example from '../../utils/Example';
 
 const data = [
   {
@@ -19,8 +20,7 @@ const data = [
 class Grid extends Component {
   render() { 
     return (
-      <section className="example">
-        <h3 className="ex-title">Grid</h3>
+      <Example title="Grid">
 
         <List
           grid={{ gutter: 16, column: 4 }}
@@ -32,7 +32,7 @@ class Grid extends Component {
           )}
         />
         
-      </section>
+      </Example>
     );
   }
 }
