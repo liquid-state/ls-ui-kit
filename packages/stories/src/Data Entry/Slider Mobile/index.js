@@ -23,6 +23,16 @@ class Slider extends Component {
         <Example title="Slider">
           <SliderComponent mobile />
         </Example>
+
+        <Example title="Slider with marks">
+          <SliderComponent mobile marks={{ 0: '0cm', 100: '100cm' }} min={0} max={100} />
+        </Example>
+
+        <Example title="Slider with marks vertical">
+          <div style={{ height: 200 }}>
+            <SliderComponent mobile marks={{ 0: '0cm', 100: '100cm' }} min={0} max={100} vertical />
+          </div>
+        </Example>
       </Fragment>
     );
   }
