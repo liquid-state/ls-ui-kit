@@ -1,6 +1,6 @@
 {
   "name": "@liquid-state/ui-kit-stories",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Storybook stories for Liquid State UI Kit",
   "scripts": {
     "storybook": "start-storybook -p 9002 -c .storybook",
