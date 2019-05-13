@@ -60,6 +60,8 @@ import List from './Data Display/List';
 import Table from './Data Display/Table';
 import Tabs from './Data Display/Tabs';
 import Timeline from './Data Display/Timeline';
+import MediaButton from './Data Display/MediaButton';
+import MediaButtonGroup from './Data Display/MediaButtonGroup';
 import Popover from './Data Display/Popover';
 import Tooltip from './Data Display/Tooltip';
 import Tree from './Data Display/Tree';
@@ -151,6 +153,8 @@ export function configureStories(storiesOf = defStory, config = defaultConfig) {
     .add('Collapse', () => <Collapse />)
     .add('Carousel', () => <Carousel />)
     .add('List', () => <List />)
+    .add('Media Button', () => <MediaButton />)
+    .add('Media Button Group', () => <MediaButtonGroup />)
     .add('Popover', () => <Popover />)
     .add('Table', () => <Table />)
     .add('Tabs', () => <Tabs />)
