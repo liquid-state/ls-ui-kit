@@ -88,4 +88,25 @@ export class SearchOnSubmit extends Component {
   }
 }
 
+export class SearchUpdateValue extends Component {
+  state = {
+    selected: ''
+  };
+
+  render() {
+    const { selected } = this.state;
+    return (
+      <Fragment>
+        <h2>Search which updates on Item Clicked</h2>
+        <Search
+          results={selected ? filter(selected) : exampleData}
+          onItemClick={v => this.setState({ selected: v.title })}
+          value={selected}
+          onChange={v => this.setState({ selected: v })}
+        />
+      </Fragment>
+    )
+  }
+}
+
 export default SearchMinInput;

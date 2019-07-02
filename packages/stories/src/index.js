@@ -47,6 +47,7 @@ import {
   SearchOnSubmit,
   SearchLoading,
   SearchHeading,
+  SearchUpdateValue,
 } from './Data Entry/Search';
 
 // Data Display
@@ -141,7 +142,8 @@ export function configureStories(storiesOf = defStory, config = defaultConfig) {
     .add('Loading', () => <SearchLoading />)
     .add('Heading', () => <SearchHeading />)
     .add('With Data', () => <SearchOnChange />)
-    .add('OnSubmit', () => <SearchOnSubmit />);
+    .add('OnSubmit', () => <SearchOnSubmit />)
+    .add('Value from Props', () => <SearchUpdateValue />);
 
   storiesOf(`${prefix}/Data Display`, module)
     .add('Avatar', () => <Avatar />)
