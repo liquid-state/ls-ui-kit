@@ -57,6 +57,7 @@ class SearchList extends Component {
   static getDerivedStateFromProps = (props, state) => ({
     ...state,
     error: !state.error && props.error ? props.error : state.error,
+    value: Object.prototype.hasOwnProperty.call(props, 'value') ? props.value : state.value
   });
 
   onSubmit = () => {
@@ -68,11 +69,11 @@ class SearchList extends Component {
   onChange = ({ target: { value } }) => {
     const { props: { minInput, onChange, onEmpty } } = this;
     this.setState({ value });
+    onChange(value);
     if (value === '') { return onEmpty(); }
     if (value.length < minInput) { return this.error(`Please enter at least ${minInput} characters`); }
     this.error();
     this.setState({ hasSubmitted: false });
-    return onChange(value);
   }
 
   error = v => (typeof v === 'undefined' ? this.setState({ error: null }) : this.setState({ error: v }));
@@ -153,9 +154,10 @@ SearchList.defaultProps = {
   button: true,
   renderItem: renderListItem,
   spinner: <Spin />,
-  value: '',
   error: null,
   placeholder: '',
 };
+
+SearchList.displayName = 'Search'
 
 export default SearchList;
