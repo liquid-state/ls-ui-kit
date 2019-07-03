@@ -5,6 +5,7 @@ import {
   Input,
   Spin,
   Icon,
+  Empty,
 } from 'antd';
 import PropTypes from 'prop-types';
 
@@ -48,7 +49,6 @@ class SearchList extends Component {
     this.state = {
       value: props.value,
       error: props.error,
-      hasSubmitted: false,
     };
   }
 
@@ -61,9 +61,8 @@ class SearchList extends Component {
   });
 
   onSubmit = () => {
-    const { state: { value }, props: { minInput, onSubmit }, error } = this;
-    this.setState({ hasSubmitted: true });
-    return value.length >= minInput ? onSubmit(value) : error();
+    const { state: { value }, props: { minInput, onSubmit }, updateError } = this;
+    return value.length >= minInput ? onSubmit(value) : updateError();
   };
 
   onChange = ({ target: { value } }) => {
@@ -71,31 +70,37 @@ class SearchList extends Component {
     this.setState({ value });
     onChange(value);
     if (value === '') { return onEmpty(); }
-    if (value.length < minInput) { return this.error(`Please enter at least ${minInput} characters`); }
-    this.error();
-    this.setState({ hasSubmitted: false });
+    if (value.length < minInput) { return this.updateError(`Please enter at least ${minInput} characters`); }
+    this.updateError();
   }
 
-  error = v => (typeof v === 'undefined' ? this.setState({ error: null }) : this.setState({ error: v }));
+  updateError = error => this.setState({ error });
+
+  renderResults = results => {
+    const { renderItem, onItemClick, noResultsMessage } = this.props;
+    const { value } = this.state;
+    if (results.length) {
+      return <List>{results.map(renderItem(onItemClick))}</List>
+    } else if (value) {
+      return noResultsMessage;
+    }
+    return null;
+  }
 
   render() {
     const {
       results,
       button,
-      renderItem,
       loading,
-      onItemClick,
       heading,
-      noResultsMessage,
       spinner,
       placeholder,
     } = this.props;
-    const { error, value, hasSubmitted } = this.state;
-    const help = error || (results.length === 0 && value !== '' && hasSubmitted ? noResultsMessage : null);
+    const { error, value } = this.state;
 
     return (
       <Form className="ls-ui-kit search">
-        <Form.Item className="search-input-wrap" help={help}>
+        <Form.Item className="search-input-wrap" help={error}>
           <Input.Search
             placeholder={placeholder}
             value={value}
@@ -107,7 +112,8 @@ class SearchList extends Component {
         { heading }
         { loading === true
           ? <div className="search-spinner">{ spinner }</div>
-          : <List>{results.map(renderItem(onItemClick))}</List> }
+          : this.renderResults(results)
+        }
       </Form>);
   }
 }
@@ -147,7 +153,7 @@ SearchList.defaultProps = {
   onSubmit: e => e,
   onItemClick: e => e,
   heading: null,
-  noResultsMessage: 'No Results found',
+  noResultsMessage: <Empty description="No results found" />,
   minInput: 0,
   results: [],
   loading: false,
