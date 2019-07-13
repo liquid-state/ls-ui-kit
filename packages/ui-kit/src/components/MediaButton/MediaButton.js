@@ -9,87 +9,87 @@ import Icon from './Icon';
 import './style.less';
 
 export default class extends React.Component {
-    static Image = Image;
-    static Text = Text;
-    static Icon = Icon;
+  static Image = Image;
+  static Text = Text;
+  static Icon = Icon;
 
-    static displayName = 'MediaButton';
-    static propTypes = {
-      type: PropTypes.string,
-      className: PropTypes.string,
-      children: PropTypes.oneOfType([
-        PropTypes.node,
-        PropTypes.arrayOf(PropTypes.node),
-      ]).isRequired,
-      size: PropTypes.string,
-      onClick: PropTypes.func,
-    };
+  static displayName = 'MediaButton';
+  static propTypes = {
+    type: PropTypes.string,
+    className: PropTypes.string,
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node),
+    ]).isRequired,
+    size: PropTypes.string,
+    onClick: PropTypes.func,
+  };
 
-    static defaultProps = {
-      type: undefined,
-      className: undefined,
-      size: undefined,
-      onClick: undefined,
+  static defaultProps = {
+    type: undefined,
+    className: undefined,
+    size: undefined,
+    onClick: undefined,
+  }
+
+  state = {
+    animating: false,
+  };
+
+  onClick = (event) => {
+    if (this.state.animating) {
+      return;
     }
-
-    state = {
-      animating: false,
-    };
-
-    onClick = (event) => {
-      if (this.state.animating) {
-        return;
+    this.setState({ animating: true });
+    setTimeout(() => {
+      this.setState({ animating: false });
+      if (this.props.onClick) {
+        this.props.onClick(event);
       }
-      this.setState({ animating: true });
-      setTimeout(() => {
-        this.setState({ animating: false });
-        if (this.props.onClick) {
-          this.props.onClick(event);
-        }
-      }, 400);
+    }, 400);
+  }
+
+  onKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      this.onClick();
     }
+  }
 
-    onKeyPress = (event) => {
-      if (event.key === 'Enter') {
-        this.onClick();
-      }
-    }
+  render() {
+    const {
+      children,
+      type,
+      className,
+      size,
+      ...props
+    } = this.props;
 
-    render() {
-      const {
-        children,
-        type,
-        className,
-        size,
-        ...props
-      } = this.props;
+    const cname = cx('ls-ui-kit', 'media-button', className, size, { animating: this.state.animating });
 
-      const cname = cx('ls-ui-kit', 'media-button', className, size, { animating: this.state.animating });
-
-      if (type) {
-        // Make this an actual button.
-        return (
-                <button
-                  type={type}
-                  className={cname}
-                  onClick={this.onClick}
-                  {...props}
-                >
-                    {children}
-                </button>
-        );
-      }
+    if (type) {
+      // Make this an actual button.
       return (
-            <div
-              className={cname}
-              {...props}
-              onClick={this.onClick}
-              onKeyPress={this.onKeyPress}
-              tabIndex={0}
-              role="button"
-            >
-                {children}
-            </div>
+        <button
+          type={type}
+          className={cname}
+          onClick={this.onClick}
+          {...props}
+        >
+          {children}
+        </button>
       );
     }
+    return (
+      <div
+        className={cname}
+        {...props}
+        onClick={this.onClick}
+        onKeyPress={this.onKeyPress}
+        tabIndex={0}
+        role="button"
+      >
+        {children}
+      </div>
+    );
+  }
 }
